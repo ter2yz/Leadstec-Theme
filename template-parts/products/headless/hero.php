@@ -1,11 +1,11 @@
-<section class="relative w-full flex justify-center items-center bg-cover bg-bottom pt-20 pb-40" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/mac-book-bg.jpg' ); ?>)">
+<section class="relative w-full flex justify-center items-center bg-cover bg-bottom pt-20 pb-40" style="background-image: url(<?php echo esc_url( get_field('hero_section')['background_image'] ); ?>)">
     <div class="absolute inset-0 w-full h-full bg-black opacity-60 z-0"></div>    
     <div class="container @container z-10">
         <div class="w-full flex flex-col-reverse lg:flex-row justify-start lg:justify-center items-center @container lg:min-h-[600px] overflow-hidden">
             <div class="relative w-full flex flex-col items-center z-10 text-white">
-                <h1 class="text-5xl lg:text-7xl capitalize font-semibold leading-tight text-center">Headless CMS</h1>
+                <h1 class="text-5xl lg:text-7xl capitalize font-semibold leading-tight text-center"><?php echo get_field('hero_section')['heading'] ?></h1>
                 <span class="w-20 h-3 bg-transparent my-5"></span>
-                <p class="leading-relaxed max-w-5xl text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p class="leading-relaxed max-w-5xl text-center"><?php echo get_field('hero_section')['description'] ?></p>
             </div>
         </div>
     </div>
