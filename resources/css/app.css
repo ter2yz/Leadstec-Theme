@@ -1,0 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "box-shadow.css";
+@import "carousel.css";
+@import "custom.css";

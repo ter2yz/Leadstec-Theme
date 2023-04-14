@@ -1,0 +1,1 @@
+<div class="absolute inset-0 w-full h-full bg-zinc-800 opacity-60 z-0"></div>
