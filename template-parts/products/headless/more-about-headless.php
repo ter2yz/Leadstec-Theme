@@ -1,83 +1,55 @@
 <section class="relative w-full flex justify-center bg-white pt-16 pb-40 lg:pt-32">
     <div class="relative container z-20">
         <div class="w-full flex flex-col items-center justify-center">
-            <h2 class="w-full capitalize text-5xl text-gray-900 font-semibold mb-10">More about headless</h2>
+            <h2 class="w-full capitalize text-5xl text-gray-900 font-semibold mb-10"><?php echo get_field('more_about_headless_heading') ?></h2>
 
             <!-- Desktop cards -->
-
             <div class="w-full hidden lg:flex flex-col lg:flex-row justify-center items-stretch space-y-9 space-x-0 lg:space-y-0 lg:space-x-6 xl:space-x-9">
+            <?php
+            $stories = get_field('more_stories');
+            if($stories) {
+                foreach($stories as $story) {
+            ?>
                 <div class="w-full lg:w-1/3 bg-white flex flex-col border border-zinc-200">
-                    <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/mocking-story-4.png' ); ?>); "></div>
+                    <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( get_the_post_thumbnail_url($story['post']) ); ?>); "></div>
                     <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
                         <div class="w-full">
-                            <h3 class="font-bold text-xl text-left mb-3">Head TO headless report</h3>
-                            <p class="leading-relaxed text-zinc-500 text-left mb-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the zince the 1500s, when an and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <h3 class="font-bold text-xl text-left mb-3"><?php echo esc_html( $story['post']->post_title ) ?></h3>
+                            <p class="leading-relaxed text-zinc-500 text-left mb-12"><?php echo esc_html( get_the_excerpt($story['post']) ) ?></p>
                         </div>
-                        <a href="/" class="text-sky-600">Read More</a>
+                        <a href="<?php echo get_permalink($story['post']) ?>" class="text-sky-600">Read More</a>
                     </div>
                 </div>
-                <div class="w-full lg:w-1/3 bg-white flex flex-col border border-zinc-200">
-                    <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/mocking-story-5.png' ); ?>); "></div>
-                    <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
-                        <div class="w-full">
-                            <h3 class="font-bold text-xl text-left mb-3">Magnolia Blog</h3>
-                            <p class="leading-relaxed text-zinc-500 text-left mb-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the zince the 1500s, when an and scrambled it to make a type specimen book. Remaining essentially unchanged.</p>
-                        </div>
-                        <a href="/" class="text-sky-600">Read More</a>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/3 bg-white flex flex-col border border-zinc-200">
-                    <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/mocking-story-6.png' ); ?>); "></div>
-                    <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
-                        <div class="w-full">
-                            <h3 class="font-bold text-xl text-left mb-3">Visual spa editor</h3>
-                            <p class="leading-relaxed text-zinc-500 text-left mb-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the zince the 1500s, when an and scrambled it to make a type specimen book.</p>
-                        </div>
-                        <a href="/" class="text-sky-600">Read More</a>
-                    </div>
-                </div>
+            <?php
+                }
+            }
+            ?>
             </div>
 
             <!-- Mobile Carousel -->
 
             <div class="relative w-full block lg:hidden pb-16">
                 <div id="slider-headless-moreabout" class="w-full my-slider">
+                    <?php
+                    if($stories) {
+                        foreach($stories as $story) {
+                    ?>
                     <div class="w-full">
                         <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
-                            <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/mocking-story-4.png' ); ?>); "></div>
+                            <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( get_the_post_thumbnail_url($story['post']) ); ?>); "></div>
                             <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
                                 <div class="w-full">
-                                    <h3 class="font-bold text-xl text-left mb-3">Head TO headless report</h3>
-                                    <p class="leading-relaxed text-zinc-500 text-left mb-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the zince the 1500s, when an and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                    <h3 class="font-bold text-xl text-left mb-3"><?php echo $story['post']->post_title ?></h3>
+                                    <p class="leading-relaxed text-zinc-500 text-left mb-12"><?php echo get_the_excerpt($story['post']) ?></p>
                                 </div>
-                                <a href="/" class="text-sky-600">Read More</a>
+                                <a href="<?php echo get_permalink($story['post']) ?>" class="text-sky-600">Read More</a>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full">
-                        <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
-                            <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/mocking-story-5.png' ); ?>); "></div>
-                            <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
-                                <div class="w-full">
-                                    <h3 class="font-bold text-xl text-left mb-3">Magnolia Blog</h3>
-                                    <p class="leading-relaxed text-zinc-500 text-left mb-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the zince the 1500s, when an and scrambled it to make a type specimen book. Remaining essentially unchanged.</p>
-                                </div>
-                                <a href="/" class="text-sky-600">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full">
-                        <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
-                            <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/mocking-story-6.png' ); ?>); "></div>
-                            <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
-                                <div class="w-full">
-                                    <h3 class="font-bold text-xl text-left mb-3">Visual spa editor</h3>
-                                    <p class="leading-relaxed text-zinc-500 text-left mb-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the zince the 1500s, when an and scrambled it to make a type specimen book.</p>
-                                </div>
-                                <a href="/" class="text-sky-600">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>

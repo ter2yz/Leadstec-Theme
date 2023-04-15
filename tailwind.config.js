@@ -35,5 +35,9 @@ module.exports = {
             "2xl": "1440px",
         },
     },
-    plugins: [tailpress.tailwind, require("@tailwindcss/container-queries")],
+    plugins: [
+        tailpress.tailwind,
+        require("@tailwindcss/container-queries"),
+        require("@tailwindcss/typography"),
+    ],
 };
