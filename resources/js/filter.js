@@ -3,6 +3,14 @@ const productsWrapper = document.querySelector(".products");
 
 filters.forEach((filter) => {
     filter.addEventListener("click", function () {
+        filters.forEach((currentFilter) => {
+            currentFilter.classList.remove("border");
+            currentFilter.classList.remove("text-orange-500");
+            currentFilter.classList.add("text-zinc-500");
+        });
+        filter.classList.remove("text-zinc-500");
+        filter.classList.add("border");
+        filter.classList.add("text-orange-500");
         productsWrapper.classList.remove("opacity-100");
         productsWrapper.classList.add("opacity-0");
 

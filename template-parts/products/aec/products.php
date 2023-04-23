@@ -2,8 +2,8 @@
     <div class="relative container z-20">
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full capitalize text-5xl text-gray-900 font-semibold mb-10 px-2">Recommended For You</h2>
-            <div class="filters w-full flex justify-start items-center mb-10 px-2">
-                <button class="filter border border-orange-500 text-orange-500 rounded-lg px-6 py-2 mr-3" data-filter="all">All</button>
+            <div class="filters w-full flex justify-start items-center mb-10 px-2 overflow-x-auto no-scrollbar">
+                <button class="filter border border-orange-500 text-orange-500 rounded-lg px-6 py-2 mr-3 whitespace-nowrap" data-filter="all">All</button>
                 <?php
                     $categories = get_categories( array(
                         'orderby' => 'name',
@@ -12,7 +12,7 @@
 
                     foreach( $categories as $category ) {
                 ?>
-                        <button class="filter border border-orange-500 text-orange-500 rounded-lg px-6 py-2 mr-3" data-filter="<?php echo $category->slug ?>"><?php echo $category->name ?></button>
+                    <button class="filter border-orange-500 text-zinc-500 rounded-lg px-6 py-2 mr-3 whitespace-nowrap" data-filter="<?php echo $category->slug ?>"><?php echo $category->name ?></button>
                 <?php
                     } 
                 ?>
