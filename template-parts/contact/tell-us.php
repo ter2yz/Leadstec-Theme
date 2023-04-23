@@ -1,4 +1,4 @@
-<section class="relative w-full lg:bg-zinc-900 z-40 pb-40">
+<section id="tell-us-about-you" class="relative w-full lg:bg-zinc-900 z-40 pb-40">
     <div class="w-full flex flex-col lg:flex-row justify-center items-start lg:min-h-[600px] bg-white z-30">
         <div class="w-full lg:w-4/12 lg:min-h-screen lg:sticky lg:top-0 bg-gradient-to-b from-[#FEBE00] to-[#F08300] p-12 z-40">
             <div class="w-full bg-white p-6">
@@ -28,8 +28,11 @@
                 <p class="leading-relaxed text-white text-center"><?php echo get_field('tell_us_section')['description'] ?></p>
             </div>
             <div class="w-full bg-white p-12">
-                <form action="" class="flex flex-col items-center">
-                    <input name="name" type="text" placeholder="Your Name" class="w-full rounded-md border border-zinc-400/25 py-4 px-6 transition hover:border-zinc-400 focus:border-zinc-400 outline-none mb-6" require>
+                <?php
+                echo do_shortcode('[contact-form-7 id="551" title="Contact form 1"]');
+                ?>
+                <form action="" class="hidden flex-col items-center">
+                    <input name="name" type="text" placeholder="Your Name" class="w-full rounded-md border border-zinc-400/0 py-4 px-6 transition hover:border-zinc-400/25 focus:border-zinc-400/25 outline-none mb-6 bg-gray-100" require>
                     <input name="company-name" type="text" placeholder="Your Company Name" class="w-full rounded-md border border-zinc-400/25 py-4 px-6 transition hover:border-zinc-400 focus:border-zinc-400 outline-none mb-6" require>
                     <input name="website" type="text" placeholder="Your Company Website (Optional)" class="w-full rounded-md border border-zinc-400/25 py-4 px-6 transition hover:border-zinc-400 focus:border-zinc-400 outline-none mb-6">
                     <input name="email" type="email" placeholder="Email" class="w-full rounded-md border border-zinc-400/25 py-4 px-6 transition hover:border-zinc-400 focus:border-zinc-400 outline-none mb-6">

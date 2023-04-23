@@ -11,11 +11,18 @@
                 <div class="w-full flex flex-col lg:odd:flex-row lg:even:flex-row-reverse justify-center items-center mb-12 group">
                     <div class="w-full h-0 pb-[30%] lg:group-odd:pr-6 lg:group-even:pl-6 bg-cover bg-no-repeat bg-center" style="background-image: url(<?php echo esc_url( $card['image'] ); ?>);">
                     </div>
-                    <div class="w-full py-9 lg:py-0 lg:group-odd:pl-6 lg:group-even:pr-6">
+                    <div class="w-full py-9 lg:py-0 lg:group-odd:pl-6 lg:group-even:pr-6 flex flex-col items-start">
                         <h3 class="relative capitalize text-gray-900 text-3xl font-semibold mb-6">
                             <?php echo $card['heading'] ?>
                         </h3>
                         <p class="text-gray-900 capitalize"><?php echo $card['description'] ?></p>
+                        <?php if($card['button_label'] && $card['button_url']) {
+                        ?>                        
+                        <a href="<?php echo $card['button_url']; ?>" class="text-lg mt-10 flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize">
+                            <?php echo $card['button_label']; ?>
+                        </a>
+                        <?php
+                        }?>
                     </div>
                 </div>
                 <?php

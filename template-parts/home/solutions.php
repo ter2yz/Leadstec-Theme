@@ -1,7 +1,7 @@
 <section class="relative w-full flex justify-center mt-20 lg:mt-40 bg-gray-200 overflow-hidden">
-    <div class="absolute h-full w-full inset-0 hidden lg:flex justify-center items-center py-12 z-30">
+    <!-- <div class="absolute h-full w-full inset-0 hidden lg:flex justify-center items-center py-12 z-30">
         <div id="solution-mask" class="h-full aspect-square rounded-full bg-transparent"></div>
-    </div>
+    </div> -->
     <div class="relative container z-20">
         <div class="w-full py-40 lg:py-60 flex flex-col items-center justify-center">
             <h2 class="capitalize text-5xl text-gray-900 font-semibold"><?php echo get_field('our_solutions')['heading']; ?></h2>
@@ -11,16 +11,16 @@
                     if( $tools ) {
                         foreach( $tools as $tool) {
                 ?>
-                    <div class="w-full min-w-[180px] lg:min-w-min px-3 flex flex-col items-center">
-                        <div class="w-full p-6 lg:p-10 bg-white">
-                            <img class="w-full" src="<?php echo esc_url($tool['logo']); ?>" alt="">
-                        </div>
-                        <a href="<?php echo $tool['url']; ?>" class="w-full">
-                            <div class="w-full bg-gray-100 flex justify-center items-center py-6 font-medium">
-                                <p class="solution-brand-label opacity-50 transition duration-300"><?php echo $tool['name'] ?></p>
+                    <a href="<?php echo $tool['url']; ?>" class="w-full" target="_blank">
+                        <div class="solution-brand w-full min-w-[180px] lg:min-w-min px-3 flex flex-col items-center group">
+                            <div class="w-full p-6 lg:p-10 bg-white">
+                                <img class="w-full" src="<?php echo esc_url($tool['logo']); ?>" alt="">
                             </div>
-                        </a>
-                    </div>
+                            <div class="w-full bg-gray-100 flex justify-center items-center py-6 font-medium">
+                                <p class="solution-brand-label opacity-50 transition duration-300 group-hover:opacity-100"><?php echo $tool['name'] ?></p>
+                            </div>
+                        </div>
+                    </a>
                 <?php
                         }
                     }
