@@ -5,6 +5,9 @@
     $banner_section = get_field('banner_section', $footer_page->ID);
 ?>
 </main>
+<?php do_action( 'tailpress_content_end' ); ?>
+</div>
+<?php do_action( 'tailpress_content_after' ); ?>
 <footer class="relative w-full py-10 bg-zinc-900 flex flex-col justify-center items-center z-40">
     <div class="relative container">
         <div class="relative flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between py-10 px-10 lg:px-20 bg-gradient-to-br from-[#F18701] to-[#FBB100] -mt-10 -translate-y-1/2 z-10 overflow-hidden">
@@ -111,3 +114,9 @@
         <p class="leading-relaxed text-white opacity-50 text-[15px] text-center">© Copyright Leadstec. All Rights Reserved Guangdong Icp Registration</p>
     </div>
 </footer>
+</div>
+
+<?php wp_footer(); ?>
+
+</body>
+</html>
