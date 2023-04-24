@@ -36,11 +36,11 @@ function console_log($output, $with_script_tags = true) {
 <body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 <?php do_action( 'tailpress_site_before' ); ?>
-<div id="page" class="min-h-screen flex flex-col">
+<div id="page" class="relative min-h-screen flex flex-col">
 
 	<?php do_action( 'tailpress_header' ); ?>
 
-	<header class="z-40 sticky top-0 bg-white">
+	<header class="z-40 sticky top-0 bg-white flex-none">
         <div class="w-full flex justify-center items-center py-3">
             <div class="container">
                 <div class="w-full flex justify-between items-center">
@@ -242,4 +242,4 @@ function console_log($output, $with_script_tags = true) {
 
 		<?php do_action( 'tailpress_content_start' ); ?>
 
-		<main class="@container">
+		<main class="w-full h-full">

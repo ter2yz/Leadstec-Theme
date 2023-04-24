@@ -1994,6 +1994,11 @@ video {
   background-color: rgb(14 165 233 / var(--tw-bg-opacity));
 }
 
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -2407,6 +2412,10 @@ video {
 
 .text-\[26rem\] {
   font-size: 26rem;
+}
+
+.text-\[60px\] {
+  font-size: 60px;
 }
 
 .text-lg {
@@ -2974,6 +2983,7 @@ video {
 
 html {
   scroll-behavior: smooth;
+  margin-top: 0 !important;
 }
 
 section {
