@@ -8,7 +8,7 @@ if (storiesSliderContainer) {
         axis: "vertical",
         fixedWidth: 400,
         speed: 400,
-        items: 3,
+        items: 4,
         nav: false,
         startIndex: 1,
     });

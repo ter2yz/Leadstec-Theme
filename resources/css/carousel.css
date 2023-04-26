@@ -90,3 +90,7 @@
 #slider-headless-tools-ow .tns-nav > button.tns-nav-active {
     background: #f77316;
 }
+
+.tns-ovh {
+    min-height: 290px;
+}

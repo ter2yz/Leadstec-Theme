@@ -19,14 +19,14 @@
             <span class="absolute w-32 h-32 rounded-full z-0 bg-gradient-to-br from-[#F18701] to-[#FBB100] -bottom-16 -right-10"></span>
         </div>
     </div>
-    <div class="container mb-6">
+    <div class="container mb-6 -mt-20 md:mt-0">
         <div class="w-full mb-10">
             <a href="/">
-                <img class="max-w-xs" src="<?php echo esc_url( get_template_directory_uri() . '/assets/leadstec-logo-original.svg' ); ?>" alt="">
+                <img class="max-w-[15rem] md:max-w-xs" src="<?php echo esc_url( get_template_directory_uri() . '/assets/leadstec-logo-original.svg' ); ?>" alt="">
             </a>
         </div>
         <div class="w-full flex flex-col md:flex-row items-stretch space-x-0 md:space-x-9">
-            <div class="w-full md:w-1/2 lg:w-2/3 flex flex-col lg:flex-row justify-between pt-6 pb-0 lg:pt-0">
+            <div class="w-full md:w-1/2 lg:w-2/3 flex flex-col lg:flex-row justify-between pb-0 pt-0">
                 <div class="w-full lg:w-1/2">
                     <h3 class="font-bold text-xl text-left text-white mb-3">Web Design & Development</h3>
                     <p class="leading-relaxed text-white opacity-50 text-[15px]">

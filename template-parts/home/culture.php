@@ -14,7 +14,7 @@
                 <div class="relative container flex group-odd:flex-row group-even:flex-row-reverse group-odd:justify-start group-even:justify-end items-center z-10">
                     <div class="w-full md:group-even:w-7/12 lg:w-5/12 md:group-odd:pr-12 md:group-even:pl-12 lg:group-even:pl-20 min-h-[300px] lg:group-odd:min-h-min flex flex-col justify-center group-odd:items-start group-even:items-end">
                         <h3 class="w-full text-white text-2xl font-semibold mb-3 group-even:text-right transition duration-300 group-hover:text-zinc-900"><?php echo $culture['heading'] ?></h3>
-                        <p class="w-full text-white capitalize lg:max-w-lg group-even:text-right transition duration-300 group-hover:text-zinc-900"><?php echo $culture['description'] ?></p>
+                        <p class="w-full text-white lg:max-w-lg group-even:text-right transition duration-300 group-hover:text-zinc-900"><?php echo $culture['description'] ?></p>
                     </div>
                     <div class="hidden lg:block w-7/12 h-[500px]"></div>
                 </div>

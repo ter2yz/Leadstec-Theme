@@ -24,6 +24,11 @@ module.exports = {
             fontSize: tailpress.fontSizeMapper(
                 tailpress.theme("settings.typography.fontSizes", theme)
             ),
+            backgroundSize: {
+                "100%": "100%",
+                "110%": "110%",
+                "120%": "120%",
+            },
         },
         screens: {
             xs: "480px",
