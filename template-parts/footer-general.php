@@ -3,12 +3,15 @@
 <?php
     $footer_page = get_page_by_path('footer');
     $banner_section = get_field('banner_section', $footer_page->ID);
+    global $template;
+
 ?>
 </main>
 <?php do_action( 'tailpress_content_end' ); ?>
 </div>
 <?php do_action( 'tailpress_content_after' ); ?>
 <footer class="relative w-full py-10 bg-zinc-900 flex flex-col justify-center items-center z-40">
+    <?php if (!is_page_template( 'page-templates/page_contact.php' )){ ?>
     <div class="relative container">
         <div class="relative flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between py-10 px-10 lg:px-20 bg-gradient-to-br from-[#F18701] to-[#FBB100] -mt-10 -translate-y-1/2 z-10 overflow-hidden">
             <h3 class="relative capitalize text-white text-3xl font-semibold mb-6 lg:mb-0 z-10"><?php echo $banner_section['heading'] ?></h3>
@@ -19,6 +22,7 @@
             <span class="absolute w-32 h-32 rounded-full z-0 bg-gradient-to-br from-[#F18701] to-[#FBB100] -bottom-16 -right-10"></span>
         </div>
     </div>
+    <?php } ?>
     <div class="container mb-6 -mt-20 md:mt-0">
         <div class="w-full mb-10">
             <a href="/">

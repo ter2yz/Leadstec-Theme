@@ -30,6 +30,11 @@ function console_log($output, $with_script_tags = true) {
 
     <!-- Lightbox -->
     <link rel="stylesheet" href="<?php echo (get_template_directory_uri() . '/resources/css/lightbox.min.css' ); ?>">
+    
+    <!-- Splide -->
+    <script src="<?php echo (get_template_directory_uri() . '/resources/js/dist/splide.min.js' ); ?>"></script>
+    <script src="<?php echo (get_template_directory_uri() . '/resources/js/dist/splide-extension-auto-scroll.min.js' ); ?>"></script>
+    <link rel="stylesheet" href="<?php echo (get_template_directory_uri() . '/resources/css/splide.min.css' ); ?>">
 
 </head>
 
@@ -40,7 +45,7 @@ function console_log($output, $with_script_tags = true) {
 
 	<?php do_action( 'tailpress_header' ); ?>
 
-	<header class="z-40 sticky top-0 bg-white">
+	<header class="z-50 sticky top-0 bg-white">
         <div class="w-full flex justify-center items-center py-3">
             <div class="container">
                 <div class="w-full flex justify-between items-center">

@@ -54,3 +54,28 @@ const handleReadExpand = (el) => {
     mainText.classList.toggle("max-h-6");
     mainText.classList.toggle("max-h-screen");
 };
+
+const splide = new Splide(".splide", {
+    type: "loop",
+    drag: "free",
+    focus: "center",
+    arrows: false,
+    pagination: false,
+    perPage: 5,
+    autoScroll: {
+        speed: 1,
+    },
+    breakpoints: {
+        640: {
+            perPage: 2,
+        },
+        768: {
+            perPage: 3,
+        },
+        1024: {
+            perPage: 4,
+        },
+    },
+});
+
+splide.mount(window.splide.Extensions);

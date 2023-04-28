@@ -5,7 +5,7 @@
             <p class="text-center max-w-3xl"><?php echo get_field('why_leadstec')['description']; ?></p>
             <div class="w-full flex flex-col sm:flex-row justify-center items-stretch mt-20">
                 <div class="w-full px-3 flex flex-col items-center relative box-bg-shadow__spring-sun mb-6">
-                    <div class="flex flex-col lg:flex-row w-full h-full bg-white p-6 sm:p-10 items-stretch">
+                    <div class="flex flex-row w-full h-full bg-white p-6 sm:p-10 items-stretch">
                         <div class="flex-auto mr-3 mb-3">
                             <h3 class="max-w-[50%] sm:max-w-xs font-semibold text-2xl"><?php echo get_field('why_leadstec')['card_one_heading']; ?></h3>
                         </div>

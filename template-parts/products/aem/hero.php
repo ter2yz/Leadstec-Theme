@@ -20,7 +20,7 @@
                     <?php echo get_field('hero')['cta_button_text']; ?>
                 </a>
             </div>
-            <div class="w-full lg:w-5/12 relative md:absolute lg:relative top-0 right-0 flex justify-end">
+            <div class="w-full lg:w-5/12 relative flex justify-end mb-6 lg:mb-0">
                 <?php
                     if(get_field('hero')['image']){
                 ?>
