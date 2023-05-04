@@ -7,10 +7,6 @@ function console_log($output, $with_script_tags = true) {
     }
     echo $js_code;
 }
-global $post;
-$page_slug = $_SERVER['REQUEST_URI'];
-$link = "/products";
-console_log(str_contains($page_slug, $link))
 ?>
 
 <!DOCTYPE html>
