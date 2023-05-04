@@ -66,6 +66,7 @@ if (headlessStoriesContainer) {
         slideBy: "page",
         controls: false,
         gutter: 16,
+        loop: false,
     });
 }
 

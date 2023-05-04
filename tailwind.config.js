@@ -33,7 +33,7 @@ module.exports = {
         screens: {
             xs: "480px",
             sm: "600px",
-            md: "782px",
+            md: "769px",
             lg: "1024px",
             // lg: tailpress.theme("settings.layout.contentSize", theme),
             xl: tailpress.theme("settings.layout.wideSize", theme),

@@ -16,7 +16,7 @@
                 <h1 class="text-5xl lg:text-7xl capitalize font-semibold leading-tight"><?php echo get_field('hero')['heading']; ?></h1>
                 <span class="w-20 h-3 bg-transparent my-5"></span>
                 <p class="leading-relaxed"><?php echo get_field('hero')['description']; ?></p>
-                <a href="<?php echo get_field('hero')['cta_button_url']; ?>" class="text-lg mt-10 flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2">
+                <a data-fslightbox="lightbox" href="<?php echo get_field('hero')['cta_button_url']; ?>" class="text-lg mt-10 flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2">
                     <?php echo get_field('hero')['cta_button_text']; ?>
                 </a>
             </div>

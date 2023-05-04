@@ -1,11 +1,11 @@
-#home-stories .tns-item {
+#successful-stories-section .tns-item {
     opacity: 0.5;
     transition-property: opacity, transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
     transform: scale(0.9);
 }
-#home-stories
+#successful-stories-section
     .tns-item:not(.tns-slide-active)
     + .tns-slide-active
     + .tns-slide-active {

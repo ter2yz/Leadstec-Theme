@@ -6,7 +6,7 @@
                 <h1 class="text-5xl lg:text-7xl capitalize font-semibold leading-tight"><?php echo get_field('hero_section')['heading']; ?></h1>
                 <span class="w-20 h-3 bg-orange-500 my-5"></span>
                 <p class="leading-relaxed"><?php echo get_field('hero_section')['description'] ?></p>
-                <a href="#home-stories" class="text-3xl w-12 h-12 mt-10 flex justify-center items-center rounded-full border-2 border-gray-900 text-gray-900">
+                <a href="<?php echo get_field('hero_section')['anchor_url'] ?>" class="text-3xl w-12 h-12 mt-10 flex justify-center items-center rounded-full border-2 border-gray-900 text-gray-900">
                     <i class="fa-solid fa-chevron-down"></i>
                 </a>
             </div>

@@ -12,7 +12,7 @@
             ?>
             <div class="w-full lg:w-1/3 bg-white flex flex-col border border-zinc-200">
                 <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( get_the_post_thumbnail_url($singlePost['post'])) ?>); "></div>
-                <div class="w-full flex flex-col justify-between items-center grow p-3 lg:p-6 xl:p-9">
+                <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
                     <div class="w-full">
                         <h3 class="font-bold text-xl text-left mb-3"><?php echo esc_html( $singlePost['post']->post_title ); ?></h3>
                         <p class="leading-relaxed text-zinc-500 text-left mb-12"><?php echo get_the_excerpt($singlePost['post']); ?></p>
@@ -39,7 +39,7 @@
                     <div class="w-full">
                         <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
                             <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( get_the_post_thumbnail_url($singlePost['post']) ); ?>); "></div>
-                            <div class="w-full flex flex-col justify-between items-center grow p-3 lg:p-6 xl:p-9">
+                            <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
                                 <div class="w-full">
                                     <h3 class="font-bold text-xl text-left mb-3"><?php echo esc_html( $singlePost['post']->post_title ); ?></h3>
                                     <p class="leading-relaxed text-zinc-500 text-left mb-12"><?php echo get_the_excerpt($singlePost['post']); ?></p>

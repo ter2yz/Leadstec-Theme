@@ -2,7 +2,7 @@
     <div class="container">
         <div class="w-full flex flex-col lg:flex-row justify-between items-start lgitems-center">
             <h2 class="capitalize text-5xl text-gray-900 font-semibold max-h-screen mb-10 lg:mb-0"><?php echo get_field('heading') ?></h2>
-            <a href="" class="text-lg flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize">
+            <a href="" class="text-lg flex flex-none justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize whitespace-nowrap">
                 Read more
             </a>
         </div>

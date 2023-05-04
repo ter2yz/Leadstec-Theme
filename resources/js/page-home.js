@@ -6,9 +6,9 @@ if (storiesSliderContainer) {
         prevButton: "#sliderStoriesPrev",
         nextButton: "#sliderStoriesNext",
         axis: "vertical",
-        fixedWidth: 400,
+        // fixedWidth: 400,
         speed: 400,
-        items: 4,
+        items: 3,
         nav: false,
         startIndex: 1,
     });
@@ -55,7 +55,7 @@ const handleReadExpand = (el) => {
     mainText.classList.toggle("max-h-screen");
 };
 
-const splide = new Splide(".splide", {
+const splideClient = new Splide("#home-client .splide", {
     type: "loop",
     drag: "free",
     focus: "center",
@@ -78,4 +78,4 @@ const splide = new Splide(".splide", {
     },
 });
 
-splide.mount(window.splide.Extensions);
+splideClient.mount(window.splide.Extensions);

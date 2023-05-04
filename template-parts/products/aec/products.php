@@ -3,7 +3,7 @@
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full capitalize text-5xl text-gray-900 font-semibold mb-10 px-2"><?php echo get_field('recommend_heading') ?></h2>
             <div class="filters w-full flex justify-start items-center mb-10 px-2 no-scrollbar flex-wrap">
-                <button class="filter border border-orange-500 text-orange-500 rounded-lg px-6 py-2 mr-3 whitespace-nowrap" data-filter="all">All</button>
+                <button class="filter border border-orange-500 text-orange-500 rounded-lg px-6 py-2 mr-3 whitespace-nowrap mb-3" data-filter="all">All</button>
                 <?php
                     $categories = get_categories( array(
                         'orderby' => 'name',
@@ -12,7 +12,7 @@
 
                     foreach( $categories as $category ) {
                 ?>
-                    <button class="filter border-orange-500 text-zinc-500 rounded-lg px-6 py-2 mr-3 whitespace-nowrap" data-filter="<?php echo $category->slug ?>"><?php echo $category->name ?></button>
+                    <button class="filter border text-zinc-500 border-zinc-400/25 hover:border-orange-500 hover:text-orange-500 rounded-lg px-6 py-2 mr-3 mb-3 whitespace-nowrap" data-filter="<?php echo $category->slug ?>"><?php echo $category->name ?></button>
                 <?php
                     } 
                 ?>

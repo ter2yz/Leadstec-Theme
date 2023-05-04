@@ -1,14 +1,14 @@
 
-<section class="relative w-full min-h-[500px] lg:min-h-screen bg-gradient-to-tr from-[#38B0F1] to-[#81E4E8]">
+<section id="our-clients-section" class="relative w-full min-h-[500px] lg:min-h-screen bg-gradient-to-tr from-[#38B0F1] to-[#81E4E8]">
     <div class="w-full -mt-[1px]">
         <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
             <path fill="#ffffff" d="M0 120L48 105C96 90 192 60 288 47.4844C384 35.1563 480 39.8437 576 50.0156C672 60 768 75 864 87.5156C960 99.8437 1056 110.156 1152 99.9844C1248 90 1344 60 1392 45L1440 30V0H1392C1344 0 1248 0 1152 0C1056 0 960 0 864 0C768 0 672 0 576 0C480 0 384 0 288 0C192 0 96 0 48 0H0V120Z" fill="white"/>
         </svg>
     </div>
     <div class="w-full mt-20">
-        <h2 class="capitalize text-5xl text-white font-semibold text-center"><?php echo get_field('our_clients')['heading']; ?></h2>
+        <h2 class="capitalize text-[30px] md:text-[60px] text-white font-semibold text-center"><?php echo get_field('our_clients')['heading']; ?></h2>
     </div>
-    <div class="w-full h-screen max-h-[500px] lg:max-h-[700px] relative overflow-hidden mt-16">
+    <div id="home-client" class="w-full h-screen max-h-[500px] lg:max-h-[700px] relative overflow-hidden mt-16">
         <div class="splide" aria-labelledby="carousel-heading">
             <div class="splide__track min-h-[500px]">
                     <ul class="splide__list">
