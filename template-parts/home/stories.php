@@ -45,7 +45,7 @@
                                         the_sub_field('description');
                                     ?>
                                 </div>
-                                <div class="absolute left-0 bottom-0 w-full bg-white p-6">
+                                <div class="absolute left-0 bottom-0 w-full bg-white px-6 py-3">
                                     <a href="<?php the_sub_field('button_url'); ?>" class="description-read-btn text-sky-600 text-left"><?php echo get_field('read_more_button_label') ?></a>
                                 </div>
                             </div>
