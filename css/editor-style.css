@@ -925,6 +925,10 @@
   height: 100vh;
 }
 
+.h-\[25px\] {
+  height: 25px;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -1083,6 +1087,10 @@
 
 .w-full {
   width: 100%;
+}
+
+.w-\[25px\] {
+  width: 25px;
 }
 
 .min-w-full {
