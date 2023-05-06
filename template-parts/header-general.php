@@ -65,7 +65,7 @@ function console_log($output, $with_script_tags = true) {
                                 foreach($first_lv_items as $f_item) {
                             ?>
                             <div class="group inline-block relative">
-                                <<?php echo $f_item['url'] ? 'a' : 'div' ?> href="#" class="relative inline-flex w-full justify-center items-center gap-x-1.5 rounded-md bg-white px-3 py-3 text-lg <?php echo str_contains($_SERVER['REQUEST_URI'], strtolower('/'.$f_item['label'])) ? "text-orange-500" : "text-zinc-900" ?> hover:text-orange-500 transition-colors group" id="menu-products" aria-expanded="true" aria-haspopup="true">
+                                <<?php echo $f_item['url'] ? 'a' : 'div' ?> href="<?php echo $f_item['url'] ?>" class="relative inline-flex w-full justify-center items-center gap-x-1.5 rounded-md bg-white px-3 py-3 text-lg <?php echo str_contains($_SERVER['REQUEST_URI'], strtolower('/'.$f_item['label'])) ? "text-orange-500" : "text-zinc-900" ?> hover:text-orange-500 transition-colors group" id="menu-products" aria-expanded="true" aria-haspopup="true">
                                     <?php echo $f_item['label'] ?>
                                     <?php if($f_item['second_level_items']): ?>
                                     <svg class="-mr-1 h-5 w-5 text-gray-400 group-hover:text-orange-500 transition rot group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
