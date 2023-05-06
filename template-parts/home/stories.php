@@ -1,12 +1,12 @@
 <section id="successful-stories-section" class="w-full flex justify-center mt-20 lg:mt-40">
-    <div class="container">
+    <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <div class="w-full flex flex-col lg:flex-row justify-between items-start lg:items-center">
-            <h2 class="px-3 capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold max-h-screen mb-10 lg:mb-0"><?php echo get_field('successful_stories_heading') ?></h2>
-            <a href="<?php echo get_field('read_more_button_url') ?>" class="mr-3 text-[16px] font-bold flex flex-none justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize whitespace-nowrap">
+            <h2 class="capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold max-h-screen mb-0"><?php echo get_field('successful_stories_heading') ?></h2>
+            <a href="<?php echo get_field('read_more_button_url') ?>" class="hidden lg:flex text-[16px] font-bold flex-none justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize whitespace-nowrap">
                 <?php echo get_field('read_more_button_label') ?>
             </a>
         </div>
-        <div class="hidden lg:flex relative w-full h-full py-20 justify-center items-center min-h-[750px] px-3">
+        <div class="hidden lg:flex relative w-full h-full py-10 justify-center items-center min-h-[750px]">
             <div class="relative flex flex-col items-center pr-6 w-1/5">
                 <button id="sliderStoriesPrev" class="w-full text-xl" data-controls="prev" aria-controls="customize" tabindex="-1">
                     <i class="fa-solid fa-chevron-up"></i>
@@ -59,13 +59,13 @@
                 <p class="hidden font-light truncate max-h-6 overflow-hidden my-6 transition-all duration-500 delay-75"></p>
             </div>
         </div>
-        <div class="flex lg:hidden w-full py-10 flex-col">
+        <div class="flex lg:hidden w-full py-10 flex-col items-center">
             <?php
                 $stories = get_field('successful_stories');
                 if ($stories) {
                     foreach($stories as $story) {
             ?>
-            <div class="w-full mb-3">
+            <div class="w-full mb-5">
                 <img class="slider-single-image w-full" src="<?php echo esc_url( $story['image']['url'] ); ?>" alt="<?php echo $story['image']['alt']; ?>">
                 <div class="w-full p-5 flex justify-center items-center bg-zinc-900">
                     <p class="text-white text-[15px] font-bold"><?php echo $story['heading'] ?></p>
@@ -75,6 +75,9 @@
                     }
                 }
             ?>
+            <a href="<?php echo get_field('read_more_button_url') ?>" class="text-[16px] font-bold flex flex-none justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize whitespace-nowrap">
+                <?php echo get_field('read_more_button_label') ?>
+            </a>
         </div>
     </div>
 </section>

@@ -1,10 +1,10 @@
 <section id="why-leadstec-section" class="relative w-full flex justify-center bg-white">
-    <div class="relative container z-20">
+    <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full pt-12 md:pt-20 pb-12 lg:pb-40 flex flex-col items-center justify-center overflow-hidden">
-            <h2 class="px-3 capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-10"><?php echo get_field('why_leadstec')['heading']; ?></h2>
+            <h2 class="capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-10"><?php echo get_field('why_leadstec')['heading']; ?></h2>
             <p class="text-center max-w-3xl text-[15px] text-[#9f9f9f]"><?php echo get_field('why_leadstec')['description']; ?></p>
             <div class="w-full flex flex-col md:flex-row justify-center items-stretch mt-20">
-                <div class="w-full md:w-1/3 px-3 flex flex-col items-center relative box-bg-shadow__spring-sun mb-6">
+                <div class="w-full md:w-1/3 [&:nth-child(3n+1)]:pl-0 [&:nth-child(3n)]:pr-0 pl-3 pr-3 flex flex-col items-center relative box-bg-shadow__spring-sun mb-6">
                     <div class="flex flex-row md:flex-col xl:flex-row w-full h-full bg-white p-6 md:p-10 items-stretch">
                         <div class="flex-auto mr-3 mb-3">
                             <h3 class="max-w-[90%] md:max-w-xs font-bold text-[#1b1c1d] text-[20px] md:text-[26px] "><?php echo get_field('why_leadstec')['card_one_heading']; ?></h3>
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-1/3 px-3 flex flex-col items-center relative box-bg-shadow__spring-sun mb-6">
+                <div class="w-full md:w-1/3 [&:nth-child(3n+1)]:pl-0 [&:nth-child(3n)]:pr-0 pl-3 pr-3 flex flex-col items-center relative box-bg-shadow__spring-sun mb-6">
                     <div class="flex flex-row md:flex-col xl:flex-row w-full h-full bg-white p-6 md:p-10 items-stretch">
                         <div class="flex-auto mr-3 mb-3">
                             <h3 class="max-w-[90%] md:max-w-xs font-bold text-[#1b1c1d] text-[20px] md:text-[26px] "><?php echo get_field('why_leadstec')['card_two_heading']; ?></h3>
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-1/3 px-3 flex flex-col items-center relative box-bg-shadow__spring-sun mb-6">
+                <div class="w-full md:w-1/3 [&:nth-child(3n+1)]:pl-0 [&:nth-child(3n)]:pr-0 pl-3 pr-3 flex flex-col items-center relative box-bg-shadow__spring-sun mb-6">
                     <div class="flex flex-row md:flex-col xl:flex-row w-full h-full bg-white p-6 md:p-10 items-stretch">
                         <div class="flex-auto mr-3 mb-3">
                             <h3 class="max-w-[90%] md:max-w-xs font-bold text-[#1b1c1d] text-[20px] md:text-[26px] "><?php echo get_field('why_leadstec')['card_three_heading']; ?></h3>

@@ -2,7 +2,7 @@
     <!-- <div class="absolute h-full w-full inset-0 hidden lg:flex justify-center items-center py-12 z-30">
         <div id="solution-mask" class="h-full aspect-square rounded-full bg-transparent"></div>
     </div> -->
-    <div class="relative container z-20">
+    <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full py-40 lg:py-60 flex flex-col items-center justify-center">
             <h2 class="capitalize text-[30px] md:text-[60px]  text-[1b1c1d] font-semibold text-center"><?php echo get_field('our_solutions')['heading']; ?></h2>
             <div class="solutions-wrap w-full flex justify-start items-stretch mt-10 md:mt-20 overflow-x-auto no-scrollbar">
@@ -12,9 +12,9 @@
                         foreach( $tools as $tool) {
                 ?>
                     <?php if($tool['url']): ?>
-                    <a href="<?php echo $tool['url']; ?>" class="w-[calc(33.33%-0.5rem)] md:w-[calc(25%-1rem)] lg:w-[calc(20%-1rem)] flex-none" target="_blank">
+                    <a href="<?php echo $tool['url']; ?>" class="w-[calc(33.33%)] md:w-[calc(25%)] lg:w-[calc(20%)] flex-none" target="_blank">
                     <?php else: ?>
-                    <div class="w-[calc(33.33%-0.5rem)] md:w-[calc(25%-1rem)] lg:w-[calc(20%-1.5rem)] flex-none">
+                    <div class="w-[calc(33.33%)] md:w-[calc(25%)] lg:w-[calc(20%)] flex-none">
                     <?php endif; ?>
                         <div class="solution-brand w-full lg:min-w-min px-3 flex flex-col items-center h-full group">
                             <div class="w-full h-[100px] sm:h-[150px] md:h-[200px] p-6 lg:p-10 bg-white flex-none flex justify-center items-center">
@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="absolute w-full lg:w-auto lg:h-full inset-0 flex justify-center items-center py-12 z-0">
-        <div class="relative w-11/12 lg:w-auto lg:h-full aspect-square">
+        <div class="relative w-[81%] md:w-[69%] lg:w-[57%] aspect-square">
             <div id="solution-circle" class="absolute inset-0 w-full h-full rounded-full bg-gradient-to-br from-gray-200 to-gray-400 transition duration-300 opacity-100">
             </div>
             <div id="solution-circle-active" class="absolute inset-0 w-full h-full rounded-full bg-gradient-to-br from-orange-300 to-orange-500 transition duration-300 opacity-0"></div>

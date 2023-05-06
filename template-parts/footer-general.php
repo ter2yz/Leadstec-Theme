@@ -17,7 +17,7 @@
 <?php do_action( 'tailpress_content_after' ); ?>
 <footer class="relative w-full py-10 bg-zinc-900 flex flex-col justify-center items-center z-40">
     <?php if (!is_page_template( 'page-templates/page_contact.php' )){ ?>
-    <div class="relative container">
+    <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <div class="relative flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between py-10 px-10 lg:px-20 bg-gradient-to-br from-[#F18701] to-[#FBB100] -mt-10 -translate-y-1/2 z-10 overflow-hidden">
             <h3 class="relative capitalize text-white text-[20px] md:text-[30px] font-bold mb-6 lg:mb-0 z-10"><?php echo $banner_section['heading'] ?></h3>
             <a href="<?php echo $banner_section['button_url'] ?>" class="relative capitalize text-white text-[15px] font-bold flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 z-10 whitespace-nowrap">
@@ -28,7 +28,7 @@
         </div>
     </div>
     <?php } ?>
-    <div class="container mb-6 <?php if (!is_page_template( 'page-templates/page_contact.php' )): ?>-mt-20<?php endif; ?> md:mt-0">
+    <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto mb-6 <?php if (!is_page_template( 'page-templates/page_contact.php' )): ?>-mt-20<?php endif; ?> md:mt-0">
         <div class="w-full mb-10">
             <a href="/">
                 <img class="max-w-[15rem] md:max-w-xs" src="<?php echo esc_url( get_template_directory_uri() . '/assets/leadstec-logo-original.svg' ); ?>" alt="">
@@ -94,7 +94,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <div class="w-full flex justify-start items-center py-6 text-zinc-300 text-3xl">
             <?php if(get_field('social_media_buttons', $footer_page->ID)):
                 foreach(get_field('social_media_buttons', $footer_page->ID) as $singleSocialMedia){
@@ -109,7 +109,7 @@
 
         </div>
     </div>
-    <div class="relative container pt-10 border-t border-zinc-400/25">
+    <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto pt-10 border-t border-zinc-400/25">
         <p class="leading-relaxed text-white opacity-50 text-[15px] text-center"><?php echo get_field('copyright_banner', $footer_page->ID) ?></p>
     </div>
 </footer>
