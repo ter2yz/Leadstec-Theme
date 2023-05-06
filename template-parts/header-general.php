@@ -65,8 +65,8 @@ function console_log($output, $with_script_tags = true) {
                                 foreach($first_lv_items as $f_item) {
                             ?>
                             <div class="group inline-block relative">
-                                <<?php echo $f_item['url'] ? 'a' : 'div' ?> href="<?php echo $f_item['url'] ?>" class="relative inline-flex w-full justify-center items-center gap-x-1.5 rounded-md bg-white px-3 py-3 text-lg <?php echo str_contains($_SERVER['REQUEST_URI'], strtolower('/'.$f_item['label'])) ? "text-orange-500" : "text-zinc-900" ?> hover:text-orange-500 transition-colors group" id="menu-products" aria-expanded="true" aria-haspopup="true">
-                                    <?php echo $f_item['label'] ?>
+                                <<?php echo $f_item['url'] ? 'a' : 'div' ?> href="<?php echo $f_item['url'] ?>" class="relative inline-flex w-full justify-center items-center gap-x-1.5 rounded-md bg-white px-3 py-3 group" id="menu-products" aria-expanded="true" aria-haspopup="true">
+                                    <p class="text-[20px] font-bold <?php echo str_contains($_SERVER['REQUEST_URI'], strtolower('/'.$f_item['label'])) ? "text-orange-500" : "text-[#9f9f9f]" ?> hover:text-orange-500 transition-colors"><?php echo $f_item['label'] ?></p>
                                     <?php if($f_item['second_level_items']): ?>
                                     <svg class="-mr-1 h-5 w-5 text-gray-400 group-hover:text-orange-500 transition rot group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
@@ -84,17 +84,17 @@ function console_log($output, $with_script_tags = true) {
                                     ?>
                                         <?php if($s_item['url']){
                                         ?>
-                                        <a href="<?php echo $s_item['url'] ?>" class="<?php echo str_contains($_SERVER['REQUEST_URI'], strtolower($s_item['url'])) ? "text-orange-500" : "text-gray-700" ?> block px-4 py-2 font-medium hover:bg-orange-50 transition" role="menuitem" tabindex="-1" id="menu-item-2"><?php echo $s_item['label'] ?></a>
+                                        <a href="<?php echo $s_item['url'] ?>" class="<?php echo str_contains($_SERVER['REQUEST_URI'], strtolower($s_item['url'])) ? "text-orange-500" : "text-[#1B1C1D]" ?> block px-4 py-2 font-bold text-[15px] hover:bg-orange-50 transition" role="menuitem" tabindex="-1" id="menu-item-2"><?php echo $s_item['label'] ?></a>
                                         <?php
                                         } else {
                                         ?>
-                                        <p class="text-gray-700 block px-4 py-2 font-medium cursor-default"><?php echo $s_item['label'] ?></p>
+                                        <p class="text-[15px] text-[1B1C1D] block px-4 py-2 font-bold cursor-default"><?php echo $s_item['label'] ?></p>
                                         <?php
                                         }
                                         if($s_item['third_level_items']){
                                             foreach($s_item['third_level_items'] as $t_item){
                                         ?>
-                                        <a href="<?php echo $t_item['url'] ?>" class="<?php echo str_contains($_SERVER['REQUEST_URI'], strtolower($t_item['url'])) ? "text-orange-500" : "text-zinc-500" ?> block px-4 py-2 hover:bg-orange-50 transition" role="menuitem" tabindex="-1" id="menu-item-0"><?php echo $t_item['label'] ?></a>
+                                        <a href="<?php echo $t_item['url'] ?>" class="<?php echo str_contains($_SERVER['REQUEST_URI'], strtolower($t_item['url'])) ? "text-orange-500" : "text-[#767676]" ?> block px-4 py-2 hover:bg-orange-50 transition" role="menuitem" tabindex="-1" id="menu-item-0"><?php echo $t_item['label'] ?></a>
                                         <?php
                                             }
                                         }
@@ -103,10 +103,6 @@ function console_log($output, $with_script_tags = true) {
                                     <?php
                                         }
                                     ?>
-                                    <!-- <a href="/products/adobe-experience-manager.html" class="text-zinc-500 block px-4 py-2 hover:bg-orange-50 transition" role="menuitem" tabindex="-1" id="menu-item-0">Aem</a>
-                                    <a href="/products/adobe-experience-cloud.html" class="text-zinc-500 block px-4 py-2 hover:bg-orange-50 transition" role="menuitem" tabindex="-1" id="menu-item-0">Adobe Experience Cloud</a>
-                                    <a href="/products/headless-cms.html" class="text-gray-700 block px-4 py-2 font-medium hover:bg-orange-50 transition" role="menuitem" tabindex="-1" id="menu-item-1">Magnolia CMS</a>
-                                    <a href="/products/erp.html" class="text-gray-700 block px-4 py-2 font-medium hover:bg-orange-50 transition" role="menuitem" tabindex="-1" id="menu-item-2">ERP Products</a> -->
                                 </div>
                                 <?php endif; ?>
                             </div>
@@ -117,17 +113,17 @@ function console_log($output, $with_script_tags = true) {
                         </div>
                         <div class="pl-6 flex justify-center items-center">
                             <a href="">
-                                <span class="flex justify-center gap-x-1.5 bg-white px-3 text-lg font-medium text-orange-500 transition-colors border-r hover:underline underline-offset-4">
+                                <span class="flex justify-center gap-x-1.5 bg-white px-3 text-[15px] text-orange-500 transition-colors border-r hover:underline underline-offset-4">
                                     En
                                 </span>
                             </a>
                             <a href="">
-                                <span class="flex justify-center gap-x-1.5 bg-white px-3 text-lg font-medium text-zinc-900 hover:text-orange-500 transition-colors border-r hover:underline underline-offset-4">
+                                <span class="flex justify-center gap-x-1.5 bg-white px-3 text-[15px] text-[#767676] hover:text-orange-500 transition-colors border-r hover:underline underline-offset-4">
                                     简
                                 </span>
                             </a>
                             <a href="">
-                                <span class="flex justify-center gap-x-1.5 bg-white px-3 text-lg font-medium text-zinc-900 hover:text-orange-500 transition-colors hover:underline underline-offset-4">
+                                <span class="flex justify-center gap-x-1.5 bg-white px-3 text-[15px] text-[#767676] hover:text-orange-500 transition-colors hover:underline underline-offset-4">
                                     繁
                                 </span>
                             </a>

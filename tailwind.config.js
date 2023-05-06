@@ -17,6 +17,9 @@ module.exports = {
                 sm: "2rem",
             },
         },
+        fontFamily: {
+            sans: ["Helvetica", "Arial", "sans-serif"],
+        },
         extend: {
             colors: tailpress.colorMapper(
                 tailpress.theme("settings.color.palette", theme)

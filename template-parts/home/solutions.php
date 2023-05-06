@@ -4,7 +4,7 @@
     </div> -->
     <div class="relative container z-20">
         <div class="w-full py-40 lg:py-60 flex flex-col items-center justify-center">
-            <h2 class="capitalize text-[30px] md:text-[60px]  text-gray-900 font-semibold text-center"><?php echo get_field('our_solutions')['heading']; ?></h2>
+            <h2 class="capitalize text-[30px] md:text-[60px]  text-[1b1c1d] font-semibold text-center"><?php echo get_field('our_solutions')['heading']; ?></h2>
             <div class="w-full flex justify-start items-stretch mt-10 md:mt-20 overflow-x-auto no-scrollbar">
                 <?php
                     $tools = get_field('our_solutions')['tools'];
@@ -21,7 +21,7 @@
                                 <img class="w-full h-full object-center object-contain" src="<?php echo esc_url($tool['logo']); ?>" alt="">
                             </div>
                             <div class="w-full bg-gray-100 flex justify-center grow items-center py-4 md:py-6 px-6 font-medium">
-                                <p class="solution-brand-label opacity-50 transition duration-300 text-center group-hover:opacity-100 text-[10px] md:text-[20px]"><?php echo $tool['name'] ?></p>
+                                <p class="solution-brand-label opacity-50 transition duration-300 text-center group-hover:opacity-100 text-[12px] md:text-[20px] text-[1b1c1d]"><?php echo $tool['name'] ?></p>
                             </div>
                         </div>
                     <?php if($tool['url']): ?>
