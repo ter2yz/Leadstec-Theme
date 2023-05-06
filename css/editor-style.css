@@ -2691,6 +2691,10 @@ body {
     margin-top: 5rem;
   }
 
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -2713,6 +2717,10 @@ body {
 
   .md\:min-h-screen {
     min-height: 100vh;
+  }
+
+  .md\:min-h-\[385px\] {
+    min-height: 385px;
   }
 
   .md\:w-1\/2 {
@@ -2741,6 +2749,10 @@ body {
 
   .md\:max-w-xs {
     max-width: 20rem;
+  }
+
+  .md\:max-w-\[370px\] {
+    max-width: 370px;
   }
 
   .md\:flex-row {
@@ -2810,6 +2822,10 @@ body {
 
   .md\:text-\[40px\] {
     font-size: 40px;
+  }
+
+  .group:nth-child(odd) .md\:group-odd\:min-h-\[385px\] {
+    min-height: 385px;
   }
 
   .group:nth-child(odd) .md\:group-odd\:pr-12 {

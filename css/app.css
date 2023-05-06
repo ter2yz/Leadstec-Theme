@@ -3481,6 +3481,10 @@ article > *:not(.entry-content),
     margin-top: 5rem;
   }
 
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -3503,6 +3507,10 @@ article > *:not(.entry-content),
 
   .md\:min-h-screen {
     min-height: 100vh;
+  }
+
+  .md\:min-h-\[385px\] {
+    min-height: 385px;
   }
 
   .md\:w-1\/2 {
@@ -3531,6 +3539,10 @@ article > *:not(.entry-content),
 
   .md\:max-w-xs {
     max-width: 20rem;
+  }
+
+  .md\:max-w-\[370px\] {
+    max-width: 370px;
   }
 
   .md\:flex-row {
@@ -3600,6 +3612,10 @@ article > *:not(.entry-content),
 
   .md\:text-xl {
     font-size: 1.25rem;
+  }
+
+  .group:nth-child(odd) .md\:group-odd\:min-h-\[385px\] {
+    min-height: 385px;
   }
 
   .group:nth-child(odd) .md\:group-odd\:pr-12 {
