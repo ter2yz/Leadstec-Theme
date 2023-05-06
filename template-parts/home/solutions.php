@@ -18,7 +18,7 @@
                     <?php endif; ?>
                         <div class="solution-brand w-full lg:min-w-min px-3 flex flex-col items-center h-full group">
                             <div class="w-full h-[100px] sm:h-[150px] md:h-[200px] p-6 lg:p-10 bg-white flex-none flex justify-center items-center">
-                                <img class="w-full h-full object-center object-contain" src="<?php echo esc_url($tool['logo']); ?>" alt="">
+                                <img class="w-full h-full object-center object-contain" src="<?php echo esc_url($tool['logo']['url']); ?>" alt="<?php echo $tool['logo']['alt']; ?>">
                             </div>
                             <div class="w-full bg-gray-100 flex justify-center grow items-center py-4 md:py-6 px-6 font-medium">
                                 <p class="solution-brand-label opacity-50 transition duration-300 text-center group-hover:opacity-100 text-[12px] md:text-[20px] text-[1b1c1d]"><?php echo $tool['name'] ?></p>

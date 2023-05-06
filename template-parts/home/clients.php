@@ -22,7 +22,7 @@
                                     <?php if($client['url']): ?>
                                     <a href="<?php echo esc_url( $client['url'] ); ?>" class="w-full h-full flex justify-center items-center" target="_blank">
                                     <?php endif; ?>
-                                    <img class="w-full" src="<?php echo esc_url( $client['image'] ); ?>" alt="">
+                                    <img class="w-full" src="<?php echo esc_url( $client['image']['url'] ); ?>" alt="<?php echo $client['image']['alt']; ?>">
                                     <?php if($client['url']): ?>
                                     </a>
                                     <?php endif; ?>

@@ -15,14 +15,14 @@
                     <div class="slider-stories w-full">
                     <?php
                         $stories_index = 0;
-                        while( have_rows('successful_stories') ): the_row(); 
+                        foreach(get_field('successful_stories') as $story) {
                     ?>
                         <div class="w-full  overflow-hidden py-2">
-                            <img data-index="<?php echo $stories_index ?>" onclick="handleImageClick(this)" class="slider-single-image w-full cursor-pointer" src="<?php echo esc_url( the_sub_field('image')); ?>" alt="">
+                            <img data-index="<?php echo $stories_index ?>" onclick="handleImageClick(this)" class="slider-single-image w-full cursor-pointer" src="<?php echo $story['image']['url']; ?>" alt="<?php echo $story['image']['alt'] ?>">
                         </div>
                     <?php
                         $stories_index += 1;
-                        endwhile;
+                        }       
                     ?>
                     </div>
                 <?php endif; ?>
@@ -33,27 +33,27 @@
             <div class="relative h-full grow overflow-hidden">
                 <?php if( have_rows('successful_stories')):
                     $stories_main_index = 0;
-                    while( have_rows('successful_stories') ): the_row(); 
+                    foreach(get_field('successful_stories') as $story) {
                 ?>
                     <div data-index="<?php echo $stories_main_index ?>" class="story-main-image-wrapper absolute inset-0 w-full h-full shadow-lg <?php echo $stories_main_index == 2 ? 'opacity-100' : 'opacity-0' ?> transition group">
-                        <img class="min-w-full min-h-full transition-all duration-200 opacity-100 object-cover object-center" src="<?php echo esc_url( the_sub_field('image')); ?>" alt="">
+                        <img class="min-w-full min-h-full transition-all duration-200 opacity-100 object-cover object-center" src="<?php echo esc_url( $story['image']['url']); ?>" alt="<?php echo $story['image']['alt']; ?>">
                         <div class="absolute inset-0 w-full h-full transition-all duration-500 opacity-0 hover:opacity-100 z-20">
                             <div class="description-wrap absolute w-1/2 h-full flex flex-col justify-start max-h-[50%] transition-all duration-500 bottom-0 right-0 bg-white p-6 text-zinc-900 overflow-auto z-20">
                                 <div class="w-full h-full overflow-auto mb-9">
-                                    <h3 class="font-bold text-[15px] text-left mb-6 capitalize"><?php the_sub_field('heading'); ?></h3>
+                                    <h3 class="font-bold text-[15px] text-left mb-6 capitalize"><?php echo $story['heading']; ?></h3>
                                     <?php 
-                                        the_sub_field('description');
+                                        echo $story['description'];
                                     ?>
                                 </div>
                                 <div class="absolute left-0 bottom-0 w-full bg-white px-6 py-3">
-                                    <a href="<?php the_sub_field('button_url'); ?>" class="description-read-btn text-sky-600 text-left"><?php echo get_field('read_more_button_label') ?></a>
+                                    <a href="<?php $story['button_url']; ?>" class="description-read-btn text-sky-600 text-left"><?php echo get_field('read_more_button_label') ?></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 <?php
                     $stories_main_index += 1;
-                    endwhile;
+                    }
                     endif;
                 ?>
                 <p class="hidden font-light truncate max-h-6 overflow-hidden my-6 transition-all duration-500 delay-75"></p>
@@ -66,7 +66,7 @@
                     foreach($stories as $story) {
             ?>
             <div class="w-full mb-3">
-                <img class="slider-single-image w-full" src="<?php echo esc_url( $story['image'] ); ?>" alt="">
+                <img class="slider-single-image w-full" src="<?php echo esc_url( $story['image']['url'] ); ?>" alt="<?php echo $story['image']['alt']; ?>">
                 <div class="w-full p-5 flex justify-center items-center bg-zinc-900">
                     <p class="text-white text-[15px] font-bold"><?php echo $story['heading'] ?></p>
                 </div>
