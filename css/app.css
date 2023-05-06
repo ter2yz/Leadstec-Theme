@@ -2490,16 +2490,16 @@ video {
   line-height: 1;
 }
 
-.text-\[10px\] {
-  font-size: 10px;
-}
-
-.text-\[14px\] {
-  font-size: 14px;
+.text-\[12px\] {
+  font-size: 12px;
 }
 
 .text-\[15px\] {
   font-size: 15px;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
 }
 
 .text-\[18px\] {
@@ -2534,14 +2534,6 @@ video {
 
 .text-xl {
   font-size: 1.25rem;
-}
-
-.text-\[16px\] {
-  font-size: 16px;
-}
-
-.text-\[12px\] {
-  font-size: 12px;
 }
 
 .font-black {
@@ -2602,6 +2594,34 @@ video {
 
 .tracking-tight {
   letter-spacing: -0.025em;
+}
+
+.text-\[\#1B1C1D\] {
+  --tw-text-opacity: 1;
+  color: rgb(27 28 29 / var(--tw-text-opacity));
+}
+
+.text-\[\#1b1c1d\] {
+  --tw-text-opacity: 1;
+  color: rgb(27 28 29 / var(--tw-text-opacity));
+}
+
+.text-\[\#767676\] {
+  --tw-text-opacity: 1;
+  color: rgb(118 118 118 / var(--tw-text-opacity));
+}
+
+.text-\[\#9f9f9f\] {
+  --tw-text-opacity: 1;
+  color: rgb(159 159 159 / var(--tw-text-opacity));
+}
+
+.text-\[1B1C1D\] {
+  color: 1B1C1D;
+}
+
+.text-\[1b1c1d\] {
+  color: 1b1c1d;
 }
 
 .text-blue-500 {
@@ -2690,34 +2710,6 @@ video {
 
 .text-zinc-900\/70 {
   color: rgb(24 24 27 / 0.7);
-}
-
-.text-\[\#9f9f9f\] {
-  --tw-text-opacity: 1;
-  color: rgb(159 159 159 / var(--tw-text-opacity));
-}
-
-.text-\[\#1B1C1D\] {
-  --tw-text-opacity: 1;
-  color: rgb(27 28 29 / var(--tw-text-opacity));
-}
-
-.text-\[1B1C1D\] {
-  color: 1B1C1D;
-}
-
-.text-\[\#767676\] {
-  --tw-text-opacity: 1;
-  color: rgb(118 118 118 / var(--tw-text-opacity));
-}
-
-.text-\[\#1b1c1d\] {
-  --tw-text-opacity: 1;
-  color: rgb(27 28 29 / var(--tw-text-opacity));
-}
-
-.text-\[1b1c1d\] {
-  color: 1b1c1d;
 }
 
 .underline {
@@ -3128,10 +3120,7 @@ video {
 html {
   scroll-behavior: smooth;
   margin-top: 0 !important;
-}
-
-section {
-  scroll-margin-top: 2rem;
+  scroll-padding-top: 6rem;
 }
 
 article > *:not(.entry-content),
@@ -3237,6 +3226,13 @@ article > *:not(.entry-content),
 .fslightbox-slide-btn-container.fslightbox-slide-btn-container-previous,
 .fslightbox-slide-btn-container.fslightbox-slide-btn-container-next {
   display: none !important;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
 }
 
 .last\:mb-0:last-child {
@@ -3642,20 +3638,16 @@ article > *:not(.entry-content),
     font-size: 26px;
   }
 
+  .md\:text-\[30px\] {
+    font-size: 30px;
+  }
+
   .md\:text-\[40px\] {
     font-size: 40px;
   }
 
   .md\:text-\[60px\] {
     font-size: 60px;
-  }
-
-  .md\:text-xl {
-    font-size: 1.25rem;
-  }
-
-  .md\:text-\[30px\] {
-    font-size: 30px;
   }
 
   .group:nth-child(odd) .md\:group-odd\:pr-12 {

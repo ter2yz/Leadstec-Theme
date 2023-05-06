@@ -1,10 +1,7 @@
 html {
     scroll-behavior: smooth;
     margin-top: 0 !important;
-}
-
-section {
-    scroll-margin-top: 2rem;
+    scroll-padding-top: 6rem;
 }
 
 article > *:not(.entry-content),
