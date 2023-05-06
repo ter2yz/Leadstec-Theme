@@ -79,3 +79,40 @@ const splideClient = new Splide("#home-client .splide", {
 });
 
 splideClient.mount(window.splide.Extensions);
+
+const slider = document.querySelector(".solutions-wrap");
+const sliderItems = document.querySelectorAll(".solutions-wrap a");
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    slider.classList.add("active");
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener("mouseleave", () => {
+    sliderItems.forEach((item) => {
+        item.style.pointerEvents = "auto";
+    });
+    isDown = false;
+    slider.classList.remove("active");
+});
+slider.addEventListener("mouseup", () => {
+    sliderItems.forEach((item) => {
+        item.style.pointerEvents = "auto";
+    });
+    isDown = false;
+    slider.classList.remove("active");
+});
+slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    sliderItems.forEach((item) => {
+        item.style.pointerEvents = "none";
+    });
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+});

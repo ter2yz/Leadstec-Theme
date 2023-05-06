@@ -5,7 +5,7 @@
     <div class="relative container z-20">
         <div class="w-full py-40 lg:py-60 flex flex-col items-center justify-center">
             <h2 class="capitalize text-[30px] md:text-[60px]  text-[1b1c1d] font-semibold text-center"><?php echo get_field('our_solutions')['heading']; ?></h2>
-            <div class="w-full flex justify-start items-stretch mt-10 md:mt-20 overflow-x-auto no-scrollbar">
+            <div class="solutions-wrap w-full flex justify-start items-stretch mt-10 md:mt-20 overflow-x-auto no-scrollbar">
                 <?php
                     $tools = get_field('our_solutions')['tools'];
                     if( $tools ) {
