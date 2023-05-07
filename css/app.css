@@ -1204,6 +1204,11 @@ video {
   margin-bottom: 2.25rem;
 }
 
+.my-\[20px\] {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .-mr-1 {
   margin-right: -0.25rem;
 }
@@ -1322,6 +1327,22 @@ video {
 
 .mb-0 {
   margin-bottom: 0px;
+}
+
+.mt-\[15px\] {
+  margin-top: 15px;
+}
+
+.mb-\[15px\] {
+  margin-bottom: 15px;
+}
+
+.mb-\[20px\] {
+  margin-bottom: 20px;
+}
+
+.mt-\[44px\] {
+  margin-top: 44px;
 }
 
 .line-clamp-3 {
@@ -2413,6 +2434,21 @@ video {
   padding-right: 22px;
 }
 
+.px-\[25px\] {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.px-\[20px\] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -2647,6 +2683,10 @@ video {
 
 .leading-tight {
   line-height: 1.25;
+}
+
+.leading-\[19px\] {
+  line-height: 19px;
 }
 
 .tracking-tight {
@@ -3574,12 +3614,21 @@ article > *:not(.entry-content),
     margin-bottom: 1.5rem;
   }
 
+  .md\:my-\[44px\] {
+    margin-top: 44px;
+    margin-bottom: 44px;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
 
   .md\:mt-20 {
     margin-top: 5rem;
+  }
+
+  .md\:mb-\[44px\] {
+    margin-bottom: 44px;
   }
 
   .md\:flex {
@@ -3650,6 +3699,10 @@ article > *:not(.entry-content),
     width: calc(25%);
   }
 
+  .md\:w-\[91\%\] {
+    width: 91%;
+  }
+
   .md\:max-w-\[370px\] {
     max-width: 370px;
   }
@@ -3660,6 +3713,10 @@ article > *:not(.entry-content),
 
   .md\:max-w-\[1112px\] {
     max-width: 1112px;
+  }
+
+  .md\:max-w-\[349px\] {
+    max-width: 349px;
   }
 
   .md\:flex-row {
@@ -3706,6 +3763,16 @@ article > *:not(.entry-content),
     padding-bottom: 1.5rem;
   }
 
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .md\:px-\[25px\] {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
   .md\:pt-20 {
     padding-top: 5rem;
   }
@@ -3750,6 +3817,10 @@ article > *:not(.entry-content),
   .md\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .md\:text-\[15px\] {
+    font-size: 15px;
   }
 
   .group:nth-child(odd) .md\:group-odd\:pr-12 {
@@ -3936,6 +4007,10 @@ article > *:not(.entry-content),
 
   .lg\:max-w-\[1112px\] {
     max-width: 1112px;
+  }
+
+  .lg\:max-w-\[426px\] {
+    max-width: 426px;
   }
 
   .lg\:-translate-x-0 {
