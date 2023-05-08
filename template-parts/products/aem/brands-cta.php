@@ -10,7 +10,7 @@
                 <h3 class="relative max-w-sm font-bold text-xl text-left capitalize leading-snug text-zinc-900 mb-20 z-20"><?php echo $brand['description'] ?></h3>
                 <?php if($brand['button_url']): ?>
                 <div class="w-60 grow flex justify-start items-end">
-                    <a href="<?php echo $brand['button_url'] ?>" class="capitalize text-white flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2">
+                    <a href="<?php echo $brand['button_url'] ?>" class="capitalize text-white flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 z-20">
                     <?php echo $brand['button_label'] ?>
                     </a>
                 </div>

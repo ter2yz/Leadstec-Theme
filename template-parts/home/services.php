@@ -10,7 +10,7 @@
                     if( $services ) {
                         foreach( $services as $service ) {
                 ?>
-                    <div class="w-full lg:w-1/3 [&:nth-child(3n+1)]:pl-0 [&:nth-child(3n)]:pr-0 pl-3 pr-3 mb-6 lg:mb-9 group">
+                    <div class="w-full md:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n)]:pr-0 md:pl-3 md:pr-3 mb-6 md:mb-9 group">
                         <div class="bg-white flex flex-col items-center justify-center p-6 border border-gray-200 h-full">
                             <h3 class="w-full font-bold text-[18px] md:text-[20px] text-left mb-6 sm:mb-9 text-[#1b1c1d]"><?php echo $service['heading']; ?></h3>
                             <div class="w-full flex flex-col sm:flex-row justify-between items-start sm:items-end">
