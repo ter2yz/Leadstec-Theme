@@ -18,7 +18,7 @@
                     </div>
                     <div class="hidden lg:block w-7/12 min-h-[181px] md:min-h-[385px]"></div>
                 </div>
-                <div class="absolute w-full md:w-7/12 h-full scale-105 group-odd:right-0 group-even:left-0 top-0 bg-no-repeat bg-cover bg-center opacity-60 transition duration-300 group-hover:opacity-100" style="background-image: url(<?php echo esc_url( $culture['image'] ); ?>)"></div>
+                <div class="absolute w-full md:w-7/12 h-full scale-105 group-odd:right-0 group-even:left-0 top-0 bg-no-repeat bg-cover bg-center opacity-60 transition duration-300 group-hover:opacity-100" aria-label="<?php echo $culture['image']['alt']; ?>" style="background-image: url(<?php echo esc_url( $culture['image']['url'] ); ?>)"></div>
             </div>
         <?php
                 }

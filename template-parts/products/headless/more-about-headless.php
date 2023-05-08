@@ -1,7 +1,7 @@
 <section class="relative w-full flex justify-center bg-white pt-16 pb-40 lg:pt-32">
-    <div class="relative container z-20">
+    <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
-            <h2 class="w-full capitalize text-5xl text-gray-900 font-semibold mb-10 px-3"><?php echo get_field('more_about_headless_heading') ?></h2>
+            <h2 class="w-full capitalize text-[40px] md:text-[60px] text-[#1b1c1d] font-bold mb-10"><?php echo get_field('more_about_headless_heading') ?></h2>
 
             <!-- Desktop cards -->
             <div class="w-full hidden lg:flex flex-col lg:flex-row justify-start items-stretch flex-wrap">
@@ -10,15 +10,15 @@
             if($stories) {
                 foreach($stories as $story) {
             ?>
-                <div class="w-full lg:w-1/3 px-3 mb-6">
+                <div class="w-full md:w-1/3 [&:nth-child(3n+1)]:pl-0 [&:nth-child(3n)]:pr-0 pl-3 pr-3 mb-9">
                     <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
                         <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( $story['bg_image'] ); ?>); "></div>
                         <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
                             <div class="w-full">
-                                <h3 class="font-bold text-xl text-left mb-3"><?php echo esc_html( $story['heading'] ) ?></h3>
-                                <p class="leading-relaxed text-zinc-500 text-left mb-12"><?php echo esc_html( ($story['summary']) ) ?></p>
+                                <h3 class="font-bold text-[20px] text-left mb-3"><?php echo esc_html( $story['heading'] ) ?></h3>
+                                <p class="leading-relaxed text-[#9f9f9f] text-[14px] text-left mb-12"><?php echo esc_html( ($story['summary']) ) ?></p>
                             </div>
-                            <a href="<?php echo $story['button_url'] ?>" class="text-sky-600"><?php echo $story['button_label'] ?></a>
+                            <a href="<?php echo $story['button_url'] ?>" class="text-sky-600 text-[14px]"><?php echo $story['button_label'] ?></a>
                         </div>
                     </div>
                 </div>
