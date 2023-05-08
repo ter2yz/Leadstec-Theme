@@ -23,7 +23,7 @@
                 <?php
                     if(get_field('hero')['image']){
                 ?>
-                <img class="w-full" src="<?php echo esc_url( get_field('hero')['image'] ); ?>" alt="">
+                <img class="w-full" src="<?php echo esc_url( get_field('hero')['image']['url'] ); ?>" alt="<?php echo get_field('hero')['image']['alt']; ?>">
                 <?php
                     }
                 ?>
