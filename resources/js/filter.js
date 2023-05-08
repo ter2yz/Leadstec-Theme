@@ -7,10 +7,10 @@ filters.forEach((filter) => {
             currentFilter.classList.remove("border-orange-500");
             currentFilter.classList.remove("text-orange-500");
             currentFilter.classList.add("border-zinc-400/25");
-            currentFilter.classList.add("text-zinc-500");
+            currentFilter.classList.add("text-[#9f9f9f]");
         });
         filter.classList.remove("border-zinc-400/25");
-        filter.classList.remove("text-zinc-500");
+        filter.classList.remove("text-[#9f9f9f]");
         filter.classList.add("border-orange-500");
         filter.classList.add("text-orange-500");
         productsWrapper.classList.remove("opacity-100");
