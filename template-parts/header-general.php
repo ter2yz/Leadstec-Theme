@@ -57,7 +57,6 @@ function console_log($output, $with_script_tags = true) {
         } else {
             $header_page = get_page_by_path('header');
         }
-        $header_page = get_page_by_path('header');
         $first_lv_items = get_field('first_level_items', $header_page->ID);
         global $template;
 
