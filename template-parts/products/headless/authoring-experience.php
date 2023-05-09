@@ -4,8 +4,8 @@
     }
 </style>
 <section class="relative w-full pt-20">
-    <div class="container mx-auto">
-        <h2 class="w-full capitalize text-5xl text-gray-900 font-semibold mb-10"><?php echo get_field('authoring_experience_section')['heading'] ?></h2>
+    <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
+        <h2 class="w-full capitalize text-[30px] md:text-[60px] text-center text-[#1b1c1d] font-bold mb-10"><?php echo get_field('authoring_experience_section')['heading'] ?></h2>
     </div>
     <div class="flex w-full flex-row justify-start border-t border-zinc-100 flex-wrap items-stretch @container">
         <?php
@@ -13,10 +13,10 @@
         if($cards) {
             foreach($cards as $card) {
         ?>
-        <div class="w-full lg:w-1/2" style="--hover-color: <?php echo $card['hover_background_color'] ?>">
-            <div class="card-wrapper w-full h-full flex flex-col items-center lg:items-start py-16 lg:py-32 px-16 lg:px-28 border-y odd:border-r border-zinc-100 bg-white transition duration-300 group">
-                <h3 class="font-bold text-xl mb-3 capitalize text-zinc-900 text-center lg:text-left <?php echo $card['hover_text_theme'] == 'dark' ? "group-hover:text-zinc-900" : "group-hover:text-white" ?>"><?php echo $card['heading'] ?></h3>
-                <p class="leading-relaxed max-w-lg text-zinc-900 text-center lg:text-left <?php echo $card['hover_text_theme'] == 'dark' ? "group-hover:text-zinc-900" : "group-hover:text-white" ?>">
+        <div class="w-[91%] lg:w-1/2 mx-auto" style="--hover-color: <?php echo $card['hover_background_color'] ?>">
+            <div class="card-wrapper w-full h-full flex flex-col items-start py-16 lg:py-32 px-0 lg:px-28 border-y lg:odd:border-r border-zinc-100 bg-white transition duration-300 group">
+                <h3 class="font-bold text-[20px] md:text-[26px] mb-3 capitalize text-[#1b1c1d] text-center lg:text-left <?php echo $card['hover_text_theme'] == 'dark' ? "group-hover:text-[#1b1c1d]" : "group-hover:text-white" ?>"><?php echo $card['heading'] ?></h3>
+                <p class="leading-relaxed text-[15px] md:text-[20px] lg:max-w-lg text-[#9f9f9f] text-left <?php echo $card['hover_text_theme'] == 'dark' ? "group-hover:text-[#9f9f9f]" : "group-hover:text-white" ?>">
                 <?php echo $card['description'] ?>
                 </p>
                 <?php if ($card['button_label'] && $card['button_url']): ?>

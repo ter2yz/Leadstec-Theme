@@ -91,6 +91,10 @@
     background: #f77316;
 }
 
+#slider-aem-cta-ow .tns-item {
+    display: inline-flex;
+}
+
 .tns-ovh {
     min-height: 290px;
 }
