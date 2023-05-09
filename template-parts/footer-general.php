@@ -2,7 +2,17 @@
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/fslightbox.js' ); ?>"></script>
 
 <?php
-    $footer_page = get_page_by_path('footer');
+    $current_post_uri = get_page_uri(get_post());
+    $current_lang = substr($current_post_uri, 0, 2);
+    if($current_lang == 'en') {
+        $footer_page = get_page_by_path('en/footer');
+    } else if($current_lang == 'sc') {
+        $footer_page = get_page_by_path('sc/footer');
+    } else if($current_lang == 'tc') {
+        $footer_page = get_page_by_path('tc/footer');
+    } else {
+        $footer_page = get_page_by_path('footer');
+    }
     $banner_section = get_field('banner_section', $footer_page->ID);
     $about_section = get_field('about_section', $footer_page->ID);
     $links_section = get_field('links_section', $footer_page->ID);

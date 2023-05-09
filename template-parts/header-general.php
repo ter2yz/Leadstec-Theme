@@ -46,6 +46,17 @@ function console_log($output, $with_script_tags = true) {
 	<?php do_action( 'tailpress_header' ); ?>
 
     <?php
+        $current_post_uri = get_page_uri(get_post());
+        $current_lang = substr($current_post_uri, 0, 2);
+        if($current_lang == 'en') {
+            $header_page = get_page_by_path('en/header');
+        } else if($current_lang == 'sc') {
+            $header_page = get_page_by_path('sc/header');
+        } else if($current_lang == 'tc') {
+            $header_page = get_page_by_path('tc/header');
+        } else {
+            $header_page = get_page_by_path('header');
+        }
         $header_page = get_page_by_path('header');
         $first_lv_items = get_field('first_level_items', $header_page->ID);
         global $template;
