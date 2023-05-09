@@ -994,6 +994,10 @@
   height: 45px;
 }
 
+.h-\[84px\] {
+  height: 84px;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -1180,6 +1184,14 @@
 
 .w-\[calc\(33\.33\%-0\.6667rem\)\] {
   width: calc(33.33% - 0.6667rem);
+}
+
+.w-\[250px\] {
+  width: 250px;
+}
+
+.w-\[181px\] {
+  width: 181px;
 }
 
 .min-w-full {
@@ -1824,9 +1836,19 @@
      object-fit: cover;
 }
 
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 .object-center {
   -o-object-position: center;
      object-position: center;
+}
+
+.object-left {
+  -o-object-position: left;
+     object-position: left;
 }
 
 .p-10 {
@@ -2194,6 +2216,10 @@
   font-size: 40px;
 }
 
+.text-\[26px\] {
+  font-size: 26px;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -2252,6 +2278,14 @@
 
 .leading-\[19px\] {
   line-height: 19px;
+}
+
+.leading-\[0\.5\] {
+  line-height: 0.5;
+}
+
+.leading-\[1\] {
+  line-height: 1;
 }
 
 .tracking-tight {
@@ -3032,6 +3066,10 @@ body {
     max-width: 552px;
   }
 
+  .md\:max-w-\[350px\] {
+    max-width: 350px;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -3357,6 +3395,10 @@ body {
 
   .lg\:max-w-\[991px\] {
     max-width: 991px;
+  }
+
+  .lg\:max-w-\[640px\] {
+    max-width: 640px;
   }
 
   .lg\:-translate-x-0 {
