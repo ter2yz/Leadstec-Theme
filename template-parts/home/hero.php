@@ -11,7 +11,7 @@
                 </a>
             </div>
             <div class="w-full md:w-5/12 relative max-h-[300px] md:max-h-[500px] lg:max-h-screen top-0 right-0 flex justify-center md:justify-end overflow-clip">
-                <img class="w-full object-cover object-center" src="<?php echo esc_url(get_field('hero_section')['image']['url']); ?>" alt="<?php echo get_field('hero_section')['image']['alt'] ?>">
+                <img class="w-full object-cover object-center" src="<?php echo esc_url(get_field('hero_section')['image']['url']); ?>" alt="<?php echo get_field('hero_section')['image_alt_text'] ?>">
             </div>
         </div>
     </div>

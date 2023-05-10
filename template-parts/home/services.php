@@ -15,7 +15,7 @@
                             <h3 class="w-full font-bold text-[18px] md:text-[20px] text-left mb-6 sm:mb-9 text-[#1b1c1d]"><?php echo $service['heading']; ?></h3>
                             <div class="w-full flex flex-col sm:flex-row justify-between items-start sm:items-end">
                                 <div class="w-full sm:w-40 h-40 mb-6 sm:mb-0 overflow-hidden flex justify-center items-center">
-                                    <img class="min-w-full min-h-full object-cover scale-100 transition group-hover:scale-110" src="<?php echo esc_url($service['image']['url']) ?>" alt="<?php echo $service['image']['alt'] ?>">
+                                    <img class="min-w-full min-h-full object-cover scale-100 transition group-hover:scale-110" src="<?php echo esc_url($service['image']['url']) ?>" alt="<?php echo $service['image_alt_text'] ?>">
                                 </div>
                                 <a class="px-[22px] py-3 bg-zinc-900 text-white text-center sm:ml-3 transition hover:bg-orange-500" href="<?php echo esc_url($service['url']) ?>">
                                     <p class="text-[16px] font-bold"><?php echo $service['button_label'] ?></p>

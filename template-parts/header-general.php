@@ -67,7 +67,7 @@ function console_log($output, $with_script_tags = true) {
             <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
                 <div class="w-full flex justify-between items-center">
                     <a href="/">
-                        <img class="h-[45px] max-w-none" src="<?php echo esc_url( get_template_directory_uri() . '/assets/leadstec-logo-dark.png' ); ?>" alt="">
+                        <img class="h-[45px] max-w-none" src="<?php echo esc_url( get_template_directory_uri() . '/assets/leadstec-logo-dark.png' ); ?>" alt="凝新科技，Leadstec">
                     </a>
                     <div class="relative w-full flex justify-end items-center">
                         <div class="hidden lg:flex justify-center items-center">

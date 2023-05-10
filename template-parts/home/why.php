@@ -11,7 +11,7 @@
                         </div>
                         <div class="flex flex-none items-end justify-end">
                             <?php $iconOne = get_field('why_leadstec')['card_one_icon'];  if($iconOne) { ?>
-                                <div class="w-28 h-28 right-10 bottom-10 rounded-full bg-cover bg-center bg-no-repeat" aria-label="<?php echo get_field('why_leadstec')['card_one_icon']['alt']; ?>" style="background-image: url(<?php echo esc_url(get_field('why_leadstec')['card_one_icon']['url']); ?>)"></div>
+                                <div class="w-28 h-28 right-10 bottom-10 rounded-full bg-cover bg-center bg-no-repeat" aria-label="<?php echo get_field('why_leadstec')['card_one_image_alt_text']; ?>" style="background-image: url(<?php echo esc_url(get_field('why_leadstec')['card_one_icon']['url']); ?>)"></div>
                             <?php } else { ?>
                                 <div class="w-28 h-28 right-10 bottom-10 bg-green-400 rounded-full"></div>
                             <?php } ?>
@@ -25,7 +25,7 @@
                         </div>
                         <div class="flex flex-none items-end justify-end">
                             <?php $iconTwo = get_field('why_leadstec')['card_two_icon'];  if($iconTwo) { ?>
-                                <div class="w-28 h-28 right-10 bottom-10 rounded-full bg-cover bg-center bg-no-repeat" aria-label="<?php echo get_field('why_leadstec')['card_two_icon']['alt']; ?>" style="background-image: url(<?php echo esc_url(get_field('why_leadstec')['card_two_icon']['url']); ?>)"></div>
+                                <div class="w-28 h-28 right-10 bottom-10 rounded-full bg-cover bg-center bg-no-repeat" aria-label="<?php echo get_field('why_leadstec')['card_two_image_alt_text']; ?>" style="background-image: url(<?php echo esc_url(get_field('why_leadstec')['card_two_icon']['url']); ?>)"></div>
                             <?php } else { ?>
                                 <div class="w-28 h-28 right-10 bottom-10 bg-blue-400 rounded-full"></div>
                             <?php } ?>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="flex flex-none items-end justify-end">
                             <?php $iconThree = get_field('why_leadstec')['card_three_icon'];  if($iconThree) { ?>
-                                <div class="w-28 h-28 right-10 bottom-10 rounded-full bg-cover bg-center bg-no-repeat" aria-label="<?php echo get_field('why_leadstec')['card_three_icon']['alt']; ?>" style="background-image: url(<?php echo esc_url(get_field('why_leadstec')['card_three_icon']['url']); ?>)"></div>
+                                <div class="w-28 h-28 right-10 bottom-10 rounded-full bg-cover bg-center bg-no-repeat" aria-label="<?php echo get_field('why_leadstec')['card_three_image_alt_text']; ?>" style="background-image: url(<?php echo esc_url(get_field('why_leadstec')['card_three_icon']['url']); ?>)"></div>
                             <?php } else { ?>
                                 <div class="w-28 h-28 right-10 bottom-10 bg-orange-400 rounded-full"></div>
                             <?php } ?>
