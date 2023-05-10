@@ -46,7 +46,7 @@
                                     ?>
                                 </div>
                                 <div class="absolute left-0 bottom-0 w-full bg-white px-6 py-3">
-                                    <a href="<?php $story['button_url']; ?>" class="description-read-btn text-sky-600 text-left"><?php echo get_field('read_more_button_label') ?></a>
+                                    <a href="<?php echo $story['button_url']; ?>" class="description-read-btn text-sky-600 text-left"><?php echo get_field('read_more_button_label') ?></a>
                                 </div>
                             </div>
                         </div>
