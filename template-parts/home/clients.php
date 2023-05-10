@@ -10,7 +10,7 @@
     </div>
     <div id="home-client" class="w-full relative overflow-hidden mt-16 pb-32">
         <div class="splide" aria-labelledby="carousel-heading">
-            <div class="splide__track min-h-[380px] lg:min-h-[500px]">
+            <div class="splide__track min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
                     <ul class="splide__list">
                         <?php
                             $clients = get_field('our_clients')['clients'];
@@ -18,7 +18,7 @@
                                 foreach( $clients as $client ) {
                         ?>
                             <li class="splide__slide odd:translate-y-40 even:translate-y-5">
-                                <div class="w-48 h-48 lg:w-60 lg:h-60 p-10 bg-white rounded-full flex justify-center items-center transition hover:scale-105 duration-300 <?php if($client['url']): ?>cursor-pointer<?php endif; ?>">
+                                <div class="w-[120px] h-[120px] md:w-60 md:h-60 p-5 md:p-10 bg-white rounded-full flex justify-center items-center transition hover:scale-105 duration-300 <?php if($client['url']): ?>cursor-pointer<?php endif; ?>">
                                     <?php if($client['url']): ?>
                                     <a href="<?php echo esc_url( $client['url'] ); ?>" class="w-full h-full flex justify-center items-center" target="_blank">
                                     <?php endif; ?>
