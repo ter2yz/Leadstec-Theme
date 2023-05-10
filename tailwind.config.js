@@ -39,7 +39,7 @@ module.exports = {
             md: "769px",
             lg: "1024px",
             // lg: tailpress.theme("settings.layout.contentSize", theme),
-            xl: tailpress.theme("settings.layout.wideSize", theme),
+            xl: "1280px",
             "2xl": "1440px",
         },
     },

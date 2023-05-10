@@ -7,7 +7,7 @@
                 <div class="w-full md:w-1/3 [&:nth-child(3n+1)]:pl-0 [&:nth-child(3n)]:pr-0 pl-3 pr-3 flex flex-col items-center relative box-bg-shadow__spring-sun mb-6">
                     <div class="flex flex-row md:flex-col xl:flex-row w-full h-full bg-white p-6 md:p-10 items-stretch">
                         <div class="flex-auto mr-3 mb-3">
-                            <h3 class="max-w-[90%] md:max-w-xs font-bold text-[#1b1c1d] text-[20px] md:text-[26px] "><?php echo get_field('why_leadstec')['card_one_heading']; ?></h3>
+                            <h3 class="max-w-[90%] md:max-w-xs font-bold text-[#1b1c1d] text-[20px] md:text-[25px] "><?php echo get_field('why_leadstec')['card_one_heading']; ?></h3>
                         </div>
                         <div class="flex flex-none items-end justify-end">
                             <?php $iconOne = get_field('why_leadstec')['card_one_icon'];  if($iconOne) { ?>
@@ -21,7 +21,7 @@
                 <div class="w-full md:w-1/3 [&:nth-child(3n+1)]:pl-0 [&:nth-child(3n)]:pr-0 pl-3 pr-3 flex flex-col items-center relative box-bg-shadow__spring-sun mb-6">
                     <div class="flex flex-row md:flex-col xl:flex-row w-full h-full bg-white p-6 md:p-10 items-stretch">
                         <div class="flex-auto mr-3 mb-3">
-                            <h3 class="max-w-[90%] md:max-w-xs font-bold text-[#1b1c1d] text-[20px] md:text-[26px] "><?php echo get_field('why_leadstec')['card_two_heading']; ?></h3>
+                            <h3 class="max-w-[90%] md:max-w-xs font-bold text-[#1b1c1d] text-[20px] md:text-[25px] "><?php echo get_field('why_leadstec')['card_two_heading']; ?></h3>
                         </div>
                         <div class="flex flex-none items-end justify-end">
                             <?php $iconTwo = get_field('why_leadstec')['card_two_icon'];  if($iconTwo) { ?>
@@ -35,7 +35,7 @@
                 <div class="w-full md:w-1/3 [&:nth-child(3n+1)]:pl-0 [&:nth-child(3n)]:pr-0 pl-3 pr-3 flex flex-col items-center relative box-bg-shadow__spring-sun mb-6">
                     <div class="flex flex-row md:flex-col xl:flex-row w-full h-full bg-white p-6 md:p-10 items-stretch">
                         <div class="flex-auto mr-3 mb-3">
-                            <h3 class="max-w-[90%] md:max-w-xs font-bold text-[#1b1c1d] text-[20px] md:text-[26px] "><?php echo get_field('why_leadstec')['card_three_heading']; ?></h3>
+                            <h3 class="max-w-[90%] md:max-w-xs font-bold text-[#1b1c1d] text-[20px] md:text-[25px] "><?php echo get_field('why_leadstec')['card_three_heading']; ?></h3>
                         </div>
                         <div class="flex flex-none items-end justify-end">
                             <?php $iconThree = get_field('why_leadstec')['card_three_icon'];  if($iconThree) { ?>

@@ -8,11 +8,9 @@
             <div class="w-full flex flex-col justify-start items-start py-6 px-[20px] md:px-[25px] lg:px-10 bg-gray-50">
                 <p class="text-zinc-900 text-4xl font-semibold capitalize mb-[15px]"><?php echo the_title() ?></p>
                 <?php if(get_field('info_group')):
-                        foreach(get_field('info_group') as $singleInfo) {
                 ?>
-                            <p class="text-[#1b1c1d] text-[12px] md:text-[15px] leading-[19px]"><?php echo $singleInfo['name'] . ': ' . $singleInfo['details'] ?></p>
+                            <p class="text-[#1b1c1d] text-[12px] md:text-[15px] leading-[19px]"><?php echo get_field('information_text') ?></p>
                 <?php
-                        }
                     endif;
                 ?>
             </div>

@@ -1,14 +1,14 @@
 <section class="relative w-full flex justify-center bg-white pt-10 pb-16 lg:pb-32">
-    <div class="relative container z-20">
+    <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
-            <h2 class="w-full text-center capitalize text-5xl text-gray-900 font-semibold py-10 lg:sticky top-0 bg-white z-20"><?php echo get_field('best_on_market')['heading'] ?></h2>
+            <h2 class="w-full text-center text-[30px] md:text-[60px] text-[#1b1c1d] px-3 font-bold py-10 lg:sticky top-0 bg-white z-20"><?php echo get_field('best_on_market')['heading'] ?></h2>
             <!-- @TODO: Array begin -->
             <?php
             $services = get_field('best_on_market')['services'];
             if ($services) {
                 foreach($services as $service){
             ?>
-            <div class="w-full lg:py-20 flex flex-col lg:flex-row justify-center items-center mb-12 lg:mb-0">
+            <div class="w-full lg:py-20 px-3 flex flex-col lg:flex-row justify-center items-center mb-12 lg:mb-0">
                 <div class="w-full lg:w-1/2 lg:pr-6">
                     <img class="slider-single-image w-full max-w-xl mx-auto" src="<?php echo esc_url( $service['image'] ); ?>" alt="">
                 </div>

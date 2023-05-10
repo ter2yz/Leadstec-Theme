@@ -15,14 +15,9 @@
                 <div class="w-full">
                     <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
                         <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( get_field('feature_image', $recent_post->ID)['url'] ); ?>); "></div>
-                        <div class="w-full flex flex-col justify-between items-start grow p-3 md:p-6 xl:p-9">
-                            <div class="w-full">
-                                <h3 class="font-bold text-[20px] text-left mb-3"><?php echo $recent_post->post_title ?></h3>
-                                <p class="leading-relaxed mb-3"><?php echo get_field('post_date', $recent_post->ID); ?></p>
-                                <p class="leading-relaxed text-zinc-500 mb-12 max-h-40 line-clamp-3"><?php echo get_the_excerpt($recent_post) ?></p>
-                            </div>
-                            <a href="<?php echo get_permalink($recent_post); ?>" class="text-sky-600"><?php echo get_field('read_more_label', $recent_post->ID); ?></a>
-                        </div>
+                        <a href="<?php echo get_permalink($recent_post); ?>" class="w-full p-[20px] bg-[#1b1c1d] text-white">
+                            <h3 class="font-bold text-[20px]"><?php echo $recent_post->post_title ?></h3>
+                        </a>
                     </div>
                 </div>
                 <?php

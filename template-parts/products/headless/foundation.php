@@ -1,8 +1,8 @@
 <section class="relative w-full flex justify-center bg-gray-100 pt-16 pb-10 lg:pt-32 lg:pb-32">
-    <div class="relative container z-20">
+    <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
-            <h2 class="w-full capitalize text-5xl text-gray-900 font-semibold mb-10 px-3"><?php echo get_field('foundation_section')['heading'] ?></h2>
-            <div class="w-full hidden lg:flex flex-col lg:flex-row justify-center items-stretch flex-wrap">
+            <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-10 px-3"><?php echo get_field('foundation_section')['heading'] ?></h2>
+            <div class="w-full hidden lg:flex flex-col lg:flex-row justify-start items-stretch flex-wrap">
                 <?php
                     $cards = get_field('foundation_section')['cards'];
                     if($cards) {
