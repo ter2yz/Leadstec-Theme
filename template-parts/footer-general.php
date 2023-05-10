@@ -110,7 +110,7 @@
                 foreach(get_field('social_media_buttons', $footer_page->ID) as $singleSocialMedia){
             ?>
                 <a href="<?php echo $singleSocialMedia['url'] ?>" class="mr-6 last:mr-0 transition opacity-50 hover:opacity-100">
-                    <img class="w-[25px] h-[25px]" src="<?php echo $singleSocialMedia['icon']['url'] ?>" alt="<?php echo $singleSocialMedia['icon']['alt'] ?>">
+                    <img class="w-[25px] h-[25px]" src="<?php echo $singleSocialMedia['icon']['url'] ?>" alt="<?php echo $singleSocialMedia['alt_text'] ?>">
                 </a>
             <?php
                 }

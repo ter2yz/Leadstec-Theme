@@ -5,7 +5,7 @@
 
             <!-- Desktop cards -->
 
-            <div class="w-full hidden md:flex flex-col md:flex-row justify-center items-stretch space-y-9 space-x-0 md:space-y-0 md:space-x-6 xl:space-x-9">
+            <div class="w-full hidden md:flex flex-col md:flex-row justify-center items-stretch space-x-0 md:space-x-6 xl:space-x-9">
                 <div class="w-full md:w-1/3 bg-white flex flex-col">
                     <div class="w-full h-60 flex-none bg-white flex justify-center items-center bg-cover bg-no-repeat bg-center" style="background-image:url(<?php echo esc_url(get_field('headless_stories_section')['card_one_image']) ?>)">
                     </div>
