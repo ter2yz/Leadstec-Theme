@@ -17,7 +17,7 @@
                     } 
                 ?>
             </div>
-            <div class="products w-full flex flex-col lg:flex-row flex-wrap justify-start items-stretch transition opacity-100">
+            <div class="products w-full flex flex-col md:flex-row flex-wrap justify-start items-stretch transition opacity-100">
                 <?php
                     $stories = get_field('recommend_stories');
                     if( $stories ) {
