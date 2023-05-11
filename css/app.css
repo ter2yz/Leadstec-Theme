@@ -2785,6 +2785,14 @@ video {
   line-height: 1.25;
 }
 
+.leading-\[1\.2\] {
+  line-height: 1.2;
+}
+
+.leading-\[1\.5\] {
+  line-height: 1.5;
+}
+
 .tracking-tight {
   letter-spacing: -0.025em;
 }
