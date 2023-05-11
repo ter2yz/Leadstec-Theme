@@ -1,9 +1,9 @@
-<section class="relative w-full flex justify-center items-center bg-cover bg-bottom py-20" style="background-image: url(<?php echo esc_url( get_field('hero_section')['background_image'] ); ?>)">
+<section class="relative w-full flex justify-center items-center bg-cover bg-bottom py-20" aria-label="<?php echo get_field('hero_section')['bg_image_alt_text']; ?>" style="background-image: url(<?php echo esc_url( get_field('hero_section')['background_image'] ); ?>)">
     <div class="absolute inset-0 w-full h-full bg-black opacity-60 z-0"></div>    
     <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto mb-10 z-10">
         <div class="w-full flex flex-col-reverse lg:flex-row justify-start lg:justify-center items-center lg:min-h-[600px] overflow-hidden">
             <div class="relative w-full flex flex-col items-center z-10 text-white">
-                <img src="<?php echo esc_url( get_field('hero_section')['icon']['url'] ); ?>" alt="<?php echo get_field('hero_section')['icon']['alt']; ?>" class="w-20 mb-[30px]">
+                <img src="<?php echo esc_url( get_field('hero_section')['icon']['url'] ); ?>" alt="<?php echo get_field('hero_section')['icon_image_alt_text']; ?>" class="w-20 mb-[30px]">
                 <h1 class="text-[30px] md:text-[60px] capitalize font-bold leading-tight text-center mb-[30px]"><?php echo esc_html(get_field('hero_section')['heading']) ?></h1>
                 <p class="leading-relaxed max-w-none md:max-w-[673px] lg:max-w-[732px] text-center text-[15px] md:text-[20px]"><?php echo esc_html(get_field('hero_section')['description']) ?></p>
             </div>

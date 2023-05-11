@@ -28,7 +28,7 @@
                         <a href="<?php echo $story['button_url'] ?>">
                         <?php endif; ?>
                             <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
-                                <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( $story['feature_image'] ); ?>); "></div>
+                                <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo $story['image_alt_text'] ?>" style="background-image: url(<?php echo esc_url( $story['feature_image'] ); ?>); "></div>
                                 <div class="w-full flex flex-col justify-between items-start grow p-[30px] lg:p-6 xl:p-9">
                                     <div class="w-full">
                                         <h3 class="font-bold text-[20px] text-left mb-[10px]"><?php echo esc_html( $story['title'] ); ?></h3>

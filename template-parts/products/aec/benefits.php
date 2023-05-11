@@ -3,7 +3,7 @@
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-10"><?php echo get_field('aec_section')['heading'] ?></h2>
             <div class="w-full flex flex-col lg:flex-row justify-center items-center">
-                    <img class="w-full mx-auto" src="<?php echo esc_url( get_field('aec_section')['image']['url'] ); ?>" alt="<?php echo get_field('aec_section')['image']['alt']; ?>">
+                    <img class="w-full mx-auto" src="<?php echo esc_url( get_field('aec_section')['image']['url'] ); ?>" alt="<?php echo get_field('aec_section')['image_alt_text']; ?>">
             </div>
         </div>
     </div>
