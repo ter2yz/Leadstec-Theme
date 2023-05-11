@@ -3065,6 +3065,10 @@ body {
     align-items: flex-start;
   }
 
+  .md\:items-end {
+    align-items: flex-end;
+  }
+
   .md\:items-center {
     align-items: center;
   }
@@ -3091,6 +3095,10 @@ body {
 
   .md\:p-6 {
     padding: 1.5rem;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
   }
 
   .md\:px-0 {
@@ -3282,6 +3290,10 @@ body {
     margin-top: 10rem;
   }
 
+  .lg\:ml-3 {
+    margin-left: 0.75rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -3378,6 +3390,10 @@ body {
     width: calc(33.33% - 1rem);
   }
 
+  .lg\:w-40 {
+    width: 10rem;
+  }
+
   .lg\:min-w-min {
     min-width: -moz-min-content;
     min-width: min-content;
@@ -3443,6 +3459,10 @@ body {
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:items-end {
+    align-items: flex-end;
   }
 
   .lg\:items-center {

@@ -104,7 +104,7 @@ function console_log($output, $with_script_tags = true) {
                                         if($s_item['third_level_items']){
                                             foreach($s_item['third_level_items'] as $t_item){
                                         ?>
-                                        <a href="<?php echo $t_item['url'] ?>" class="<?php echo str_contains($_SERVER['REQUEST_URI'], strtolower($t_item['url'])) ? "text-orange-500" : "text-[#767676]" ?> block px-4 py-2 hover:bg-orange-50 transition" role="menuitem" tabindex="-1" id="menu-item-0"><?php echo $t_item['label'] ?></a>
+                                        <a href="<?php echo $t_item['url'] ?>" class="<?php echo str_contains($_SERVER['REQUEST_URI'], strtolower($t_item['url'])) ? "text-orange-500" : "text-[#767676]" ?> block text-[15px] px-4 py-2 hover:bg-orange-50 transition" role="menuitem" tabindex="-1" id="menu-item-0"><?php echo $t_item['label'] ?></a>
                                         <?php
                                             }
                                         }
