@@ -23,7 +23,7 @@
                     if( $stories ) {
                         foreach( $stories as $story ) {
                 ?>
-                    <div class="product w-full md:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n)]:pr-0 md:pl-3 md:pr-3 mb-6 overflow-hidden" data-filter="<?php echo $story['category']->slug ?>">
+                    <div class="product w-full md:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n+1)]:pr-2 md:[&:nth-child(3n)]:pl-2 md:[&:nth-child(3n)]:pr-0 md:pl-1 md:pr-1 mb-6 overflow-hidden" data-filter="<?php echo $story['category']->slug ?>">
                         <?php if($story['button_url']): ?>
                         <a href="<?php echo $story['button_url'] ?>">
                         <?php endif; ?>

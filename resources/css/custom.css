@@ -77,3 +77,19 @@ article > *:not(.entry-content),
 .brand-logo-animate:has(button:hover) {
     animation-play-state: paused;
 }
+
+.square-container {
+    container-type: size;
+    container-name: resize-box;
+    resize: both;
+}
+.square-wrapper {
+    width: 95%;
+    aspect-ratio: 1/1;
+}
+@container resize-box (aspect-ratio > 1/1) {
+    .square-wrapper {
+        width: auto;
+        height: 98%;
+    }
+}

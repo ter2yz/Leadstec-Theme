@@ -8,7 +8,7 @@
                     if( $differences ) {
                         foreach( $differences as $difference ) {
                 ?>
-                    <div class="w-full md:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n)]:pr-0 md:pl-3 md:pr-3 px-3 mb-6">
+                    <div class="w-full md:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n+1)]:pr-2 md:[&:nth-child(3n)]:pl-2 md:[&:nth-child(3n)]:pr-0 md:pl-1 md:pr-1 px-3 mb-6">
                         <div class="w-full h-full bg-white flex flex-col justify-between p-9 border-[6px] border-[#de1509]/0 transition <?php if($difference['url']){ ?>hover:border-[#de1509]/100<?php } ?>">
                             <div class="w-full">
                                 <h3 class="font-bold text-xl text-left mb-[15px] text-[#1b1c1d]"><?php echo $difference['heading'] ?></h3>

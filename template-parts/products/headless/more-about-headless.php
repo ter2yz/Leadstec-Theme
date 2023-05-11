@@ -10,7 +10,7 @@
             if($stories) {
                 foreach($stories as $story) {
             ?>
-                <div class="w-full md:w-1/3 [&:nth-child(3n+1)]:pl-0 [&:nth-child(3n)]:pr-0 pl-3 pr-3 mb-9">
+                <div class="w-full md:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n+1)]:pr-2 md:[&:nth-child(3n)]:pl-2 md:[&:nth-child(3n)]:pr-0 pl-1 pr-1 mb-9">
                     <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
                         <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( $story['bg_image'] ); ?>); "></div>
                         <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">

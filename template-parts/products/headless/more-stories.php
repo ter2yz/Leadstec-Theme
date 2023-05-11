@@ -6,8 +6,10 @@
             <!-- Desktop cards -->
 
             <div class="w-full hidden md:flex flex-col md:flex-row justify-center items-stretch">
-                <div class="w-full md:w-1/3 flex flex-col px-3">
-                    <div class="w-full h-60 flex-none bg-white flex justify-center items-center bg-cover bg-no-repeat bg-center" style="background-image:url(<?php echo esc_url(get_field('headless_stories_section')['card_one_image']) ?>)">
+                <div class="w-full md:w-1/3 flex flex-col px-3 group">
+                    <div class="w-full h-60 overflow-hidden">
+                        <div class="w-full h-60 flex-none bg-white flex justify-center items-center bg-cover bg-no-repeat bg-center transition-all group-hover:scale-110" style="background-image:url(<?php echo esc_url(get_field('headless_stories_section')['card_one_image']) ?>)">
+                        </div>
                     </div>
                     <div class="w-full flex flex-col justify-between items-start grow p-[30px] bg-gray-100">
                         <div class="w-full">
@@ -16,8 +18,10 @@
                         <a href="/" class="text-sky-600 text-[14px]"><?php echo get_field('headless_stories_section')['card_one_description'] ?></a>
                     </div>
                 </div>
-                <div class="w-full md:w-1/3 flex flex-col px-3">
-                    <div class="w-full h-60 flex-none bg-white flex justify-center items-center bg-cover bg-no-repeat bg-center" style="background-image:url(<?php echo esc_url(get_field('headless_stories_section')['card_two_image']) ?>)">
+                <div class="w-full md:w-1/3 flex flex-col px-3 group">
+                    <div class="w-full h-60 overflow-hidden">
+                        <div class="w-full h-60 flex-none bg-white flex justify-center items-center bg-cover bg-no-repeat bg-center transition-all group-hover:scale-110" style="background-image:url(<?php echo esc_url(get_field('headless_stories_section')['card_two_image']) ?>)">
+                        </div>
                     </div>
                     <div class="w-full flex flex-col justify-between items-start grow p-[30px] bg-gray-100">
                         <div class="w-full">
@@ -26,8 +30,10 @@
                         <a href="/" class="text-sky-600 text-[14px]"><?php echo get_field('headless_stories_section')['card_two_description'] ?></a>
                     </div>
                 </div>
-                <div class="w-full md:w-1/3 flex flex-col px-3">
-                    <div class="w-full h-60 flex-none bg-white flex justify-center items-center bg-cover bg-no-repeat bg-center" style="background-image:url(<?php echo esc_url(get_field('headless_stories_section')['card_three_image']) ?>)">
+                <div class="w-full md:w-1/3 flex flex-col px-3 group">
+                    <div class="w-full h-60 overflow-hidden">
+                        <div class="w-full h-60 flex-none bg-white flex justify-center items-center bg-cover bg-no-repeat bg-center transition-all group-hover:scale-110" style="background-image:url(<?php echo esc_url(get_field('headless_stories_section')['card_three_image']) ?>)">
+                        </div>
                     </div>
                     <div class="w-full flex flex-col justify-between items-start grow p-[30px] bg-gray-100">
                         <div class="w-full">
