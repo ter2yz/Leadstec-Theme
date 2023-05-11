@@ -1504,6 +1504,10 @@ video {
   height: 100vh;
 }
 
+.h-\[150px\] {
+  height: 150px;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -1682,6 +1686,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[90\%\] {
+  width: 90%;
 }
 
 .min-w-full {
@@ -3473,6 +3481,10 @@ article > *:not(.entry-content),
 
 .hover\:border-zinc-400\/25:hover {
   border-color: rgb(161 161 170 / 0.25);
+}
+
+.hover\:border-\[\#de1509\]\/100:hover {
+  border-color: rgb(222 21 9 / 1);
 }
 
 .hover\:bg-orange-50:hover {

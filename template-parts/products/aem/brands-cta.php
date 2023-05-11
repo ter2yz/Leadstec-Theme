@@ -6,7 +6,7 @@
             foreach($brands as $brand){
         ?>
             <div class="relative w-full flex flex-col items-start py-16 lg:py-32 px-16 overflow-hidden" style="background-color: <?php echo $brand['background_color'] ?>">
-                <div class="w-[250px] max-w-full h-[84px] mb-12 flex justify-start items-center">
+                <div class="w-[90%] max-w-full h-[150px] mb-12 flex justify-start items-center">
                     <img class="w-full h-full max-h-full max-w-full object-contain object-left" src="<?php echo esc_url( $brand['logo']['url'] ); ?>" alt="<?php echo $brand['logo']['alt']; ?>">
                 </div>
                 <h3 class="relative max-w-sm md:max-w-[350px] lg:max-w-[640px] font-bold text-[26px] text-left capitalize leading-snug text-[#1b1c1d] mb-20 z-20"><?php echo $brand['description'] ?></h3>
@@ -45,8 +45,8 @@
                         </a>
                     </div>
                     <?php endif; ?>
-                    <div class="absolute h-2/3 bottom-6 -right-12 text-[26rem] font-black z-0" style="color: <?php echo $brand['decoration_letter_color'] ?>">
-                        <p class="leading-[1]"><?php echo $brand['decoration_letter'] ?></p>
+                    <div class="absolute h-2/3 bottom-6 -right-12 text-[26rem] font-black z-0 flex items-end" style="color: <?php echo $brand['decoration_letter_color'] ?>">
+                        <p class="leading-[0.5]"><?php echo $brand['decoration_letter'] ?></p>
                     </div>
                 </div>
             <?php        
