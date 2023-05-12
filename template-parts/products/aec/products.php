@@ -5,10 +5,8 @@
             <div class="filters w-full flex justify-start items-center mb-5 no-scrollbar flex-wrap">
                 <button class="filter border border-orange-500 text-orange-500 text-[15px] rounded-lg px-6 py-2 mr-3 whitespace-nowrap mb-3" data-filter="all">All</button>
                 <?php
-                    $categories = get_categories( array(
-                        'orderby' => 'name',
-                        'order'   => 'ASC'
-                    ) );
+                    $taxonomy = get_field('recommend_taxonomy');
+                    $categories = get_terms($taxonomy, array('hide_empty' => false));
 
                     foreach( $categories as $category ) {
                 ?>

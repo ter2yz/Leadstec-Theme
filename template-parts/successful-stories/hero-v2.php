@@ -7,7 +7,7 @@
                 <?php
                     $categories = get_categories( array(
                         'orderby' => 'name',
-                        'order'   => 'ASC'
+                        'order'   => 'ASC',
                     ) );
 
                     foreach( $categories as $category ) {
