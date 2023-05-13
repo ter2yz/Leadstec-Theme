@@ -17,7 +17,7 @@
                                 <?php if ($story['category']): ?>
                                 <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3"><?php echo esc_html( $story['category'][0]->name ); ?></p>
                                 <?php endif; ?>
-                                <p class="leading-relaxed text-[#9f9f9f] text-[14px] mb-6"><?php echo $story['summary']; ?></p>
+                                <p class="leading-relaxed text-[#9f9f9f] text-[14px] mb-6 line-clamp-3"><?php echo $story['summary']; ?></p>
                             </div>
                             <?php if ($story['button_url']): ?>
                             <a href="<?php echo $story['button_url'] ?>" class="text-white flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">

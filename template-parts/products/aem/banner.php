@@ -5,8 +5,10 @@
         <p class="text-white max-w-none md:max-w-[552px] text-[15px] md:text-[20px] text-center leading-snug mb-8">
         <?php echo get_field('banner')['description'] ?>
         </p>
+        <?php if(get_field('banner')['button_url'] && get_field('banner')['button_text']): ?>
         <a href="<?php echo esc_url(get_field('banner')['button_url']) ?>" class="text-[14px] text-white flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
             <?php echo get_field('banner')['button_text'] ?>
         </a>
+        <?php endif; ?>
     </div>
 </section>

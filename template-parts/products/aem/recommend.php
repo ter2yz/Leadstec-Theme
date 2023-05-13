@@ -20,7 +20,7 @@
                                 <?php if ($recommendation['category']): ?>
                                 <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3"><?php echo esc_html( $recommendation['category'] ); ?></p>
                                 <?php endif; ?>
-                                <p class="leading-relaxed text-[#9f9f9f] text-[14px] mb-6"><?php echo $recommendation['summary']; ?></p>
+                                <p class="leading-relaxed text-[#9f9f9f] text-[14px] mb-6 line-clamp-3"><?php echo $recommendation['summary']; ?></p>
                             </div>
                             <a href="<?php echo $recommendation['button_url'] ?>" class="text-white  text-[14px] flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
                                 <?php echo $recommendation['button_label'] ?>
