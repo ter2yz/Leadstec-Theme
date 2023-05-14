@@ -875,6 +875,10 @@
   margin-top: 2.25rem;
 }
 
+.mb-\[18px\] {
+  margin-bottom: 18px;
+}
+
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
