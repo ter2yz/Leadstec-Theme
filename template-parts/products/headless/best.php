@@ -5,16 +5,17 @@
         </div>
     </div>
     <!-- @TODO: Array begin -->
-    <div class="w-full snap-y snap-mandatory overflow-scroll h-screen sticky top-0">
+    <!-- <div class="w-full snap-y snap-mandatory overflow-scroll h-screen sticky top-0"> -->
+    <div class="w-full">
         <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
             <?php
             $services = get_field('best_on_market')['services'];
             if ($services) {
                 foreach($services as $service){
             ?>
-            <div class="snap-center w-full h-screen min-h-max lg:py-20 px-3 flex flex-col lg:flex-row justify-center items-center mb-12 lg:mb-0">
+            <div class="w-full h-screen min-h-max lg:py-20 px-3 flex flex-col lg:flex-row justify-center items-center mb-12 lg:mb-0">
                 <div class="w-full lg:w-1/2 lg:pr-6">
-                    <img class="slider-single-image w-full max-w-xl mx-auto" src="<?php echo esc_url( $service['image'] ); ?>" alt="">
+                    <img class="slider-single-image w-full max-w-xl mx-auto" src="<?php echo esc_url( $service['image'] ); ?>" alt="<?php echo $service['image_alt_text'] ?>">
                 </div>
                 <div class="w-full lg:w-1/2 lg:pl-6 mt-12 lg:mt-0">
                     <h3 class="relative capitalize text-gray-900 text-3xl font-semibold mb-6 text-center lg:text-left">

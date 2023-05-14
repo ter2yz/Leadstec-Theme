@@ -10,7 +10,7 @@
                 ?>
                 <div class="w-full flex flex-col md:odd:flex-row md:even:flex-row-reverse justify-center items-center mb-12 group">
                     <div class="w-full md:max-w-[340px] lg:max-w-none md:group-odd:mr-[28px] md:group-even:ml-[28px] lg:group-odd:mr-[50px] lg:group-even:ml-[50px] bg-cover bg-no-repeat bg-center" style="background-image: url(<?php echo esc_url( $card['image'] ); ?>);">
-                        <img src="<?php echo esc_url( $card['image'] ); ?>" class="w-full object-center object-cover" alt="">
+                        <img src="<?php echo esc_url( $card['image'] ); ?>" class="w-full object-center object-cover" alt="<?php echo $card['image_alt_text'] ?>">
                     </div>
                     <div class="w-full py-9 md:py-0 md:group-odd:pl-[28px] md:group-even:pr-[28px] lg:group-odd:pl-[50px] lg:group-even:pr-[50px] flex flex-col items-start">
                         <h3 class="relative capitalize text-[#1b1c1d] text-[20px] md:text-[40px] font-bold mb-5 leading-[1]">

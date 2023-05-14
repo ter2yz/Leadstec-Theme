@@ -13,7 +13,7 @@
                 ?>
                 <div class="w-full lg:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n+1)]:pr-2 md:[&:nth-child(3n)]:pl-2 md:[&:nth-child(3n)]:pr-0 md:pl-1 md:pr-1 mb-6 bg-white flex flex-col">
                     <div class="w-full flex justify-center items-center">
-                        <img class="w-full max-w-xs mx-auto" src="<?php echo esc_url( $tool['image'] ); ?>" alt="">
+                        <img class="w-full max-w-xs mx-auto" src="<?php echo esc_url( $tool['image'] ); ?>" alt="<?php echo $tool['image_alt_text'] ?>">
                     </div>
                     <div class="w-full flex flex-col justify-start items-center grow p-3 lg:p-6 xl:p-9">
                         <h3 class="font-bold text-xl text-center mb-3"><?php echo $tool['heading'] ?></h3>
@@ -39,7 +39,7 @@
                     ?>
                     <div class="w-full bg-white flex flex-col">
                         <div class="w-full flex justify-center items-center">
-                            <img class="w-full max-w-xs mx-auto" src="<?php echo esc_url( $tool['image'] ); ?>" alt="">
+                            <img class="w-full max-w-xs mx-auto" src="<?php echo esc_url( $tool['image'] ); ?>" alt="<?php echo $tool['image_alt_text'] ?>">
                         </div>
                         <div class="w-full flex flex-col justify-center items-center grow p-3 lg:p-6 xl:p-9">
                             <h3 class="font-bold text-xl text-center mb-3"><?php echo $tool['heading'] ?></h3>
