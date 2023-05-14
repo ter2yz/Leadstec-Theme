@@ -113,3 +113,19 @@ if (headlesToolsContainer) {
         controls: false,
     });
 }
+
+const headlessBestContainer = document.querySelector("#slider-headless-best");
+if (headlessBestContainer) {
+    var sliderServices = tns({
+        container: "#slider-headless-best",
+        prevButton: "#sliderBestPrev",
+        nextButton: "#sliderBestNext",
+        swipeAngle: false,
+        speed: 400,
+        items: 1,
+        mouseDrag: true,
+        slideBy: "page",
+        nav: false,
+        loop: false,
+    });
+}

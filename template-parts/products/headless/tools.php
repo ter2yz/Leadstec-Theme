@@ -1,7 +1,7 @@
 <section class="relative w-full flex justify-center bg-white pt-16 pb-16 lg:pt-32">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
-            <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-semibold mb-12 px-3"><?php echo get_field('authoring_tools_section')['heading'] ?></h2>
+            <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold text-center md:text-left mb-12 px-3"><?php echo get_field('authoring_tools_section')['heading'] ?></h2>
 
             <!-- Desktop cards -->
 

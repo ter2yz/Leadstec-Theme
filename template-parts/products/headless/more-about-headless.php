@@ -1,7 +1,7 @@
 <section class="relative w-full flex justify-center bg-white pt-16 pb-40 lg:pt-32">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
-            <h2 class="w-full capitalize text-[40px] md:text-[60px] text-[#1b1c1d] font-bold mb-10"><?php echo get_field('more_about_headless_heading') ?></h2>
+            <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-10"><?php echo get_field('more_about_headless_heading') ?></h2>
 
             <!-- Desktop cards -->
             <div class="w-full hidden lg:flex flex-col lg:flex-row justify-start items-stretch flex-wrap">
