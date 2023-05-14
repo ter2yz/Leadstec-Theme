@@ -7,7 +7,7 @@
         ?>
             <div class="relative w-full flex flex-col items-start py-16 lg:py-32 px-16 overflow-hidden" style="background-color: <?php echo $brand['background_color'] ?>">
                 <div class="w-[90%] max-w-full h-[150px] mb-12 flex justify-start items-center">
-                    <img class="w-full h-full max-h-full max-w-full object-contain object-left" src="<?php echo esc_url( $brand['logo']['url'] ); ?>" alt="<?php echo $brand['logo']['alt']; ?>">
+                    <img class="w-full h-full max-h-full max-w-full object-contain object-left" src="<?php echo esc_url( $brand['logo']['url'] ); ?>" alt="<?php echo $brand['logo_image_alt_text']; ?>">
                 </div>
                 <h3 class="relative max-w-sm md:max-w-[350px] lg:max-w-[640px] font-bold text-[26px] text-left capitalize leading-snug text-[#1b1c1d] mb-20 z-20"><?php echo $brand['description'] ?></h3>
                 <?php if($brand['button_url'] && $brand['button_label']): ?>
@@ -35,7 +35,7 @@
             ?>
                 <div class="relative w-full flex flex-col items-start py-16 lg:py-32 px-16 overflow-hidden" style="background-color: <?php echo $brand['background_color'] ?>">
                     <div class="w-[181px] max-w-full h-[84px] mb-12 flex justify-start items-center">
-                        <img class="w-full h-full max-h-full max-w-full object-contain object-left" src="<?php echo esc_url( $brand['logo']['url'] ); ?>" alt="<?php echo $brand['logo']['alt']; ?>">
+                        <img class="w-full h-full max-h-full max-w-full object-contain object-left" src="<?php echo esc_url( $brand['logo']['url'] ); ?>" alt="<?php echo $brand['logo_image_alt_text']; ?>">
                     </div>
                     <h3 class="relative max-w-sm font-bold text-xl text-left capitalize leading-snug text-zinc-900 mb-20 z-20"><?php echo $brand['description'] ?></h3>
                     <?php if($brand['button_url'] && $brand['button_label']): ?>

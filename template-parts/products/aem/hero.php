@@ -23,14 +23,14 @@
                 <?php
                     if(get_field('hero')['image']){
                 ?>
-                <img class="w-full" src="<?php echo esc_url( get_field('hero')['image']['url'] ); ?>" alt="<?php echo get_field('hero')['image']['alt']; ?>">
+                <img class="w-full" src="<?php echo esc_url( get_field('hero')['image']['url'] ); ?>" alt="<?php echo get_field('hero')['image_alt_text']; ?>">
                 <?php
                     }
                 ?>
             </div>
         </div>
     </div>
-    <div class="w-full absolute left-0 bottom-0" style="background-color: <?php echo get_field('hero')['background_image'] ? "transparent" : get_field('hero')['background_color']; ?>">
+    <div class="w-full absolute left-0 bottom-0" aria-label="<?php echo get_field('hero')['background_image_alt_text']; ?>" style="background-color: <?php echo get_field('hero')['background_image'] ? "transparent" : get_field('hero')['background_color']; ?>">
         <svg viewBox="0 0 1920 121" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M960 0C429.807 0 0 93.2907 0 120.65H1920C1920 93.2907 1490.19 0 960 0Z" fill="white"/>
         </svg>
