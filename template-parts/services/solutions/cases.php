@@ -9,7 +9,7 @@
             <div class="w-full mb-6 lg:mb-0">
                 <div class="w-full h-0 pb-[70%] bg-cover bg-center bg-no-repeat" style="background-image: url(<?php echo esc_url( $showcase['image'] ); ?>)"></div>
             </div>
-            <div class="w-full flex flex-col justify-center items-start py-3 mb-12">
+            <div class="w-full flex flex-col justify-start items-start py-3 mb-12">
                 <div class="w-full">
                     <h3 class="relative capitalize text-gray-900 text-3xl font-semibold mb-6">
                         <?php echo $showcase['heading']; ?>

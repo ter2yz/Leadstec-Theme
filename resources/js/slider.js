@@ -114,6 +114,19 @@ if (headlesToolsContainer) {
     });
 }
 
+const erpEvaluationContainer = document.querySelector("#slider-erp-evaluation");
+if (erpEvaluationContainer) {
+    var sliderServices = tns({
+        container: "#slider-erp-evaluation",
+        swipeAngle: false,
+        speed: 400,
+        items: 1,
+        mouseDrag: true,
+        slideBy: "page",
+        controls: false,
+    });
+}
+
 const headlessBestContainer = document.querySelector("#slider-headless-best");
 if (headlessBestContainer) {
     var sliderServices = tns({

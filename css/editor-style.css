@@ -2085,6 +2085,11 @@
   padding-bottom: 2.25rem;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -3044,6 +3049,10 @@ body {
 
   .md\:mt-20 {
     margin-top: 5rem;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .md\:block {

@@ -9,6 +9,6 @@
 
 <!-- footer scripts -->
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/brand-logo-slider.js' ); ?>"></script>
-<script src="<?php echo (get_template_directory_uri() . '/resources/js/gsap.js' ); ?>"></script>
+<script src="<?php echo (get_template_directory_uri() . '/resources/js/slider.js' ); ?>"></script>
 
 <?php get_template_part( 'template-parts/footer', 'general' );

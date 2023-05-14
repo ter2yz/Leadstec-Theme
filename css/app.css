@@ -1313,6 +1313,10 @@ video {
   margin-bottom: 15px;
 }
 
+.mb-\[18px\] {
+  margin-bottom: 18px;
+}
+
 .mb-\[20px\] {
   margin-bottom: 20px;
 }
@@ -1369,20 +1373,12 @@ video {
   margin-top: 1rem;
 }
 
-.mt-\[44px\] {
-  margin-top: 44px;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .mt-9 {
   margin-top: 2.25rem;
 }
 
-.mb-\[18px\] {
-  margin-bottom: 18px;
+.mt-\[44px\] {
+  margin-top: 44px;
 }
 
 .line-clamp-3 {
@@ -2403,6 +2399,11 @@ video {
   padding-right: 0px;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -2900,11 +2901,6 @@ video {
   color: rgb(24 24 27 / 0.7);
 }
 
-.text-red-700 {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity));
-}
-
 .underline {
   text-decoration-line: underline;
 }
@@ -3242,6 +3238,7 @@ video {
 #slider-headless-analysts-ow .tns-slider,
 #slider-headless-moreabout-ow .tns-slider,
 #slider-headless-tools-ow .tns-slider,
+#slider-erp-evaluation-ow .tns-slider,
 #slider-blogs-list-hero-ow .tns-slider,
 #slider-blog-recent-ow .tns-slider,
 #slider-headless-best-ow .tns-slider,
@@ -3268,7 +3265,8 @@ video {
   z-index: 99;
 }
 
-#slider-headless-tools-ow .tns-nav {
+#slider-headless-tools-ow .tns-nav,
+#slider-erp-evaluation-ow .tns-nav {
   position: absolute;
   bottom: -32px;
   left: 0;
@@ -3288,6 +3286,7 @@ video {
 #slider-headless-analysts-ow .tns-nav > button,
 #slider-headless-moreabout-ow .tns-nav > button,
 #slider-headless-tools-ow .tns-nav > button,
+#slider-erp-evaluation-ow .tns-nav > button,
 #slider-blogs-list-hero-ow .tns-nav > button,
 #slider-headless-best-ow .tns-nav > button,
 #slider-aem-recommend-ow .tns-nav > button {
@@ -3306,7 +3305,8 @@ video {
 }
 
 #slider-blogs-list-hero-ow .tns-nav > button.tns-nav-active,
-#slider-headless-tools-ow .tns-nav > button.tns-nav-active {
+#slider-blogs-list-hero-ow .tns-nav > button.tns-nav-active,
+#slider-erp-evaluation-ow .tns-nav > button.tns-nav-active {
   background: #f77316;
 }
 
@@ -3733,6 +3733,10 @@ article > *:not(.entry-content),
   .md\:my-\[44px\] {
     margin-top: 44px;
     margin-bottom: 44px;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .md\:mb-9 {
