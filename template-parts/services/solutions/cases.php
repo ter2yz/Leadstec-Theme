@@ -19,7 +19,7 @@
                     </p>
                 </div>
                 <a href="<?php echo $showcase['button_url']; ?>" class="text-lg mt-10 flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize">
-                    Read more
+                    <?php echo $showcase['button_label']; ?>
                 </a>
             </div>
         </div>
