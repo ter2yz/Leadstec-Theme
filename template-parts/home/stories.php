@@ -40,7 +40,7 @@
                         <div class="absolute inset-0 w-full h-full transition-all duration-500 opacity-0 hover:opacity-100 z-20">
                             <div class="description-wrap absolute w-1/2 h-full flex flex-col justify-start max-h-[50%] transition-all duration-500 bottom-0 right-0 bg-white p-6 text-zinc-900 overflow-auto z-20">
                                 <div class="w-full h-full overflow-auto mb-9">
-                                    <h3 class="font-bold text-[15px] text-left mb-6 capitalize"><?php echo $story['heading']; ?></h3>
+                                    <h3 class="font-bold text-[20px] text-left mb-6 capitalize"><?php echo $story['heading']; ?></h3>
                                     <?php 
                                         echo $story['description'];
                                     ?>
