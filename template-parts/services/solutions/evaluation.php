@@ -1,4 +1,4 @@
-<section class="relative w-full flex justify-center bg-gray-100 py-16 lg:py-32 mb-16 md:mb-0">
+<section class="relative w-full flex justify-center bg-gray-100 pt-16 pb-16 lg:pb-40">
     <div class="relative container z-20">
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full capitalize text-5xl text-gray-900 font-semibold mb-10 text-center"><?php echo get_field('evaluation_heading'); ?></h2>
@@ -11,7 +11,7 @@
                     <div class="w-1/3 bg-white flex flex-col p-9">
                         <div class="w-full flex justify-start items-center pb-6 mb-6 border-b border-zinc-400/25">
                             <div class="flex-none mr-6">
-                                <img class="h-16" src="<?php echo esc_url( $evaluation['logo'] ); ?>" alt="">
+                                <img class="h-16" src="<?php echo esc_url( $evaluation['logo'] ); ?>" alt="<?php echo $evaluation['logo_image_alt_text'] ?>">
                             </div>
                             <div class="grow flex flex-col items-start">
                                 <h3 class="font-bold text-[15px] text-[#1b1c1d] text-left mb-1"><?php echo $evaluation['heading']; ?></h3>
@@ -37,7 +37,7 @@
                         <div class="w-full h-full bg-white flex flex-col p-9">
                             <div class="w-full flex-col justify-start items-center pb-6 mb-6 border-b border-zinc-400/25">
                                 <div class="flex-none mb-6">
-                                    <img class="h-16" src="<?php echo esc_url( $evaluation['logo'] ); ?>" alt="">
+                                    <img class="h-16" src="<?php echo esc_url( $evaluation['logo'] ); ?>" alt="<?php echo $evaluation['logo_image_alt_text'] ?>">
                                 </div>
                                 <div class="grow flex flex-col items-start">
                                     <h3 class="font-bold text-[15px] text-[#1b1c1d] text-left mb-1"><?php echo $evaluation['heading']; ?></h3>

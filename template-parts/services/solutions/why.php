@@ -11,7 +11,7 @@
                 ?>
                 <div class="w-full flex flex-col lg:odd:flex-row lg:even:flex-row-reverse justify-center items-center group mb-14">
                     <div class="w-full lg:w-1/2 lg:group-odd:pr-6 lg:group-even:pl-6">
-                        <div class="w-full h-0 pb-[65%] bg-cover bg-center bg-no-repeat" style="background-image: url(<?php echo esc_url( $reason['image'] ); ?>)"></div>
+                        <div class="w-full h-0 pb-[65%] bg-cover bg-center bg-no-repeat" aria-label="<?php echo $reason['image_alt_text'] ?>" style="background-image: url(<?php echo esc_url( $reason['image'] ); ?>)"></div>
                     </div>
                     <div class="w-full lg:w-1/2 lg:group-odd:pl-6 lg:group-even:pr-6 mt-10 lg:mt-0">
                         <h3 class="relative capitalize text-gray-900 text-3xl font-semibold mb-6">
