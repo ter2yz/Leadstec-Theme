@@ -49,6 +49,7 @@ if (numberButtons && showcases) {
     numberButtons.forEach((button) => {
         const btnIndex = button.dataset.index;
         const info = sliderWebCases.getInfo();
+        console.log("but: ", button);
         button.addEventListener("click", () => {
             handleCasesChange(btnIndex);
             sliderWebCases.goTo((btnIndex - 1) % info.slideCount);
@@ -62,5 +63,21 @@ if (numberButtons && showcases) {
         const info = sliderWebCases.getInfo();
         console.log("INFO: ", info);
         handleCasesChange(info.displayIndex % info.slideCount);
+    });
+}
+
+const triggers = document.querySelectorAll(
+    "#showcase-web-cases .showcase-container .content-trigger"
+);
+
+if (triggers) {
+    triggers.forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+            const contentWrapper = trigger.querySelector(".content-wrapper");
+            contentWrapper.classList.toggle("max-h-0");
+            contentWrapper.classList.toggle("max-h-full");
+            contentWrapper.classList.toggle("opacity-0");
+            contentWrapper.classList.toggle("opacity-100");
+        });
     });
 }

@@ -30,9 +30,17 @@
             ?>
             <div data-index="<?php echo $slide_cases_index; ?>" class="showcase-container relative lg:absolute w-full h-full inset-0 flex flex-col justify-center items-stretch transition duration-500 opacity-100 translate-x-0 mb-10 lg:mb-0 shadow-xl rounded-xl lg:shadow-none lg:rounded-none lg:opacity-<?php echo $slide_cases_index == 0 ? "100" : "0" ?> lg:translate-x-<?php echo $slide_cases_index == 0 ? "0" : "full" ?>">
                 <img class="block w-full lg:hidden" src="<?php echo esc_url( $case['image'] ); ?>" alt="">
-                <div class="w-full h-1/4 bg-zinc-900 flex flex-none justify-start items-center p-6">
+                <div class="w-full h-1/4 bg-zinc-900 hidden lg:flex flex-none justify-start items-center p-6">
                     <p class="text-white text-3xl font-semibold capitalize"><?php echo $case['heading']; ?></p>
                 </div>
+                <button class="content-trigger w-full h-1/4 bg-zinc-900 flex flex-col lg:hidden flex-none justify-start items-center p-6 transition">
+                    <p class="w-full text-left text-white text-3xl font-semibold capitalize"><?php echo $case['heading']; ?></p>
+                    <div class="content-wrapper w-full transition overflow-hidden max-h-0 opacity-0 text-left">
+                        <div class="w-full pt-3">
+                            <?php echo $case['description']; ?>
+                        </div>
+                    </div>
+                </button>
                 <div class="hidden lg:block relative w-full h-full bg-top bg-cover bg-no-repeat group" style="background-image: url(<?php echo esc_url( $case['image'] ); ?>)">
                     <div class="w-full h-full bg-zinc-900/95 p-12 transition duration-500 ease-in-out translate-x-full group-hover:translate-x-0">
                     <?php echo $case['description']; ?>
