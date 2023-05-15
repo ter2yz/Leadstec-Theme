@@ -1030,6 +1030,10 @@
   height: 100vh;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -3073,6 +3077,10 @@ body {
 
   .md\:h-\[166px\] {
     height: 166px;
+  }
+
+  .md\:h-40 {
+    height: 10rem;
   }
 
   .md\:max-h-\[500px\] {
