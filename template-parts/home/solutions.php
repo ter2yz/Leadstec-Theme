@@ -1,19 +1,19 @@
 <section class="relative w-full mt-20 lg:mt-40 bg-gray-200 overflow-hidden">
     <div class="relative z-20">
-        <div class="w-full py-40 lg:py-60 flex flex-col items-center justify-center">
-            <h2 class="capitalize text-[30px] md:text-[60px]  text-[1b1c1d] font-semibold text-center -mt-16"><?php echo get_field('our_solutions')['heading']; ?></h2>
+        <div class="w-full pt-32 pb-20 lg:pt-48 lg:pb-40 flex flex-col items-center justify-center">
+            <h2 class="capitalize text-[30px] md:text-[60px]  text-[1b1c1d] font-semibold text-center -mt-16 px-2"><?php echo get_field('our_solutions')['heading']; ?></h2>
             <div id="solutions-fw-container" class="block lg:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
                 <div id="solutions-container" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
-                    <div id="solutions-wrap" class="inline-flex flex-nowrap mt-10 md:mt-20">
+                    <div id="solutions-wrap" class="inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
                         <?php
                             $tools = get_field('our_solutions')['tools'];
                             if( $tools ) {
                                 foreach( $tools as $tool) {
                         ?>
                             <?php if($tool['url']): ?>
-                            <a href="<?php echo $tool['url']; ?>" class="w-[96px] md:w-[166px] lg:w-[200px] mr-[28px] last:mr-0 flex-none" target="_blank">
+                            <a href="<?php echo $tool['url']; ?>" class="w-[96px] md:w-[166px] lg:w-[200px] mr-[12px] last:mr-0 flex-none" target="_blank">
                             <?php else: ?>
-                            <div class="w-[96px] md:w-[166px] lg:w-[200px] mr-[28px] last:mr-0 flex-none">
+                            <div class="w-[96px] md:w-[166px] lg:w-[200px] mr-[12px] last:mr-0 flex-none">
                             <?php endif; ?>
                                 <div class="solution-brand w-full lg:min-w-min flex flex-col items-center h-full group">
                                     <div class="w-full h-[96px] md:h-[166px] lg:h-[200px] p-3 lg:p-10 bg-white flex-none flex justify-center items-center">
@@ -43,9 +43,9 @@
                         foreach( $tools as $tool) {
                 ?>
                     <?php if($tool['url']): ?>
-                    <a href="<?php echo $tool['url']; ?>" class="w-1/5 [&:nth-child(5n+1)]:pl-0 [&:nth-child(5n+1)]:pr-2 [&:nth-child(5n)]:pl-2 [&:nth-child(5n)]:pr-0 pl-1 pr-1 mb-3 flex-none" target="_blank">
+                    <a href="<?php echo $tool['url']; ?>" class="w-1/5 px-2 mb-3 flex-none" target="_blank">
                     <?php else: ?>
-                    <div class="w-1/5 [&:nth-child(5n+1)]:pl-0 [&:nth-child(5n+1)]:pr-2 [&:nth-child(5n)]:pl-2 [&:nth-child(5n)]:pr-0 pl-1 pr-1 mb-3 flex-none">
+                    <div class="w-1/5 px-2 mb-3 flex-none">
                     <?php endif; ?>
                         <div class="solution-brand w-full lg:min-w-min flex flex-col items-center h-full group">
                             <div class="w-full h-[96px] md:h-[166px] lg:h-[200px] p-3 lg:p-10 bg-white flex-none flex justify-center items-center">

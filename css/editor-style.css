@@ -883,6 +883,14 @@
   margin-right: 6px;
 }
 
+.mr-\[12px\] {
+  margin-right: 12px;
+}
+
+.mt-\[20px\] {
+  margin-top: 20px;
+}
+
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -2206,6 +2214,10 @@
   padding-right: 0.25rem;
 }
 
+.pt-32 {
+  padding-top: 8rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3063,6 +3075,10 @@ body {
     margin-bottom: 0px;
   }
 
+  .md\:mt-\[40px\] {
+    margin-top: 40px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3752,6 +3768,18 @@ body {
 
   .lg\:pr-1 {
     padding-right: 0.25rem;
+  }
+
+  .lg\:pb-60 {
+    padding-bottom: 15rem;
+  }
+
+  .lg\:pt-60 {
+    padding-top: 15rem;
+  }
+
+  .lg\:pt-48 {
+    padding-top: 12rem;
   }
 
   .lg\:text-left {
