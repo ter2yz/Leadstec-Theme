@@ -1,7 +1,7 @@
 <section class="relative w-full flex justify-center bg-gray-100 pt-16 pb-16 lg:pb-40">
     <div class="relative container z-20">
         <div class="w-full flex flex-col items-center justify-center">
-            <h2 class="w-full capitalize text-5xl text-gray-900 font-semibold mb-10 text-center"><?php echo get_field('evaluation_heading'); ?></h2>
+            <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-10 text-center"><?php echo get_field('evaluation_heading'); ?></h2>
             <div class="w-full hidden md:flex flex-row justify-center items-stretch space-y-9 space-x-0 lg:space-y-0 lg:space-x-9">
                 <?php
                     $evaluations = get_field('evaluations');

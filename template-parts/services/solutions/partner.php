@@ -5,7 +5,7 @@
         </svg>
     </div>
     <div class="w-full mt-20">
-        <h2 class="capitalize text-[30px] md:text-[60px] text-white font-semibold text-center"><?php echo get_field('partner_section')['heading']; ?></h2>
+        <h2 class="capitalize text-[30px] md:text-[60px] text-white font-bold text-center"><?php echo get_field('partner_section')['heading']; ?></h2>
     </div>
     <div id="solutions-partners" class="w-full relative overflow-hidden mt-16 pb-32">
         <div class="splide" aria-labelledby="carousel-heading">
