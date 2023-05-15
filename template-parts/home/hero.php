@@ -1,6 +1,6 @@
 <section class="w-full flex justify-center items-center">
     <div class="w-[91%] max-w-none md:max-w-[1112px] mx-auto">
-        <div class="w-full flex flex-col-reverse md:flex-row justify-start items-center md:items-start md:min-h-[600px] overflow-hidden">
+        <div class="w-full flex flex-col-reverse md:flex-row justify-start items-center md:items-start md:min-h-[600px] overflow-hidden px-2">
             <div class="relative w-full md:w-7/12 flex flex-col items-start mt-10 lg:mt-20 md:pr-[33px] z-10">
                 <!-- <h1 class="text-5xl md:text-7xl capitalize font-semibold leading-tight">We are a professional digital experience agency.</h1> -->
                 <h1 class="text-[30px] md:text-[60px] capitalize font-bold leading-tight text-[#1B1C1D]"><?php echo get_field('hero_section')['heading']; ?></h1>
