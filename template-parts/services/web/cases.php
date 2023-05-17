@@ -2,7 +2,7 @@
     <div class="w-full lg:flex lg:h-screen lg:min-h-[600px] px-8 lg:px-0">
         <h2 class="block lg:hidden w-full capitalize text-5xl text-zinc-900 font-semibold mb-10 text-left"><?php echo get_field('cases_section')['heading'] ?></h2>
         <?php $cases = get_field('cases_section')['cases']; ?>
-        <div id="number-selector-wrapper" class="hidden lg:flex w-4/12 max-w-xs px-6 h-full flex-col items-center justify-center text-zinc-900">
+        <div id="number-selector-wrapper" class="hidden lg:flex w-4/12 max-w-xs px-6 h-full flex-col items-center justify-center text-zinc-900" style="background: linear-gradient(to bottom, <?php echo $cases[0]['background_gradient_start']?>, <?php echo $cases[0]['background_gradient_end']?>);">
             <h2 class="text-6xl lg:text-7xl capitalize font-semibold leading-tight mb-16 text-center"><?php echo get_field('cases_section')['heading'] ?></h2>
             <div id="slider-web-cases" class="w-full text-white flex flex-col items-center justify-center">
                 <?php
@@ -12,11 +12,15 @@
                 ?>
                 <div class="text-7xl font-bold px-3 flex items-center justify-center">
                     <?php if ($slide_cases_index == 0): ?>
-                        <button data-index="<?php echo $slide_cases_index; ?>" data-bgstart="<?php echo $case['background_gradient_start'] ?>" data-bgend="<?php echo $case['background_gradient_end'] ?>" data-caseId="" class="h-40 transition-transform text-[100px] opacity-100 mr-6 text-white custom-number-shadow"><?php echo $slide_cases_index + 1; ?></button>
-                        <span class="w-5 h-[2px] bg-zinc-900"></span>
+                        <button data-index="<?php echo $slide_cases_index; ?>" data-bgstart="<?php echo $case['background_gradient_start'] ?>" data-bgend="<?php echo $case['background_gradient_end'] ?>" data-caseId="" class="h-40 transition-all text-[100px] opacity-100 text-white custom-number-shadow flex items-center">
+                            <p class="mr-6"><?php echo $slide_cases_index + 1; ?></p>
+                            <span class="w-5 h-[2px] bg-zinc-900"></span>
+                        </button>
                     <?php else: ?>
-                        <button data-index="<?php echo $slide_cases_index; ?>" data-bgstart="<?php echo $case['background_gradient_start'] ?>" data-bgend="<?php echo $case['background_gradient_end'] ?>" data-caseId="" class="h-40 transition-transform text-[20px] opacity-60 mr-6 text-[#1b1c1d]"><?php echo $slide_cases_index + 1; ?></button>
-                        <span class="w-5 h-[2px] opacity-60 bg-zinc-900"></span>
+                        <button data-index="<?php echo $slide_cases_index; ?>" data-bgstart="<?php echo $case['background_gradient_start'] ?>" data-bgend="<?php echo $case['background_gradient_end'] ?>" data-caseId="" class="h-40 text-[20px] opacity-60 transition-all text-[#1b1c1d] flex items-center">
+                            <p class="mr-6"><?php echo $slide_cases_index + 1; ?></p>    
+                            <span class="w-5 h-[2px] opacity-60 bg-zinc-900"></span>
+                        </button>
                     <?php endif; ?>
                 </div>
                 <?php

@@ -25,22 +25,22 @@ if (numberButtons && showcases) {
                 b.classList.remove("text-[20px]");
                 b.classList.remove("opacity-60");
                 b.classList.remove("text-[#1b1c1d]");
-                b.nextElementSibling.classList.remove("opacity-60");
+                b.lastElementChild.classList.remove("opacity-60");
                 b.classList.add("custom-number-shadow");
                 b.classList.add("text-[100px]");
                 b.classList.add("text-white");
                 b.classList.add("opacity-100");
-                b.nextElementSibling.classList.add("opacity-100");
+                b.lastElementChild.classList.add("opacity-100");
             } else {
                 b.classList.remove("custom-number-shadow");
                 b.classList.remove("text-[100px]");
                 b.classList.remove("opacity-100");
                 b.classList.remove("text-white");
-                b.nextElementSibling.classList.remove("opacity-100");
+                b.lastElementChild.classList.remove("opacity-100");
                 b.classList.add("text-[20px]");
                 b.classList.add("opacity-60");
                 b.classList.add("text-[#1b1c1d]");
-                b.nextElementSibling.classList.add("opacity-60");
+                b.lastElementChild.classList.add("opacity-60");
             }
         });
         showcases.forEach((el) => {
@@ -66,10 +66,8 @@ if (numberButtons && showcases) {
                 button.dataset.bgstart +
                 ", " +
                 button.dataset.bgend +
-                ");";
-            console.log("but: ", bgDetail);
-            numberWrapper.style.background =
-                "linear-gradient(to bottom, #69dce0, #416f9b)";
+                ")";
+            numberWrapper.style.background = bgDetail;
             handleCasesChange(btnIndex);
             sliderWebCases.goTo((btnIndex - 1) % info.slideCount);
             // sliderWebCases.goTo(
