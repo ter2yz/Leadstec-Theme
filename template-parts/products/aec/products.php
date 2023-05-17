@@ -3,14 +3,14 @@
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] leading-[1.2] font-bold mb-5"><?php echo get_field('recommend_heading') ?></h2>
             <div class="filters w-full flex justify-start items-center mb-5 no-scrollbar flex-wrap">
-                <button class="filter border border-orange-500 text-orange-500 text-[15px] rounded-lg px-6 py-2 mr-3 whitespace-nowrap mb-3" data-filter="all">All</button>
+                <button class="filter border border-orange-500 text-orange-500 text-[15px] font-bold rounded-lg px-6 py-2 mr-3 whitespace-nowrap mb-3" data-filter="all">All</button>
                 <?php
                     $taxonomy = get_field('recommend_taxonomy');
                     $categories = get_terms($taxonomy, array('hide_empty' => false));
 
                     foreach( $categories as $category ) {
                 ?>
-                    <button class="filter border text-[#9f9f9f] border-zinc-400/25 hover:border-orange-500 hover:text-orange-500 rounded-lg px-6 py-2 mr-3 mb-3 whitespace-nowrap" data-filter="<?php echo $category->slug ?>"><?php echo $category->name ?></button>
+                    <button class="filter border text-[#9f9f9f] border-zinc-400/25 text-[15px] font-bold hover:border-orange-500 hover:text-orange-500 rounded-lg px-6 py-2 mr-3 mb-3 whitespace-nowrap" data-filter="<?php echo $category->slug ?>"><?php echo $category->name ?></button>
                 <?php
                     } 
                 ?>
@@ -36,7 +36,7 @@
                                         <p class="leading-relaxed text-[#9f9f9f] text-[14px] mb-12 line-clamp-3"><?php echo $story['summary']; ?></p>
                                     </div>
                                     <?php if($story['button_url']): ?>
-                                    <a href="<?php echo $story['button_url'] ?>" class="capitalize text-white flex justify-center items-center text-[14px] border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
+                                    <a href="<?php echo $story['button_url'] ?>" class="capitalize text-white flex justify-center items-center text-[14px] font-bold border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
                                         <?php echo $story['button_label'] ?>
                                     </a>
                                     <?php endif; ?>
