@@ -6,7 +6,7 @@
     <?php if($brand_length <= 1): ?>
     <div class="hidden md:flex w-full" style="background-color: <?php echo $brands[0]['background_color'] ?>">
         <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto flex flex-col items-start py-16 lg:py-32 overflow-hidden">
-            <div class="w-[50%] max-w-[70%] h-[100px] mb-12 flex justify-start items-center">
+            <div class="w-full max-w-[70%] h-[100px] mb-12 flex justify-start items-center">
                 <img class="w-full h-full max-h-full max-w-full object-contain object-left" src="<?php echo esc_url( $brands[0]['logo']['url'] ); ?>" alt="<?php echo $brands[0]['logo_image_alt_text']; ?>">
             </div>
             <h3 class="relative max-w-sm md:max-w-[350px] lg:max-w-[640px] font-bold text-[26px] text-left capitalize leading-snug text-[#1b1c1d] mb-20 z-20"><?php echo $brands[0]['description'] ?></h3>
@@ -29,7 +29,7 @@
             foreach($brands as $brand){
         ?>
             <div class="relative w-full flex flex-col items-start py-16 lg:py-32 px-16 overflow-hidden" style="background-color: <?php echo $brand['background_color'] ?>">
-                <div class="w-[50%] max-w-[70%] h-[100px] mb-12 flex justify-start items-center">
+                <div class="w-full max-w-[70%] h-[100px] mb-12 flex justify-start items-center">
                     <img class="w-full h-full max-h-full max-w-full object-contain object-left" src="<?php echo esc_url( $brand['logo']['url'] ); ?>" alt="<?php echo $brand['logo_image_alt_text']; ?>">
                 </div>
                 <h3 class="relative max-w-sm md:max-w-[350px] lg:max-w-[640px] font-bold text-[26px] text-left capitalize leading-snug text-[#1b1c1d] mb-20 z-20"><?php echo $brand['description'] ?></h3>
