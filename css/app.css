@@ -1018,6 +1018,10 @@ video {
   margin-bottom: 0;
 }
 
+.custom-number-shadow {
+  text-shadow: 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1528,6 +1532,10 @@ video {
   height: 100vh;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -1709,6 +1717,10 @@ video {
   width: 100%;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -1763,6 +1775,10 @@ video {
 
 .max-w-xs {
   max-width: 20rem;
+}
+
+.max-w-\[70\%\] {
+  max-width: 70%;
 }
 
 .flex-auto {
@@ -2591,6 +2607,10 @@ video {
   padding-top: 5rem;
 }
 
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
 .pt-32 {
   padding-top: 8rem;
 }
@@ -2601,14 +2621,6 @@ video {
 
 .pt-\[60\%\] {
   padding-top: 60%;
-}
-
-.pl-2 {
-  padding-left: 0.5rem;
-}
-
-.pt-3 {
-  padding-top: 0.75rem;
 }
 
 .text-left {
@@ -2709,6 +2721,10 @@ video {
 
 .text-xl {
   font-size: 1.25rem;
+}
+
+.text-\[100px\] {
+  font-size: 100px;
 }
 
 .font-black {
@@ -3417,14 +3433,14 @@ article > *:not(.entry-content),
 }
 
 .square-wrapper {
-  width: 100%;
+  height: 100%;
   aspect-ratio: 1/1;
 }
 
 @container resize-box (aspect-ratio > 1/1) {
   .square-wrapper {
     width: auto;
-    height: 98%;
+    height: 100%;
   }
 }
 
@@ -3940,11 +3956,6 @@ article > *:not(.entry-content),
     padding-bottom: 10rem;
   }
 
-  .md\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
   .md\:pl-1 {
     padding-left: 0.25rem;
   }
@@ -4353,10 +4364,6 @@ article > *:not(.entry-content),
     padding-bottom: 10rem;
   }
 
-  .lg\:pb-60 {
-    padding-bottom: 15rem;
-  }
-
   .lg\:pl-1 {
     padding-left: 0.25rem;
   }
@@ -4383,10 +4390,6 @@ article > *:not(.entry-content),
 
   .lg\:pt-32 {
     padding-top: 8rem;
-  }
-
-  .lg\:pt-60 {
-    padding-top: 15rem;
   }
 
   .lg\:pt-48 {
@@ -4566,20 +4569,4 @@ article > *:not(.entry-content),
   .lg\:\[\&\:nth-child\(3n\+1\)\]\:pr-2:nth-child(3n+1) {
     padding-right: 0.5rem;
   }
-}
-
-.\[\&\:nth-child\(5n\)\]\:pl-2:nth-child(5n) {
-  padding-left: 0.5rem;
-}
-
-.\[\&\:nth-child\(5n\)\]\:pr-0:nth-child(5n) {
-  padding-right: 0px;
-}
-
-.\[\&\:nth-child\(5n\+1\)\]\:pl-0:nth-child(5n+1) {
-  padding-left: 0px;
-}
-
-.\[\&\:nth-child\(5n\+1\)\]\:pr-2:nth-child(5n+1) {
-  padding-right: 0.5rem;
 }

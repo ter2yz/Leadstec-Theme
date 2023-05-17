@@ -84,12 +84,12 @@ article > *:not(.entry-content),
     resize: both;
 }
 .square-wrapper {
-    width: 100%;
+    height: 100%;
     aspect-ratio: 1/1;
 }
 @container resize-box (aspect-ratio > 1/1) {
     .square-wrapper {
         width: auto;
-        height: 98%;
+        height: 100%;
     }
 }
