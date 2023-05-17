@@ -13,7 +13,7 @@
                         <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo $story['background_image_alt_text'] ?>" style="background-image: url(<?php echo esc_url( $story['background_image'] ); ?>); "></div>
                         <div class="w-full flex flex-col justify-between items-start grow p-[30px] lg:p-6 xl:p-9">
                             <div class="w-full">
-                                <h3 class="font-bold text-[20px] text-[#1b1c1d] text-center md:text-left mb-3"><?php echo esc_html( $story['heading'] ); ?></h3>
+                                <h3 class="font-bold text-[20px] text-[#1b1c1d] text-left mb-3"><?php echo esc_html( $story['heading'] ); ?></h3>
                                 <?php if ($story['category']): ?>
                                 <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3"><?php echo esc_html( $story['category'][0]->name ); ?></p>
                                 <?php endif; ?>
