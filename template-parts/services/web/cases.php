@@ -11,7 +11,7 @@
                         foreach($cases as $case) {
                 ?>
                 <div class="text-7xl font-bold px-3 flex items-center justify-center">
-                    <button data-index="<?php echo $slide_cases_index; ?>" data-caseId="" class="h-40 transition-transform scale-125 opacity-100 mr-6" style="text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black; "><?php echo $slide_cases_index + 1; ?></button>
+                    <button data-index="<?php echo $slide_cases_index; ?>" data-caseId="" class="h-40 transition-transform scale-125 opacity-100 mr-6 custom-number-shadow"><?php echo $slide_cases_index + 1; ?></button>
                     <span class="w-6 h-[2px] bg-zinc-900"></span>
                 </div>
                 <?php
