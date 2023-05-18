@@ -33,10 +33,10 @@
                                         <?php if ($story['category']): ?>
                                         <p class="leading-relaxed mb-[10px] text-[15px]"><?php echo esc_html( $story['category']->name ); ?></p>
                                         <?php endif; ?>
-                                        <p class="leading-relaxed text-[#9f9f9f] text-[17px] mb-12 line-clamp-3"><?php echo $story['summary']; ?></p>
+                                        <p class="leading-relaxed text-[#9f9f9f] text-[14px] md:text-[17px] mb-12 line-clamp-3"><?php echo $story['summary']; ?></p>
                                     </div>
                                     <?php if($story['button_url']): ?>
-                                    <button class="capitalize text-white flex justify-center items-center text-[17px] font-bold border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
+                                    <button class="capitalize text-white flex justify-center items-center text-[14px] md:text-[17px] font-bold border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
                                         <?php echo $story['button_label'] ?>
                                     </button>
                                     <?php endif; ?>
