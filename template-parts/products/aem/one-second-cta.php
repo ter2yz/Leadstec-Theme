@@ -2,7 +2,7 @@
     <div class="hidden md:flex w-full justify-center">
         <div class="w-full" style="background-color: <?php echo get_field('two_cards')['card_one_color'] ?>;">
             <?php if(get_field('two_cards')['card_two_heading']): ?>
-            <div class="w-full flex flex-col items-center py-16 lg:py-32 px-16">
+            <div class="w-full h-full flex flex-col items-center py-16 lg:py-32 px-16">
             <?php else: ?>
             <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto flex flex-col items-center py-16 lg:py-32 px-16" style="background-color: <?php echo get_field('two_cards')['card_one_color'] ?>;">
             <?php endif; ?>
