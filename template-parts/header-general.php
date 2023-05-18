@@ -48,11 +48,15 @@ function console_log($output, $with_script_tags = true) {
     <?php
         $current_post_uri = get_page_uri(get_post());
         $current_lang = substr($current_post_uri, 0, 2);
+        $homepage_uri = '/';
         if($current_lang == 'en') {
+            $homepage_uri = '/en.html';
             $header_page = get_page_by_path('en/header');
         } else if($current_lang == 'sc') {
+            $homepage_uri = '/sc.html';
             $header_page = get_page_by_path('sc/header');
         } else if($current_lang == 'tc') {
+            $homepage_uri = '/sc.html';
             $header_page = get_page_by_path('tc/header');
         } else {
             $header_page = get_page_by_path('header');
@@ -66,7 +70,7 @@ function console_log($output, $with_script_tags = true) {
         <div class="w-full flex justify-center items-center py-3">
             <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
                 <div class="w-full flex justify-between items-center">
-                    <a href="/">
+                    <a href="<?php echo $homepage_uri; ?>">
                         <img class="h-[45px] max-w-none" src="<?php echo esc_url( get_template_directory_uri() . '/assets/leadstec-logo-dark.png' ); ?>" alt="凝新科技，Leadstec">
                     </a>
                     <div class="relative w-full flex justify-end items-center">
