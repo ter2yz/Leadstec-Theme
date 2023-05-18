@@ -3960,6 +3960,11 @@ article > *:not(.entry-content),
     padding-bottom: 10rem;
   }
 
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .md\:pl-1 {
     padding-left: 0.25rem;
   }
