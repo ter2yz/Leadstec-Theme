@@ -2727,6 +2727,10 @@ video {
   font-size: 100px;
 }
 
+.text-\[17px\] {
+  font-size: 17px;
+}
+
 .font-black {
   font-weight: 900;
 }
