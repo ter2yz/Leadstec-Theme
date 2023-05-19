@@ -871,6 +871,10 @@
   margin-top: 44px;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -3164,6 +3168,10 @@ body {
 
   .md\:text-\[17px\] {
     font-size: 17px;
+  }
+
+  .md\:text-\[18px\] {
+    font-size: 18px;
   }
 
   .md\:odd\:flex-row:nth-child(odd) {
