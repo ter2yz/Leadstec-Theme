@@ -9,16 +9,22 @@
                         foreach($services as $service) {
                 ?>
                     <div class="w-full sm:w-1/2 lg:w-1/3 p-3 mb-3">
-                        <div class="w-full h-full bg-white flex flex-col justify-between lg:p-9 rounded-lg shadow-none transition-shadow hover:shadow-lg">
+                        <?php if($service['url']): ?>
+                        <a href="<?php echo esc_url($service['url']); ?>" class="w-full">
+                        <?php endif; ?>
+                        <div class="w-full h-full bg-white flex flex-col justify-between items-start lg:p-9 rounded-lg shadow-none transition-shadow hover:shadow-lg">
                             <div class="w-full flex flex-col items-start">
                                 <img class="w-16 h-16 mb-[18px]" src="<?php echo esc_url( $service['icon'] ); ?>" alt="<?php echo $service['icon_image_alt_text'] ?>">
                                 <h3 class="font-bold text-[20px] text-[#1b1c1d] text-left mb-[15px] capitalize"><?php echo $service['heading']; ?></h3>
-                                <p class="leading-relaxed text-[14px] mb-[10px] text-[#9f9f9f]"><?php echo $service['description']; ?></p>
+                                <p class="leading-relaxed text-[14px] md:text-[17px] mb-[10px] text-[#9f9f9f]"><?php echo $service['description']; ?></p>
                             </div>
                             <?php if($service['url'] && $service['button_label']): ?>
-                            <a href="<?php echo esc_url($service['url']); ?>" class="text-sky-600 text-[14px]"><?php echo $service['button_label'] ?></a>
+                            <button class="text-sky-600 text-[14px] md:text-[17px]"><?php echo $service['button_label'] ?></button>
                             <?php endif; ?>
                         </div>
+                        <?php if($service['url']): ?>
+                        </a>
+                        <?php endif; ?>
                     </div>
                 <?php
                         }
