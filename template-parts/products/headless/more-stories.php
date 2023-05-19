@@ -42,7 +42,7 @@
                                 <div class="w-full">
                                     <h3 class="font-bold text-[20px] text-left mb-9 text-[#1b1c1d]"><?php echo $card['heading'] ?></h3>
                                 </div>
-                                <a href="<?php echo $card['url'] ?>" class="text-sky-600"><?php echo $card['description'] ?></a>
+                                <a href="<?php echo $card['url'] ?>" class="text-sky-600 text-[14px]"><?php echo $card['description'] ?></a>
                             </div>
                         </div>
                     </div>

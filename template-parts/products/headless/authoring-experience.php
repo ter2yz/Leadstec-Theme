@@ -20,7 +20,7 @@
                 <?php echo $card['description'] ?>
                 </p>
                 <?php if ($card['button_label'] && $card['button_url']): ?>
-                <a href="<?php echo $card['button_url'] ?>" class="text-lg mt-10 flex justify-center items-center ml-3 border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize">
+                <a href="<?php echo $card['button_url'] ?>" class="text-[15px] font-bold mt-10 flex justify-center items-center ml-3 border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-2 text-white">
                     <?php echo $card['button_label'] ?>
                 </a>
                 <?php endif; ?>    

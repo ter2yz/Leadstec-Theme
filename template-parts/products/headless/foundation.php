@@ -10,11 +10,11 @@
                 ?>
                 <div class="w-full lg:w-1/3 lg:[&:nth-child(3n+1)]:pl-0 lg:[&:nth-child(3n+1)]:pr-2 lg:[&:nth-child(3n)]:pl-2 lg:[&:nth-child(3n)]:pr-0 lg:pl-1 lg:pr-1 mb-6">
                     <div class="w-full h-full bg-white flex flex-col items-start p-9">
-                        <h3 class="font-bold text-xl text-left mb-3 capitalize"><?php echo $card['heading'] ?></h3>
+                        <h3 class="font-bold text-[20px] text-left mb-3"><?php echo $card['heading'] ?></h3>
                         <span class="w-full h-2 bg-orange-500 mb-9"></span>
-                        <p class="leading-relaxed text-zinc-900/70"><?php echo $card['description'] ?></p>
+                        <p class="leading-relaxed text-[#9f9f9f] text-[17px]"><?php echo $card['description'] ?></p>
                         <?php if($card['button_url'] && $card['button_label']): ?>
-                        <a href="<?php echo $card['button_url']; ?>" class="mt-10 text-[14px] border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize"><?php echo $card['button_label']; ?></a>
+                        <a href="<?php echo $card['button_url']; ?>" class="mt-10 text-[17px] font-bold border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-2 text-white"><?php echo $card['button_label']; ?></a>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -35,9 +35,12 @@
                     ?>
                     <div class="w-full">
                         <div class="w-full bg-white flex flex-col p-9">
-                            <h3 class="font-bold text-xl text-left mb-3 capitalize"><?php echo $card['heading'] ?></h3>
+                            <h3 class="font-bold text-[20px] text-left mb-3"><?php echo $card['heading'] ?></h3>
                             <span class="w-full h-2 bg-orange-500 mb-9"></span>
-                            <p class="leading-relaxed text-zinc-900/70"><?php echo $card['description'] ?></p>
+                            <p class="leading-relaxed text-[#9f9f9f] text-[14px] mb-6"><?php echo $card['description'] ?></p>
+                            <?php if($card['button_url'] && $card['button_label']): ?>
+                            <a href="<?php echo $card['button_url']; ?>" class="mt-10 text-[14px] font-bold border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-2 text-white"><?php echo $card['button_label']; ?></a>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <?php

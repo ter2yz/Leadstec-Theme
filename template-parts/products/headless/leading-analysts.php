@@ -16,9 +16,9 @@
                     <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
                         <div class="w-full">
                             <h3 class="font-bold text-[20px] text-[#1b1c1d] text-left mb-3"><?php echo $singlePost['heading']; ?></h3>
-                            <p class="leading-relaxed text-[#9f9f9f] text-left mb-12 line-clamp-3"><?php echo $singlePost['summary']; ?></p>
+                            <p class="leading-relaxed text-[14px] md:text-[17px] text-[#9f9f9f] text-left mb-12 line-clamp-3"><?php echo $singlePost['summary']; ?></p>
                         </div>
-                        <a href="<?php echo $singlePost['button_url'] ?>" class="capitalize text-white flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2">
+                        <a href="<?php echo $singlePost['button_url'] ?>" class="text-[14px] md:text-[17px] font-bold text-white flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-2">
                             <?php echo $singlePost['button_label'] ?>
                         </a>
                     </div>

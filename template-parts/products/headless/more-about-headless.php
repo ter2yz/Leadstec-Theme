@@ -16,9 +16,9 @@
                         <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
                             <div class="w-full">
                                 <h3 class="font-bold text-[20px] text-left mb-3"><?php echo esc_html( $story['heading'] ) ?></h3>
-                                <p class="leading-relaxed text-[#9f9f9f] text-[14px] text-left mb-12 line-clamp-3"><?php echo esc_html( ($story['summary']) ) ?></p>
+                                <p class="leading-relaxed text-[#9f9f9f] text-[14px] md:text-[17px] text-left mb-12 line-clamp-3"><?php echo esc_html( ($story['summary']) ) ?></p>
                             </div>
-                            <a href="<?php echo $story['button_url'] ?>" class="text-sky-600 text-[14px]"><?php echo $story['button_label'] ?></a>
+                            <a href="<?php echo $story['button_url'] ?>" class="text-sky-600 text-[14px] font-bold"><?php echo $story['button_label'] ?></a>
                         </div>
                     </div>
                 </div>
@@ -41,10 +41,10 @@
                             <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo $story['background_image_alt_text'] ?>" style="background-image: url(<?php echo esc_url( $story['bg_image'] ); ?>); "></div>
                             <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
                                 <div class="w-full">
-                                    <h3 class="font-bold text-xl text-left mb-3"><?php echo esc_html( $story['heading'] ) ?></h3>
-                                    <p class="leading-relaxed text-zinc-500 text-left mb-12 line-clamp-3"><?php echo esc_html( ($story['summary']) ) ?></p>
+                                    <h3 class="font-bold text-[20px] text-left mb-3"><?php echo esc_html( $story['heading'] ) ?></h3>
+                                    <p class="leading-relaxed text-zinc-500 text-[14px] md:text-[17px] text-left mb-12 line-clamp-3"><?php echo esc_html( ($story['summary']) ) ?></p>
                                 </div>
-                                <a href="<?php echo $story['button_url'] ?>" class="text-sky-600"><?php echo $story['button_label'] ?></a>
+                                <a href="<?php echo $story['button_url'] ?>" class="text-sky-600 text-[14px] font-bold"><?php echo $story['button_label'] ?></a>
                             </div>
                         </div>
                     </div>

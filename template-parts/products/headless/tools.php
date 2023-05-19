@@ -16,8 +16,8 @@
                         <img class="w-full max-w-xs mx-auto" src="<?php echo esc_url( $tool['image'] ); ?>" alt="<?php echo $tool['image_alt_text'] ?>">
                     </div>
                     <div class="w-full flex flex-col justify-start items-center grow p-3 lg:p-6 xl:p-9">
-                        <h3 class="font-bold text-xl text-center mb-3"><?php echo $tool['heading'] ?></h3>
-                        <p class="leading-relaxed text-center">
+                        <h3 class="font-bold text-[20px] text-center mb-3"><?php echo $tool['heading'] ?></h3>
+                        <p class="leading-relaxed text-center text-[16px]">
                             <?php echo $tool['description'] ?>
                         </p>
                     </div>
@@ -42,8 +42,8 @@
                             <img class="w-full max-w-xs mx-auto" src="<?php echo esc_url( $tool['image'] ); ?>" alt="<?php echo $tool['image_alt_text'] ?>">
                         </div>
                         <div class="w-full flex flex-col justify-center items-center grow p-3 lg:p-6 xl:p-9">
-                            <h3 class="font-bold text-xl text-center mb-3"><?php echo $tool['heading'] ?></h3>
-                            <p class="leading-relaxed text-center">
+                            <h3 class="font-bold text-[20px] text-center mb-3"><?php echo $tool['heading'] ?></h3>
+                            <p class="leading-relaxed text-center text-[16px]">
                             <?php echo $tool['description'] ?>
                             </p>
                         </div>
