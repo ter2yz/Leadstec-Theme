@@ -13,7 +13,7 @@
         <div class="w-full flex flex-col-reverse lg:flex-row justify-start lg:justify-center items-center @container lg:min-h-[600px] overflow-hidden">
             <div class="relative w-full lg:w-7/12 flex flex-col items-start lg:pr-10 z-10 text-white">
                 <p class="leading-relaxed text-[15px] md:text-[20px] mb-[20px] md:mb-[30px]"><?php echo get_field('hero')['sub_heading']; ?></p>
-                <h1 class="text-[30px] md:text-[60px] capitalize font-bold leading-tight mb-[10px] md:mb-[15px]"><?php echo get_field('hero')['heading']; ?></h1>
+                <h1 class="text-[30px] md:text-[40px] capitalize font-bold leading-tight mb-[10px] md:mb-[15px]"><?php echo get_field('hero')['heading']; ?></h1>
                 <p class="leading-relaxed text-[15px] md:text-[20px]"><?php echo get_field('hero')['description']; ?></p>
                 <a data-fslightbox="lightbox" href="<?php echo get_field('hero')['cta_button_url']; ?>" class="text-[14px] mt-10 flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
                     <?php echo get_field('hero')['cta_button_text']; ?>
