@@ -18,7 +18,7 @@
                                 <h3 class="font-bold text-[20px] text-left mb-3"><?php echo esc_html( $story['heading'] ) ?></h3>
                                 <p class="leading-relaxed text-[#9f9f9f] text-[14px] md:text-[17px] text-left mb-12 line-clamp-3"><?php echo esc_html( ($story['summary']) ) ?></p>
                             </div>
-                            <a href="<?php echo $story['button_url'] ?>" class="text-sky-600 text-[14px] font-bold"><?php echo $story['button_label'] ?></a>
+                            <a href="<?php echo $story['button_url'] ?>" class="text-sky-600 text-[14px] md:text-[17px] font-bold"><?php echo $story['button_label'] ?></a>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                                     <h3 class="font-bold text-[20px] text-left mb-3"><?php echo esc_html( $story['heading'] ) ?></h3>
                                     <p class="leading-relaxed text-zinc-500 text-[14px] md:text-[17px] text-left mb-12 line-clamp-3"><?php echo esc_html( ($story['summary']) ) ?></p>
                                 </div>
-                                <a href="<?php echo $story['button_url'] ?>" class="text-sky-600 text-[14px] font-bold"><?php echo $story['button_label'] ?></a>
+                                <a href="<?php echo $story['button_url'] ?>" class="text-sky-600 text-[14px] md:text-[17px] font-bold"><?php echo $story['button_label'] ?></a>
                             </div>
                         </div>
                     </div>
