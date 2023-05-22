@@ -2,8 +2,8 @@
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full text-center capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-semibold pt-10 pb-10 bg-white top-[67px] z-20"><?php echo get_field('benefits')['heading']; ?></h2>
-            <div class="w-full flex flex-col md:flex-row justify-center items-start">
-                <div class="w-full md:w-1/2 lg:pr-6 md:py-32">
+            <div class="w-full flex flex-col md:flex-row justify-center items-center">
+                <div class="w-full md:w-1/2 lg:pr-6">
                     <img class="slider-single-image w-full max-w-xl mx-auto" src="<?php echo esc_url( get_field('benefits')['image']['url'] ); ?>" alt="<?php echo get_field('benefits')['image_alt_text']; ?>">
                 </div>
                 <div class="w-full md:w-1/2 lg:pl-6 mt-10 md:mt-0 md:pl-[15px] md:overflow-y-scroll md:h-[500px] no-scrollbar">

@@ -1,7 +1,7 @@
 <section id="tell-us-about-you" class="relative w-full lg:bg-zinc-900 z-40 pb-40">
     <div class="w-full flex flex-col lg:flex-row justify-center items-start lg:min-h-[600px] bg-white z-30">
         <div class="w-full lg:w-4/12 lg:min-h-screen lg:sticky lg:top-0 bg-gradient-to-b from-[#FEBE00] to-[#F08300] p-12 z-40">
-            <div class="w-full bg-white p-6">
+            <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto lg:w-full bg-white p-6">
                 <h3 class="font-bold text-xl text-left mb-3 capitalize text-zinc-900"><?php echo get_field('info_section')['telephone_heading'] ?></h3>
                 <p class="text-zinc-900/70"><?php echo get_field('info_section')['telephone_info'] ?></p>
                 <div class="w-full h-[1px] bg-zinc-400/25 my-6"></div>
