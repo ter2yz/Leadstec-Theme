@@ -56,7 +56,7 @@ function console_log($output, $with_script_tags = true) {
             $homepage_uri = '/sc.html';
             $header_page = get_page_by_path('sc/header');
         } else if($current_lang == 'tc') {
-            $homepage_uri = '/sc.html';
+            $homepage_uri = '/tc.html';
             $header_page = get_page_by_path('tc/header');
         } else {
             $header_page = get_page_by_path('header');
