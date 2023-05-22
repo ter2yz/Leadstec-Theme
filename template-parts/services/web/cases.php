@@ -50,8 +50,8 @@
                         </div>
                     </div>
                 </button>
-                <div class="hidden lg:block relative w-full h-full bg-top bg-cover bg-no-repeat group" style="background-image: url(<?php echo esc_url( $case['image'] ); ?>)">
-                    <div class="w-[80%] h-full bg-zinc-900/95 p-12 transition duration-500 ease-in-out ml-auto translate-x-full group-hover:translate-x-0">
+                <div class="hidden lg:block relative w-full h-full bg-top bg-cover bg-no-repeat group overflow-hidden" style="background-image: url(<?php echo esc_url( $case['image'] ); ?>)">
+                    <div class="w-[80%] h-full bg-zinc-900/95 p-12 transition duration-500 ease-in-out ml-auto translate-x-full group-hover:translate-x-0 overflow-y-scroll">
                     <?php echo $case['description']; ?>
                     </div>
                 </div>
