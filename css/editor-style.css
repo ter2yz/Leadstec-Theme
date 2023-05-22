@@ -1495,6 +1495,10 @@
   overflow: scroll;
 }
 
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2947,6 +2951,14 @@ body {
     height: 166px;
   }
 
+  .md\:h-screen {
+    height: 100vh;
+  }
+
+  .md\:h-\[500px\] {
+    height: 500px;
+  }
+
   .md\:max-h-\[500px\] {
     max-height: 500px;
   }
@@ -2965,6 +2977,10 @@ body {
 
   .md\:min-h-screen {
     min-height: 100vh;
+  }
+
+  .md\:min-h-\[500px\] {
+    min-height: 500px;
   }
 
   .md\:w-1\/2 {
@@ -3061,6 +3077,10 @@ body {
     margin-left: calc(2.25rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .md\:overflow-y-scroll {
+    overflow-y: scroll;
+  }
+
   .md\:p-10 {
     padding: 2.5rem;
   }
@@ -3106,6 +3126,11 @@ body {
   .md\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .md\:pl-1 {
