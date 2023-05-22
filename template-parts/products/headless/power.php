@@ -1,4 +1,4 @@
-<section class="relative w-full flex justify-center bg-white py-16 lg:py-32">
+<section class="relative w-full flex justify-center bg-white py-12 md:py-20">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-12 text-center"><?php echo get_field('enterprise_power_section')['heading'] ?></h2>

@@ -45,11 +45,22 @@ if (headlessFoundationContainer) {
         container: "#slider-headless-foundation",
         swipeAngle: false,
         speed: 400,
-        items: 1.1,
+        items: 3.1,
         mouseDrag: true,
         slideBy: "page",
         controls: false,
         gutter: 16,
+        responsive: {
+            480: {
+                items: 1.1,
+            },
+            640: {
+                items: 2.1,
+            },
+            768: {
+                items: 3.1,
+            },
+        },
     });
 }
 
@@ -78,11 +89,22 @@ if (headlessAnalystsContainer) {
         container: "#slider-headless-analysts",
         swipeAngle: false,
         speed: 400,
-        items: 1.1,
+        items: 3,
         mouseDrag: true,
         slideBy: "page",
         controls: false,
         gutter: 16,
+        responsive: {
+            480: {
+                items: 1,
+            },
+            640: {
+                items: 2,
+            },
+            768: {
+                items: 3,
+            },
+        },
     });
 }
 const headlesMorePlatformContainer = document.querySelector(
@@ -93,11 +115,22 @@ if (headlesMorePlatformContainer) {
         container: "#slider-headless-moreabout",
         swipeAngle: false,
         speed: 400,
-        items: 1.1,
+        items: 3,
         mouseDrag: true,
         slideBy: "page",
         controls: false,
         gutter: 16,
+        responsive: {
+            480: {
+                items: 1,
+            },
+            640: {
+                items: 2,
+            },
+            768: {
+                items: 3,
+            },
+        },
     });
 }
 
