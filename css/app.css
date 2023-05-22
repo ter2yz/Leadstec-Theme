@@ -1397,6 +1397,10 @@ video {
   margin-bottom: 44px;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -3769,6 +3773,10 @@ article > *:not(.entry-content),
     margin-bottom: 3rem;
   }
 
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3930,6 +3938,18 @@ article > *:not(.entry-content),
     margin-left: calc(2.25rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-x-12 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(3rem * var(--tw-space-x-reverse));
+    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .md\:overflow-y-scroll {
     overflow-y: scroll;
   }
@@ -4018,6 +4038,14 @@ article > *:not(.entry-content),
     padding-top: 5rem;
   }
 
+  .md\:pb-40 {
+    padding-bottom: 10rem;
+  }
+
+  .md\:pb-16 {
+    padding-bottom: 4rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
@@ -4100,6 +4128,14 @@ article > *:not(.entry-content),
     padding-right: 4rem;
   }
 
+  .group:nth-child(odd) .md\:group-odd\:pl-6 {
+    padding-left: 1.5rem;
+  }
+
+  .group:nth-child(odd) .md\:group-odd\:pr-6 {
+    padding-right: 1.5rem;
+  }
+
   .group:nth-child(even) .md\:group-even\:ml-\[28px\] {
     margin-left: 28px;
   }
@@ -4122,6 +4158,14 @@ article > *:not(.entry-content),
 
   .group:nth-child(even) .md\:group-even\:pr-\[9\%\] {
     padding-right: 9%;
+  }
+
+  .group:nth-child(even) .md\:group-even\:pl-6 {
+    padding-left: 1.5rem;
+  }
+
+  .group:nth-child(even) .md\:group-even\:pr-6 {
+    padding-right: 1.5rem;
   }
 }
 
@@ -4570,6 +4614,14 @@ article > *:not(.entry-content),
   }
 }
 
+.\[\&\:nth-child\(3n\)\]\:pl-2:nth-child(3n) {
+  padding-left: 0.5rem;
+}
+
+.\[\&\:nth-child\(3n\)\]\:pr-0:nth-child(3n) {
+  padding-right: 0px;
+}
+
 @media (min-width: 769px) {
   .md\:\[\&\:nth-child\(3n\)\]\:pl-2:nth-child(3n) {
     padding-left: 0.5rem;
@@ -4588,6 +4640,14 @@ article > *:not(.entry-content),
   .lg\:\[\&\:nth-child\(3n\)\]\:pr-0:nth-child(3n) {
     padding-right: 0px;
   }
+}
+
+.\[\&\:nth-child\(3n\+1\)\]\:pl-0:nth-child(3n+1) {
+  padding-left: 0px;
+}
+
+.\[\&\:nth-child\(3n\+1\)\]\:pr-2:nth-child(3n+1) {
+  padding-right: 0.5rem;
 }
 
 @media (min-width: 769px) {

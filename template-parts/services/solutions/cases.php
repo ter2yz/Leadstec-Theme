@@ -1,15 +1,15 @@
-<section class="w-full py-16 lg:py-32">
-    <div class="relative container mx-auto">
+<section class="w-full py-16 md:py-32">
+    <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto mx-auto">
         <?php
             $showcases = get_field('showcases');
             if ($showcases) {
                 foreach($showcases as $showcase) {
         ?>
-        <div class="w-full flex flex-col lg:flex-row justify-center items-stretch space-x-0 lg:space-x-12 mb-12">
-            <div class="w-full mb-6 lg:mb-0">
+        <div class="w-full flex flex-col md:flex-row justify-center items-stretch space-x-0 md:space-x-12 mb-12">
+            <div class="w-full mb-6 md:mb-0">
                 <div class="w-full h-0 pb-[70%] bg-cover bg-center bg-no-repeat" aria-label="<?php echo $showcase['image_alt_text']?>" style="background-image: url(<?php echo esc_url( $showcase['image'] ); ?>)"></div>
             </div>
-            <div class="w-full flex flex-col justify-start items-start py-3">
+            <div class="w-full flex flex-col justify-start items-start">
                 <div class="w-full">
                     <h3 class="relative text-[#1b1c1d] text-[20px] md:text-[40px] font-bold mb-5">
                         <?php echo $showcase['heading']; ?>
