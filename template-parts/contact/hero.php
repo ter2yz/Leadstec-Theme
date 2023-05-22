@@ -1,10 +1,10 @@
 <section class="w-full flex justify-center items-center mb-40 relative lg:sticky top-0 -z-40 overflow-hidden">
     <div class="relative container z-10">
         <div class="w-full flex flex-col-reverse lg:flex-row justify-start lg:justify-center items-center min-h-[600px] overflow-hidden">
-            <div class="relative w-full lg:w-1/2 flex flex-col items-start z-10">
-                <h1 class="text-5xl lg:text-7xl capitalize font-semibold leading-tight"><?php echo get_field('hero_section')['heading'] ?></h1>
+            <div class="relative w-full md:w-1/2 flex flex-col items-start z-10 md:pr-8">
+                <h1 class="text-[30px] md:text-[60px] capitalize font-semibold leading-tight"><?php echo get_field('hero_section')['heading'] ?></h1>
                 <span class="w-20 h-3 bg-orange-500 my-5"></span>
-                <p class="leading-relaxed capitalize"><?php echo get_field('hero_section')['description'] ?></p>
+                <p class="leading-relaxed text-[15px] md:text-[20px] text-[#9f9f9f]"><?php echo get_field('hero_section')['description'] ?></p>
                 <a href="<?php echo get_field('hero_section')['button_url'] ?>" class="text-3xl w-12 h-12 mt-10 flex justify-center items-center rounded-full border-2 border-gray-900 text-gray-900">
                     <i class="fa-solid fa-chevron-down"></i>
                 </a>
