@@ -10,7 +10,7 @@
                 <span class="w-20 h-3 bg-transparent my-5"></span>
                 <p class="leading-relaxed max-w-5xl text-center text-[15px] md:text-[20px]"><?php echo get_field('hero_section')['description'] ?></p>
                 <?php if(get_field('hero_section')['button_url'] && get_field('hero_section')['button_text']): ?>
-                <a href="<?php echo esc_url(get_field('hero_section')['button_url']) ?>" class="text-[14px] md:text-[18px] mt-10 flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2">
+                <a href="<?php echo esc_url(get_field('hero_section')['button_url']) ?>" class="text-[14px] md:text-[18px] font-bold mt-10 flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2">
                     <?php echo get_field('hero_section')['button_text'] ?>
                 </a>
                 <?php endif; ?>

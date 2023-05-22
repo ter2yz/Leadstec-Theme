@@ -19,7 +19,7 @@
                         </h3>
                         <p class="text-[#9f9f9f] text-[15px] md:text-[20px] capitalize"><?php echo $reason['description']; ?></p>
                         <?php if($reason['button_url'] && $reason['button_label']): ?>
-                        <a href="<?php echo $reason['button_url'] ?>" class="text-[14px] md:text-[17px] mt-6 flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-2 text-white">
+                        <a href="<?php echo $reason['button_url'] ?>" class="text-[14px] md:text-[16px] font-bold mt-6 flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-2 text-white">
                             <?php echo $reason['button_label'] ?>
                         </a>
                         <?php endif; ?>

@@ -4064,6 +4064,10 @@ article > *:not(.entry-content),
     font-size: 60px;
   }
 
+  .md\:text-\[16px\] {
+    font-size: 16px;
+  }
+
   .md\:odd\:flex-row:nth-child(odd) {
     flex-direction: row;
   }

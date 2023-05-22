@@ -19,7 +19,7 @@
                     </p>
                 </div>
                 <?php if($showcase['button_url'] && $showcase['button_label']):?>
-                <a href="<?php echo $showcase['button_url']; ?>" class="text-[14px] mt-10 flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize">
+                <a href="<?php echo $showcase['button_url']; ?>" class="text-[14px] font-bold mt-10 flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize">
                     <?php echo $showcase['button_label']; ?>
                 </a>
                 <?php endif; ?>

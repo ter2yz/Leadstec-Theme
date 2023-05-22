@@ -3273,6 +3273,10 @@ body {
     font-size: 18px;
   }
 
+  .md\:text-\[16px\] {
+    font-size: 16px;
+  }
+
   .md\:odd\:flex-row:nth-child(odd) {
     flex-direction: row;
   }
