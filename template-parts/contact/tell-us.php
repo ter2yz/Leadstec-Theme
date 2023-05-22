@@ -29,7 +29,7 @@
             </div>
             <div class="w-full bg-white p-12">
                 <?php
-                echo do_shortcode('[contact-form-7 id="551" title="Contact form 1"]');
+                echo do_shortcode(get_field('tell_us_section')['form_shortcode']);
                 ?>
                 <form action="" class="hidden flex-col items-center">
                     <input name="name" type="text" placeholder="Your Name" class="w-full rounded-md border border-zinc-400/0 py-4 px-6 transition hover:border-zinc-400/25 focus:border-zinc-400/25 outline-none mb-6 bg-gray-100" require>
