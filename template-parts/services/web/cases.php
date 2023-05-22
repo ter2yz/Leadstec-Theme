@@ -1,5 +1,5 @@
 <section id="web-cases" class="relative w-full lg:bg-zinc-900 z-20 pb-40">
-    <div class="w-full lg:flex lg:h-screen lg:min-h-[600px] px-8 lg:px-0">
+    <div class="w-full hidden lg:flex lg:h-screen lg:min-h-[600px] px-8 lg:px-0">
         <h2 class="block lg:hidden w-full text-5xl text-zinc-900 font-semibold mb-10 text-left"><?php echo get_field('cases_section')['heading'] ?></h2>
         <?php $cases = get_field('cases_section')['cases']; ?>
         <div id="number-selector-wrapper" class="hidden lg:flex w-4/12 max-w-xs px-6 h-full flex-col items-center justify-center text-zinc-900" style="background: linear-gradient(to bottom, <?php echo $cases[0]['background_gradient_start']?>, <?php echo $cases[0]['background_gradient_end']?>);">
@@ -30,7 +30,7 @@
                 ?>
             </div>
         </div>
-        <div id="showcase-web-cases" class="relative grow w-full lg:w-auto h-full">
+        <div id="showcase-web-cases" class="relative hidden lg:block grow w-full lg:w-auto h-full">
             <?php
                 $slide_cases_index = 0;
                 $cases = get_field('cases_section')['cases'];
@@ -65,4 +65,41 @@
     </div>
     <div class="hidden relative lg:absolute w-full h-full inset-0 flex-col justify-center items-stretch transition duration-500 opacity-100 translate-x-0 mb-10 lg:mb-0 shadow-xl rounded-xl lg:shadow-none lg:rounded-none lg:opacity-100 lg:translate-x-full"></div>
     <div class="hidden relative lg:absolute w-full h-full inset-0 flex-col justify-center items-stretch transition duration-500 opacity-100 translate-x-full mb-10 lg:mb-0 shadow-xl rounded-xl lg:shadow-none lg:rounded-none lg:opacity-100 lg:translate-x-0"></div>
+    <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
+        <h2 class="block lg:hidden w-full text-5xl text-zinc-900 font-semibold mb-10 text-left"><?php echo get_field('cases_section')['heading'] ?></h2>
+        <div class="w-full flex lg:hidden flex-col md:flex-row flex-wrap justify-start items-stretch transition opacity-100">
+            <?php
+                $cases = get_field('cases_section')['cases'];
+                if ($cases) {
+                    foreach($cases as $case) {
+            ?>
+                <div class="w-full md:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n+1)]:pr-2 md:[&:nth-child(3n)]:pl-2 md:[&:nth-child(3n)]:pr-0 md:pl-1 md:pr-1 mb-6 overflow-hidden">
+                    <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
+                        <?php if($case['button_url']): ?>
+                        <a href="<?php echo esc_url($case['button_url']); ?>" class="w-full">
+                        <?php endif; ?>
+                            <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo $case['image_alt_text'] ?>" style="background-image: url(<?php echo esc_url( $case['image'] ); ?>); "></div>
+                            <div class="w-full flex flex-col justify-between items-start grow p-[30px] lg:p-6 xl:p-9">
+                                <div class="w-full">
+                                    <h3 class="font-bold text-[20px] text-left mb-[10px]"><?php echo esc_html( $case['heading'] ); ?></h3>
+                                    <p class="leading-relaxed text-[#9f9f9f] text-[14px] md:text-[17px] mb-12 line-clamp-3"><?php echo strip_tags($case['description']); ?></p>
+                                </div>
+                                <?php if($case['button_url']): ?>
+                                <button class="capitalize text-white flex justify-center items-center text-[14px] md:text-[17px] font-bold border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
+                                    <?php echo $case['button_label'] ?>
+                                </button>
+                                <?php endif; ?>
+                            </div>
+                        <?php if($case['button_url']): ?>
+                        </a>
+                        <?php endif; ?>
+                    </div>
+                </div>   
+            <?php
+                    }
+                }
+            ?>
+            
+        </div>
+    </div>
 </section>
