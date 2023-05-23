@@ -10,12 +10,12 @@
                 </a>
             </div>
             <div class="w-full md:w-1/2 relative flex justify-end my-9 lg:my-0">
-                <img class="w-full md:max-w-lg block md:hidden" src="<?php echo esc_url( get_field('hero_section')['image'] ); ?>" alt="">
+                <img class="w-full md:max-w-lg block md:hidden" src="<?php echo esc_url( get_field('hero_section')['image'] ); ?>" alt="<?php echo get_field('hero_section')['image_alt_text']; ?>">
             </div>
         </div>
     </div>
     <div class="absolute hidden top-1/2 right-0 w-full h-full md:flex justify-end -translate-y-1/2 overflow-hidden z-0">
         <div class="w-7/12 bg-gray-100 h-full flex justify-end items-end"></div>
-        <img class="absolute bottom-0 right-0 w-1/2" src="<?php echo esc_url( get_field('hero_section')['image'] ); ?>" alt="">
+        <img class="absolute bottom-0 right-0 w-1/2" src="<?php echo esc_url( get_field('hero_section')['image'] ); ?>" alt="<?php echo get_field('hero_section')['image_alt_text']; ?>">
     </div>
 </section>
