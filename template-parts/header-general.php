@@ -208,4 +208,4 @@ function console_log($output, $with_script_tags = true) {
 
 		<?php do_action( 'tailpress_content_start' ); ?>
 
-		<main class="@container">
+		<main>

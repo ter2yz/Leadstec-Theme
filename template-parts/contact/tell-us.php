@@ -27,7 +27,7 @@
                 <h2 class="text-white text-5xl font-semibold capitalize text-center mb-6"><?php echo get_field('tell_us_section')['heading'] ?></h2>
                 <p class="leading-relaxed text-white text-center"><?php echo get_field('tell_us_section')['description'] ?></p>
             </div>
-            <div class="w-full bg-white p-12">
+            <div id="contact-form" class="w-full bg-white p-12">
                 <?php
                 echo do_shortcode(get_field('tell_us_section')['form_shortcode']);
                 ?>

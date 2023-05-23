@@ -51,8 +51,13 @@
                     </div>
                 </button>
                 <div class="hidden lg:block relative w-full h-full bg-top bg-cover bg-no-repeat group overflow-hidden" aria-label="<?php echo $case['image_alt_text']?>" style="background-image: url(<?php echo esc_url( $case['image'] ); ?>)">
-                    <div class="w-[80%] h-full bg-zinc-900/95 p-12 transition duration-500 ease-in-out ml-auto translate-x-full group-hover:translate-x-0 overflow-y-scroll">
-                    <?php echo $case['description']; ?>
+                    <div class="absolute top-0 right-0 w-[80%] h-full bg-zinc-900/95 p-12 transition duration-500 ease-in-out translate-x-full group-hover:translate-x-0 overflow-y-auto">
+                        <?php echo $case['description']; ?>
+                        <?php if($case['button_url']): ?>
+                        <div class="absolute left-0 bottom-0 w-full bg-zinc-900/95 px-6 py-3">
+                            <a href="<?php echo $case['button_url']; ?>" class="text-white text-left align-middle"><?php echo $case['button_label'] ?></a>
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
