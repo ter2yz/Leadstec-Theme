@@ -1725,6 +1725,10 @@ video {
   width: 80%;
 }
 
+.w-\[27\.3vw\] {
+  width: 27.3vw;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -3896,6 +3900,10 @@ article > *:not(.entry-content),
 
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:w-\[27\.3vw\] {
+    width: 27.3vw;
   }
 
   .md\:max-w-\[1112px\] {
