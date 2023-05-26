@@ -4197,6 +4197,10 @@ article > *:not(.entry-content),
     margin-top: 10rem;
   }
 
+  .lg\:mb-40 {
+    margin-bottom: 10rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -4442,6 +4446,10 @@ article > *:not(.entry-content),
 
   .lg\:pt-48 {
     padding-top: 12rem;
+  }
+
+  .lg\:pr-8 {
+    padding-right: 2rem;
   }
 
   .lg\:text-left {

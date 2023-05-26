@@ -3491,6 +3491,10 @@ body {
     margin-top: 10rem;
   }
 
+  .lg\:mb-40 {
+    margin-bottom: 10rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -3786,6 +3790,10 @@ body {
 
   .lg\:pb-20 {
     padding-bottom: 5rem;
+  }
+
+  .lg\:pr-8 {
+    padding-right: 2rem;
   }
 
   .lg\:text-left {
