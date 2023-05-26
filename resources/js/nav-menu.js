@@ -24,3 +24,10 @@ if (navMobileMenuItems.length) {
         });
     });
 }
+
+window.addEventListener("DOMContentLoaded", function () {
+    console.log("dom loaded");
+    var header = document.getElementById("header");
+    var headerHeight = header.clientHeight;
+    document.documentElement.style.scrollPaddingTop = headerHeight + "px";
+});

@@ -66,7 +66,7 @@ function console_log($output, $with_script_tags = true) {
 
     ?>
 
-	<header class="z-50 sticky top-0 bg-white">
+	<header id="header" class="z-50 sticky top-0 bg-white">
         <div class="w-full flex justify-center items-center py-3">
             <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
                 <div class="w-full flex justify-between items-center">

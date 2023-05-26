@@ -1,4 +1,4 @@
-<section class="w-full flex justify-center items-center mb-40 relative lg:sticky top-0 -z-40 overflow-hidden">
+<section class="w-full flex justify-center items-center mb-40 relative lg:sticky top-0 z-0 overflow-hidden">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-10">
         <div class="w-full flex flex-col-reverse md:flex-row justify-start md:justify-center items-center min-h-[600px] overflow-hidden">
             <div class="relative w-full md:w-1/2 flex flex-col items-start z-10 md:pr-8">
