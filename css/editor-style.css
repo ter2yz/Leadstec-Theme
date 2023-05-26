@@ -3312,6 +3312,10 @@ body {
     padding-right: 2rem;
   }
 
+  .md\:pt-32 {
+    padding-top: 8rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }

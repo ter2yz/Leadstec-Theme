@@ -2,7 +2,7 @@
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-5 md:mb-10 text-center"><?php echo get_field('evaluation_heading'); ?></h2>
-            <div class="w-full hidden md:flex flex-row justify-center items-stretch flex-wrap">
+            <div class="w-full hidden md:flex flex-row justify-start items-stretch flex-wrap">
                 <?php
                     $evaluations = get_field('evaluations');
                     if ($evaluations) {
