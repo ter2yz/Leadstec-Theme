@@ -3721,6 +3721,11 @@ article > *:not(.entry-content),
     margin-bottom: 44px;
   }
 
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -3763,6 +3768,10 @@ article > *:not(.entry-content),
 
   .md\:mt-\[40px\] {
     margin-top: 40px;
+  }
+
+  .md\:mb-40 {
+    margin-bottom: 10rem;
   }
 
   .md\:block {
