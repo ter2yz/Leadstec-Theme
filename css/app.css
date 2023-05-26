@@ -1392,6 +1392,10 @@ video {
   margin-top: 44px;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -2474,6 +2478,11 @@ video {
   padding-bottom: 2.25rem;
 }
 
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -2584,6 +2593,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .align-middle {
@@ -4074,6 +4087,10 @@ article > *:not(.entry-content),
 
   .md\:text-\[60px\] {
     font-size: 60px;
+  }
+
+  .md\:text-\[22px\] {
+    font-size: 22px;
   }
 
   .md\:odd\:flex-row:nth-child(odd) {
