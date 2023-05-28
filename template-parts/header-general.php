@@ -126,17 +126,17 @@ function console_log($output, $with_script_tags = true) {
                             ?>
                         </div>
                         <div class="pl-6 flex justify-center items-center">
-                            <a href="/en.html">
+                            <a href="<?php echo '/en' . substr($current_post_uri, 2) . '.html' ?>">
                                 <span class="flex justify-center gap-x-1.5 bg-white px-3 text-[15px] <?php if($current_lang == 'en'): ?>text-orange-500<?php else:?>text-[#767676]<?php endif; ?> hover:text-orange-500 transition-colors border-r hover:underline underline-offset-4">
                                     En
                                 </span>
                             </a>
-                            <a href="/sc.html">
+                            <a href="<?php echo '/sc' . substr($current_post_uri, 2) . '.html' ?>">
                                 <span class="flex justify-center gap-x-1.5 bg-white px-3 text-[15px] <?php if($current_lang == 'sc'): ?>text-orange-500<?php else:?>text-[#767676]<?php endif; ?> hover:text-orange-500 transition-colors border-r hover:underline underline-offset-4">
                                     简
                                 </span>
                             </a>
-                            <a href="/tc.html">
+                            <a href="<?php echo '/tc' . substr($current_post_uri, 2) . '.html' ?>">
                                 <span class="flex justify-center gap-x-1.5 bg-white px-3 text-[15px] <?php if($current_lang == 'tc'): ?>text-orange-500<?php else:?>text-[#767676]<?php endif; ?> hover:text-orange-500 transition-colors hover:underline underline-offset-4">
                                     繁
                                 </span>
