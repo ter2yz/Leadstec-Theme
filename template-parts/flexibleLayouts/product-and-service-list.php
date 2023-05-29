@@ -1,4 +1,4 @@
-<section id="our-services-section" class="w-full flex justify-center mt-10 md:mt-20 overflow-hidden pb-20">
+<section id="<?php echo get_sub_field('id')?>" class="w-full flex justify-center mt-10 md:mt-20 overflow-hidden pb-20">
     <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <div class="w-full px-2">
             <h2 class="capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold"><?php echo get_sub_field('heading'); ?></h2>

@@ -1,4 +1,4 @@
-<section class="relative w-full flex justify-center bg-zinc-900 py-16 md:py-32">
+<section id="<?php echo get_sub_field('id')?>" class="relative w-full flex justify-center bg-zinc-900 py-16 md:py-32">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full capitalize text-[30px] md:text-[60px] text-white font-semibold mb-12"><?php echo get_sub_field('heading') ?></h2>
