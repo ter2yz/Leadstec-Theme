@@ -1,10 +1,10 @@
 function setMarginRightBasedOnLeftOffset() {
     // Get a reference to the target <div> element
-    const targetDiv = document.getElementById("solutions-wrap");
+    const targetDiv = document.getElementById("la-wrap");
 
     // Get the updated leftOffset value
     const leftOffset = document
-        .getElementById("solutions-container")
+        .getElementById("la-container")
         .getBoundingClientRect().left;
 
     // Set the margin-right value based on the leftOffset
@@ -18,54 +18,52 @@ setMarginRightBasedOnLeftOffset();
 window.addEventListener("resize", setMarginRightBasedOnLeftOffset);
 
 // Drag to scroll functionality with smooth stop
-let isDragging = false;
-let startX;
-let startScrollLeft;
-let requestId;
-let dragStartTime;
-const sliderItems = document.querySelectorAll("#solutions-wrap a");
+let laIsDragging = false;
+let laStartX;
+let laStartScrollLeft;
+let laRequestId;
+let laDragStartTime;
+const laSliderItems = document.querySelectorAll("#la-wrap a");
 
 function handleDragStart(event) {
-    isDragging = true;
-    startX = event.clientX || event.touches[0].clientX;
-    startScrollLeft = document.getElementById(
-        "solutions-fw-container"
-    ).scrollLeft;
-    dragStartTime = Date.now();
+    laIsDragging = true;
+    laStartX = event.clientX || event.touches[0].clientX;
+    laStartScrollLeft = document.getElementById("la-fw-container").scrollLeft;
+    laDragStartTime = Date.now();
     document.body.style.cursor = "grabbing";
-    cancelAnimationFrame(requestId);
+    cancelAnimationFrame(laRequestId);
 }
 
 function handleDrag(event) {
-    if (!isDragging) return;
-    sliderItems.forEach((item) => {
+    if (!laIsDragging) return;
+    laSliderItems.forEach((item) => {
         item.style.pointerEvents = "none";
     });
     event.preventDefault();
     const x = event.clientX || event.touches[0].clientX;
-    const dragDistance = x - startX;
-    document.getElementById("solutions-fw-container").scrollLeft =
-        startScrollLeft - dragDistance;
+    const dragDistance = x - laStartX;
+    document.getElementById("la-fw-container").scrollLeft =
+        laStartScrollLeft - dragDistance;
 }
 
 function handleDragEnd(event) {
-    if (!isDragging) return;
-    sliderItems.forEach((item) => {
+    if (!laIsDragging) return;
+    laSliderItems.forEach((item) => {
         item.style.pointerEvents = "auto";
     });
-    isDragging = false;
+    laIsDragging = false;
     document.body.style.cursor = "default";
     const dragEndTime = Date.now();
-    const dragDuration = dragEndTime - dragStartTime;
+    const dragDuration = dragEndTime - laDragStartTime;
     if (dragDuration < 100) {
         animateScroll();
     }
 }
 
 function animateScroll() {
-    const sourceDiv = document.getElementById("solutions-fw-container");
+    const sourceDiv = document.getElementById("la-fw-container");
     const currentScrollLeft = sourceDiv.scrollLeft;
-    const distance = startScrollLeft - currentScrollLeft;
+    const distance = laStartScrollLeft - currentScrollLeft;
     const duration = 500; // Adjust the duration to control the speed of the stop (in milliseconds)
 
     let startTimestamp = null;
@@ -75,24 +73,24 @@ function animateScroll() {
         const elapsed = timestamp - startTimestamp;
         const progress = Math.min(elapsed / duration, 1);
         const easeProgress = easeOutCubic(progress);
-        sourceDiv.scrollLeft = startScrollLeft - easeProgress * distance;
+        sourceDiv.scrollLeft = laStartScrollLeft - easeProgress * distance;
 
         if (progress < 1) {
-            requestId = requestAnimationFrame(step);
+            laRequestId = requestAnimationFrame(step);
         }
     }
 
-    requestId = requestAnimationFrame(step);
+    laRequestId = requestAnimationFrame(step);
 }
 
 document
-    .getElementById("solutions-fw-container")
+    .getElementById("la-fw-container")
     .addEventListener("mousedown", handleDragStart);
 document.addEventListener("mousemove", handleDrag);
 document.addEventListener("mouseup", handleDragEnd);
 
 document
-    .getElementById("solutions-fw-container")
+    .getElementById("la-fw-container")
     .addEventListener("touchstart", handleDragStart);
 document.addEventListener("touchmove", handleDrag);
 document.addEventListener("touchend", handleDragEnd);

@@ -1,10 +1,10 @@
 function setMarginRightBasedOnLeftOffset() {
     // Get a reference to the target <div> element
-    const targetDiv = document.getElementById("solutions-wrap");
+    const targetDiv = document.getElementById("mah-wrap");
 
     // Get the updated leftOffset value
     const leftOffset = document
-        .getElementById("solutions-container")
+        .getElementById("mah-container")
         .getBoundingClientRect().left;
 
     // Set the margin-right value based on the leftOffset
@@ -18,54 +18,52 @@ setMarginRightBasedOnLeftOffset();
 window.addEventListener("resize", setMarginRightBasedOnLeftOffset);
 
 // Drag to scroll functionality with smooth stop
-let isDragging = false;
-let startX;
-let startScrollLeft;
-let requestId;
-let dragStartTime;
-const sliderItems = document.querySelectorAll("#solutions-wrap a");
+let mahIsDragging = false;
+let mahStartX;
+let mahStartScrollLeft;
+let mahRequestId;
+let mahDragStartTime;
+const mahSliderItems = document.querySelectorAll("#mah-wrap a");
 
 function handleDragStart(event) {
-    isDragging = true;
-    startX = event.clientX || event.touches[0].clientX;
-    startScrollLeft = document.getElementById(
-        "solutions-fw-container"
-    ).scrollLeft;
-    dragStartTime = Date.now();
+    mahIsDragging = true;
+    mahStartX = event.clientX || event.touches[0].clientX;
+    mahStartScrollLeft = document.getElementById("mah-fw-container").scrollLeft;
+    mahDragStartTime = Date.now();
     document.body.style.cursor = "grabbing";
-    cancelAnimationFrame(requestId);
+    cancelAnimationFrame(mahRequestId);
 }
 
 function handleDrag(event) {
-    if (!isDragging) return;
-    sliderItems.forEach((item) => {
+    if (!mahIsDragging) return;
+    mahSliderItems.forEach((item) => {
         item.style.pointerEvents = "none";
     });
     event.preventDefault();
     const x = event.clientX || event.touches[0].clientX;
-    const dragDistance = x - startX;
-    document.getElementById("solutions-fw-container").scrollLeft =
-        startScrollLeft - dragDistance;
+    const dragDistance = x - mahStartX;
+    document.getElementById("mah-fw-container").scrollLeft =
+        mahStartScrollLeft - dragDistance;
 }
 
 function handleDragEnd(event) {
-    if (!isDragging) return;
-    sliderItems.forEach((item) => {
+    if (!mahIsDragging) return;
+    mahSliderItems.forEach((item) => {
         item.style.pointerEvents = "auto";
     });
-    isDragging = false;
+    mahIsDragging = false;
     document.body.style.cursor = "default";
     const dragEndTime = Date.now();
-    const dragDuration = dragEndTime - dragStartTime;
+    const dragDuration = dragEndTime - mahDragStartTime;
     if (dragDuration < 100) {
         animateScroll();
     }
 }
 
 function animateScroll() {
-    const sourceDiv = document.getElementById("solutions-fw-container");
+    const sourceDiv = document.getElementById("mah-fw-container");
     const currentScrollLeft = sourceDiv.scrollLeft;
-    const distance = startScrollLeft - currentScrollLeft;
+    const distance = mahStartScrollLeft - currentScrollLeft;
     const duration = 500; // Adjust the duration to control the speed of the stop (in milliseconds)
 
     let startTimestamp = null;
@@ -75,24 +73,24 @@ function animateScroll() {
         const elapsed = timestamp - startTimestamp;
         const progress = Math.min(elapsed / duration, 1);
         const easeProgress = easeOutCubic(progress);
-        sourceDiv.scrollLeft = startScrollLeft - easeProgress * distance;
+        sourceDiv.scrollLeft = mahStartScrollLeft - easeProgress * distance;
 
         if (progress < 1) {
-            requestId = requestAnimationFrame(step);
+            mahRequestId = requestAnimationFrame(step);
         }
     }
 
-    requestId = requestAnimationFrame(step);
+    mahRequestId = requestAnimationFrame(step);
 }
 
 document
-    .getElementById("solutions-fw-container")
+    .getElementById("mah-fw-container")
     .addEventListener("mousedown", handleDragStart);
 document.addEventListener("mousemove", handleDrag);
 document.addEventListener("mouseup", handleDragEnd);
 
 document
-    .getElementById("solutions-fw-container")
+    .getElementById("mah-fw-container")
     .addEventListener("touchstart", handleDragStart);
 document.addEventListener("touchmove", handleDrag);
 document.addEventListener("touchend", handleDragEnd);

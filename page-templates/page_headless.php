@@ -16,5 +16,8 @@
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/slider.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/page-headless.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-solution-list.js' ); ?>"></script>
+<script src="<?php echo (get_template_directory_uri() . '/resources/js/dnd-more-stories.js' ); ?>"></script>
+<script src="<?php echo (get_template_directory_uri() . '/resources/js/dnd-analyst.js' ); ?>"></script>
+<script src="<?php echo (get_template_directory_uri() . '/resources/js/dnd-more-headless.js' ); ?>"></script>
 
 <?php get_template_part( 'template-parts/footer', 'general' );

@@ -29,9 +29,9 @@
         </div>
     </div>
     <!-- Mobile Carousel -->
-    <div id="solutions-fw-container" class="block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
-        <div id="solutions-container" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
-            <div id="solutions-wrap" class="inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
+    <div id="ms-fw-container" class="block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
+        <div id="ms-container" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
+            <div id="ms-wrap" class="inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
                 <?php if(get_field('headless_stories_section')['cards']):
                             foreach(get_field('headless_stories_section')['cards'] as $card){
                     ?>
