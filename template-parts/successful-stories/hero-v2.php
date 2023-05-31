@@ -1,7 +1,7 @@
 <section class="relative w-full flex justify-center bg-white pt-10 pb-40 lg:pt-20">
     <div class="relative container z-20">
         <div class="w-full flex flex-col items-center justify-center">
-            <h2 class="w-full capitalize text-5xl text-gray-900 font-semibold mb-10 px-2">Successful Stories</h2>
+            <h2 class="w-full capitalize text-5xl text-gray-900 font-semibold mb-10 px-2"><?php echo get_field('heading')?></h2>
             <div class="filters w-full flex justify-start items-center mb-10 px-2 no-scrollbar flex-wrap">
                 <button class="filter border border-orange-500 text-orange-500 text-[15px] font-bold rounded-lg px-6 py-2 mr-3 whitespace-nowrap mb-3" data-filter="all"><?php echo get_field('all_label');?></button>
                 <?php
@@ -17,7 +17,7 @@
             </div>
             <div class="products w-full flex flex-col lg:flex-row flex-wrap justify-start items-stretch transition opacity-100">
                 <?php
-                    $stories = get_field('recommend_stories');
+                    $stories = get_field('successful_stories');
                     if( $stories ) {
                         foreach( $stories as $story ) {
                 ?>
