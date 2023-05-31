@@ -1,4 +1,4 @@
-<section class="relative w-full flex justify-center bg-gray-100 pt-12 pb-10 md:pt-20 md:pb-20">
+<section class="relative w-full flex flex-col items-center justify-center bg-gray-100 pt-12 pb-10 md:pt-20 md:pb-20 overflow-hidden">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-5 md:mb-10"><?php echo get_field('foundation_section')['heading'] ?></h2>
@@ -23,17 +23,18 @@
                     }
                 ?>
             </div>
-
-            <!-- Mobile Carousel -->
-
-            <div class="relative w-full block lg:hidden pb-16">
-                <div id="slider-headless-foundation" class="w-full my-slider">
-                    <?php
-                        $cards = get_field('foundation_section')['cards'];
-                        if($cards) {
-                            foreach($cards as $card) {
-                    ?>
-                    <div class="w-full">
+        </div>
+    </div>
+    <!-- Mobile Carousel -->
+    <div id="solutions-fw-container" class="block lg:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
+        <div id="solutions-container" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
+            <div id="solutions-wrap" class="inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
+                <?php
+                    $cards = get_field('foundation_section')['cards'];
+                    if($cards) {
+                        foreach($cards as $card) {
+                ?>
+                    <div class="w-[290px] mr-3 last:mr-0">
                         <div class="w-full h-full bg-white flex flex-col p-9">
                             <h3 class="font-bold text-[20px] text-left mb-3"><?php echo $card['heading'] ?></h3>
                             <span class="w-full h-2 bg-orange-500 mb-9"></span>
@@ -43,11 +44,10 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <?php
-                            }
+                <?php
                         }
-                    ?>
-                </div>
+                    }
+                ?>
             </div>
         </div>
     </div>

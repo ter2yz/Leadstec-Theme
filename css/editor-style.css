@@ -1243,6 +1243,10 @@
   width: 27.3vw;
 }
 
+.w-\[290px\] {
+  width: 290px;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -1329,6 +1333,10 @@
 
 .origin-top-right {
   transform-origin: top right;
+}
+
+.origin-top-left {
+  transform-origin: top left;
 }
 
 .-translate-x-1\/2 {
@@ -2373,6 +2381,10 @@
   line-height: 1.25;
 }
 
+.leading-\[0px\] {
+  line-height: 0px;
+}
+
 .tracking-tight {
   letter-spacing: -0.025em;
 }
@@ -2970,6 +2982,10 @@ body {
 }
 
 @media (min-width: 769px) {
+  .md\:relative {
+    position: relative;
+  }
+
   .md\:sticky {
     position: sticky;
   }
@@ -3048,6 +3064,38 @@ body {
 
   .md\:mb-40 {
     margin-bottom: 10rem;
+  }
+
+  .md\:-mt-10 {
+    margin-top: -2.5rem;
+  }
+
+  .md\:-mt-12 {
+    margin-top: -3rem;
+  }
+
+  .md\:-mt-16 {
+    margin-top: -4rem;
+  }
+
+  .md\:-mt-\[3\.5rem\] {
+    margin-top: -3.5rem;
+  }
+
+  .md\:-mt-0 {
+    margin-top: -0px;
+  }
+
+  .md\:-mt-3 {
+    margin-top: -0.75rem;
+  }
+
+  .md\:-mt-4 {
+    margin-top: -1rem;
+  }
+
+  .md\:-mt-5 {
+    margin-top: -1.25rem;
   }
 
   .md\:block {
@@ -3206,6 +3254,12 @@ body {
   .md\:scale-150 {
     --tw-scale-x: 1.5;
     --tw-scale-y: 1.5;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:scale-\[200\%\] {
+    --tw-scale-x: 200%;
+    --tw-scale-y: 200%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 

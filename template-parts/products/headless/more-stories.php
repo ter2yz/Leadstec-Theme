@@ -1,4 +1,4 @@
-<section class="relative w-full flex justify-center bg-zinc-900 py-16 md:py-32">
+<section class="relative w-full flex flex-col items-center justify-center bg-zinc-900 py-16 md:py-32">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full capitalize text-[30px] md:text-[60px] text-white font-semibold mb-12"><?php echo get_field('headless_stories_section')['heading'] ?></h2>
@@ -26,15 +26,16 @@
                     endif;
                 ?>
             </div>
-
-            <!-- Mobile Carousel -->
-
-            <div class="relative w-full block md:hidden pb-16">
-                <div id="slider-headless-stories" class="w-full my-slider">
-                    <?php if(get_field('headless_stories_section')['cards']):
+        </div>
+    </div>
+    <!-- Mobile Carousel -->
+    <div id="solutions-fw-container" class="block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
+        <div id="solutions-container" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
+            <div id="solutions-wrap" class="inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
+                <?php if(get_field('headless_stories_section')['cards']):
                             foreach(get_field('headless_stories_section')['cards'] as $card){
                     ?>
-                    <div class="w-full">
+                    <div class="w-[290px] mr-3 last:mr-0">
                         <div class="w-full h-full bg-white flex flex-col">
                             <div class="w-full h-60 flex-none bg-white flex justify-center items-center bg-cover bg-no-repeat bg-center" aria-label="<?php echo $card['image_alt_text'] ?>" style="background-image:url(<?php echo esc_url($card['image']['url']) ?>)">
                             </div>
@@ -50,7 +51,6 @@
                             }
                         endif;
                     ?>
-                </div>
             </div>
         </div>
     </div>

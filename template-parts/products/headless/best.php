@@ -19,10 +19,10 @@
             <div class="w-full md:w-1/2 md:pr-6">
                 <img class="slider-single-image w-full max-w-xl mx-auto" src="<?php echo esc_url( $service['image'] ); ?>" alt="<?php echo $service['image_alt_text'] ?>">
             </div>
-            <div class="w-full md:w-1/2 md:pl-6 mt-12 md:mt-0">
-                <h3 class="relative capitalize text-[#1b1c1d] text-[40px] font-bold mb-6 text-center md:text-left">
+            <div class="w-full md:w-1/2 md:pl-6 mt-12 md:mt-0 overflow-hidden">
+                <p class="absolute md:relative left-1/2 md:left-0 bottom-0 text-7xl transform origin-top-left scale-110 md:scale-150 -translate-x-1/2 md:-translate-x-0 font-bold text-zinc-800/5"><?php echo $service['blur_background_text'] ?></p>
+                <h3 class="relative capitalize text-[#1b1c1d] text-[40px] font-bold mb-6 text-center md:text-left leading-tight md:-mt-5">
                     <?php echo $service['heading'] ?>
-                    <span class="absolute left-1/2 md:left-0 bottom-0 text-7xl origin-bottom-left scale-110 md:scale-150 -translate-x-1/2 md:-translate-x-0 font-bold text-zinc-800/5"><?php echo $service['blur_background_text'] ?></span>
                 </h3>
                 <p class="text-[#1b1c1d] text-[20px] text-center md:text-left"><?php echo $service['description'] ?></p>
             </div>
@@ -33,7 +33,7 @@
         ?>
     </div>
 </section>
-<div class="relative w-full block md:hidden pb-16">
+<div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto block md:hidden pb-16">
     <div id="slider-headless-best" class="w-full my-slider">
         <?php
             $services = get_field('best_on_market')['services'];

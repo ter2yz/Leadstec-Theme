@@ -1,6 +1,6 @@
 function setMarginRightBasedOnLeftOffset() {
     // Get a reference to the target <div> element
-    const targetDiv = document.getElementById("solutions-wrap");
+    const targetDivs = document.querySelectorAll("#solutions-wrap");
 
     // Get the updated leftOffset value
     const leftOffset = document
@@ -8,7 +8,9 @@ function setMarginRightBasedOnLeftOffset() {
         .getBoundingClientRect().left;
 
     // Set the margin-right value based on the leftOffset
-    targetDiv.style.marginRight = leftOffset + "px";
+    targetDivs.forEach((targetDiv) => {
+        targetDiv.style.marginRight = leftOffset + "px";
+    });
 }
 
 // Call the function initially to set the margin-right
