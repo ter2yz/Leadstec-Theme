@@ -1,7 +1,7 @@
 <section class="w-full flex justify-center items-center mb-20 md:mb-40 relative lg:sticky top-0 z-0">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col-reverse md:flex-row justify-start md:justify-center items-start min-h-[600px] overflow-hidden">
-            <div class="relative w-full md:w-1/2 flex flex-col items-start z-10 lg:pr-8">
+            <div class="relative w-full md:w-1/2 flex flex-col items-start z-10 md:pt-8 lg:pr-8">
                 <h1 class="text-[30px] md:text-[60px] text-[#1b1c1d] font-bold leading-tight"><?php echo get_field('hero_section')['heading'] ?></h1>
                 <span class="w-20 h-3 bg-orange-500 my-5"></span>
                 <p class="leading-relaxed text-[15px] md:text-[20px] text-[#9f9f9f]"><?php echo get_field('hero_section')['description'] ?></p>

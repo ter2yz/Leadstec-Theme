@@ -4140,6 +4140,10 @@ article > *:not(.entry-content),
     padding-top: 2.5rem;
   }
 
+  .md\:pt-8 {
+    padding-top: 2rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
