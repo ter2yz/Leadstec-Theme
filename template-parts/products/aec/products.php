@@ -3,7 +3,7 @@
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] leading-[1.2] font-bold mb-5"><?php echo get_field('recommend_heading') ?></h2>
             <div class="filters w-full flex justify-start items-center mb-5 no-scrollbar flex-wrap">
-                <button class="filter border border-orange-500 text-orange-500 text-[15px] font-bold rounded-lg px-6 py-2 mr-3 whitespace-nowrap mb-3" data-filter="all">All</button>
+                <button class="filter border border-orange-500 text-orange-500 text-[15px] font-bold rounded-lg px-6 py-2 mr-3 whitespace-nowrap mb-3" data-filter="all"><?php echo get_field('all_label');?></button>
                 <?php
                     $taxonomy = get_field('recommend_taxonomy');
                     $categories = get_terms($taxonomy, array('hide_empty' => false));
