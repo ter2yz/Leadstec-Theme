@@ -21,7 +21,7 @@
                                 <?php if ($categories): ?>
                                 <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3"><?php echo $categories[0]->name; ?></p>
                                 <?php endif; ?>
-                                <p class="leading-relaxed text-[#9f9f9f] text-[14px] mb-6 line-clamp-3"><?php echo get_the_excerpt($recent_post) ?></p>
+                                <p class="leading-relaxed text-[#9f9f9f] text-[14px] mb-6 line-clamp-3"><?php echo get_the_content($recent_post) ?></p>
                             </div>
                             <a href="<?php echo get_permalink($recent_post); ?>" class="text-white flex justify-center text-[14px] font-bold items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
                                 <?php echo get_field('read_more_label') ?>
