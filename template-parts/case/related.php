@@ -14,7 +14,7 @@
                 ?>
                 <div class="w-full">
                     <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
-                        <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo esc_url( get_field('feature_image', $recent_post->ID)['alt'] ); ?>" style="background-image: url(<?php echo esc_url( get_field('feature_image', $recent_post->ID)['url'] ); ?>); "></div>
+                        <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo get_field('image_alt_text', $recent_post->ID); ?>" style="background-image: url(<?php echo esc_url( get_field('feature_image', $recent_post->ID)['url'] ); ?>); "></div>
                         <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
                             <div class="w-full">
                                 <h3 class="font-bold text-[20px] text-[#1b1c1d] text-left mb-3"><?php echo $recent_post->post_title ?></h3>
