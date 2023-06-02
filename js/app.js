@@ -7,5 +7,4 @@
       main_navigation.classList.toggle("hidden");
     });
   });
-  console.log("helelo app js");
 })();
