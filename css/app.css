@@ -4017,6 +4017,10 @@ article > *:not(.entry-content),
     align-items: flex-start;
   }
 
+  .md\:items-stretch {
+    align-items: stretch;
+  }
+
   .md\:justify-end {
     justify-content: flex-end;
   }

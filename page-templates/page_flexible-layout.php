@@ -24,6 +24,8 @@ if( have_rows('component_listing') ):
             get_template_part( 'template-parts/flexibleLayouts/text-and-image-culture' );
         elseif( get_row_layout() == 'text_component' ): 
             get_template_part( 'template-parts/flexibleLayouts/text-component' );
+        elseif( get_row_layout() == 'hero_banner_homepage' ): 
+            get_template_part( 'template-parts/flexibleLayouts/hero-banner-homepage' );
         endif;
     // End loop.
     endwhile;
@@ -35,5 +37,6 @@ endif;
 
 <!-- footer scripts -->
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-solution-list.js' ); ?>"></script>
+<script src="<?php echo (get_template_directory_uri() . '/resources/js/dnd-slide.js' ); ?>"></script>
 
 <?php get_template_part( 'template-parts/footer', 'general' );

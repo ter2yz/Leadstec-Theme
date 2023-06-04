@@ -37,9 +37,9 @@
         </div>
     </div>
     <!-- Mobile Carousel -->
-    <div id="ms-fw-container" class="block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
-        <div id="ms-container" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
-            <div id="ms-wrap" class="inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
+    <div class="ms-fw-container block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
+        <div class="ms-container w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
+            <div class="ms-wrap inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
                 <?php if(get_sub_field('card_group')):
                     foreach(get_sub_field('card_group') as $card){
                 ?>
