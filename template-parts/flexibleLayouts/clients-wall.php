@@ -9,7 +9,7 @@
                 if( $clients ) {
                     foreach( $clients as $client ) {
             ?>
-            <div class="w-4/12 md:w-3/12 lg:w-[20%] flex justify-center items-center p-9 lg:p-12">
+            <div class="w-4/12 md:w-3/12 lg:w-[20%] flex justify-center items-center p-5 lg:p-8">
                 <a href="<?php echo $client['url']; ?>" class="w-full h-full">
                     <img class="w-full h-full max-w-full max-h-full object-contain" src="<?php echo esc_url($client['image']['url']); ?>" alt="<?php echo $client['image_alt_text']; ?>">
                 </a>

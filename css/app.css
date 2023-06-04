@@ -4269,6 +4269,10 @@ article > *:not(.entry-content),
   .group:nth-child(even) .md\:group-even\:pr-\[9\%\] {
     padding-right: 9%;
   }
+
+  .md\:prose-p\:text-\[20px\] :is(:where(p):not(:where([class~="not-prose"] *))) {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -4502,6 +4506,10 @@ article > *:not(.entry-content),
 
   .lg\:p-6 {
     padding: 1.5rem;
+  }
+
+  .lg\:p-8 {
+    padding: 2rem;
   }
 
   .lg\:px-0 {

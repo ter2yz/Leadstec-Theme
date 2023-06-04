@@ -3555,6 +3555,10 @@ body {
   .group:nth-child(even) .md\:group-even\:pr-6 {
     padding-right: 1.5rem;
   }
+
+  .md\:prose-p\:text-\[20px\] :is(:where(p):not(:where([class~="not-prose"] *))) {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -3833,6 +3837,10 @@ body {
 
   .lg\:p-9 {
     padding: 2.25rem;
+  }
+
+  .lg\:p-8 {
+    padding: 2rem;
   }
 
   .lg\:px-0 {

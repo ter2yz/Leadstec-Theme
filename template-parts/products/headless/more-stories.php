@@ -1,7 +1,7 @@
 <section class="relative w-full flex flex-col items-center justify-center bg-zinc-900 py-16 md:py-32">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
-            <h2 class="w-full capitalize text-[30px] md:text-[60px] text-white font-semibold mb-12"><?php echo get_field('headless_stories_section')['heading'] ?></h2>
+            <h2 class="w-full capitalize text-[30px] md:text-[60px] text-white font-semibold mb-5 md:mb-10"><?php echo get_field('headless_stories_section')['heading'] ?></h2>
 
             <!-- Desktop cards -->
 
