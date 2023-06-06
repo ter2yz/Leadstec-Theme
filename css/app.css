@@ -1212,6 +1212,11 @@ video {
   margin-bottom: 20px;
 }
 
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .-mr-1 {
   margin-right: -0.25rem;
 }

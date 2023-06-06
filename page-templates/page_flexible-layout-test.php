@@ -1,4 +1,4 @@
-<?php /* Template Name: Flexible Content Template */ ?>
+<?php /* Template Name: Flexible Content Test Template */ ?>
 <?php get_template_part( 'template-parts/header', 'general' ); ?>
 
 <?php
