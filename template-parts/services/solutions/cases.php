@@ -1,5 +1,5 @@
 <section class="w-full pt-16 pb-32 md:pt-32">
-    <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto mx-auto">
+    <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <?php
             $showcases = get_field('showcases');
             if ($showcases) {

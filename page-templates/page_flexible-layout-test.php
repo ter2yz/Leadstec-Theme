@@ -44,6 +44,32 @@ if( have_rows('component_listing') ):
             get_template_part( 'template-parts/flexibleLayouts/product-introduction-slide-multiple-images' );
         elseif( get_row_layout() == 'message_card_list_with_horizontal_line' ): 
             get_template_part( 'template-parts/flexibleLayouts/message-card-list-with-horizontal-line' );
+        elseif( get_row_layout() == 'message_card_list' ): 
+            get_template_part( 'template-parts/flexibleLayouts/message-card-list' );
+        elseif( get_row_layout() == 'relate_list_with_button' ): 
+            get_template_part( 'template-parts/flexibleLayouts/relate-list-with-button' );
+        elseif( get_row_layout() == 'relate_list_text_link' ): 
+            get_template_part( 'template-parts/flexibleLayouts/relate-list-with-link' );
+        elseif( get_row_layout() == 'customer_evaluation_list' ): 
+            get_template_part( 'template-parts/flexibleLayouts/customer-evaluation-list' );
+        elseif( get_row_layout() == 'tools_display' ): 
+            get_template_part( 'template-parts/flexibleLayouts/tools-display' );
+        elseif( get_row_layout() == 'image_popup_two_columns' ): 
+            get_template_part( 'template-parts/flexibleLayouts/image-popup-two-columns' );
+        elseif( get_row_layout() == 'single_banner' ): 
+            get_template_part( 'template-parts/flexibleLayouts/single-banner' );
+        elseif( get_row_layout() == 'customer_evaluation_two_columns' ): 
+            get_template_part( 'template-parts/flexibleLayouts/customer-evaluation-two-columns' );
+        elseif( get_row_layout() == 'message_card_list_two_columns' ): 
+            get_template_part( 'template-parts/flexibleLayouts/message-card-list-two-columns' );
+        elseif( get_row_layout() == 'text_and_image_with_link' ): 
+            get_template_part( 'template-parts/flexibleLayouts/text-and-image-with-link' );
+        elseif( get_row_layout() == 'video' ): 
+            get_template_part( 'template-parts/flexibleLayouts/video' );
+        elseif( get_row_layout() == 'left_image_right_text' ): 
+            get_template_part( 'template-parts/flexibleLayouts/left-image-right-text' );
+        elseif( get_row_layout() == 'hero_banner_with_shadow' ): 
+            get_template_part( 'template-parts/flexibleLayouts/hero-banner-with-shadow' );
         endif;
     // End loop.
     endwhile;
@@ -58,6 +84,8 @@ endif;
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-case-list-image-switch.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-clients-list.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-product-slide-multiple-images.js' ); ?>"></script>
+<script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-relate-list-btn.js' ); ?>"></script>
+<script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-video.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/dnd-slide.js' ); ?>"></script>
 
 <?php get_template_part( 'template-parts/footer', 'general' );

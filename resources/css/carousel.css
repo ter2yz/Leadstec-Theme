@@ -36,6 +36,7 @@
 #slider-blogs-list-hero-ow .tns-slider,
 #slider-blog-recent-ow .tns-slider,
 #slider-headless-best-ow .tns-slider,
+#slider-rl-ow .tns-slider,
 #slider-aem-recommend-ow .tns-slider {
     display: flex;
 }
@@ -49,6 +50,7 @@
 #slider-blogs-list-hero-ow .tns-nav,
 #slider-blog-recent-ow .tns-nav,
 #slider-headless-best-ow .tns-nav,
+#slider-rl-ow .tns-nav,
 #slider-aem-recommend-ow .tns-nav {
     position: absolute;
     bottom: 16px;
@@ -80,6 +82,7 @@
 #slider-erp-evaluation-ow .tns-nav > button,
 #slider-blogs-list-hero-ow .tns-nav > button,
 #slider-headless-best-ow .tns-nav > button,
+#slider-rl-ow .tns-nav > button,
 #slider-aem-recommend-ow .tns-nav > button {
     background: #ddd;
 }
@@ -90,6 +93,7 @@
 #slider-headless-stories-ow .tns-nav > button.tns-nav-active,
 #slider-headless-moreabout-ow .tns-nav > button.tns-nav-active,
 #slider-headless-best-ow .tns-nav > button.tns-nav-active,
+#slider-rl-ow .tns-nav > button.tns-nav-active,
 #slider-aem-recommend-ow .tns-nav > button.tns-nav-active {
     background: #2d2d2d;
 }
