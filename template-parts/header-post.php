@@ -46,8 +46,15 @@ function console_log($output, $with_script_tags = true) {
 	<?php do_action( 'tailpress_header' ); ?>
 
     <?php
-        $current_post_uri = get_page_uri(get_post());
-        $current_lang = substr($current_post_uri, 0, 2);
+        $post_type = get_post_type(get_post());
+        $post_type_obj = get_post_type_object( $post_type );
+        // Check if a description is set.
+        if ( isset( $post_type_obj->description ) ) {
+            $description = $post_type_obj->description;
+        } else {
+            $description = '';
+        }
+        $current_lang = $description;
         $homepage_uri = '/';
         if($current_lang == 'en') {
             $homepage_uri = '/en.html';
