@@ -5,10 +5,12 @@ function setMarginRightBasedOnLeftOffset() {
     // Get the updated leftOffset value
     const leftOffset = document
         .getElementById("solutions-container")
-        .getBoundingClientRect().left;
+        ?.getBoundingClientRect().left;
 
     // Set the margin-right value based on the leftOffset
-    targetDiv.style.marginRight = leftOffset + "px";
+    if (targetDiv) {
+        targetDiv.style.marginRight = leftOffset + "px";
+    }
 }
 
 // Call the function initially to set the margin-right
@@ -87,13 +89,13 @@ function animateScroll() {
 
 document
     .getElementById("solutions-fw-container")
-    .addEventListener("mousedown", handleDragStart);
+    ?.addEventListener("mousedown", handleDragStart);
 document.addEventListener("mousemove", handleDrag);
 document.addEventListener("mouseup", handleDragEnd);
 
 document
     .getElementById("solutions-fw-container")
-    .addEventListener("touchstart", handleDragStart);
+    ?.addEventListener("touchstart", handleDragStart);
 document.addEventListener("touchmove", handleDrag);
 document.addEventListener("touchend", handleDragEnd);
 

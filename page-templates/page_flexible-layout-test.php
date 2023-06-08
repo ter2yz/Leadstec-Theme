@@ -70,6 +70,10 @@ if( have_rows('component_listing') ):
             get_template_part( 'template-parts/flexibleLayouts/left-image-right-text' );
         elseif( get_row_layout() == 'hero_banner_with_shadow' ): 
             get_template_part( 'template-parts/flexibleLayouts/hero-banner-with-shadow' );
+        elseif( get_row_layout() == 'contact_form' ): 
+            get_template_part( 'template-parts/flexibleLayouts/contact-form' );
+        elseif( get_row_layout() == 'case_list_number_switch' ): 
+            get_template_part( 'template-parts/flexibleLayouts/case-list-number-switch' );
         endif;
     // End loop.
     endwhile;
@@ -86,6 +90,7 @@ endif;
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-product-slide-multiple-images.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-relate-list-btn.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-video.js' ); ?>"></script>
+<script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-case-list-number.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/dnd-slide.js' ); ?>"></script>
 
 <?php get_template_part( 'template-parts/footer', 'general' );
