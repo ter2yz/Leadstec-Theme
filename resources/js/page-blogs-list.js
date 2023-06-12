@@ -21,17 +21,17 @@ if (numberButtons && showcases) {
     const handleCasesChange = (index) => {
         numberButtons.forEach((b) => {
             if (index == b.dataset.index) {
-                b.classList.remove("scale-75");
+                b.classList.remove("text-[20px]");
                 b.classList.remove("opacity-80");
                 b.classList.remove("text-zinc-900");
-                b.classList.add("scale-125");
+                b.classList.add("text-[100px]");
                 b.classList.add("opacity-100");
                 b.classList.add("text-orange-500");
             } else {
-                b.classList.remove("scale-125");
+                b.classList.remove("text-[100px]");
                 b.classList.remove("opacity-100");
                 b.classList.remove("text-orange-500");
-                b.classList.add("scale-75");
+                b.classList.add("text-[20px]");
                 b.classList.add("opacity-80");
                 b.classList.add("text-zinc-900");
             }

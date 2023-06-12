@@ -9,8 +9,8 @@
                     foreach($feature_blogs as $feature_blog) {
                 ?>
                 <div class="text-7xl font-bold px-3 flex items-center justify-center">
-                    <button data-index="<?php echo $feature_index ?>" data-caseId="" class="h-40 transition-transform mr-6 <?php echo $feature_index == 0 ? "scale-125 opacity-100 text-orange-500" : "scale-75 opacity-80 text-zinc-900" ?>"><?php echo $feature_index + 1 ?></button>
-                    <span class="w-6 h-[2px] bg-zinc-900"></span>
+                    <button data-index="<?php echo $feature_index ?>" data-caseId="" class="h-40 transition-all mr-6 <?php echo $feature_index == 0 ? "text-[100px] opacity-100 text-orange-500" : "text-[20px] opacity-80 text-zinc-900" ?>"><?php echo $feature_index + 1 ?></button>
+                    <span class="w-6 h-[2px] bg-zinc-900 text-[100px] text-[20px]"></span>
                 </div>
                 <?php
                         $feature_index += 1;
@@ -18,6 +18,9 @@
                 }
                 ?>
             </div>
+            <a href="<?php echo get_field("button_url"); ?>" class="text-3xl w-12 h-12 mt-10 flex justify-center items-center rounded-full border-2 border-gray-900 text-gray-900">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
         </div>
         <div id="showcase-web-cases" class="relative grow w-full lg:w-auto">
             <?php
