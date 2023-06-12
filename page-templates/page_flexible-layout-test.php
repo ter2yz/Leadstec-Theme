@@ -74,6 +74,8 @@ if( have_rows('component_listing') ):
             get_template_part( 'template-parts/flexibleLayouts/contact-form' );
         elseif( get_row_layout() == 'case_list_number_switch' ): 
             get_template_part( 'template-parts/flexibleLayouts/case-list-number-switch' );
+        elseif( get_row_layout() == 'product_list_category' ): 
+            get_template_part( 'template-parts/flexibleLayouts/product-list-category' );
         endif;
     // End loop.
     endwhile;
@@ -91,6 +93,7 @@ endif;
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-relate-list-btn.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-video.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-case-list-number.js' ); ?>"></script>
+<script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-filter.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/dnd-slide.js' ); ?>"></script>
 
 <?php get_template_part( 'template-parts/footer', 'general' );

@@ -1,5 +1,5 @@
 <?php /* Template Name: Single Story Template */ ?>
-<?php get_template_part( 'template-parts/header', 'general' ); ?>
+<?php get_template_part( 'template-parts/header', 'post' ); ?>
 <?php get_template_part( 'template-parts/blog/content' ); ?>
 <?php get_template_part( 'template-parts/blog/related' ); ?>
 
