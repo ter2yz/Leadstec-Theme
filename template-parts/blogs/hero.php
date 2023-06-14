@@ -30,7 +30,7 @@
                 foreach($feature_blogs as $feature_blog){
                     $current_taxonomies = get_post_taxonomies($feature_blog['single_blog']);
                     $categories = get_the_terms($feature_blog['single_blog'], $current_taxonomies[0]);
-                    $dateStr = get_the_date( 'j F Y', $feature_blog['single_blog'] );
+                    $dateStr = get_the_date( 'd F Y', $feature_blog['single_blog'] );
                     if ($current_lang == "blogs_sc" || $current_lang == "blogs_tc") {
                         $dateStr = get_the_date( 'Y年n月j日', $feature_blog['single_blog'] );
                     }
