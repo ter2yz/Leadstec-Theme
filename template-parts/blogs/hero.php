@@ -3,6 +3,7 @@
         <div class="hidden lg:flex w-4/12 px-6 h-full flex-col items-center justify-start mt-10">
             <div id="slider-web-cases" class="w-full text-white flex flex-col items-center justify-center">
                 <?php
+                $current_lang = get_field('blogs_type');
                 $feature_blogs = get_field('feature_blogs');
                 $feature_index = 0;
                 if($feature_blogs) {
@@ -27,14 +28,19 @@
             $blog_index = 0;
             if($feature_blogs) {
                 foreach($feature_blogs as $feature_blog){
-                    $categories = get_the_category($feature_blog['single_blog']);
+                    $current_taxonomies = get_post_taxonomies($feature_blog['single_blog']);
+                    $categories = get_the_terms($feature_blog['single_blog'], $current_taxonomies[0]);
+                    $dateStr = get_the_date( 'j F Y', $feature_blog['single_blog'] );
+                    if ($current_lang == "blogs_sc" || $current_lang == "blogs_tc") {
+                        $dateStr = get_the_date( 'Y年n月j日', $feature_blog['single_blog'] );
+                    }
             ?>
             <a href="<?php echo get_permalink($feature_blog['single_blog']) ?>" data-index="<?php echo $blog_index ?>" class="showcase-container relative lg:absolute w-full inset-0 flex flex-col justify-start items-stretch transition duration-500 opacity-100 translate-x-0 mb-10 lg:mb-0 shadow-xl rounded-xl lg:shadow-none lg:rounded-none <?php echo $blog_index == 0 ? "lg:opacity-100 lg:translate-x-0" : "lg:opacity-0 lg:translate-x-full" ?>">
                 <img class="block w-full max-h-[500px] lg:hidden" src="<?php echo esc_url( get_the_post_thumbnail_url($feature_blog['single_blog']) ); ?>" alt="">
                 <div class="hidden lg:block relative w-full h-[500px] bg-center bg-cover bg-no-repeat group" style="background-image: url(<?php echo esc_url( get_the_post_thumbnail_url($feature_blog['single_blog']) ); ?>)"></div>
                 <div class="w-full bg-white flex flex-col flex-none justify-start items-start py-6 lg:pr-10">
                     <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6"><?php echo $feature_blog['single_blog']->post_title; ?></p>
-                    <p class="text-zinc-900 capitalize"><?php echo $categories[0]->name ?> • <?php echo get_the_date( 'j F Y', $feature_blog['single_blog'] )?></p>
+                    <p class="text-zinc-900 capitalize"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
                 </div>
             </a>
             <?php
@@ -67,42 +73,6 @@
                     }
                 }
                 ?>
-                <div class="w-full">
-                    <a href="/single-blog/" class="relative">
-                        <img class="block w-full max-h-[500px] lg:hidden" src="<?php echo esc_url( get_template_directory_uri() . '/assets/mocking-story-3.png' ); ?>" alt="">
-                        <div class="w-full bg-white flex flex-col flex-none justify-start items-start py-6 lg:pr-10">
-                            <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6">Building a high performance international website using kentico kontent</p>
-                            <p class="text-zinc-900 capitalize">Aem • 23 April 2021</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="w-full">
-                    <a href="/single-blog/" class="relative">
-                        <img class="block w-full max-h-[500px] lg:hidden" src="<?php echo esc_url( get_template_directory_uri() . '/assets/mocking-story-5.png' ); ?>" alt="">
-                        <div class="w-full bg-white flex flex-col flex-none justify-start items-start py-6 lg:pr-10">
-                            <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6">Building a high performance international website using kentico kontent</p>
-                            <p class="text-zinc-900 capitalize">Aem • 23 April 2021</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="w-full">
-                    <a href="/single-blog/" class="relative">
-                        <img class="block w-full max-h-[500px] lg:hidden" src="<?php echo esc_url( get_template_directory_uri() . '/assets/mocking-story-6.png' ); ?>" alt="">
-                        <div class="w-full bg-white flex flex-col flex-none justify-start items-start py-6 lg:pr-10">
-                            <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6">Building a high performance international website using kentico kontent</p>
-                            <p class="text-zinc-900 capitalize">Aem • 23 April 2021</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="w-full">
-                    <a href="/single-blog/" class="relative">
-                        <img class="block w-full max-h-[500px] lg:hidden" src="<?php echo esc_url( get_template_directory_uri() . '/assets/mocking-story-4.png' ); ?>" alt="">
-                        <div class="w-full bg-white flex flex-col flex-none justify-start items-start py-6 lg:pr-10">
-                            <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6">Building a high performance international website using kentico kontent</p>
-                            <p class="text-zinc-900 capitalize">Aem • 23 April 2021</p>
-                        </div>
-                    </a>
-                </div>
             </div>
         </div>
     </div>
