@@ -12,8 +12,8 @@ if( have_rows('component_listing') ):
             get_template_part( 'template-parts/flexibleLayouts/header', 'banner' );
         elseif( get_row_layout() == 'image' ): 
             get_template_part( 'template-parts/flexibleLayouts/image' );
-        elseif( get_row_layout() == 'related_list_text_link' ): 
-            get_template_part( 'template-parts/flexibleLayouts/related-list-text-link' );
+        elseif( get_row_layout() == 'related_list_black' ): 
+            get_template_part( 'template-parts/flexibleLayouts/related-list-black' );
         elseif( get_row_layout() == 'solution_list' ): 
             get_template_part( 'template-parts/flexibleLayouts/solution-list' );
         elseif( get_row_layout() == 'product_and_service_list' ): 

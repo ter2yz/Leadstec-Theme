@@ -11,7 +11,7 @@
                 ?>
                 <div class="w-full md:w-1/3 flex flex-col md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n+1)]:pr-2 md:[&:nth-child(3n)]:pl-2 md:[&:nth-child(3n)]:pr-0 md:pl-1 md:pr-1 mb-6 group">
                     <?php if($card['button_url']): ?>
-                    <a href="<?php echo $card['button_url'] ?>">
+                    <a class="h-full flex flex-col" href="<?php echo $card['button_url'] ?>">
                     <?php endif; ?>
                         <div class="w-full h-60 overflow-hidden">
                             <div class="w-full h-60 flex-none bg-white flex justify-center items-center bg-cover bg-no-repeat bg-center transition-all group-hover:scale-110" aria-label="<?php echo $card['image_alt_text'] ?>" style="background-image:url(<?php echo esc_url($card['image']['url']) ?>)">
