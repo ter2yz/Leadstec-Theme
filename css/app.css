@@ -2616,6 +2616,10 @@ video {
   padding-top: 60%;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -4512,6 +4516,11 @@ article > *:not(.entry-content),
     padding-bottom: 8rem;
   }
 
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .lg\:pb-28 {
     padding-bottom: 7rem;
   }
@@ -4558,6 +4567,10 @@ article > *:not(.entry-content),
 
   .lg\:pt-48 {
     padding-top: 12rem;
+  }
+
+  .lg\:pt-12 {
+    padding-top: 3rem;
   }
 
   .lg\:text-left {

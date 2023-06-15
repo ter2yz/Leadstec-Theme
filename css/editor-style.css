@@ -2094,6 +2094,10 @@
   padding-top: 60%;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3646,6 +3650,11 @@ body {
     padding-bottom: 8rem;
   }
 
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .lg\:pb-28 {
     padding-bottom: 7rem;
   }
@@ -3692,6 +3701,10 @@ body {
 
   .lg\:pt-48 {
     padding-top: 12rem;
+  }
+
+  .lg\:pt-12 {
+    padding-top: 3rem;
   }
 
   .lg\:text-left {
