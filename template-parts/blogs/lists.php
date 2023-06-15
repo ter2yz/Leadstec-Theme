@@ -20,7 +20,7 @@
                             }
                     ?>
                     <a href="<?php echo get_permalink($recent_post) ?>" class="w-full h-[108px] flex flex-col items-start justify-center border-b border-zinc-400/25 last:border-transparent py-6">
-                        <p class="text-zinc-900 font-medium capitalize"><?php echo $recent_post->post_title ?></p>
+                        <p class="text-zinc-900 font-medium capitalize"><?php echo get_field('title', $recent_post->ID) ?></p>
                         <p class="text-zinc-500 capitalize"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
                     </a>
                     <?php
@@ -44,7 +44,7 @@
                         <a href="<?php echo get_permalink($singlePost) ?>" class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" style="background-image: url(<?php echo esc_url( get_the_post_thumbnail_url($singlePost) ); ?>); "></a>
                         <div class="w-full flex flex-col justify-between items-start grow p-3 md:p-6 xl:p-9">
                             <div class="w-full">
-                                <h3 class="font-bold text-xl text-left mb-3"><?php echo $singlePost->post_title ?></h3>
+                                <h3 class="font-bold text-xl text-left mb-3"><?php echo get_field('title', $singlePost->ID) ?></h3>
                                 <p class="leading-relaxed mb-3"><?php echo $current_terms[0]->name ?> • <?php echo get_the_date( 'd F Y', $singlePost )?></p>
                                 <p class="leading-relaxed text-zinc-500 mb-12 max-h-80 overflow-hidden"><?php echo get_the_excerpt($singlePost) ?></p>
                             </div>

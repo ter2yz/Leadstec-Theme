@@ -9,7 +9,7 @@ $categories = get_the_category();
         <div class="relative w-full flex flex-col md:flex-row items-stretch mb-10">
             <img class="w-full md:w-[27.3vw] object-cover" src="<?php echo esc_url( get_field('feature_image')['url'] ); ?>" alt="<?php echo get_field('feature_image')['alt']; ?>">
             <div class="w-full flex flex-col justify-start items-start py-6 px-6 lg:px-10 bg-gray-50">
-                <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6"><?php echo the_title() ?></p>
+                <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6"><?php echo get_field('title') ?></p>
                 <p class="text-zinc-900 capitalize"><?php echo $categories[0]->name ?> • <?php the_time( 'j F Y' )?></p>
             </div>
         </div>
