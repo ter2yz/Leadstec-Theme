@@ -2,7 +2,7 @@
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
         <div class="w-full md:w-4/12 md:min-h-screen md:sticky md:top-12 bg-gray-100 px-6 pt-6 pb-40 lg:px-12 lg:pt-12">
             <div class="w-full bg-white p-6">
-                <h3 class="font-bold text-xl text-left uppercase"><?php echo get_field('recent_posts_heading');?></h3>
+                <h3 class="font-bold text-xl text-left"><?php echo get_field('recent_posts_heading');?></h3>
                 <div class="w-full h-[590px] overflow-y-auto no-scrollbar">
                     <?php
                     $current_type = get_field('blogs_type');

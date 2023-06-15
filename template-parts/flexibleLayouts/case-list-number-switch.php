@@ -1,4 +1,4 @@
-<section id="<?php echo get_sub_field('id')?>" class="relative w-full lg:bg-zinc-900 z-20 pb-40 overflow-hidden">
+<section id="<?php echo get_sub_field('id')?>" class="relative w-full lg:bg-zinc-900 z-20 overflow-hidden">
     <div class="clns-container w-full hidden lg:flex lg:h-screen lg:min-h-[600px] px-8 lg:px-0">
         <h2 class="block lg:hidden w-full text-5xl text-zinc-900 font-semibold mb-10 text-left"><?php echo get_sub_field('heading') ?></h2>
         <?php $cases = get_sub_field('cases'); ?>

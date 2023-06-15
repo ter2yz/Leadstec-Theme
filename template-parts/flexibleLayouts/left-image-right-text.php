@@ -1,4 +1,4 @@
-<section id="<?php echo get_sub_field('id')?>" class="w-full pt-16 pb-32 md:pt-32">
+<section id="<?php echo get_sub_field('id')?>" class="w-full">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <?php
             $cards = get_sub_field('cards');

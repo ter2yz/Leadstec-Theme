@@ -1,4 +1,4 @@
-<section id="<?php echo get_sub_field('id')?>" class="w-full bg-white pt-10 pb-16 lg:pb-32">
+<section id="<?php echo get_sub_field('id')?>" class="w-full bg-white pb-8 md:pb-0">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full text-center text-[30px] md:text-[60px] text-[#1b1c1d] px-3 font-bold top-0 bg-white z-20"><?php echo get_sub_field('heading') ?></h2>

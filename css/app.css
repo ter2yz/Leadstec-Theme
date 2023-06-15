@@ -2620,6 +2620,10 @@ video {
   padding-top: 1.5rem;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -4116,6 +4120,10 @@ article > *:not(.entry-content),
 
   .md\:pt-8 {
     padding-top: 2rem;
+  }
+
+  .md\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .md\:text-left {
