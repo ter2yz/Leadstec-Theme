@@ -2,7 +2,7 @@
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
         <div class="w-full md:w-4/12 md:min-h-screen md:sticky md:top-12 bg-gray-100 px-6 pt-6 pb-40 lg:px-12 lg:pt-12">
             <div class="w-full bg-white p-6">
-                <h3 class="font-bold text-xl text-left"><?php echo get_field('recent_posts_heading');?></h3>
+                <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('recent_posts_heading');?></h3>
                 <div class="w-full h-[590px] overflow-y-auto no-scrollbar">
                     <?php
                     $current_type = get_field('blogs_type');
@@ -19,8 +19,8 @@
                                 $dateStr = get_the_date( 'Y年n月j日', $recent_post );
                             }
                     ?>
-                    <a href="<?php echo get_permalink($recent_post) ?>" class="w-full h-[108px] flex flex-col items-start justify-center border-b border-zinc-400/25 last:border-transparent py-6">
-                        <p class="text-zinc-900 font-medium capitalize"><?php echo get_field('title', $recent_post->ID) ?></p>
+                    <a href="<?php echo get_permalink($recent_post) ?>" class="w-full flex flex-col items-start justify-center border-b border-zinc-400/25 last:border-transparent py-[20px]">
+                        <p class="text-zinc-900 font-medium capitalize mb-[10px]"><?php echo get_field('title', $recent_post->ID) ?></p>
                         <p class="text-zinc-500 capitalize"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
                     </a>
                     <?php
