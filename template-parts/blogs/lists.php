@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full md:w-8/12 px-6 pt-6 pb-40 lg:px-12 lg:pt-12">
+        <div class="hidden md:block w-full md:w-8/12 px-6 pt-6 pb-40 lg:px-12 lg:pt-12">
             <div class="w-full flex flex-col md:flex-row flex-wrap justify-start items-stretch transition opacity-100 px-6 lg:px-0">
                 <?php
                 $allPosts = $recent_posts;
@@ -56,6 +56,36 @@
                     }
                 }
                 ?>
+            </div>
+        </div>
+        <div class="ms-fw-container block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar bg-gray-100">
+            <div class="ms-container w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
+                <div class="ms-wrap inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
+                    <?php
+                    $allPosts = $recent_posts;
+                    if ($allPosts) {
+                        foreach($allPosts as $singlePost) {
+                            $current_taxonomies = get_post_taxonomies($singlePost);
+                            $categories = get_the_terms($singlePost, $current_taxonomies[0]);
+                    ?>
+                    <div class="w-[290px] mr-3 last:mr-0">
+                        <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
+                            <a href="<?php echo get_permalink($singlePost) ?>" class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo get_field('image_alt_text', $singlePost->ID); ?>" style="background-image: url(<?php echo esc_url( get_field('feature_image', $singlePost->ID)['url'] ); ?>); "></a>
+                            <div class="w-full flex flex-col justify-between items-start grow p-3 md:p-6 xl:p-9">
+                                <div class="w-full">
+                                    <h3 class="font-bold text-xl text-left mb-3"><?php echo get_field('title', $singlePost->ID) ?></h3>
+                                    <p class="leading-relaxed mb-3"><?php echo $current_terms[0]->name ?> • <?php echo get_the_date( 'd F Y', $singlePost )?></p>
+                                    <p class="leading-relaxed text-zinc-500 mb-12 max-h-80 overflow-hidden line-clamp-3"><?php echo strip_tags(get_field('information_text', $singlePost)) ?></p>
+                                </div>
+                                <a href="<?php echo get_permalink($singlePost) ?>" class="text-sky-600"><?php echo get_field('learn_more_label');?></a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                        }
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </div>
