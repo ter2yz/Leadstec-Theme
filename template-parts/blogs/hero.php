@@ -28,18 +28,18 @@
             $blog_index = 0;
             if($feature_blogs) {
                 foreach($feature_blogs as $feature_blog){
-                    $current_taxonomies = get_post_taxonomies($feature_blog['single_blog']);
-                    $categories = get_the_terms($feature_blog['single_blog'], $current_taxonomies[0]);
-                    $dateStr = get_the_date( 'd F Y', $feature_blog['single_blog'] );
+                    $current_taxonomies = get_post_taxonomies($feature_blog);
+                    $categories = get_the_terms($feature_blog, $current_taxonomies[0]);
+                    $dateStr = get_the_date( 'd F Y', $feature_blog );
                     if ($current_lang == "blogs_sc" || $current_lang == "blogs_tc") {
-                        $dateStr = get_the_date( 'Y年n月j日', $feature_blog['single_blog'] );
+                        $dateStr = get_the_date( 'Y年n月j日', $feature_blog );
                     }
             ?>
-            <a href="<?php echo get_permalink($feature_blog['single_blog']) ?>" data-index="<?php echo $blog_index ?>" class="showcase-container relative lg:absolute w-full inset-0 flex flex-col justify-start items-stretch transition duration-500 opacity-100 translate-x-0 mb-10 lg:mb-0 shadow-xl rounded-xl lg:shadow-none lg:rounded-none <?php echo $blog_index == 0 ? "lg:opacity-100 lg:translate-x-0" : "lg:opacity-0 lg:translate-x-full" ?>">
-                <img class="block w-full max-h-[500px] lg:hidden" src="<?php echo esc_url( get_field('feature_image', $feature_blog['single_blog']->ID)['url'] ); ?>" alt="<?php echo get_field('image_alt_text', $feature_blog['single_blog']->ID);?>">
-                <div class="hidden lg:block relative w-full h-[500px] bg-center bg-cover bg-no-repeat group" style="background-image: url(<?php echo esc_url( get_field('feature_image', $feature_blog['single_blog']->ID)['url'] ); ?>)" aria-label="<?php echo get_field('image_alt_text', $feature_blog['single_blog']->ID);?>"></div>
+            <a href="<?php echo get_permalink($feature_blog) ?>" data-index="<?php echo $blog_index ?>" class="showcase-container relative lg:absolute w-full inset-0 flex flex-col justify-start items-stretch transition duration-500 opacity-100 translate-x-0 mb-10 lg:mb-0 shadow-xl rounded-xl lg:shadow-none lg:rounded-none <?php echo $blog_index == 0 ? "lg:opacity-100 lg:translate-x-0" : "lg:opacity-0 lg:translate-x-full" ?>">
+                <img class="block w-full max-h-[500px] lg:hidden" src="<?php echo esc_url( get_field('feature_image', $feature_blog->ID)['url'] ); ?>" alt="<?php echo get_field('image_alt_text', $feature_blog->ID);?>">
+                <div class="hidden lg:block relative w-full h-[500px] bg-center bg-cover bg-no-repeat group" style="background-image: url(<?php echo esc_url( get_field('feature_image', $feature_blog->ID)['url'] ); ?>)" aria-label="<?php echo get_field('image_alt_text', $feature_blog->ID);?>"></div>
                 <div class="w-full bg-white flex flex-col flex-none justify-start items-start py-6 lg:pr-10">
-                    <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6"><?php echo get_field('title', $feature_blog['single_blog']->ID); ?></p>
+                    <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6"><?php echo get_field('title', $feature_blog->ID); ?></p>
                     <p class="text-zinc-900 capitalize"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
                 </div>
             </a>
@@ -58,14 +58,14 @@
                 <?php
                 if($feature_blogs) {
                     foreach($feature_blogs as $feature_blog){
-                        $categories = get_the_category($feature_blog['single_blog']);
+                        $categories = get_the_category($feature_blog);
                 ?>
                 <div class="w-full">
-                    <a href="<?php echo get_permalink($feature_blog['single_blog']) ?>" class="relative">
-                        <img class="block w-full max-h-[500px] lg:hidden" src="<?php echo esc_url( get_field('feature_image', $feature_blog['single_blog']->ID)['url'] ); ?>" alt="">
+                    <a href="<?php echo get_permalink($feature_blog) ?>" class="relative">
+                        <img class="block w-full max-h-[500px] lg:hidden" src="<?php echo esc_url( get_field('feature_image', $feature_blog->ID)['url'] ); ?>" alt="">
                         <div class="w-full bg-white flex flex-col flex-none justify-start items-start py-6 lg:pr-10">
-                            <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6"><?php echo get_field('title', $feature_blog['single_blog']->ID) ?></p>
-                            <p class="text-zinc-900 capitalize"><?php echo $categories[0]->name ?> • <?php echo get_the_date( 'j F Y', $feature_blog['single_blog'] ) ?></p>
+                            <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6"><?php echo get_field('title', $feature_blog->ID) ?></p>
+                            <p class="text-zinc-900 capitalize"><?php echo $categories[0]->name ?> • <?php echo get_the_date( 'j F Y', $feature_blog ) ?></p>
                         </div>
                     </a>
                 </div>

@@ -9,14 +9,17 @@
                     $recent_posts = get_posts(array(
                         'numberposts' => -1,
                         'post_type' => $current_type,
+                        'meta_key'  => 'post_date',
+                        'orderby' => array( 'meta_value' => 'DESC' ), 
                     ));
                     if ($recent_posts) {
                         foreach($recent_posts as $recent_post) {
                             $current_taxonomies = get_post_taxonomies($recent_post);
                             $categories = get_the_terms($recent_post, $current_taxonomies[0]);
-                            $dateStr = get_the_date( 'j F Y', $recent_post );
+                            $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $recent_post->ID) );
+                            $dateStr = $postDate->format('j F Y');
                             if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
-                                $dateStr = get_the_date( 'Y年n月j日', $recent_post );
+                                $dateStr = $postDate->format('Y年n月j日');; 
                             }
                     ?>
                     <a href="<?php echo get_permalink($recent_post) ?>" class="w-full flex flex-col items-start justify-center border-b border-zinc-400/25 last:border-transparent py-[20px]">
@@ -38,6 +41,11 @@
                     foreach($allPosts as $singlePost) {
                         $current_taxonomies = get_post_taxonomies($singlePost);
                         $categories = get_the_terms($singlePost, $current_taxonomies[0]);
+                        $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $singlePost->ID) );
+                        $dateStr = $postDate->format('j F Y');
+                        if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
+                            $dateStr = $postDate->format('Y年n月j日');; 
+                        }
                 ?>
                 <div class="w-full lg:w-1/2 lg:odd:pl-0 lg:odd:pr-3 lg:even:pl-3 lg:even:pr-0 overflow-hidden mb-6">
                     <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
@@ -45,7 +53,7 @@
                         <div class="w-full flex flex-col justify-between items-start grow p-3 md:p-6 xl:p-9">
                             <div class="w-full">
                                 <h3 class="font-bold text-xl text-left mb-3"><?php echo get_field('title', $singlePost->ID) ?></h3>
-                                <p class="leading-relaxed mb-3"><?php echo $current_terms[0]->name ?> • <?php echo get_the_date( 'd F Y', $singlePost )?></p>
+                                <p class="leading-relaxed mb-3"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
                                 <p class="leading-relaxed text-zinc-500 mb-12 max-h-80 overflow-hidden line-clamp-3"><?php echo strip_tags(get_field('information_text', $singlePost)) ?></p>
                             </div>
                             <a href="<?php echo get_permalink($singlePost) ?>" class="text-sky-600"><?php echo get_field('learn_more_label');?></a>
