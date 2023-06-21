@@ -16,10 +16,14 @@
                         foreach($recent_posts as $recent_post) {
                             $current_taxonomies = get_post_taxonomies($recent_post);
                             $categories = get_the_terms($recent_post, $current_taxonomies[0]);
-                            $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $recent_post->ID) );
-                            $dateStr = $postDate->format('j F Y');
-                            if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
-                                $dateStr = $postDate->format('Y年n月j日');; 
+                            if(get_field('post_date', $recent_post->ID)){
+                                $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $recent_post->ID) );
+                                $dateStr = $postDate->format('j F Y');
+                                if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
+                                    $dateStr = $postDate->format('Y年n月j日');; 
+                                }
+                            } else {
+                                $dateStr = "";
                             }
                     ?>
                     <a href="<?php echo get_permalink($recent_post) ?>" class="w-full flex flex-col items-start justify-center border-b border-zinc-400/25 last:border-transparent py-[20px]">
@@ -41,10 +45,14 @@
                     foreach($allPosts as $singlePost) {
                         $current_taxonomies = get_post_taxonomies($singlePost);
                         $categories = get_the_terms($singlePost, $current_taxonomies[0]);
-                        $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $singlePost->ID) );
-                        $dateStr = $postDate->format('j F Y');
-                        if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
-                            $dateStr = $postDate->format('Y年n月j日');; 
+                        if(get_field('post_date', $singlePost->ID)){
+                            $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $singlePost->ID) );
+                            $dateStr = $postDate->format('j F Y');
+                            if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
+                                $dateStr = $postDate->format('Y年n月j日');; 
+                            }
+                        } else {
+                            $dateStr = "";
                         }
                 ?>
                 <div class="w-full lg:w-1/2 lg:odd:pl-0 lg:odd:pr-3 lg:even:pl-3 lg:even:pr-0 overflow-hidden mb-6">

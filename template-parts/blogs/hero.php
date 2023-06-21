@@ -30,10 +30,14 @@
                 foreach($feature_blogs as $feature_blog){
                     $current_taxonomies = get_post_taxonomies($feature_blog);
                     $categories = get_the_terms($feature_blog, $current_taxonomies[0]);
-                    $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $feature_blog->ID) );
-                    $dateStr = $postDate->format('j F Y');
-                    if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
-                        $dateStr = $postDate->format('Y年n月j日');; 
+                    if(get_field('post_date', $feature_blog->ID)){
+                        $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $feature_blog->ID) );
+                        $dateStr = $postDate->format('j F Y');
+                        if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
+                            $dateStr = $postDate->format('Y年n月j日');
+                        }
+                    } else {
+                        $dateStr = "";
                     }
             ?>
             <a href="<?php echo get_permalink($feature_blog) ?>" data-index="<?php echo $blog_index ?>" class="showcase-container relative lg:absolute w-full inset-0 flex flex-col justify-start items-stretch transition duration-500 opacity-100 translate-x-0 mb-10 lg:mb-0 shadow-xl rounded-xl lg:shadow-none lg:rounded-none <?php echo $blog_index == 0 ? "lg:opacity-100 lg:translate-x-0" : "lg:opacity-0 lg:translate-x-full" ?>">
@@ -59,14 +63,24 @@
                 <?php
                 if($feature_blogs) {
                     foreach($feature_blogs as $feature_blog){
-                        $categories = get_the_category($feature_blog);
+                        $current_taxonomies = get_post_taxonomies($feature_blog);
+                        $categories = get_the_terms($feature_blog, $current_taxonomies[0]);
+                        if(get_field('post_date', $feature_blog->ID)){
+                            $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $feature_blog->ID) );
+                            $dateStr = $postDate->format('j F Y');
+                            if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
+                                $dateStr = $postDate->format('Y年n月j日');
+                            }
+                        } else {
+                            $dateStr = "";
+                        }
                 ?>
                 <div class="w-full">
                     <a href="<?php echo get_permalink($feature_blog) ?>" class="relative">
                         <img class="block w-full max-h-[500px] lg:hidden" src="<?php echo esc_url( get_field('feature_image', $feature_blog->ID)['url'] ); ?>" alt="">
                         <div class="w-full bg-white flex flex-col flex-none justify-start items-start py-6 lg:pr-10">
                             <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6"><?php echo get_field('title', $feature_blog->ID) ?></p>
-                            <p class="text-zinc-900 capitalize"><?php echo $categories[0]->name ?> • <?php echo get_the_date( 'j F Y', $feature_blog ) ?></p>
+                            <p class="text-zinc-900 capitalize"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
                         </div>
                     </a>
                 </div>
