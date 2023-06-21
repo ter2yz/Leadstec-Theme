@@ -20,6 +20,12 @@ function replaceLanguageInURL($url, $language) {
             if ($index !== false && isset($pathParts[$index + 1])) {
                 $pathParts[$index - 1] = $language;
             }
+        } else if (count($pathParts) > 1 && in_array('cases', $pathParts)) {
+            $index = array_search('cases', $pathParts);
+            
+            if ($index !== false && isset($pathParts[$index + 1])) {
+                $pathParts[$index - 1] = $language;
+            }
         }
         
         $parsedUrl['path'] = '/' . implode('/', $pathParts);
@@ -129,7 +135,7 @@ function buildUrlFromParts($parsedUrl) {
         }
         $first_lv_items = get_field('first_level_items', $header_page->ID);
         global $template;
-
+        console_log(get_post()->guid);
         $post_link_en = replaceLanguageInURL(get_post()->guid, "en");
         $post_link_sc = replaceLanguageInURL(get_post()->guid, "sc");
         $post_link_tc = replaceLanguageInURL(get_post()->guid, "tc");
