@@ -1,6 +1,3 @@
-<?php /* Template Name: Flexible Content Test Template */ ?>
-<?php get_template_part( 'template-parts/header', 'general' ); ?>
-
 <?php
 
 // Check value exists.
@@ -96,5 +93,3 @@ endif;
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-filter.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/dnd-slide.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/contact.js' ); ?>"></script>
-
-<?php get_template_part( 'template-parts/footer', 'general' );

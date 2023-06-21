@@ -7,6 +7,65 @@ function console_log($output, $with_script_tags = true) {
     }
     echo $js_code;
 }
+function replaceLanguageInURL($url, $language) {
+    $parsedUrl = parse_url($url);
+    
+    if (isset($parsedUrl['path'])) {
+        $path = trim($parsedUrl['path'], '/');
+        $pathParts = explode('/', $path);
+        
+        if (count($pathParts) > 1 && in_array('blogs', $pathParts)) {
+            $index = array_search('blogs', $pathParts);
+            
+            if ($index !== false && isset($pathParts[$index + 1])) {
+                $pathParts[$index - 1] = $language;
+            }
+        }
+        
+        $parsedUrl['path'] = '/' . implode('/', $pathParts);
+    }
+    
+    return buildUrlFromParts($parsedUrl);
+}
+function buildUrlFromParts($parsedUrl) {
+    $url = '';
+    
+    if (isset($parsedUrl['scheme'])) {
+        $url .= $parsedUrl['scheme'] . '://';
+    }
+    
+    if (isset($parsedUrl['user'])) {
+        $url .= $parsedUrl['user'];
+        
+        if (isset($parsedUrl['pass'])) {
+            $url .= ':' . $parsedUrl['pass'];
+        }
+        
+        $url .= '@';
+    }
+    
+    if (isset($parsedUrl['host'])) {
+        $url .= $parsedUrl['host'];
+    }
+    
+    if (isset($parsedUrl['port'])) {
+        $url .= ':' . $parsedUrl['port'];
+    }
+    
+    if (isset($parsedUrl['path'])) {
+        $url .= $parsedUrl['path'];
+    }
+    
+    if (isset($parsedUrl['query'])) {
+        $url .= '?' . $parsedUrl['query'];
+    }
+    
+    if (isset($parsedUrl['fragment'])) {
+        $url .= '#' . $parsedUrl['fragment'];
+    }
+    
+    return $url;
+}
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +129,10 @@ function console_log($output, $with_script_tags = true) {
         }
         $first_lv_items = get_field('first_level_items', $header_page->ID);
         global $template;
-        
+
+        $post_link_en = replaceLanguageInURL(get_post()->guid, "en");
+        $post_link_sc = replaceLanguageInURL(get_post()->guid, "sc");
+        $post_link_tc = replaceLanguageInURL(get_post()->guid, "tc");
     ?>
 	<header id="header" class="z-50 sticky top-0 bg-white">
         <div class="w-full flex justify-center items-center py-3">
@@ -132,17 +194,17 @@ function console_log($output, $with_script_tags = true) {
                             ?>
                         </div>
                         <div class="pl-6 flex justify-center items-center">
-                            <a href="<?php echo '/en' . substr($current_post_uri, 2) . '.html' ?>">
+                            <a href="<?php echo $post_link_en ?>">
                                 <span class="flex justify-center gap-x-1.5 bg-white px-3 text-[15px] <?php if($current_lang == 'en'): ?>text-orange-500<?php else:?>text-[#767676]<?php endif; ?> hover:text-orange-500 transition-colors border-r hover:underline underline-offset-4">
                                     En
                                 </span>
                             </a>
-                            <a href="<?php echo '/sc' . substr($current_post_uri, 2) . '.html' ?>">
+                            <a href="<?php echo $post_link_sc ?>">
                                 <span class="flex justify-center gap-x-1.5 bg-white px-3 text-[15px] <?php if($current_lang == 'sc'): ?>text-orange-500<?php else:?>text-[#767676]<?php endif; ?> hover:text-orange-500 transition-colors border-r hover:underline underline-offset-4">
                                     简
                                 </span>
                             </a>
-                            <a href="<?php echo '/tc' . substr($current_post_uri, 2) . '.html' ?>">
+                            <a href="<?php echo $post_link_tc ?>">
                                 <span class="flex justify-center gap-x-1.5 bg-white px-3 text-[15px] <?php if($current_lang == 'tc'): ?>text-orange-500<?php else:?>text-[#767676]<?php endif; ?> hover:text-orange-500 transition-colors hover:underline underline-offset-4">
                                     繁
                                 </span>

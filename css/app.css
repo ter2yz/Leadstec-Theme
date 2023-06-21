@@ -4185,6 +4185,10 @@ article > *:not(.entry-content),
     font-size: 60px;
   }
 
+  .md\:text-\[36px\] {
+    font-size: 36px;
+  }
+
   .md\:odd\:flex-row:nth-child(odd) {
     flex-direction: row;
   }
@@ -4598,6 +4602,10 @@ article > *:not(.entry-content),
   .lg\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .lg\:text-\[40px\] {
+    font-size: 40px;
   }
 
   .lg\:opacity-0 {

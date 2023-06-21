@@ -30,9 +30,10 @@
                 foreach($feature_blogs as $feature_blog){
                     $current_taxonomies = get_post_taxonomies($feature_blog);
                     $categories = get_the_terms($feature_blog, $current_taxonomies[0]);
-                    $dateStr = get_the_date( 'd F Y', $feature_blog );
-                    if ($current_lang == "blogs_sc" || $current_lang == "blogs_tc") {
-                        $dateStr = get_the_date( 'Y年n月j日', $feature_blog );
+                    $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $feature_blog->ID) );
+                    $dateStr = $postDate->format('j F Y');
+                    if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
+                        $dateStr = $postDate->format('Y年n月j日');; 
                     }
             ?>
             <a href="<?php echo get_permalink($feature_blog) ?>" data-index="<?php echo $blog_index ?>" class="showcase-container relative lg:absolute w-full inset-0 flex flex-col justify-start items-stretch transition duration-500 opacity-100 translate-x-0 mb-10 lg:mb-0 shadow-xl rounded-xl lg:shadow-none lg:rounded-none <?php echo $blog_index == 0 ? "lg:opacity-100 lg:translate-x-0" : "lg:opacity-0 lg:translate-x-full" ?>">

@@ -4,8 +4,17 @@
         <div class="relative w-full pb-16">
             <div id="slider-blog-recent" class="w-full my-slider">
                 <?php
+                $current_post = get_post();
+                $current_taxonomies = get_post_taxonomies($current_post);
+                $current_terms = get_the_terms($current_post, $current_taxonomies[0]);
                 $recent_posts = get_posts(array(
-                    'numberposts' => 5,
+                    'numberposts' => -1,
+                    'post_type' => $post_type,
+                    'exclude' => [$current_post->ID],
+                    'category' => get_the_category($current_post)[0]->ID,
+                    $current_taxonomies[0] => $current_terms[0]->slug,
+                    'meta_key'  => 'post_date',
+                    'orderby' => array( 'meta_value' => 'DESC' ), 
                 ));
                 if ($recent_posts) {
                     foreach($recent_posts as $recent_post) {
