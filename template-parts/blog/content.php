@@ -22,7 +22,7 @@ if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
             <a href="<?php echo get_field('back_button_url')?>" class="text-sky-600"><?php echo get_field('back_button_label')?></a>
         </div>
         <div class="relative w-full flex flex-col md:flex-row items-stretch mb-10">
-            <img class="w-full md:w-[27.3vw] object-cover" src="<?php echo esc_url( get_field('feature_image')['url'] ); ?>" alt="<?php echo get_field('feature_image')['alt']; ?>">
+            <img class="w-full md:w-[27.3vw] object-cover" src="<?php echo esc_url( get_field('feature_image')['url'] ); ?>" alt="<?php echo get_field('image_alt_text'); ?>">
             <div class="w-full flex flex-col justify-start items-start py-6 px-6 lg:px-10 bg-gray-50">
                 <p class="text-[#1b1c1d] text-[30px] md:text-[36px] lg:text-[40px] font-semibold mt-3 mb-3"><?php echo get_field('title') ?></p>
                 <p class="text-[#1b1c1d] mb-3"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
