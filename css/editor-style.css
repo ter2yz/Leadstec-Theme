@@ -2863,6 +2863,34 @@ body {
   opacity: 1;
 }
 
+.prose-headings\:mb-0 :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"] *))) {
+  margin-bottom: 0px;
+}
+
+.prose-headings\:mt-0 :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"] *))) {
+  margin-top: 0px;
+}
+
+.prose-h1\:mb-0 :is(:where(h1):not(:where([class~="not-prose"] *))) {
+  margin-bottom: 0px;
+}
+
+.prose-h1\:text-\[40px\] :is(:where(h1):not(:where([class~="not-prose"] *))) {
+  font-size: 40px;
+}
+
+.prose-h1\:text-\[60px\] :is(:where(h1):not(:where([class~="not-prose"] *))) {
+  font-size: 60px;
+}
+
+.prose-h2\:text-\[30px\] :is(:where(h2):not(:where([class~="not-prose"] *))) {
+  font-size: 30px;
+}
+
+.prose-h2\:text-\[45px\] :is(:where(h2):not(:where([class~="not-prose"] *))) {
+  font-size: 45px;
+}
+
 .prose-p\:text-\[15px\] :is(:where(p):not(:where([class~="not-prose"] *))) {
   font-size: 15px;
 }
