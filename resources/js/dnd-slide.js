@@ -80,12 +80,12 @@ function setupDragToScroll(container) {
     }
 
     container.addEventListener("mousedown", handleDragStart);
-    document.addEventListener("mousemove", handleDrag);
-    document.addEventListener("mouseup", handleDragEnd);
+    container.addEventListener("mousemove", handleDrag);
+    container.addEventListener("mouseup", handleDragEnd);
 
     container.addEventListener("touchstart", handleDragStart);
-    document.addEventListener("touchmove", handleDrag);
-    document.addEventListener("touchend", handleDragEnd);
+    container.addEventListener("touchmove", handleDrag);
+    container.addEventListener("touchend", handleDragEnd);
 
     // Easing function
     function easeOutCubic(t) {
