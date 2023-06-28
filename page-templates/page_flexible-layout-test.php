@@ -48,7 +48,7 @@ if( have_rows('component_listing') ):
             get_template_part( 'template-parts/flexibleLayouts/message-card-list' );
         elseif( get_row_layout() == 'relate_list_with_button' ): 
             get_template_part( 'template-parts/flexibleLayouts/relate-list-with-button' );
-        elseif( get_row_layout() == 'relate_list_text_link' ): 
+        elseif( get_row_layout() == 'relate_list_with_link' ): 
             get_template_part( 'template-parts/flexibleLayouts/relate-list-with-link' );
         elseif( get_row_layout() == 'customer_evaluation_list' ): 
             get_template_part( 'template-parts/flexibleLayouts/customer-evaluation-list' );
