@@ -1,21 +1,24 @@
+<?php
+$current_post = get_post();
+$current_taxonomies = get_post_taxonomies($current_post);
+$current_terms = get_the_terms($current_post, $current_taxonomies[0]);
+$recent_posts = get_posts(array(
+    'numberposts' => -1,
+    'post_type' => $post_type,
+    'exclude' => [$current_post->ID],
+    'category' => get_the_category($current_post)[0]->ID,
+    $current_taxonomies[0] => $current_terms[0]->slug,
+    'meta_key'  => 'post_date',
+    'orderby' => array( 'meta_value' => 'DESC' ), 
+));
+if ($recent_posts){
+?>
 <div class="w-full pb-40">
     <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <h2 class="w-full text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mt-[44px] mb-[20px] md:mb-[44px]"><?php echo get_field('similar_cases_heading') ?></h2>
         <div class="relative w-full pb-16">
             <div id="slider-blog-recent" class="w-full my-slider">
                 <?php
-                $current_post = get_post();
-                $current_taxonomies = get_post_taxonomies($current_post);
-                $current_terms = get_the_terms($current_post, $current_taxonomies[0]);
-                $recent_posts = get_posts(array(
-                    'numberposts' => -1,
-                    'post_type' => $post_type,
-                    'exclude' => [$current_post->ID],
-                    'category' => get_the_category($current_post)[0]->ID,
-                    $current_taxonomies[0] => $current_terms[0]->slug,
-                    'meta_key'  => 'post_date',
-                    'orderby' => array( 'meta_value' => 'DESC' ), 
-                ));
                 if ($recent_posts) {
                     foreach($recent_posts as $recent_post) {
                         $categories = get_the_category($recent_post);
@@ -45,3 +48,4 @@
         </div>
     </div>
 </div>
+<?php } ?>
