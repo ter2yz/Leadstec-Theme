@@ -1,4 +1,5 @@
 const singleBlogRecentContainer = document.querySelector("#slider-blog-recent");
+const anchorItem = singleBlogRecentContainer.querySelectorAll("a");
 if (singleBlogRecentContainer) {
     var sliderServices = tns({
         container: "#slider-blog-recent",
@@ -23,4 +24,19 @@ if (singleBlogRecentContainer) {
             },
         },
     });
+
+    const disableAnchorBehavior = function (info, eventName) {
+        if (eventName == "dragMove") {
+            anchorItem.forEach((item) => {
+                item.style.pointerEvents = "none";
+            });
+        } else if (eventName == "dragEnd") {
+            anchorItem.forEach((item) => {
+                item.style.pointerEvents = "auto";
+            });
+        }
+    };
+
+    sliderServices.events.on("dragMove", disableAnchorBehavior);
+    sliderServices.events.on("dragEnd", disableAnchorBehavior);
 }
