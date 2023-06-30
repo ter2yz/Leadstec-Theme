@@ -228,7 +228,7 @@ function buildUrlFromParts($parsedUrl) {
                 </div>
             </div>
         </div>
-        <div id="nav-menu-mobile" class="block lg:hidden w-full absolute left-0 top-full bg-white shadow-lg overflow-hidden opacity-0 max-h-0 transition-all duration-300 rounded-b-lg">
+        <div id="nav-menu-mobile" class="block lg:hidden w-full absolute left-0 top-full bg-white shadow-lg overflow-y-auto opacity-0 max-h-0 transition-all duration-300 rounded-b-lg">
             <div class="container mx-auto">
                 <?php if($first_lv_items){
                     foreach($first_lv_items as $f_item) {
