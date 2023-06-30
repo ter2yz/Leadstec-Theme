@@ -14,7 +14,7 @@ if (navBtn && navMobileMenuWrapper) {
         navMobileMenuWrapper.classList.toggle("opacity-0");
         navMobileMenuWrapper.classList.toggle("max-h-0");
         navMobileMenuWrapper.classList.toggle("opacity-100");
-        navMobileMenuWrapper.classList.toggle("max-h-screen");
+        navMobileMenuWrapper.classList.toggle("max-h-[80vh]");
     });
 }
 if (navMobileMenuItems.length) {

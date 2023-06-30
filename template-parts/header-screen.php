@@ -59,7 +59,7 @@ function console_log($output, $with_script_tags = true) {
                                     <span class="absolute bottom-2 left-3 w-1 h-1 bg-orange-500 rounded-full transition duration-300 opacity-0 translate-x-0 group-hover:opacity-100 group-hover:translate-x-2"></span>
                                     <span class="absolute bottom-2 left-3 w-1 h-1 bg-orange-500 rounded-full transition duration-300 opacity-0 translate-x-0 group-hover:opacity-100 group-hover:translate-x-4"></span>
                                 </a>
-                                <div class="absolute left-1/2 -translate-x-1/2 top-full z-10 w-56 p-3 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden group-hover:block" role="menu" aria-labelledby="menu-products" tabindex="-1">
+                                <div class="absolute left-1/2 -translate-x-1/2 top-full z-10 w-56 p-3 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden group-hover:block max-h-[50vh] overflow-y-auto" role="menu" aria-labelledby="menu-products" tabindex="-1">
                                     <p class="text-gray-700 block px-4 py-2 font-medium cursor-default">Adobe</p>
                                     <a href="/products/adobe-experience-manager.html" class="text-zinc-500 block px-4 py-2 hover:bg-orange-50 transition" role="menuitem" tabindex="-1" id="menu-item-0">Aem</a>
                                     <a href="/products/adobe-experience-cloud.html" class="text-zinc-500 block px-4 py-2 hover:bg-orange-50 transition" role="menuitem" tabindex="-1" id="menu-item-0">Adobe Experience Cloud</a>
@@ -146,6 +146,7 @@ function console_log($output, $with_script_tags = true) {
             </div>
         </div>
         <div id="nav-menu-mobile" class="block lg:hidden w-full absolute left-0 top-full bg-white shadow-lg overflow-hidden opacity-0 max-h-0 transition-all duration-300 rounded-b-lg">
+            <span class="hidden max-h-[80vh]"></span>
             <div class="container mx-auto">
                 <div class="menu-item w-full flex items-start justify-center group">
                     <span class="w-6 h-[2px] flex-none my-6 translate-y-[1px] opacity-70 group-[.active]:bg-orange-500 <?php echo is_page_template( array('page-templates/page_adobe-experience-manager.php', 'page-templates/page_adobe-experience-cloud.php', 'page-templates/page_headless.php', 'page-templates/page_erp.php')) ? "bg-orange-500" : "bg-zinc-500" ?>"></span>
