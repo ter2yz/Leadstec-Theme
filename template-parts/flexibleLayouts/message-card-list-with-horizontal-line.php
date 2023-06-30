@@ -30,7 +30,7 @@
         <div class="ms-container w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
             <div class="ms-wrap inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
                 <?php
-                    $cards = get_field('cards');
+                    $cards = get_sub_field('cards');
                     if($cards) {
                         foreach($cards as $card) {
                 ?>
