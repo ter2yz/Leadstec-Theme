@@ -53,7 +53,7 @@
     <div class="block md:hidden w-full">
         <div id="slider-brands-cta" class="w-full my-slider">
             <?php
-            $cards = get_field('brands');
+            $cards = get_sub_field('cards');
             if($cards) {
                 foreach($cards as $card){
             ?>
