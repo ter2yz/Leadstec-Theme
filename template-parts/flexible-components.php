@@ -90,5 +90,6 @@ endif;
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-relate-list-btn.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-video.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-case-list-number.js' ); ?>"></script>
+<script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-customer-evaluation-two-columns.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/flexible-filter.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/contact.js' ); ?>"></script>
