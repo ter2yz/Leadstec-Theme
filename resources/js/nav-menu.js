@@ -7,6 +7,8 @@ const navMobileMenuItems = document.querySelectorAll(
 if (navBtn) {
     navBtn.addEventListener("click", () => {
         navBtn.classList.toggle("active");
+        document.body.style.overflow =
+            document.body.style.overflow == "hidden" ? "auto" : "hidden";
     });
 }
 if (navBtn && navMobileMenuWrapper) {
