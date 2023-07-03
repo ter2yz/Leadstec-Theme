@@ -1,11 +1,19 @@
-#successful-stories-section .tns-item {
+#successful-stories-section .tns-item,
+.case-list-image-switch .tns-item {
     opacity: 0.5;
     transition-property: opacity, transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
-    transform: scale(0.9);
+    transform: scale(0.8);
 }
 #successful-stories-section
+    .tns-item:not(.tns-slide-active)
+    + .tns-slide-active
+    + .tns-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+.case-list-image-switch
     .tns-item:not(.tns-slide-active)
     + .tns-slide-active
     + .tns-slide-active {

@@ -6,7 +6,7 @@
                 <?php echo get_field('read_more_button_label') ?>
             </a>
         </div>
-        <div class="hidden lg:flex relative w-full h-full py-10 justify-center items-center min-h-[750px] px-2">
+        <div class="hidden lg:flex relative w-full h-full py-10 justify-center items-center px-2">
             <div class="relative flex flex-col items-center pr-6 w-1/5">
                 <button id="sliderStoriesPrev" class="w-full text-xl" data-controls="prev" aria-controls="customize" tabindex="-1">
                     <i class="fa-solid fa-chevron-up"></i>
@@ -30,13 +30,13 @@
                     <i class="fa-solid fa-chevron-down"></i>      
                 </button>
             </div>
-            <div class="relative h-full grow overflow-hidden">
+            <div class="relative min-h-[500px] grow overflow-hidden">
                 <?php if( have_rows('successful_stories')):
                     $stories_main_index = 0;
                     foreach(get_field('successful_stories') as $story) {
                 ?>
                     <div data-index="<?php echo $stories_main_index ?>" class="story-main-image-wrapper absolute inset-0 w-full h-full shadow-lg <?php echo $stories_main_index == 2 ? 'opacity-100' : 'opacity-0' ?> transition group">
-                        <img class="min-w-full min-h-full transition-all duration-200 opacity-100 object-cover object-center" src="<?php echo esc_url( $story['image']['url']); ?>" alt="<?php echo $story['image_alt_text']; ?>">
+                        <img class="min-w-full min-h-full transition-all duration-200 opacity-100 object-contain object-center" src="<?php echo esc_url( $story['image']['url']); ?>" alt="<?php echo $story['image_alt_text']; ?>">
                         <div class="absolute inset-0 w-full h-full transition-all duration-500 opacity-0 hover:opacity-100 z-20">
                             <div class="description-wrap absolute w-1/2 h-full flex flex-col justify-start max-h-[50%] transition-all duration-500 bottom-0 right-0 bg-white p-6 text-zinc-900 overflow-auto z-20">
                                 <div class="w-full h-full overflow-auto mb-9">

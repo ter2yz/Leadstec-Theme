@@ -1,4 +1,4 @@
-<section id="<?php echo get_sub_field('id')?>" class="w-full flex justify-center my-20">
+<section id="<?php echo get_sub_field('id')?>" class="case-list-image-switch w-full flex justify-center">
     <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <div class="w-full flex flex-col lg:flex-row justify-between items-start lg:items-center px-2">
             <h2 class="capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold max-h-screen mb-0"><?php echo get_sub_field('heading') ?></h2>
@@ -6,7 +6,7 @@
                 <?php echo get_sub_field('read_more_button_label') ?>
             </a>
         </div>
-        <div class="hidden lg:flex relative w-full h-full py-10 justify-center items-center min-h-[750px] px-2">
+        <div class="hidden lg:flex relative w-full h-full py-10 justify-center items-center px-2">
             <div class="relative flex flex-col items-center pr-6 w-1/5">
                 <button id="sliderStoriesPrev" class="w-full text-xl" data-controls="prev" aria-controls="customize" tabindex="-1">
                     <i class="fa-solid fa-chevron-up"></i>
@@ -30,13 +30,13 @@
                     <i class="fa-solid fa-chevron-down"></i>      
                 </button>
             </div>
-            <div class="relative h-full grow overflow-hidden">
+            <div class="relative min-h-[500px] grow overflow-hidden">
                 <?php if( get_sub_field('cases')):
                     $stories_main_index = 0;
                     foreach(get_sub_field('cases') as $story) {
                 ?>
                     <div data-index="<?php echo $stories_main_index ?>" class="story-main-image-wrapper absolute inset-0 w-full h-full shadow-lg <?php echo $stories_main_index == 2 ? 'opacity-100' : 'opacity-0' ?> transition group">
-                        <img class="min-w-full min-h-full transition-all duration-200 opacity-100 object-cover object-center" src="<?php echo esc_url( $story['image']['url']); ?>" alt="<?php echo $story['image_alt_text']; ?>">
+                        <img class="min-w-full min-h-full transition-all duration-200 opacity-100 object-contain object-center" src="<?php echo esc_url( $story['image']['url']); ?>" alt="<?php echo $story['image_alt_text']; ?>">
                         <div class="absolute inset-0 w-full h-full transition-all duration-500 opacity-0 hover:opacity-100 z-20">
                             <div class="description-wrap absolute w-1/2 h-full flex flex-col justify-start max-h-[50%] transition-all duration-500 bottom-0 right-0 bg-white p-6 text-zinc-900 overflow-auto z-20">
                                 <div class="w-full h-full overflow-auto mb-9">
