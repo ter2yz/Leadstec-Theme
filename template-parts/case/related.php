@@ -3,7 +3,7 @@
     $current_taxonomies = get_post_taxonomies($current_post);
     $current_terms = get_the_terms($current_post, $current_taxonomies[0]);
     $recent_posts = get_posts(array(
-        'numberposts' => 5,
+        'numberposts' => -1,
         'post_type' => $post_type,
         'exclude' => [$current_post->ID],
         'category' => get_the_category($current_post)[0]->ID,
@@ -21,7 +21,7 @@
                 $current_taxonomies = get_post_taxonomies($current_post);
                 $current_terms = get_the_terms($current_post, $current_taxonomies[0]);
                 $recent_posts = get_posts(array(
-                    'numberposts' => 5,
+                    'numberposts' => -1,
                     'post_type' => $post_type,
                     'exclude' => [$current_post->ID],
                     'category' => get_the_category($current_post)[0]->ID,
@@ -56,7 +56,7 @@
             </div>
         </div>
     </div>
-    <div class="ms-fw-container block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar bg-gray-100">
+    <div class="ms-fw-container block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar bg-white">
         <div class="ms-container w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
             <div class="ms-wrap inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
                 <?php
