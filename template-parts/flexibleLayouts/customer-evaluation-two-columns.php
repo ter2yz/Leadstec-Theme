@@ -57,7 +57,7 @@
             if($cards) {
                 foreach($cards as $card){
             ?>
-                <div class="relative w-full flex flex-col items-start py-16 lg:py-32 px-16 overflow-hidden" style="background-color: <?php echo $card['background_color'] ?>">
+                <div class="relative w-full flex flex-col items-start py-16 lg:py-32 px-8 overflow-hidden" style="background-color: <?php echo $card['background_color'] ?>">
                     <div class="w-full max-w-[70%] h-[100px] mb-12 flex justify-start items-center">
                         <img class="w-full h-full max-h-full max-w-full object-contain object-left" src="<?php echo esc_url( $card['logo']['url'] ); ?>" alt="<?php echo $card['logo_image_alt_text']; ?>">
                     </div>
