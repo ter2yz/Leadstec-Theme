@@ -65,12 +65,12 @@
                 if ($stories) {
                     foreach($stories as $story) {
             ?>
-            <div class="w-full mb-5">
+            <a href="<?php echo $story['button_url']; ?>" class="w-full mb-5">
                 <img class="slider-single-image w-full" src="<?php echo esc_url( $story['image']['url'] ); ?>" alt="<?php echo $story['image_alt_text']; ?>">
                 <div class="w-full p-5 flex justify-center items-center bg-zinc-900">
                     <p class="text-white text-[15px] font-bold"><?php echo $story['heading'] ?></p>
                 </div>
-            </div>
+            </a>
             <?php
                     }
                 }
