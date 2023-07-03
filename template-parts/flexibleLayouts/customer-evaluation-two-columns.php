@@ -51,7 +51,7 @@
     </div>
     <?php endif; ?>
     <div class="block md:hidden w-full">
-        <div id="slider-brands-cta" class="w-full my-slider">
+        <div id="slider-brands-cta" class="slider-cetc w-full my-slider">
             <?php
             $cards = get_sub_field('cards');
             if($cards) {
