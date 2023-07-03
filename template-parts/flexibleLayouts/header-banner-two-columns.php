@@ -15,9 +15,11 @@
                 <p class="leading-relaxed text-[15px] md:text-[20px] mb-[20px] md:mb-[30px]"><?php echo get_sub_field('sub_heading'); ?></p>
                 <h1 class="text-[30px] md:text-[40px] capitalize font-bold leading-tight mb-[10px] md:mb-[15px]"><?php echo get_sub_field('heading'); ?></h1>
                 <p class="leading-relaxed text-[15px] md:text-[20px]"><?php echo get_sub_field('description'); ?></p>
+                <?php if(get_sub_field('cta_button_url')):?>
                 <a data-fslightbox="lightbox" href="<?php echo get_sub_field('cta_button_url'); ?>" class="text-[14px] mt-10 flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
                     <?php echo get_sub_field('cta_button_text'); ?>
                 </a>
+                <?php endif; ?>
             </div>
             <div class="w-full lg:w-5/12 relative flex justify-end mb-6 lg:mb-0 ">
                 <?php
