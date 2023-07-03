@@ -3459,6 +3459,10 @@ article > *:not(.entry-content),
   margin: -100px 0 0;
 }
 
+.contact-form-wrapper::before {
+  display: none !important;
+}
+
 .last\:mb-0:last-child {
   margin-bottom: 0px;
 }

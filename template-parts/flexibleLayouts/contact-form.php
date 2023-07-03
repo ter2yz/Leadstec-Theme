@@ -1,5 +1,6 @@
-<section id="<?php echo get_sub_field('id')?>" class="relative w-full lg:bg-zinc-900 z-40">
+<section id="<?php echo get_sub_field('id')?>" class="contact-form-wrapper relative w-full lg:bg-zinc-900 z-40">
     <div class="w-full flex flex-col lg:flex-row justify-center items-start lg:min-h-[600px] bg-white z-30">
+        <?php if(get_sub_field('is_displaying_info')): ?>
         <div id="company-info-section" class="w-full lg:w-4/12 lg:min-h-screen lg:sticky lg:top-0 bg-gradient-to-b from-[#FEBE00] to-[#F08300] p-12 z-40">
             <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto lg:w-full bg-white p-6">
                 <h3 class="font-bold text-xl text-left mb-3 capitalize text-zinc-900"><?php echo get_sub_field('info_section')['telephone_heading'] ?></h3>
@@ -22,12 +23,24 @@
                 ?>
             </div>
         </div>
+        <?php endif; ?>
+        <?php if(get_sub_field('is_displaying_info')): ?>
         <div class="w-full lg:w-8/12 z-40">
             <div class="w-full bg-zinc-900 p-12">
                 <h2 class="text-white text-[30px] md:text-[60px] font-semibold capitalize text-center mb-6"><?php echo get_sub_field('tell_us_section')['heading'] ?></h2>
                 <p class="leading-relaxed text-white text-center"><?php echo get_sub_field('tell_us_section')['description'] ?></p>
             </div>
             <div id="contact-form" class="w-full bg-white p-12">
+        <?php else: ?>
+        <div class="w-full z-40">
+            <div class="w-full bg-zinc-900 p-12">
+                <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
+                    <h2 class="text-white text-[30px] md:text-[60px] font-semibold capitalize text-center mb-6"><?php echo get_sub_field('tell_us_section')['heading'] ?></h2>
+                    <p class="leading-relaxed text-white text-center"><?php echo get_sub_field('tell_us_section')['description'] ?></p>
+                </div>
+            </div>
+            <div id="contact-form" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto bg-white p-12">
+        <?php endif; ?>
                 <?php
                 echo do_shortcode(get_sub_field('tell_us_section')['form_shortcode']);
                 ?>

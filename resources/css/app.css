@@ -30,6 +30,10 @@
     margin: -100px 0 0;
 }
 
+.contact-form-wrapper::before {
+    display: none !important;
+}
+
 @layer components {
     .custom-number-shadow {
         text-shadow: 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
