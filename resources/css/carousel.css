@@ -41,6 +41,7 @@
 #slider-headless-moreabout-ow .tns-slider,
 #slider-headless-tools-ow .tns-slider,
 #slider-erp-evaluation-ow .tns-slider,
+.slider-rl-wrapper .tns-slider,
 #slider-blogs-list-hero-ow .tns-slider,
 #slider-blog-recent-ow .tns-slider,
 #slider-headless-best-ow .tns-slider,
@@ -69,7 +70,8 @@
     z-index: 99;
 }
 #slider-headless-tools-ow .tns-nav,
-#slider-erp-evaluation-ow .tns-nav {
+#slider-erp-evaluation-ow .tns-nav,
+.slider-rl-wrapper .tns-nav {
     position: absolute;
     bottom: -32px;
     left: 0;
@@ -88,6 +90,7 @@
 #slider-headless-moreabout-ow .tns-nav > button,
 #slider-headless-tools-ow .tns-nav > button,
 #slider-erp-evaluation-ow .tns-nav > button,
+.slider-rl-wrapper .tns-nav > button,
 #slider-blogs-list-hero-ow .tns-nav > button,
 #slider-headless-best-ow .tns-nav > button,
 #slider-rl-ow .tns-nav > button,
@@ -108,7 +111,8 @@
 #slider-blogs-list-hero-ow .tns-nav > button.tns-nav-active,
 #slider-blogs-list-hero-ow .tns-nav > button.tns-nav-active,
 #slider-headless-tools-ow .tns-nav > button.tns-nav-active,
-#slider-erp-evaluation-ow .tns-nav > button.tns-nav-active {
+#slider-erp-evaluation-ow .tns-nav > button.tns-nav-active,
+.slider-rl-wrapper .tns-nav > button.tns-nav-active {
     background: #f77316;
 }
 
