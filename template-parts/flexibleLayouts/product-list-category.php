@@ -6,7 +6,13 @@
                 <button class="filter border border-orange-500 text-orange-500 text-[15px] font-bold rounded-lg px-6 py-2 mr-3 whitespace-nowrap mb-3" data-filter="all"><?php echo get_sub_field('all_label');?></button>
                 <?php
                     $taxonomy = get_sub_field('cases_taxonomy');
-                    $categories = get_terms($taxonomy, array('hide_empty' => false));
+                    $categories = get_terms($taxonomy, array(
+                        'hide_empty' => false,
+                        'orderby' => 'date'
+                    ));
+                    usort($categories, function($a, $b) {
+                        return get_field('order', $a) - get_field('order', $b);
+                    });
 
                     foreach( $categories as $category ) {
                 ?>

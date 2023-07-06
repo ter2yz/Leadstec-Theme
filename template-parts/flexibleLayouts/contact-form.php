@@ -39,7 +39,7 @@
                     <p class="leading-relaxed text-white text-center"><?php echo get_sub_field('tell_us_section')['description'] ?></p>
                 </div>
             </div>
-            <div id="contact-form" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto bg-white p-12">
+            <div id="contact-form" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto bg-white py-12">
         <?php endif; ?>
                 <?php
                 echo do_shortcode(get_sub_field('tell_us_section')['form_shortcode']);
