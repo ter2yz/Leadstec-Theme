@@ -1813,6 +1813,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-y-\[calc\(50\%\+5px\)\] {
+  --tw-translate-y: calc(calc(50% + 5px) * -1);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-x-0 {
   --tw-translate-x: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1823,33 +1828,13 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-y-\[1px\] {
-  --tw-translate-y: 1px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .translate-y-4 {
   --tw-translate-y: 1rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.-translate-y-1\/3 {
-  --tw-translate-y: -33.333333%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-y-\[calc\(50\%-10px\)\] {
-  --tw-translate-y: calc(calc(50% - 10px) * -1);
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-y-\[calc\(50\%\+10px\)\] {
-  --tw-translate-y: calc(calc(50% + 10px) * -1);
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-y-\[calc\(50\%\+5px\)\] {
-  --tw-translate-y: calc(calc(50% + 5px) * -1);
+.translate-y-\[1px\] {
+  --tw-translate-y: 1px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2502,6 +2487,11 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
@@ -2510,11 +2500,6 @@ video {
 .py-\[20px\] {
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .pb-0 {
@@ -3278,6 +3263,7 @@ video {
 }
 
 #slider-aem-cta-ow .tns-nav,
+.slider-popup-wrapper .tns-nav,
 #slider-brands-cta-ow .tns-nav,
 #slider-headless-foundation-ow .tns-nav,
 #slider-headless-stories-ow .tns-nav,
@@ -3309,6 +3295,7 @@ video {
   z-index: 99;
 }
 
+.slider-popup-wrapper .tns-nav > button,
 #slider-aem-cta-ow .tns-nav > button,
 #slider-headless-foundation-ow .tns-nav > button {
   background: #ffffff;
@@ -3328,6 +3315,7 @@ video {
   background: #ddd;
 }
 
+.slider-popup-wrapper .tns-nav > button.tns-nav-active,
 #slider-aem-cta-ow .tns-nav > button.tns-nav-active,
 #slider-brands-cta-ow .tns-nav > button.tns-nav-active,
 #slider-headless-foundation-ow .tns-nav > button.tns-nav-active,
@@ -3349,6 +3337,7 @@ video {
 }
 
 #slider-headless-best-ow .tns-item,
+.slider-popup-wrapper .tns-item,
 #slider-aem-cta-ow .tns-item {
   display: inline-flex;
 }
@@ -4083,6 +4072,11 @@ article > *:not(.entry-content),
     padding-bottom: 2.5rem;
   }
 
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -4091,11 +4085,6 @@ article > *:not(.entry-content),
   .md\:py-32 {
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-
-  .md\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
   }
 
   .md\:pb-0 {
@@ -4134,6 +4123,10 @@ article > *:not(.entry-content),
     padding-right: 1.5rem;
   }
 
+  .md\:pr-8 {
+    padding-right: 2rem;
+  }
+
   .md\:pr-\[33px\] {
     padding-right: 33px;
   }
@@ -4152,10 +4145,6 @@ article > *:not(.entry-content),
 
   .md\:pt-8 {
     padding-top: 2rem;
-  }
-
-  .md\:pr-8 {
-    padding-right: 2rem;
   }
 
   .md\:text-left {

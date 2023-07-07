@@ -51,6 +51,7 @@
 }
 
 #slider-aem-cta-ow .tns-nav,
+.slider-popup-wrapper .tns-nav,
 #slider-brands-cta-ow .tns-nav,
 #slider-headless-foundation-ow .tns-nav,
 #slider-headless-stories-ow .tns-nav,
@@ -80,6 +81,7 @@
     justify-content: center;
     z-index: 99;
 }
+.slider-popup-wrapper .tns-nav > button,
 #slider-aem-cta-ow .tns-nav > button,
 #slider-headless-foundation-ow .tns-nav > button {
     background: #ffffff;
@@ -97,6 +99,7 @@
 #slider-aem-recommend-ow .tns-nav > button {
     background: #ddd;
 }
+.slider-popup-wrapper .tns-nav > button.tns-nav-active,
 #slider-aem-cta-ow .tns-nav > button.tns-nav-active,
 #slider-brands-cta-ow .tns-nav > button.tns-nav-active,
 #slider-headless-foundation-ow .tns-nav > button.tns-nav-active,
@@ -117,6 +120,7 @@
 }
 
 #slider-headless-best-ow .tns-item,
+.slider-popup-wrapper .tns-item,
 #slider-aem-cta-ow .tns-item {
     display: inline-flex;
 }
