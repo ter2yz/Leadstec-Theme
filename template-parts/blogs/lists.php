@@ -1,6 +1,6 @@
 <section class="relative w-full z-20">
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
-        <div id="<?php echo get_field('recent_section_id'); ?>" class="w-full md:w-4/12 md:min-h-screen md:sticky md:top-12 bg-gray-100 px-6 pt-6 pb-40 lg:px-12 lg:pt-12">
+        <div id="<?php echo get_field('recent_section_id'); ?>" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto md:w-4/12 md:min-h-screen md:sticky md:top-12 bg-white md:bg-gray-100 pt-6 pb-40 lg:px-12 lg:pt-12">
             <div class="w-full bg-white p-6">
                 <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('recent_posts_heading');?></h3>
                 <div class="w-full h-[590px] overflow-y-auto no-scrollbar">
@@ -76,7 +76,7 @@
         </div>
         <div id="<?php echo get_field('all_posts_section_id'); ?>" class="ms-fw-container block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar bg-gray-100">
             <div class="ms-container w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
-                <div class="ms-wrap inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
+                <div class="ms-wrap inline-flex flex-nowrap my-[20px] md:my-[40px]">
                     <?php
                     $allPosts = $recent_posts;
                     if ($allPosts) {

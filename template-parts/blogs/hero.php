@@ -1,6 +1,6 @@
 <section id="web-cases" class="relative w-full bg-white z-20 pt-10 pb-20 overflow-hidden">
     <div class="w-full hidden lg:flex lg:min-h-[600px] px-8 lg:px-0">
-        <div class="hidden lg:flex w-4/12 px-6 h-full flex-col items-center justify-start mt-10">
+        <div class="hidden lg:flex w-3/12 px-6 h-full flex-col items-center justify-start mt-10">
             <div id="slider-web-cases" class="w-full text-white flex flex-col items-center justify-center">
                 <?php
                 $current_lang = get_field('blogs_type');
@@ -58,7 +58,7 @@
 
     <!-- Mobile Hero Section -->
     <div class="relative w-full block lg:hidden pb-16">
-        <div class="container mx-auto">
+        <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
             <div id="slider-blogs-list-hero" class="w-full my-slider">
                 <?php
                 if($feature_blogs) {

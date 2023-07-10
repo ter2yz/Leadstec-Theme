@@ -685,6 +685,11 @@
   margin-bottom: 2.25rem;
 }
 
+.my-\[20px\] {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .-mr-1 {
   margin-right: -0.25rem;
 }
@@ -1183,6 +1188,10 @@
 
 .w-full {
   width: 100%;
+}
+
+.w-3\/12 {
+  width: 25%;
 }
 
 .min-w-full {
@@ -2928,6 +2937,11 @@ body {
     margin-bottom: 1.5rem;
   }
 
+  .md\:my-\[40px\] {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
   .md\:-mt-5 {
     margin-top: -1.25rem;
   }
@@ -3161,6 +3175,11 @@ body {
 
   .md\:overflow-y-scroll {
     overflow-y: scroll;
+  }
+
+  .md\:bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   }
 
   .md\:p-10 {
