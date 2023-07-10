@@ -5,5 +5,6 @@
 
 <!-- footer scripts -->
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/post-single-blog.js' ); ?>"></script>
+<script src="<?php echo (get_template_directory_uri() . '/resources/js/dnd-slide.js' ); ?>"></script>
 
 <?php get_template_part( 'template-parts/footer', 'general' );
