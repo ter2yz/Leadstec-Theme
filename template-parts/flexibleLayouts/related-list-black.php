@@ -1,4 +1,4 @@
-<section id="<?php echo get_sub_field('id')?>" class="relative w-full flex flex-col items-center justify-center bg-zinc-900 py-16 md:py-32">
+<section id="<?php echo get_sub_field('id')?>" class="relative w-full flex flex-col items-center justify-center bg-zinc-900">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full capitalize text-[30px] md:text-[60px] text-white font-bold mb-5 md:mb-10"><?php echo get_sub_field('heading') ?></h2>
@@ -39,7 +39,7 @@
     <!-- Mobile Carousel -->
     <div class="ms-fw-container block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
         <div class="ms-container w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
-            <div class="ms-wrap inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
+            <div class="ms-wrap inline-flex flex-nowrap">
                 <?php if(get_sub_field('card_group')):
                     foreach(get_sub_field('card_group') as $card){
                 ?>
