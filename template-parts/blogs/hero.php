@@ -45,7 +45,8 @@
                 <div class="hidden lg:block relative w-full h-[500px] bg-center bg-cover bg-no-repeat group" style="background-image: url(<?php echo esc_url( get_field('feature_image', $feature_blog->ID)['url'] ); ?>)" aria-label="<?php echo get_field('image_alt_text', $feature_blog->ID);?>"></div>
                 <div class="w-full bg-white flex flex-col flex-none justify-start items-start py-6 lg:pr-10">
                     <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6"><?php echo get_field('title', $feature_blog->ID); ?></p>
-                    <p class="text-zinc-900 capitalize"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
+                    <p class="text-zinc-900 capitalize mb-3"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
+                    <p class="leading-relaxed text-[#9f9f9f] text-[15px] md:text-[20px] line-clamp-3"><?php echo get_field('short_description', $feature_blog->ID) ?></p>
                 </div>
             </a>
             <?php
@@ -80,7 +81,8 @@
                         <img class="block w-full max-h-[500px] lg:hidden" src="<?php echo esc_url( get_field('feature_image', $feature_blog->ID)['url'] ); ?>" alt="">
                         <div class="w-full bg-white flex flex-col flex-none justify-start items-start py-6 lg:pr-10">
                             <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6"><?php echo get_field('title', $feature_blog->ID) ?></p>
-                            <p class="text-zinc-900 capitalize"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
+                            <p class="text-zinc-900 capitalize mb-3"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
+                            <p class="leading-relaxed text-[#9f9f9f] text-[15px] md:text-[20px] line-clamp-3"><?php echo get_field('short_description', $feature_blog->ID) ?></p>
                         </div>
                     </a>
                 </div>
