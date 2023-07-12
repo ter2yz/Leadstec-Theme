@@ -1,6 +1,6 @@
 <section id="<?php echo get_sub_field('id')?>" class="relative w-full flex justify-center bg-white">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
-        <div class="w-full pt-12 md:pt-20 pb-12 lg:pb-40 flex flex-col items-center justify-center">
+        <div class="w-full flex flex-col items-center justify-center">
             <?php if(get_sub_field('heading')): ?>
             <h2 class="w-full text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-10" style="text-align: <?php echo get_sub_field('heading_alignment')?>"><?php echo get_sub_field('heading'); ?></h2>
             <?php endif; ?>
