@@ -83,6 +83,15 @@
                         foreach($allPosts as $singlePost) {
                             $current_taxonomies = get_post_taxonomies($singlePost);
                             $categories = get_the_terms($singlePost, $current_taxonomies[0]);
+                            if(get_field('post_date', $singlePost->ID)){
+                                $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $singlePost->ID) );
+                                $dateStr = $postDate->format('j F Y');
+                                if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
+                                    $dateStr = $postDate->format('Y年n月j日');; 
+                                }
+                            } else {
+                                $dateStr = "";
+                            }
                     ?>
                     <div class="w-[290px] mr-3 last:mr-0">
                         <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
@@ -90,8 +99,8 @@
                             <div class="w-full flex flex-col justify-between items-start grow p-3 md:p-6 xl:p-9">
                                 <div class="w-full">
                                     <h3 class="font-bold text-xl text-left mb-3"><?php echo get_field('title', $singlePost->ID) ?></h3>
-                                    <p class="leading-relaxed mb-3"><?php echo $current_terms[0]->name ?> • <?php echo get_the_date( 'd F Y', $singlePost )?></p>
-                                    <p class="leading-relaxed text-zinc-500 mb-12 max-h-80 overflow-hidden line-clamp-3"><?php echo strip_tags(get_field('information_text', $singlePost)) ?></p>
+                                    <p class="leading-relaxed mb-3"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
+                                    <p class="leading-relaxed text-[#9f9f9f] text-[14px] line-clamp-3 mb-6"><?php echo get_field('short_description', $singlePost->ID) ?></p>
                                 </div>
                                 <a href="<?php echo get_permalink($singlePost) ?>" class="text-sky-600"><?php echo get_field('learn_more_label');?></a>
                             </div>
