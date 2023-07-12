@@ -46,7 +46,6 @@
                 <div class="w-full bg-white flex flex-col flex-none justify-start items-start py-6 lg:pr-10">
                     <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6"><?php echo get_field('title', $feature_blog->ID); ?></p>
                     <p class="text-zinc-900 capitalize mb-3"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
-                    <p class="leading-relaxed text-[#9f9f9f] text-[15px] md:text-[20px] line-clamp-3"><?php echo get_field('short_description', $feature_blog->ID) ?></p>
                 </div>
             </a>
             <?php
@@ -82,7 +81,6 @@
                         <div class="w-full bg-white flex flex-col flex-none justify-start items-start py-6 lg:pr-10">
                             <p class="text-zinc-900 text-4xl font-semibold capitalize mt-3 mb-6"><?php echo get_field('title', $feature_blog->ID) ?></p>
                             <p class="text-zinc-900 capitalize mb-3"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
-                            <p class="leading-relaxed text-[#9f9f9f] text-[15px] md:text-[20px] line-clamp-3"><?php echo get_field('short_description', $feature_blog->ID) ?></p>
                         </div>
                     </a>
                 </div>
