@@ -28,7 +28,7 @@
     <!-- Mobile Carousel -->
     <div class="ms-fw-container block lg:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
         <div class="ms-container w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
-            <div class="ms-wrap inline-flex flex-nowrap md:mt-[40px]">
+            <div class="ms-wrap inline-flex flex-nowrap">
                 <?php
                     $cards = get_sub_field('cards');
                     if($cards) {
