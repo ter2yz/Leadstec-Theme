@@ -7,9 +7,9 @@
                 <?php if(get_sub_field('video_url')): ?>
                 <iframe id="iframe-video" style="position:absolute;top:0;left:0;width:100%;height:100%;" src="<?php echo esc_url(get_sub_field('video_url')) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <?php endif; ?>
-                <?php if(get_sub_field('cover_image') && get_sub_field('play_button_icon')): ?>
+                <?php if(get_sub_field('cover_image')): ?>
                 <div id="video-cover-wrapper" class="absolute inset-0 w-full h-full bg-center bg-cover bg-no-repeat flex justify-center items-center z-10 opacity-100 transition duration-300" aria-label="<?php echo get_sub_field('cover_image_alt_text') ?>" style="background-image: url(<?php echo esc_url(get_sub_field('cover_image')['url']) ?>)">
-                    <?php if(get_sub_field('video_url')): ?>
+                    <?php if(get_sub_field('video_url')  && get_sub_field('play_button_icon')): ?>
                     <button id="play-btn" class="scale-100 transition duration-300 hover:scale-110">
                         <img class="w-16 h-16 object-cover object-center overflow-hidden" src="<?php echo esc_url(get_sub_field('play_button_icon')['url']) ?>" alt="<?php echo get_sub_field('icon_image_alt_text') ?>">
                     </button>
