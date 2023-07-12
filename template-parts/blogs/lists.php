@@ -1,7 +1,7 @@
 <section class="relative w-full z-20">
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
         <div id="<?php echo get_field('recent_section_id'); ?>" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto md:w-4/12 md:min-h-screen md:sticky md:top-12 bg-white md:bg-gray-100 pt-6 pb-40 lg:px-12 lg:pt-12">
-            <div class="w-full bg-white p-6">
+            <div class="w-full bg-white md:p-6">
                 <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('recent_posts_heading');?></h3>
                 <div class="w-full h-[590px] overflow-y-auto no-scrollbar">
                     <?php
