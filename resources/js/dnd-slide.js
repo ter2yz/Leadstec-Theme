@@ -17,6 +17,7 @@ window.addEventListener("resize", setMarginRightBasedOnLeftOffset);
 function setupDragToScroll(container) {
     let msIsDragging = false;
     let msStartX;
+    let msStartY;
     let msStartScrollLeft;
     let msRequestId;
     let msDragStartTime;
@@ -25,6 +26,7 @@ function setupDragToScroll(container) {
     function handleDragStart(event) {
         msIsDragging = true;
         msStartX = event.clientX || event.touches[0].clientX;
+        msStartY = event.clientY || event.touches[0].clientY;
         msStartScrollLeft = container.scrollLeft;
         msDragStartTime = Date.now();
         document.body.style.cursor = "grabbing";
@@ -33,11 +35,23 @@ function setupDragToScroll(container) {
 
     function handleDrag(event) {
         if (!msIsDragging) return;
+        // Check if dragging is primarily horizontal
+        const x = event.clientX || event.touches[0].clientX;
+        const y = event.clientY || event.touches[0].clientY;
+        const deltaX = Math.abs(x - msStartX);
+        const deltaY = Math.abs(y - msStartY);
+
+        if (deltaX > deltaY) {
+            // Horizontal dragging, prevent default to allow vertical scrolling
+            event.preventDefault();
+        } else {
+            // Vertical dragging, exit the drag handler
+            msIsDragging = false;
+            return;
+        }
         msSliderItems.forEach((item) => {
             item.style.pointerEvents = "none";
         });
-        event.preventDefault();
-        const x = event.clientX || event.touches[0].clientX;
         const dragDistance = x - msStartX;
         container.scrollLeft = msStartScrollLeft - dragDistance;
     }
@@ -47,6 +61,7 @@ function setupDragToScroll(container) {
         msSliderItems.forEach((item) => {
             item.style.pointerEvents = "auto";
         });
+
         msIsDragging = false;
         document.body.style.cursor = "default";
         const dragEndTime = Date.now();
