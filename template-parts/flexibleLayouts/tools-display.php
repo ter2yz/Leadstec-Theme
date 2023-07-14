@@ -1,4 +1,4 @@
-<section id="<?php echo get_sub_field('id')?>" class="slider-rl-wrapper relative w-full flex justify-center bg-white">
+<section id="<?php echo get_sub_field('id')?>" class="slider-rl-wrapper relative w-full flex justify-center bg-white pb-12 md:pb-0">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
             <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold text-center md:text-left mb-5 md:mb-10 px-3"><?php echo get_sub_field('heading'); ?></h2>
@@ -31,7 +31,7 @@
 
 
             <div class="w-full block md:hidden">
-                <div class="slider-rl w-full my-slider">
+                <div class="slider-cetc w-full my-slider">
                     <?php
                     $cards = get_sub_field('cards');
                     if($cards) {
