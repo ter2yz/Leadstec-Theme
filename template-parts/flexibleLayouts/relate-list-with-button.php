@@ -84,7 +84,7 @@
                         foreach($cards as $card) {
                     ?>
                     <div class="w-[290px] mr-3 last:mr-0">
-                        <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
+                        <a href="<?php echo $card['button_url'] ?>" class="w-full h-full bg-white flex flex-col border border-zinc-200">
                             <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo $card['image_alt_text']; ?>" style="background-image: url(<?php echo esc_url( $card['feature_image'] ); ?>); "></div>
                             <div class="w-full flex flex-col justify-between items-start grow p-3 lg:p-6 xl:p-9">
                                 <div class="w-full">
@@ -94,11 +94,11 @@
                                     <?php endif; ?>
                                     <p class="leading-relaxed text-[#9f9f9f] text-[14px] mb-6 line-clamp-3"><?php echo $card['summary']; ?></p>
                                 </div>
-                                <a href="<?php echo $card['button_url'] ?>" class="text-white flex justify-center text-[14px] font-bold items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
+                                <button class="text-white flex justify-center text-[14px] font-bold items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
                                     <?php echo $card['button_label'] ?>
-                                </a>
+                                </button>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <?php
                         }
