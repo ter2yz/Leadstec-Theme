@@ -90,7 +90,7 @@ function console_log($output, $with_script_tags = true) {
                                     <span class="absolute bottom-2 left-3 w-1 h-1 bg-orange-500 rounded-full transition duration-300 opacity-0 translate-x-0 group-hover:opacity-100 group-hover:translate-x-4"></span>
                                 </<?php echo $f_item['url'] ? 'a' : 'div' ?>>
                                 <?php if($f_item['second_level_items']): ?>
-                                <div class="absolute left-1/2 -translate-x-1/2 top-full z-10 w-80 p-3 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden group-hover:block max-h-[80vh] overflow-y-auto" role="menu" aria-labelledby="menu-products" tabindex="-1">
+                                <div class="absolute left-1/2 -translate-x-1/2 top-full z-10 w-80 p-3 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden group-hover:block max-h-[85vh] overflow-y-auto" role="menu" aria-labelledby="menu-products" tabindex="-1">
                                     <!-- <p class="text-gray-700 block px-4 py-2 font-medium cursor-default">Adobe</p> -->
                                     <?php
                                         foreach($f_item['second_level_items'] as $s_item){
