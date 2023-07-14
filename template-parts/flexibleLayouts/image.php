@@ -5,7 +5,7 @@
             <h2 class="text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-10 text-center"><?php echo get_sub_field('image_section')['heading'] ?></h2>
             <?php endif; ?>
             <div class="w-full flex flex-col lg:flex-row justify-center items-center mb-0">
-                <img class="slider-single-image w-full mx-auto" src="<?php echo esc_url( get_sub_field('image_section')['image'] ); ?>" alt="<?php echo get_sub_field('image_section')['image_alt_text']; ?>">
+                <img class="slider-single-image w-full mx-auto" src="<?php echo esc_url( get_sub_field('image_section')['image']['url'] ); ?>" alt="<?php echo get_sub_field('image_section')['image_alt_text']; ?>">
             </div>
         </div>
     </div>
