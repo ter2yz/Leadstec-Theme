@@ -1,16 +1,16 @@
 <?php
     if(get_sub_field('background_image')) {
 ?>
-<section id="<?php echo get_sub_field('id')?>" class="relative w-full flex justify-center items-center pt-20 pb-32 bg-center bg-cover bg-no-repeat" style="background-image: url(<?php echo get_sub_field('background_image'); ?>)">    
+<section id="<?php echo get_sub_field('id')?>" class="relative w-full flex justify-center items-center pt-16 pb-32 bg-center bg-cover bg-no-repeat" style="background-image: url(<?php echo get_sub_field('background_image'); ?>)">    
 <?php
     } else {
 ?>
-<section id="<?php echo get_sub_field('id')?>" class="relative w-full flex justify-center items-center pt-20 pb-32" style="background-color: <?php echo get_sub_field('background_color'); ?>">
+<section id="<?php echo get_sub_field('id')?>" class="relative w-full flex justify-center items-center pt-16 pb-32" style="background-color: <?php echo get_sub_field('background_color'); ?>">
 <?php
     }
 ?>
     <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
-        <div class="w-full flex flex-col-reverse lg:flex-row justify-start lg:justify-center items-center @container lg:min-h-[600px] overflow-hidden">
+        <div class="w-full flex flex-col-reverse lg:flex-row justify-start lg:justify-center items-center @container lg:min-h-[450px] overflow-hidden">
             <div class="relative w-full lg:w-7/12 flex flex-col items-start lg:pr-10 z-10 text-white">
                 <p class="leading-relaxed text-[15px] md:text-[20px] mb-[20px] md:mb-[30px]"><?php echo get_sub_field('sub_heading'); ?></p>
                 <h1 class="text-[30px] md:text-[40px] capitalize font-bold leading-tight mb-[10px] md:mb-[15px]"><?php echo get_sub_field('heading'); ?></h1>

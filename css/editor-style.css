@@ -3521,6 +3521,10 @@ body {
     min-height: 100vh;
   }
 
+  .lg\:min-h-\[450px\] {
+    min-height: 450px;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
