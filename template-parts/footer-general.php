@@ -18,6 +18,7 @@
     $links_section = get_field('links_section', $footer_page->ID);
     $info_section = get_field('info_section', $footer_page->ID);
     $locations = $info_section['location_info']['single_location'];
+    $contact_form_url = get_field('footer_contact_form_url');
     global $template;
 
 ?>
@@ -30,7 +31,7 @@
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <div class="relative flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between py-10 px-10 lg:px-20 bg-gradient-to-br from-[#F18701] to-[#FBB100] -mt-10 -translate-y-1/2 z-10 overflow-hidden">
             <h3 class="relative capitalize text-white text-[20px] md:text-[30px] font-bold mb-6 lg:mb-0 z-10"><?php echo $banner_section['heading'] ?></h3>
-            <a href="<?php echo $banner_section['button_url'] ?>" class="relative capitalize text-white text-[15px] font-bold flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 z-10 whitespace-nowrap">
+            <a href="<?php echo $contact_form_url ? $contact_form_url : $banner_section['button_url'] ?>" class="relative capitalize text-white text-[15px] font-bold flex justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 z-10 whitespace-nowrap">
                 <?php echo $banner_section['button_label'] ?>
             </a>
             <span class="absolute w-40 h-40 rounded-full z-0 bg-gradient-to-tl from-[#F18701] to-[#FBB100] -top-1/3 left-2/3"></span>
