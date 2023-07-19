@@ -1,4 +1,4 @@
-<section id="<?php echo get_sub_field('id')?>" class="relative w-full flex justify-center bg-gray-400 py-28 bg-cover bg-center bg-no-repeat" aria-label="<?php echo get_sub_field('image_alt_text') ?>" style="background-image: url(<?php echo esc_url( get_sub_field('background_image') ); ?>); ">
+<section id="<?php echo get_sub_field('id')?>" class="relative w-full flex justify-center py-28 bg-cover bg-center bg-no-repeat" aria-label="<?php echo get_sub_field('image_alt_text') ?>" style="background-color: <?php echo get_sub_field('background_color'); ?>;background-image: url(<?php echo esc_url( get_sub_field('background_image') ); ?>); ">
     <div class="absolute inset-0 w-full h-full bg-zinc-800 opacity-60 z-0"></div>
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto flex flex-col justify-center items-center z-10">
         <h3 class="max-w-none md:max-w-[772px] lg:max-w-[991px] text-white text-[20px] md:text-[40px] text-center font-bold mb-[20px] leading-snug"><?php echo get_sub_field('heading') ?></h3>
