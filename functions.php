@@ -193,3 +193,5 @@ function register_navwalker(){
 	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
+
+add_filter( 'do_redirect_guess_404_permalink', '__return_false' );
