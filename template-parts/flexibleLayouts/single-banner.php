@@ -6,9 +6,15 @@
         <?php echo get_sub_field('description') ?>
         </p>
         <?php if(get_sub_field('button_url') && get_sub_field('button_text')): ?>
-        <a href="<?php echo esc_url(get_sub_field('button_url')) ?>" class="text-[14px] text-white flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
-            <?php echo get_sub_field('button_text') ?>
-        </a>
+            <?php if(get_sub_field('is_pop_up_button')): ?>
+                <a href="<?php echo get_sub_field('popup_image')['url'] ?>" data-fslightbox="banner-popup-image" data-alt="<?php echo get_sub_field('popup_image_alt_text') ?>" aria-label="<?php echo get_sub_field('popup_image_alt_text') ?>" class="text-[14px] text-white flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
+                    <?php echo get_sub_field('button_text') ?>
+                </a>
+            <?php else: ?>
+                <a href="<?php echo esc_url(get_sub_field('button_url')) ?>" class="text-[14px] text-white flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
+                    <?php echo get_sub_field('button_text') ?>
+                </a>
+            <?php endif; ?>
         <?php endif; ?>
     </div>
 </section>
