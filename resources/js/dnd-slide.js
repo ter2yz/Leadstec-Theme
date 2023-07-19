@@ -43,7 +43,7 @@ function setupDragToScroll(container) {
 
         if (deltaX > deltaY) {
             // Horizontal dragging, prevent default to allow vertical scrolling
-            event.preventDefault();
+            // event.preventDefault();
         } else {
             // Vertical dragging, exit the drag handler
             msIsDragging = false;
