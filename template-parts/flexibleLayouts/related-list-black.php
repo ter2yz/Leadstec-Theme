@@ -37,7 +37,7 @@
         </div>
     </div>
     <!-- Mobile Carousel -->
-    <div class="ms-fw-container block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
+    <div class="ms-fw-container block md:hidden w-full overflow-auto md:touch-none cursor-grab no-scrollbar">
         <div class="ms-container w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
             <div class="ms-wrap inline-flex flex-nowrap">
                 <?php if(get_sub_field('card_group')):

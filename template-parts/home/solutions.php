@@ -2,7 +2,7 @@
     <div class="relative z-20">
         <div class="w-full pt-32 pb-20 lg:pt-48 lg:pb-40 flex flex-col items-center justify-center">
             <h2 class="capitalize text-[30px] md:text-[60px]  text-[1b1c1d] font-semibold text-center -mt-16 px-2"><?php echo get_field('our_solutions')['heading']; ?></h2>
-            <div id="solutions-fw-container" class="block lg:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
+            <div id="solutions-fw-container" class="block lg:hidden w-full overflow-auto md:touch-none cursor-grab no-scrollbar">
                 <div id="solutions-container" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
                     <div id="solutions-wrap" class="inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
                         <?php

@@ -3141,6 +3141,10 @@ body {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .md\:touch-none {
+    touch-action: none;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }

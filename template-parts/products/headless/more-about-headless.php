@@ -30,7 +30,7 @@
         </div>
     </div>
     <!-- Mobile Carousel -->
-    <div id="mah-fw-container" class="block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
+    <div id="mah-fw-container" class="block md:hidden w-full overflow-auto md:touch-none cursor-grab no-scrollbar">
         <div id="mah-container" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
             <div id="mah-wrap" class="inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
                 <?php

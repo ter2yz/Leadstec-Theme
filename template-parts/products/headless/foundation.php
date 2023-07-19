@@ -26,7 +26,7 @@
         </div>
     </div>
     <!-- Mobile Carousel -->
-    <div id="solutions-fw-container" class="block lg:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar">
+    <div id="solutions-fw-container" class="block lg:hidden w-full overflow-auto md:touch-none cursor-grab no-scrollbar">
         <div id="solutions-container" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
             <div id="solutions-wrap" class="inline-flex flex-nowrap mt-[20px] md:mt-[40px]">
                 <?php

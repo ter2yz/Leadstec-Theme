@@ -74,7 +74,7 @@
                 ?>
             </div>
         </div>
-        <div id="<?php echo get_field('all_posts_section_id'); ?>" class="ms-fw-container block md:hidden w-full overflow-auto touch-none cursor-grab no-scrollbar bg-gray-100">
+        <div id="<?php echo get_field('all_posts_section_id'); ?>" class="ms-fw-container block md:hidden w-full overflow-auto md:touch-none cursor-grab no-scrollbar bg-gray-100">
             <div class="ms-container w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
                 <div class="ms-wrap inline-flex flex-nowrap my-[20px] md:my-[40px]">
                     <?php
