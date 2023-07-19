@@ -2,8 +2,15 @@
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/fslightbox.js' ); ?>"></script>
 
 <?php
-    $current_post_uri = get_page_uri(get_post());
-    $current_lang = substr($current_post_uri, 0, 2);
+    $post_type = get_post_type(get_post());
+    $post_type_obj = get_post_type_object( $post_type );
+    // Check if a description is set.
+    if ( isset( $post_type_obj->description ) ) {
+        $description = $post_type_obj->description;
+    } else {
+        $description = '';
+    }
+    $current_lang = $description;
     console_log($current_lang);
     if($current_lang == 'en') {
         $footer_page = get_page_by_path('en/footer');
