@@ -1,9 +1,18 @@
 <?php /* Template Name: 404 Template */ ?>
 <?php
-    $current_page = get_page_by_path('custom-404');
+    $current_lang = substr($_SERVER['REQUEST_URI'], 1, 2);
+    if($current_lang == 'en') {
+        $current_page = get_page_by_path('en/custom-404');
+    } else if($current_lang == 'sc') {
+        $current_page = get_page_by_path('sc/custom-404');
+    } else if($current_lang == 'tc') {
+        $current_page = get_page_by_path('tc/custom-404');
+    } else {
+        $current_page = get_page_by_path('custom-404');
+    }
 ?>
-<?php get_template_part( 'template-parts/header', 'general' ); ?>
-<div id="tyMainWrapper" class="relative w-full py-20 flex flex-col justify-center items-center mb-10">
+<?php get_template_part( 'template-parts/header', '404' ); ?>
+<div class="relative w-full py-20 flex flex-col justify-center items-center mb-10">
     <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto flex flex-col items-center">
         <div class="w-60 h-60 rounded-full mb-6 overflow-hidden">
             <img src="<?php echo get_field('image', $current_page->ID)['url'] ?>" alt="<?php echo get_field('image_alt_text', $current_page->ID); ?>" class="w-full h-full object-cover object-center">
@@ -18,4 +27,4 @@
 
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/page-ty.js' ); ?>"></script>
 
-<?php get_template_part( 'template-parts/footer', 'general' );
+<?php get_template_part( 'template-parts/footer', '404' );

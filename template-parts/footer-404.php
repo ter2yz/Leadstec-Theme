@@ -2,8 +2,7 @@
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/fslightbox.js' ); ?>"></script>
 
 <?php
-    $current_post_uri = get_page_uri(get_post());
-    $current_lang = substr($current_post_uri, 0, 2);
+    $current_lang = substr($_SERVER['REQUEST_URI'], 1, 2);
     if($current_lang == 'en') {
         $footer_page = get_page_by_path('en/footer');
     } else if($current_lang == 'sc') {
