@@ -2,7 +2,7 @@
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full flex flex-col items-center justify-center">
             <?php if(get_sub_field('heading')):?>
-            <h2 class="capitalize text-[30px] md:text-[60px] text-center text-[#1b1c1d] font-bold my-10"><?php echo get_sub_field('heading') ?></h2>
+            <h2 class="capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold my-10 <?php echo get_sub_field('is_header_center') ? 'text-center' : 'text-left'; ?>"><?php echo get_sub_field('heading') ?></h2>
             <?php endif; ?>
             <div class="w-full flex flex-row justify-start items-stretch flex-wrap">
                 <?php
