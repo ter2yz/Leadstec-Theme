@@ -46,7 +46,7 @@ const handleImageClick = (el) => {
 const handleReadExpand = (el) => {
     const descriptionWrap = el.closest(".description-wrap");
     const mainText = el.previousElementSibling;
-    descriptionWrap.classList.toggle("max-h-[50%]");
+    descriptionWrap.classList.toggle("max-h-[67%]");
     descriptionWrap.classList.toggle("max-h-full");
     descriptionWrap.classList.toggle("w-1/2");
     descriptionWrap.classList.toggle("w-2/3");

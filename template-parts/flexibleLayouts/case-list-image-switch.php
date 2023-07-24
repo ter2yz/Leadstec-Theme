@@ -38,7 +38,7 @@
                     <div data-index="<?php echo $stories_main_index ?>" class="story-main-image-wrapper absolute inset-0 w-full h-full shadow-lg <?php echo $stories_main_index == 2 ? 'opacity-100' : 'opacity-0' ?> transition group">
                         <img class="min-w-full min-h-full transition-all duration-200 opacity-100 object-contain object-center" src="<?php echo esc_url( $story['image']['url']); ?>" alt="<?php echo $story['image_alt_text']; ?>">
                         <div class="absolute inset-0 w-full h-full transition-all duration-500 opacity-0 hover:opacity-100 z-20">
-                            <div class="description-wrap absolute w-1/2 h-full flex flex-col justify-start max-h-[50%] transition-all duration-500 bottom-0 right-0 bg-white p-6 text-zinc-900 overflow-auto z-20">
+                            <div class="description-wrap absolute w-1/2 h-full flex flex-col justify-start max-h-[67%] transition-all duration-500 bottom-0 right-0 bg-white p-6 text-zinc-900 overflow-auto z-20">
                                 <div class="w-full h-full overflow-auto mb-9">
                                     <h3 class="font-bold text-[20px] text-left mb-6 capitalize"><?php echo $story['heading']; ?></h3>
                                     <?php 

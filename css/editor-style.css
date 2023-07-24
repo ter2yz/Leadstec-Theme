@@ -1057,6 +1057,10 @@
   max-height: 85vh;
 }
 
+.max-h-\[67\%\] {
+  max-height: 67%;
+}
+
 .min-h-\[181px\] {
   min-height: 181px;
 }
