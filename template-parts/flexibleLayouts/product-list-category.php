@@ -1,7 +1,7 @@
 <section id="<?php echo get_sub_field('id')?>" class="relative w-full flex justify-center bg-white">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="filter-wrapper w-full flex flex-col items-center justify-center">
-            <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] leading-[1.2] font-bold mb-5 <?php echo get_sub_field('is_header_center') ? 'text-center' : 'text-left'; ?>"><?php echo get_sub_field('heading') ?></h2>
+            <h2 class="w-full text-[30px] md:text-[60px] text-[#1b1c1d] leading-[1.2] font-bold mb-5 <?php echo get_sub_field('is_header_center') ? 'text-center' : 'text-left'; ?>"><?php echo get_sub_field('heading') ?></h2>
             <div class="filters w-full flex justify-start items-center mb-5 no-scrollbar flex-wrap">
                 <button class="filter border border-orange-500 text-orange-500 text-[15px] font-bold rounded-lg px-6 py-2 mr-3 whitespace-nowrap mb-3" data-filter="all"><?php echo get_sub_field('all_label');?></button>
                 <?php
@@ -42,7 +42,7 @@
                                         <p class="leading-relaxed text-[#9f9f9f] text-[14px] md:text-[17px] mb-12 line-clamp-3"><?php echo $case['summary']; ?></p>
                                     </div>
                                     <?php if($case['button_url']): ?>
-                                    <button class="capitalize text-white flex justify-center items-center text-[14px] md:text-[17px] font-bold border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
+                                    <button class="text-white flex justify-center items-center text-[14px] md:text-[17px] font-bold border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
                                         <?php echo $case['button_label'] ?>
                                     </button>
                                     <?php endif; ?>

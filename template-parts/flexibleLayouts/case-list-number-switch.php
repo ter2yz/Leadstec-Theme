@@ -1,6 +1,6 @@
 <section id="<?php echo get_sub_field('id')?>" class="relative w-full lg:bg-zinc-900 z-20 overflow-hidden">
     <div class="clns-container w-full hidden lg:flex lg:h-screen lg:min-h-[600px] px-8 lg:px-0">
-        <h2 class="block lg:hidden w-full text-5xl text-zinc-900 font-semibold mb-10 text-left"><?php echo get_sub_field('heading') ?></h2>
+        <h2 class="block lg:hidden w-full text-[30px] md:text-[60px] text-zinc-900 font-semibold mb-10 text-left"><?php echo get_sub_field('heading') ?></h2>
         <?php $cases = get_sub_field('cases'); ?>
         <div id="number-selector-wrapper" class="hidden lg:flex w-4/12 max-w-xs px-6 h-full flex-col items-center justify-center text-zinc-900" style="background: linear-gradient(to bottom, <?php echo $cases[0]['background_gradient_start']?>, <?php echo $cases[0]['background_gradient_end']?>);">
             <h2 class="text-5xl font-semibold leading-tight mb-16 text-center"><?php echo get_sub_field('heading') ?></h2>
