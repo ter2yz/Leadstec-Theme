@@ -1,7 +1,7 @@
 <section id="successful-stories-section" class="w-full flex justify-center mt-20 lg:mt-40">
     <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <div class="w-full flex flex-col lg:flex-row justify-between items-start lg:items-center px-2">
-            <h2 class="capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold max-h-screen mb-0"><?php echo get_field('successful_stories_heading') ?></h2>
+            <h2 class="text-[30px] md:text-[60px] text-[#1b1c1d] font-bold max-h-screen mb-0 w-full lg:w-auto <?php echo get_field('is_stories_header_center') ? 'text-center' : 'text-left'; ?>"><?php echo get_field('successful_stories_heading') ?></h2>
             <a href="<?php echo get_field('read_more_button_url') ?>" class="hidden lg:flex text-[16px] font-bold flex-none justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize whitespace-nowrap">
                 <?php echo get_field('read_more_button_label') ?>
             </a>

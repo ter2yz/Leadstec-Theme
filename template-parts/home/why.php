@@ -1,7 +1,7 @@
 <section id="why-leadstec-section" class="relative w-full flex justify-center bg-white">
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
         <div class="w-full pt-12 md:pt-20 pb-12 lg:pb-40 flex flex-col items-center justify-center">
-            <h2 class="capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-10"><?php echo get_field('why_leadstec')['heading']; ?></h2>
+            <h2 class="capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-10 text-center"><?php echo get_field('why_leadstec')['heading']; ?></h2>
             <p class="text-center max-w-3xl text-[15px] md:text-[20px] text-[#9f9f9f] px-2 md:px-0"><?php echo get_field('why_leadstec')['description']; ?></p>
             <div class="w-full flex flex-col md:flex-row justify-center items-stretch mt-20">
                 <div class="w-full md:w-1/3 px-2 flex flex-col items-center relative box-bg-shadow__spring-sun mb-6">
