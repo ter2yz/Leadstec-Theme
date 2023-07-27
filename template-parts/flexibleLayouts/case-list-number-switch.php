@@ -71,7 +71,7 @@
     <div class="hidden relative lg:absolute w-full h-full inset-0 flex-col justify-center items-stretch transition duration-500 opacity-100 translate-x-0 mb-10 lg:mb-0 shadow-xl rounded-xl lg:shadow-none lg:rounded-none lg:opacity-100 lg:translate-x-full"></div>
     <div class="hidden relative lg:absolute w-full h-full inset-0 flex-col justify-center items-stretch transition duration-500 opacity-100 translate-x-full mb-10 lg:mb-0 shadow-xl rounded-xl lg:shadow-none lg:rounded-none lg:opacity-100 lg:translate-x-0"></div>
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto z-20">
-        <h2 class="block lg:hidden w-full text-5xl text-zinc-900 font-semibold mb-10 <?php echo get_sub_field('is_header_center') ? 'text-center' : 'text-left'; ?>"><?php echo get_sub_field('heading') ?></h2>
+        <h2 class="block lg:hidden w-full text-[30px] md:text-[60px] text-zinc-900 font-semibold mb-10 <?php echo get_sub_field('is_header_center') ? 'text-center' : 'text-left'; ?>"><?php echo get_sub_field('heading') ?></h2>
         <div class="w-full flex lg:hidden flex-col md:flex-row flex-wrap justify-start items-stretch transition opacity-100">
             <?php
                 $cases = get_sub_field('cases');
