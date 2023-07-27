@@ -6,7 +6,7 @@
 <section id="<?php echo get_sub_field('id')?>" class="relative w-full">
     <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <?php if(get_sub_field('heading')): ?>
-        <h2 class="w-full capitalize text-[30px] md:text-[60px] text-center text-[#1b1c1d] font-bold mb-5 md:mb-10 <?php echo get_sub_field('is_header_center') ? 'text-center' : 'text-left'; ?>"><?php echo get_sub_field('heading') ?></h2>
+        <h2 class="w-full capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mb-5 md:mb-10 <?php echo get_sub_field('is_header_center') ? 'text-center' : 'text-left'; ?>"><?php echo get_sub_field('heading') ?></h2>
         <?php endif; ?>
     </div>
     <div class="flex w-full flex-row justify-start border-t border-zinc-100 flex-wrap items-stretch @container">

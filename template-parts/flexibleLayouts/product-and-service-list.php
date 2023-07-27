@@ -1,7 +1,7 @@
 <section id="<?php echo get_sub_field('id')?>" class="w-full flex justify-center overflow-hidden">
     <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <div class="w-full px-2">
-            <h2 class="capitalize text-[30px] md:text-[60px] text-[#1b1c1d] font-bold"><?php echo get_sub_field('heading'); ?></h2>
+            <h2 class="text-[30px] md:text-[60px] text-[#1b1c1d] font-bold <?php echo get_sub_field('is_header_center') ? 'text-center' : 'text-left'; ?>"><?php echo get_sub_field('heading'); ?></h2>
         </div>
         <div class="w-full pt-5 md:pt-10 flex justify-center">
             <div class="relative w-full flex justify-start items-stretch flex-wrap">
