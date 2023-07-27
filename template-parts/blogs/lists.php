@@ -19,13 +19,13 @@ function processPagination($paginationArray, $prev_text, $next_text) {
 
     return $output;
 }
-
+$current_post = get_post();
 ?>
 <section class="relative w-full z-20">
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
-        <div id="<?php echo get_field('recent_section_id'); ?>" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto md:w-4/12 md:min-h-screen md:sticky md:top-12 bg-white md:bg-gray-100 pt-6 pb-40 lg:px-12 lg:pt-12">
+        <div id="<?php echo get_field('recent_section_id', $current_post->ID); ?>" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto md:w-4/12 md:min-h-screen md:sticky md:top-12 bg-white md:bg-gray-100 pt-6 pb-40 lg:px-12 lg:pt-12">
             <div class="w-full bg-white md:p-6">
-                <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('recent_posts_heading');?></h3>
+                <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('recent_posts_heading', $current_post->ID);?></h3>
                 <div class="w-full h-[590px] overflow-y-auto no-scrollbar">
                     <?php
                     $current_type = get_field('blogs_type');
@@ -60,7 +60,7 @@ function processPagination($paginationArray, $prev_text, $next_text) {
                 </div>
             </div>
         </div>
-        <div id="<?php echo get_field('all_posts_section_id'); ?>" class="hidden md:block w-full md:w-8/12 px-6 pt-6 pb-40 lg:px-12 lg:pt-12">
+        <div id="<?php echo get_field('all_posts_section_id', $current_post->ID); ?>" class="hidden md:block w-full md:w-8/12 px-6 pt-6 pb-40 lg:px-12 lg:pt-12">
             <div class="w-full flex flex-col md:flex-row flex-wrap justify-start items-stretch transition opacity-100 px-6 lg:px-0">
                 <?php
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -109,7 +109,7 @@ function processPagination($paginationArray, $prev_text, $next_text) {
                                 <p class="leading-relaxed mb-3"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
                                 <p class="leading-relaxed text-[#9f9f9f] text-[14px] line-clamp-3 mb-6"><?php echo get_field('short_description', $post->ID) ?></p>
                             </div>
-                            <a href="<?php echo get_permalink($post) ?>" class="text-sky-600"><?php echo get_field('learn_more_label');?></a>
+                            <a href="<?php echo get_permalink($post) ?>" class="text-sky-600"><?php echo get_field('learn_more_label', $current_post->ID);?></a>
                         </div>
                     </div>
                 </div>
@@ -145,7 +145,7 @@ function processPagination($paginationArray, $prev_text, $next_text) {
                 </div>
                 <?php endif; ?>
         </div>
-        <div id="<?php echo get_field('all_posts_section_id'); ?>" class="ms-fw-container block md:hidden w-full overflow-auto md:touch-none cursor-grab no-scrollbar bg-gray-100">
+        <div id="<?php echo get_field('all_posts_section_id', $current_post->ID); ?>" class="ms-fw-container block md:hidden w-full overflow-auto md:touch-none cursor-grab no-scrollbar bg-gray-100">
             <div class="ms-container w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
                 <div class="ms-wrap inline-flex flex-nowrap my-[20px] md:my-[40px]">
                     <?php
@@ -173,7 +173,7 @@ function processPagination($paginationArray, $prev_text, $next_text) {
                                     <p class="leading-relaxed mb-3"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
                                     <p class="leading-relaxed text-[#9f9f9f] text-[14px] line-clamp-3 mb-6"><?php echo get_field('short_description', $singlePost->ID) ?></p>
                                 </div>
-                                <a href="<?php echo get_permalink($singlePost) ?>" class="text-sky-600"><?php echo get_field('learn_more_label');?></a>
+                                <a href="<?php echo get_permalink($singlePost) ?>" class="text-sky-600"><?php echo get_field('learn_more_label', $current_post->ID);?></a>
                             </div>
                         </div>
                     </div>
