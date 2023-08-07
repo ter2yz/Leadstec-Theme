@@ -1,7 +1,7 @@
 <section id="our-cultures-section" class="w-full flex flex-col items-center justify-center overflow-hidden pt-[44px] md:pt-20 pb-40 lg:pb-28 bg-zinc-900 @container">
     <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto mb-10">
         <div class="w-full">
-            <h2 class="capitalize text-[30px] md:text-[60px] text-white font-semibold px-2"><?php echo get_field('our_cultures')['heading']; ?></h2>
+            <h2 class="text-[30px] md:text-[60px] text-white font-semibold px-2 <?php echo get_field('our_cultures')['is_header_center'] ? 'text-center' : 'text-left'; ?>"><?php echo get_field('our_cultures')['heading']; ?></h2>
         </div>
     </div>
     <div class="w-full">
