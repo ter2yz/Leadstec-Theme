@@ -46,7 +46,7 @@ All page templates are located in the `/page-templates` directory. Each template
 ```
 
 You can select these templates from the Page section in the WordPress backend:
-[IMAGE]
+![Screenshot 2023-08-07 at 2 31 53 pm](https://github.com/ter2yz/Leadstec-Theme/assets/18039986/b8a63908-7c55-4096-8b83-f98742681c39)
 
 
 ❗️Note: `page_flexible-layout.php` is no longer used. Please use `page_flexible-layout-test.php` instead.
