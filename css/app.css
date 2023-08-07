@@ -1724,6 +1724,10 @@ video {
   width: 100%;
 }
 
+.w-\[15px\] {
+  width: 15px;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -2923,6 +2927,11 @@ video {
 
 .text-zinc-900\/70 {
   color: rgb(24 24 27 / 0.7);
+}
+
+.text-\[\#4b87c2\] {
+  --tw-text-opacity: 1;
+  color: rgb(75 135 194 / var(--tw-text-opacity));
 }
 
 .underline {
