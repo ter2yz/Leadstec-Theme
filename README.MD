@@ -27,6 +27,8 @@ When you run `npm run watch`, all scripts and stylesheet files will be deployed 
 
 For CI/CD, we use the **WP Pusher** plugin. Refer to the [documentation](https://docs.wppusher.com/) for setting up new CI/CD configurations as required.
 
+![Screenshot 2023-08-07 at 2 43 36 pm](https://github.com/ter2yz/Leadstec-Theme/assets/18039986/1dcab256-4cef-452d-bf34-082f1b0bcefe)
+
 ## Theme Structure
 
 TailPress follows the [WordPress Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/). Before making any changes, familiarize yourself with the hierarchy.
