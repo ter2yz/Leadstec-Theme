@@ -48,6 +48,7 @@ All page templates are located in the `/page-templates` directory. Each template
 You can select these templates from the Page section in the WordPress backend:
 [IMAGE]
 
+
 ❗️Note: `page_flexible-layout.php` is no longer used. Please use `page_flexible-layout-test.php` instead.
 
 ### Components Templates
