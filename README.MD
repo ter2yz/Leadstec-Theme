@@ -1,101 +1,71 @@
-<p><img src="http://tailpress.io/images/tailpress100.svg" width="260" alt="TailPress"></p>
-
-[![GitHub release](https://img.shields.io/github/release/jeffreyvr/tailpress?include_prereleases=&sort=semver)](https://github.com/jeffreyvr/tailpress/releases/)
-[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
-[![issues - tailpress](https://img.shields.io/github/issues/jeffreyvr/tailpress)](https://github.com/jeffreyvr/tailpress/issues)
-
 # Introduction
 
-TailPress is a minimal boilerplate theme for WordPress using [Tailwind CSS](https://tailwindcss.com/).
+This theme is a minimal WordPress theme using [Tailwind CSS](https://tailwindcss.com/).
 
-## Getting started
+## Getting Started
 
-### Using the installer
+To use this theme, follow these steps:
 
-You can get started using the installer (using composer):
+1. Clone this repository to your WordPress theme directory: `[root-path]/wp-content/themes/[theme-name]/`
+2. Run `npm install` to install the required dependencies.
+3. Run `npm run watch` to start developing. The `watch` flag is essential as it ensures all Tailwind CSS classes are deployed as expected.
 
-```bash
-composer global require jeffreyvanrossum/tailpress-installer
+### NPM Scripts
 
-tailpress new example-theme
+Several NPM scripts are available to help you manage the theme. Below is the list of available scripts defined in the `package.json` file under the "scripts" section. You can execute a script through the terminal by running `npm run script-name`.
+
+| Script     | Description                                                                           |
+| ---------- | ------------------------------------------------------------------------------------- |
+| production | Creates a production (minified) build of app.js, app.css, and editor-style.css.       |
+| dev        | Creates a development build of app.js, app.css, and editor-style.css.                 |
+| watch      | Runs several watch scripts concurrently.                                              |
+| watch-sync | Runs several watch scripts concurrently and starts `browser-sync` for live reloading. |
+
+### Deployment after Updates
+
+When you run `npm run watch`, all scripts and stylesheet files will be deployed automatically. After making updates, you can push the changes to the `main` branch.
+
+For CI/CD, we use the **WP Pusher** plugin. Refer to the [documentation](https://docs.wppusher.com/) for setting up new CI/CD configurations as required.
+
+## Theme Structure
+
+TailPress follows the [WordPress Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/). Before making any changes, familiarize yourself with the hierarchy.
+
+### Resources
+
+TailPress utilizes the [Tailwind CLI](https://tailwindcss.com/docs/installation#using-tailwind-cli), [PostCSS](https://postcss.org), and [esbuild](https://esbuild.github.io). The editable CSS and JavaScript files can be found within the `/resources` folder.
+
+❗️Please avoid modifying the files under `./css` and `./js`. All files inside these directories are deployed automatically.
+
+### Pages Templates
+
+All page templates are located in the `/page-templates` directory. Each template's name is defined at the first line of the file, like this:
+
+```
+<?php /* Template Name: 404 Template */ ?>
 ```
 
-*If you haven't already, make sure to place the `~/.composer/vendor/bin` directory in your `PATH` so the tailpress executable is found when you run the tailpress command in your terminal.*
+You can select these templates from the Page section in the WordPress backend:
+[IMAGE]
 
-You can optionally set the theme name.
+❗️Note: `page_flexible-layout.php` is no longer used. Please use `page_flexible-layout-test.php` instead.
 
-```bash
-tailpress new example-theme --name="Example Theme"
+### Components Templates
+
+All component templates are stored in the `/template-parts` directory. You can call each component using the built-in WordPress function `get_template_part()`:
+
 ```
-
-By default, TailPress uses esbuild and Tailwind's CLI for compiling. Rather use Laravel Mix?
-
-```bash
-tailpress new example-theme --compiler="mix"
+get_template_part( 'template-parts/flexibleLayouts/product-and-service-list' );
 ```
-
-You can also initialize a new Git repository (branch defaults to `main`):
-
-```bash
-tailpress new example-theme --name="Example Theme" --git --branch="main"
-```
-
-Once your theme is ready, don't forget to cd into the directory.
-
-You will be asked if you would like to have WordPress installed as well. Keep in mind that you still need a local development environment for PHP and MySQL.
-
-### Regular method
-
-* Clone repo `git clone https://github.com/jeffreyvr/tailpress.git && cd tailpress`
-* Run `rm -rf .git` to remove git (or `rmdir .git` for Windows)
-* Run `npm install`
-* Run `npm run watch` to start developing
-
-### General
-
-TailPress uses the [Tailwind CLI](https://tailwindcss.com/docs/installation#using-tailwind-cli), [PostCSS](https://postcss.org) and [esbuild](https://esbuild.github.io).
-
-You will find the editable CSS and Javascript files within the `/resources` folder.
-
-Before you use your theme in production, make sure you run `npm run production`.
-
-## NPM Scripts
-
-There are several NPM scripts available. You'll find the full list in the `package.json` file under "scripts". A script is executed through the terminal by running `npm run script-name`.
-
-| Script     | Description                                                                    |
-|------------|--------------------------------------------------------------------------------|
-| production | Creates a production (minified) build of app.js, app.css and editor-style.css. |
-| dev        | Creates a development build of app.js, app.css and editor-style.css.           |
-| watch      | Runs several watch scripts concurrently.                                       |
-| watch-sync | Runs several watch scripts concurrently and starts `browser-sync`.             |
-
-## Block editor support
-
-TailPress comes with support for the [block editor](https://wordpress.org/support/article/wordpress-editor/).
-
-A basic setup for `theme.json` is included. This also means that you need to at least use WordPress 5.8. If you wan't to support earlier WordPress versions, you can use an [older version](https://github.com/jeffreyvr/tailpress/tree/0.1.1) of TailPress instead.
-
-CSS-classes for alignment (full, wide etc.) are generated automatically. You can opt-out on this by removing the plugin from the `tailwind.config.js` file.
-
-To make the editing experience within the block editor more in line with the front end styling, a `editor-style.css` is generated.
-
-### Define theme colors and font sizes
-
-Several colors and font sizes are defined from the beginning. You can modify them in `theme.json`.
 
 ## Links
 
-* [TailPress website](https://tailpress.io)
-* [Screencasts](https://www.youtube.com/playlist?list=PL6GBdOp044SHIOSCZejodwr1HcYsC43wG)
-* [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-* [Esbuild Documentation](https://esbuild.github.io)
+Here are some useful links related to TailPress:
 
-## Contributors
+-   [TailPress Website](https://tailpress.io)
+-   [Screencasts](https://www.youtube.com/playlist?list=PL6GBdOp044SHIOSCZejodwr1HcYsC43wG)
+-   [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+-   [esbuild Documentation](https://esbuild.github.io)
+-   [WP Pusher](https://wppusher.com/)
 
-* [Jeffrey van Rossum](https://github.com/jeffreyvr)
-* [All contributors](https://github.com/jeffreyvr/tailpress/graphs/contributors)
-
-## License
-
-MIT. Please see the [License File](/LICENSE) for more information.
+Feel free to reach out to our support team if you have any questions or need further assistance. Happy building with TailPress!
