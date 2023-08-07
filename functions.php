@@ -196,3 +196,4 @@ add_action( 'after_setup_theme', 'register_navwalker' );
 
 add_filter( 'do_redirect_guess_404_permalink', '__return_false' );
 
+add_filter( 'wpcf7_use_recaptcha_net', '__return_true' );
