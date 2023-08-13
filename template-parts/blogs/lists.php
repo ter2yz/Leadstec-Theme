@@ -20,15 +20,38 @@ function processPagination($paginationArray, $prev_text, $next_text) {
     return $output;
 }
 $current_post = get_post();
+
+$current_type = get_field('blogs_type');
+$taxonomy = get_object_taxonomies($current_type, 'names');
+$categories = get_terms($taxonomy, array(
+    'hide_empty' => false,
+    'orderby' => 'date'
+));
+$current_taxo = get_query_var('taxo');
 ?>
 <section class="relative w-full z-20">
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
         <div id="<?php echo get_field('recent_section_id', $current_post->ID); ?>" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto md:w-4/12 md:min-h-screen md:sticky md:top-12 bg-white md:bg-gray-100 pt-6 pb-40 lg:px-12 lg:pt-12">
+            <div class="w-full p-6">
+                <div class="w-full flex flex-col">
+                    <?php
+                        if($categories){
+                            foreach($categories as $cat){
+                                console_log($cat)
+                    ?>
+                        <a href="?taxo=<?php echo $cat->slug; ?>" class="<?php echo $current_taxo == $cat->slug ? 'text-orange-500' : '' ?>">
+                            <p><?php echo $cat->name; ?></p>
+                        </a>
+                    <?php
+                            }
+                        }
+                    ?>
+                </div>
+            </div>
             <div class="w-full bg-white md:p-6">
                 <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('recent_posts_heading', $current_post->ID);?></h3>
                 <div class="w-full h-[590px] overflow-y-auto no-scrollbar">
                     <?php
-                    $current_type = get_field('blogs_type');
                     $recent_posts = get_posts(array(
                         'numberposts' => -1,
                         'post_type' => $current_type,
@@ -67,6 +90,7 @@ $current_post = get_post();
                 $loop = new WP_Query( array(
                     'numberposts' => -1,
                     'post_type' => $current_type,
+                    $taxonomy[0] => $current_taxo,
                     'meta_key'  => 'post_date',
                     'orderby' => array( 'meta_value' => 'DESC' ), 
                     'posts_per_page' => 10,

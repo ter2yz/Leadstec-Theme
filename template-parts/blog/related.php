@@ -1,6 +1,7 @@
 <?php
 $current_post = get_post();
 $current_taxonomies = get_post_taxonomies($current_post);
+console_log($current_taxonomies);
 $current_terms = get_the_terms($current_post, $current_taxonomies[0]);
 $recent_posts = get_posts(array(
     'numberposts' => -1,
