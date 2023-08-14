@@ -19,6 +19,14 @@ function processPagination($paginationArray, $prev_text, $next_text) {
 
     return $output;
 }
+function remove_pagination_from_url($url) {
+    // Parse the URL
+    $parsed_url = parse_url($url);
+    // Get the path without the pagination part
+    $path = preg_replace('/\/page\/\d+/', '', $parsed_url['path']);
+    return $path;
+}
+$base_list_url = remove_pagination_from_url($_SERVER['REQUEST_URI']);
 $current_post = get_post();
 
 $current_type = get_field('blogs_type');
