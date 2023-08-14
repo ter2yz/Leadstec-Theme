@@ -22,7 +22,7 @@ function console_log($output, $with_script_tags = true) {
     <!-- Theme embed code -->
     <script src="https://kit.fontawesome.com/c3eb9942d6.js" crossorigin="anonymous"></script>
     <!-- Tiny Slider -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="<?php echo (get_template_directory_uri() . '/resources/css/tiny-slider.css' ); ?>">
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
@@ -34,7 +34,7 @@ function console_log($output, $with_script_tags = true) {
 </head>
 
 <body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script src="<?php echo (get_template_directory_uri() . '/resources/js/dist/tiny-slider.js' ); ?>"></script>
 <?php do_action( 'tailpress_site_before' ); ?>
 <div id="page" class="relative min-h-screen flex flex-col">
 

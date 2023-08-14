@@ -893,6 +893,10 @@
   display: inline-flex;
 }
 
+.table {
+  display: table;
+}
+
 .contents {
   display: contents;
 }
