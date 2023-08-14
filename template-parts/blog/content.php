@@ -12,7 +12,7 @@ $current_taxonomies = get_post_taxonomies($current_post);
 $categories = get_the_terms($current_post, $current_taxonomies[0]);
 $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $current_post->ID) );
 $dateStr = $postDate->format('j F Y');
-if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
+if ($post_type == "blogs_sc" || $post_type == "blogs_tc") {
     $dateStr = $postDate->format('Y年n月j日');; 
 }
 ?>

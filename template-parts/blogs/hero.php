@@ -33,7 +33,7 @@
                     if(get_field('post_date', $feature_blog->ID)){
                         $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $feature_blog->ID) );
                         $dateStr = $postDate->format('j F Y');
-                        if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
+                        if ($current_lang == "blogs_sc" || $current_lang == "blogs_tc") {
                             $dateStr = $postDate->format('Y年n月j日');
                         }
                     } else {
@@ -68,7 +68,7 @@
                         if(get_field('post_date', $feature_blog->ID)){
                             $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $feature_blog->ID) );
                             $dateStr = $postDate->format('j F Y');
-                            if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
+                            if ($current_lang == "blogs_sc" || $current_lang == "blogs_tc") {
                                 $dateStr = $postDate->format('Y年n月j日');
                             }
                         } else {
