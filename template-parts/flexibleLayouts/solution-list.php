@@ -11,7 +11,7 @@
                                 foreach( $solutions as $solution) {
                         ?>
                             <?php if($solution['url']): ?>
-                            <a href="<?php echo $solution['url']; ?>" class="w-[96px] md:w-[166px] lg:w-[200px] mr-[12px] last:mr-0 flex-none" target="_blank">
+                            <a href="<?php echo $solution['url']; ?>" class="w-[96px] md:w-[166px] lg:w-[200px] mr-[12px] last:mr-0 flex-none" <?php echo $solution['is_open_via_new_tab'] ? 'target="_blank"' : ''; ?>>
                             <?php else: ?>
                             <div class="w-[96px] md:w-[166px] lg:w-[200px] mr-[12px] last:mr-0 flex-none">
                             <?php endif; ?>
@@ -43,7 +43,7 @@
                         foreach( $solutions as $solution) {
                 ?>
                     <?php if($solution['url']): ?>
-                    <a href="<?php echo $solution['url']; ?>" class="w-1/5 px-2 mb-3 flex-none" target="_blank">
+                    <a href="<?php echo $solution['url']; ?>" class="w-1/5 px-2 mb-3 flex-none" <?php echo $solution['is_open_via_new_tab'] ? 'target="_blank"' : ''; ?>>
                     <?php else: ?>
                     <div class="w-1/5 px-2 mb-3 flex-none">
                     <?php endif; ?>
