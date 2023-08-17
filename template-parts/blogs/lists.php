@@ -8,7 +8,6 @@ function processPagination($paginationArray, $prev_text, $next_text) {
         preg_match('/href="(.*?)"/', $pageItem, $matches);
         $url = isset($matches[1]) ? $matches[1] : null;
         $title = strip_tags($pageItem);
-        console_log($title);
         if ($title === $prev_text) {
             $output->prev = $url;
         }
@@ -37,17 +36,17 @@ $categories = get_terms($taxonomy, array(
 ));
 $current_taxo = get_query_var('taxo');
 ?>
-<section class="relative w-full z-20">
+<section class="relative w-full z-20 pb-[60px] bg-gray-100">
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
-        <div id="<?php echo get_field('recent_section_id', $current_post->ID); ?>" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto md:w-4/12 md:min-h-screen md:sticky md:top-12 bg-white md:bg-gray-100 pt-6 pb-40 lg:px-12 lg:pt-12">
-            <div class="w-full p-6">
-                <div class="w-full flex flex-col">
+        <div id="<?php echo get_field('recent_section_id', $current_post->ID); ?>" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto md:w-4/12 md:h-[calc(100vh-75px)] md:sticky md:top-12 bg-white md:bg-gray-100 pt-6 pb-40 lg:px-12 lg:pt-12">
+            <div class="w-full bg-white md:p-6 md:max-h-[calc(50vh-67px)] flex flex-col mb-4">
+                <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('recent_posts_heading', $current_post->ID);?></h3>
+                <div class="w-full flex flex-col grow overflow-y-auto overflow-x-hidden no-scrollbar">
                     <?php
                         if($categories){
                             foreach($categories as $cat){
-                                console_log($cat)
                     ?>
-                        <a href="?taxo=<?php echo $cat->slug; ?>" class="<?php echo $current_taxo == $cat->slug ? 'text-orange-500' : '' ?>">
+                        <a href="?taxo=<?php echo $cat->slug; ?>" class="<?php echo $current_taxo == $cat->slug ? 'text-orange-500' : '' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
                             <p><?php echo $cat->name; ?></p>
                         </a>
                     <?php
@@ -56,7 +55,7 @@ $current_taxo = get_query_var('taxo');
                     ?>
                 </div>
             </div>
-            <div class="w-full bg-white md:p-6">
+            <div class="w-full bg-white md:p-6 md:max-h-[calc(50vh-67px)] flex flex-col">
                 <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('recent_posts_heading', $current_post->ID);?></h3>
                 <div class="w-full h-[590px] overflow-y-auto no-scrollbar">
                     <?php
@@ -117,34 +116,20 @@ $current_taxo = get_query_var('taxo');
                     } else {
                         $dateStr = "";
                     }
-                // $allPosts = $recent_posts;
-                // if ($allPosts) {
-                //     foreach($allPosts as $singlePost) {
-                //         $current_taxonomies = get_post_taxonomies($singlePost);
-                //         $categories = get_the_terms($singlePost, $current_taxonomies[0]);
-                //         if(get_field('post_date', $singlePost->ID)){
-                //             $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $singlePost->ID) );
-                //             $dateStr = $postDate->format('j F Y');
-                //             if ($current_type == "blogs_sc" || $current_type == "blogs_tc") {
-                //                 $dateStr = $postDate->format('Y年n月j日');; 
-                //             }
-                //         } else {
-                //             $dateStr = "";
-                //         }
                 ?>
-                <div class="w-full lg:w-1/2 lg:odd:pl-0 lg:odd:pr-3 lg:even:pl-3 lg:even:pr-0 overflow-hidden mb-6">
+                <a href="<?php echo get_permalink($post) ?>" class="w-full lg:w-1/2 lg:odd:pl-0 lg:odd:pr-3 lg:even:pl-3 lg:even:pr-0 overflow-hidden mb-6">
                     <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
-                        <a href="<?php echo get_permalink($post) ?>" class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo get_field('image_alt_text', $post->ID); ?>" style="background-image: url(<?php echo esc_url( get_field('feature_image', $post->ID)['url'] ); ?>); "></a>
+                        <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo get_field('image_alt_text', $post->ID); ?>" style="background-image: url(<?php echo esc_url( get_field('feature_image', $post->ID)['url'] ); ?>); "></div>
                         <div class="w-full flex flex-col justify-between items-start grow p-3 md:p-6 xl:p-9">
                             <div class="w-full">
                                 <h3 class="font-bold text-xl text-left mb-3"><?php echo get_field('title', $post->ID) ?></h3>
                                 <p class="leading-relaxed mb-3"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
                                 <p class="leading-relaxed text-[#9f9f9f] text-[14px] line-clamp-3 mb-6"><?php echo get_field('short_description', $post->ID) ?></p>
                             </div>
-                            <a href="<?php echo get_permalink($post) ?>" class="text-sky-600"><?php echo get_field('learn_more_label', $current_post->ID);?></a>
+                            <button class="text-sky-600"><?php echo get_field('learn_more_label', $current_post->ID);?></button>
                         </div>
                     </div>
-                </div>
+                </a>
                 <?php
                     endwhile;
                 ?>
@@ -152,6 +137,11 @@ $current_taxo = get_query_var('taxo');
                 <?php
                     
                     $total_pages = $loop->max_num_pages;
+                    if (get_query_var('taxo')) {
+                        $para_format = '&paged=%#%';
+                    } else {
+                        $para_format = '?paged=%#%';
+                    }
                 
                     if ($total_pages > 1){
                 
@@ -159,7 +149,7 @@ $current_taxo = get_query_var('taxo');
                 
                         $pagination = paginate_links(array(
                             'base' => html_entity_decode( get_pagenum_link(1) ) . '%_%',
-                            'format' => '?paged=%#%',
+                            'format' => $para_format,
                             'current' => $current_page,
                             'total' => $total_pages,
                             'type' => 'array',

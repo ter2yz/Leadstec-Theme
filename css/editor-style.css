@@ -1506,6 +1506,10 @@
   overflow-y: auto;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2123,6 +2127,10 @@
 
 .pt-\[60\%\] {
   padding-top: 60%;
+}
+
+.pb-\[60px\] {
+  padding-bottom: 60px;
 }
 
 .text-left {
@@ -3033,8 +3041,16 @@ body {
     height: 500px;
   }
 
+  .md\:h-\[calc\(100vh-75px\)\] {
+    height: calc(100vh - 75px);
+  }
+
   .md\:max-h-\[500px\] {
     max-height: 500px;
+  }
+
+  .md\:max-h-\[calc\(50vh-67px\)\] {
+    max-height: calc(50vh - 67px);
   }
 
   .md\:min-h-\[385px\] {
@@ -3051,6 +3067,10 @@ body {
 
   .md\:min-h-screen {
     min-height: 100vh;
+  }
+
+  .md\:min-h-\[calc\(100vh-75px\)\] {
+    min-height: calc(100vh - 75px);
   }
 
   .md\:w-1\/2 {
