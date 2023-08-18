@@ -25,7 +25,6 @@ function remove_pagination_from_url($url) {
     $path = preg_replace('/\/page\/\d+\//', '', $parsed_url['path']);
     return $path;
 }
-console_log(remove_pagination_from_url('https://www.leads-technologies.com/en/blogs-list.html/page/2/'));
 $base_list_url = remove_pagination_from_url($_SERVER['REQUEST_URI']);
 $current_post = get_post();
 
@@ -47,7 +46,7 @@ $current_taxo = get_query_var('taxo');
                         if($categories){
                             foreach($categories as $cat){
                     ?>
-                        <a href="?taxo=<?php echo $cat->slug; ?>" class="<?php echo $current_taxo == $cat->slug ? 'text-orange-500' : '' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
+                        <a href="<?php echo $base_list_url; ?>?taxo=<?php echo $cat->slug; ?>" class="<?php echo $current_taxo == $cat->slug ? 'text-orange-500' : '' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
                             <p><?php echo $cat->name; ?></p>
                         </a>
                     <?php
