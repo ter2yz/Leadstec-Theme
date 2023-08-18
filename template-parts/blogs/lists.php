@@ -164,7 +164,7 @@ $current_taxo = get_query_var('taxo');
                 }
                 ?>
                 <?php if($total_pages >1): ?>
-                <div class="flex">
+                <div class="flex px-6 lg:px-0">
                     <a class="py-2 px-3 rounded-lg border-solid border mr-2 <?php echo $pagination_object->prev ? 'border-blue-500 text-blue-500' : 'text-gray-200 border-gray-200 pointer-events-none cursor-default' ?>" href="<?php echo $pagination_object->prev ?>" ><</a>
                     <a class="py-2 px-3 rounded-lg border-solid border <?php echo $pagination_object->next ? 'border-blue-500 text-blue-500' : 'text-gray-200 border-gray-200 pointer-events-none cursor-default' ?>" href="<?php echo $pagination_object->next ?>" >></a>
                 </div>
