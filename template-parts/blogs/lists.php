@@ -40,8 +40,11 @@ $current_taxo = get_query_var('taxo');
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
         <div id="<?php echo get_field('recent_section_id', $current_post->ID); ?>" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto md:w-4/12 md:h-[calc(100vh-75px)] md:sticky md:top-12 bg-white md:bg-gray-100 pt-6 pb-40 lg:px-12 lg:pt-12">
             <div class="w-full bg-white md:p-6 md:max-h-[calc(50vh-67px)] flex flex-col mb-4">
-                <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('recent_posts_heading', $current_post->ID);?></h3>
+                <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('categories_heading', $current_post->ID);?></h3>
                 <div class="w-full flex flex-col grow overflow-y-auto overflow-x-hidden no-scrollbar">
+                        <a href="<?php echo $base_list_url; ?>" class="<?php echo $current_taxo ? '' : 'text-orange-500' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
+                            <p><?php echo get_field('all_posts_heading', $current_post->ID); ?></p>
+                        </a>
                     <?php
                         if($categories){
                             foreach($categories as $cat){
