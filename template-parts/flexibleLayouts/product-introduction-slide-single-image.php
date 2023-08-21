@@ -12,7 +12,7 @@
                         if( $slideItems ) {
                             foreach( $slideItems as $slideItem ) {
                     ?>
-                        <div class="w-full py-16 md:py-20 flex flex-col justify-center">
+                        <div class="w-full py-16 md:py-20 flex flex-col justify-center pl-2">
                             <p class="hidden md:block absolute md:relative left-1/2 md:left-0 bottom-0 text-7xl transform origin-top-left scale-110 md:scale-150 -translate-x-1/2 md:-translate-x-0 translate-y-4 font-bold text-zinc-800/5"><?php echo $slideItem['blur_background_text'] ?></p>
                             <h3 class="relative text-gray-900 text-[20px] md:text-[40px] font-semibold mb-6 leading-none">
                                 <?php echo $slideItem['heading'] ?>
