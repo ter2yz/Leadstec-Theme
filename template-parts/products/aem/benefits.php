@@ -12,7 +12,7 @@
                         if( $benefits ) {
                             foreach( $benefits as $benefit ) {
                     ?>
-                        <div class="w-full py-16 md:py-20 flex flex-col justify-center">
+                        <div class="w-full py-16 md:py-20 flex flex-col justify-center pl-2">
                             <h3 class="relative text-gray-900 text-[20px] md:text-[40px] font-semibold mb-6">
                                 <?php echo $benefit['heading'] ?>
                                 <span class="absolute left-0 bottom-0 text-7xl origin-bottom-left scale-150 font-bold text-zinc-800/5"><?php echo $benefit['blur_background_text'] ?></span>
