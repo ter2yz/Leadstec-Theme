@@ -11,7 +11,7 @@
                     <?php echo get_sub_field('button_text') ?>
                 </a>
             <?php else: ?>
-                <a href="<?php echo esc_url(get_sub_field('button_url')) ?>" class="text-[14px] text-white flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
+                <a href="<?php echo esc_url(get_sub_field('button_url')) ?>" class="text-[14px] text-white flex justify-center items-center border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3" <?php echo get_sub_field('is_open_via_new_tab') ? 'target="_blank"' : ''; ?>>
                     <?php echo get_sub_field('button_text') ?>
                 </a>
             <?php endif; ?>
