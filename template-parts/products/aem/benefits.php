@@ -6,7 +6,7 @@
                 <div class="w-full md:w-1/2 lg:pr-6">
                     <img class="slider-single-image w-full max-w-xl mx-auto" src="<?php echo esc_url( get_field('benefits')['image']['url'] ); ?>" alt="<?php echo get_field('benefits')['image_alt_text']; ?>">
                 </div>
-                <div class="w-full md:w-1/2 lg:pl-6 mt-10 md:mt-0 md:pl-[15px] md:overflow-y-scroll md:h-[500px] no-scrollbar">
+                <div class="w-full md:w-1/2 lg:pl-6 mt-10 md:mt-0 md:pl-[15px] md:overflow-y-scroll md:h-[500px] no-scrollbar overflow-x-hidden">
                     <?php
                         $benefits = get_field('benefits')['benefits'];
                         if( $benefits ) {

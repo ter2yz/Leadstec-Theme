@@ -6,7 +6,7 @@
                 <div class="w-full md:w-1/2 lg:pr-6">
                     <img class="slider-single-image w-full max-w-xl mx-auto" src="<?php echo esc_url( get_sub_field('image')['url'] ); ?>" alt="<?php echo get_sub_field('image_alt_text'); ?>">
                 </div>
-                <div class="w-full md:w-1/2 lg:pl-6 mt-10 md:mt-0 md:pl-[15px] md:overflow-y-scroll md:h-[500px] no-scrollbar">
+                <div class="w-full md:w-1/2 lg:pl-6 mt-10 md:mt-0 md:pl-[15px] md:overflow-y-scroll md:h-[500px] no-scrollbar overflow-x-hidden">
                     <?php
                         $slideItems = get_sub_field('slides');
                         if( $slideItems ) {
