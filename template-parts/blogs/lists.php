@@ -34,22 +34,26 @@ $categories = get_terms($taxonomy, array(
     'hide_empty' => false,
     'orderby' => 'date'
 ));
-$current_taxo = get_query_var('taxo');
+if (strtolower(get_query_var('category')) == 'all' || !get_query_var('category')) {
+    $current_taxo = '';
+} else {
+    $current_taxo = get_query_var('category');
+}
 ?>
-<section class="relative w-full z-20 pb-[60px] bg-gray-100">
+<section class="relative w-full z-20 pb-[100px] md:pb-[140px] lg:pb-[100px] md:bg-gray-100">
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
-        <div id="<?php echo get_field('recent_section_id', $current_post->ID); ?>" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto md:w-4/12 md:h-[calc(100vh-75px)] md:sticky md:top-12 bg-white md:bg-gray-100 pt-6 pb-40 lg:px-12 lg:pt-12">
-            <div class="w-full bg-white md:p-6 md:max-h-[calc(50vh-67px)] flex flex-col mb-4">
+        <div id="<?php echo get_field('recent_section_id', $current_post->ID); ?>" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto md:w-4/12 md:h-[calc(100vh-75px)] md:sticky md:top-12 bg-white md:bg-gray-100 pt-6 pb-10 md:pl-6 md:pr-0 lg:pl-12 lg:pr-12 lg:pt-12 md:overflow-y-auto no-scrollbar">
+            <div class="w-full bg-white md:p-6 flex flex-col mb-4">
                 <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('categories_heading', $current_post->ID);?></h3>
-                <div class="w-full flex flex-col grow overflow-y-auto overflow-x-hidden no-scrollbar">
-                        <a href="<?php echo $base_list_url; ?>" class="<?php echo $current_taxo ? '' : 'text-orange-500' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
+                <div class="w-full flex flex-col grow">
+                        <a href="<?php echo $base_list_url; ?>?category=all" class="<?php echo strtolower(get_query_var('category')) == 'all' ? 'text-orange-500' : '' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
                             <p><?php echo get_field('all_posts_heading', $current_post->ID); ?></p>
                         </a>
                     <?php
                         if($categories){
                             foreach($categories as $cat){
                     ?>
-                        <a href="<?php echo $base_list_url; ?>?taxo=<?php echo $cat->slug; ?>" class="<?php echo $current_taxo == $cat->slug ? 'text-orange-500' : '' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
+                        <a href="<?php echo $base_list_url; ?>?category=<?php echo $cat->slug; ?>" class="<?php echo $current_taxo == $cat->slug ? 'text-orange-500' : '' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
                             <p><?php echo $cat->name; ?></p>
                         </a>
                     <?php
@@ -58,12 +62,12 @@ $current_taxo = get_query_var('taxo');
                     ?>
                 </div>
             </div>
-            <div class="w-full bg-white md:p-6 md:max-h-[calc(50vh-67px)] flex flex-col">
+            <div class="w-full bg-white md:p-6 flex flex-col">
                 <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('recent_posts_heading', $current_post->ID);?></h3>
-                <div class="w-full h-[590px] overflow-y-auto no-scrollbar">
+                <div class="w-full">
                     <?php
                     $recent_posts = get_posts(array(
-                        'numberposts' => -1,
+                        'numberposts' => 10,
                         'post_type' => $current_type,
                         'meta_key'  => 'post_date',
                         'orderby' => array( 'meta_value' => 'DESC' ), 
@@ -93,7 +97,7 @@ $current_taxo = get_query_var('taxo');
                 </div>
             </div>
         </div>
-        <div id="<?php echo get_field('all_posts_section_id', $current_post->ID); ?>" class="hidden md:block w-full md:w-8/12 px-6 pt-6 pb-40 lg:px-12 lg:pt-12">
+        <div id="<?php echo get_field('all_posts_section_id', $current_post->ID); ?>" class="hidden md:block w-full md:w-8/12 px-6 pt-6 pb-10 lg:px-12 lg:pt-12">
             <div class="w-full flex flex-col md:flex-row flex-wrap justify-start items-stretch transition opacity-100 px-6 lg:px-0">
                 <?php
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -140,7 +144,7 @@ $current_taxo = get_query_var('taxo');
                 <?php
                     
                     $total_pages = $loop->max_num_pages;
-                    if (get_query_var('taxo')) {
+                    if (get_query_var('category')) {
                         $para_format = '&paged=%#%';
                     } else {
                         $para_format = '?paged=%#%';

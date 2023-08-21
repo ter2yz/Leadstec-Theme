@@ -1,4 +1,4 @@
-<section id="web-cases" class="relative w-full bg-white z-20 pt-10 pb-20 overflow-hidden">
+<section id="web-cases" class="<?php echo get_query_var('category') ? 'hidden' : '' ?> relative w-full bg-white z-20 pt-10 pb-20 overflow-hidden">
     <div class="w-full hidden lg:flex lg:min-h-[600px] px-8 lg:px-0">
         <div class="hidden lg:flex w-3/12 px-6 h-full flex-col items-center justify-start mt-10">
             <div id="slider-web-cases" class="w-full text-white flex flex-col items-center justify-center">
