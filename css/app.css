@@ -1515,10 +1515,6 @@ video {
   height: 500px;
 }
 
-.h-\[590px\] {
-  height: 590px;
-}
-
 .h-\[96px\] {
   height: 96px;
 }
@@ -2563,12 +2559,12 @@ video {
   padding-bottom: 2rem;
 }
 
-.pb-\[45\%\] {
-  padding-bottom: 45%;
+.pb-\[100px\] {
+  padding-bottom: 100px;
 }
 
-.pb-\[60px\] {
-  padding-bottom: 60px;
+.pb-\[45\%\] {
+  padding-bottom: 45%;
 }
 
 .pb-\[65\%\] {
@@ -2585,6 +2581,10 @@ video {
 
 .pl-1 {
   padding-left: 0.25rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 .pl-6 {
@@ -2641,14 +2641,6 @@ video {
 
 .pt-\[60\%\] {
   padding-top: 60%;
-}
-
-.pb-\[100px\] {
-  padding-bottom: 100px;
-}
-
-.pl-2 {
-  padding-left: 0.5rem;
 }
 
 .text-left {
@@ -3917,10 +3909,6 @@ article > *:not(.entry-content),
     max-height: 500px;
   }
 
-  .md\:max-h-\[calc\(50vh-67px\)\] {
-    max-height: calc(50vh - 67px);
-  }
-
   .md\:min-h-\[385px\] {
     min-height: 385px;
   }
@@ -4153,6 +4141,10 @@ article > *:not(.entry-content),
     padding-bottom: 10rem;
   }
 
+  .md\:pb-\[140px\] {
+    padding-bottom: 140px;
+  }
+
   .md\:pl-1 {
     padding-left: 0.25rem;
   }
@@ -4163,6 +4155,10 @@ article > *:not(.entry-content),
 
   .md\:pl-\[15px\] {
     padding-left: 15px;
+  }
+
+  .md\:pr-0 {
+    padding-right: 0px;
   }
 
   .md\:pr-1 {
@@ -4195,18 +4191,6 @@ article > *:not(.entry-content),
 
   .md\:pt-8 {
     padding-top: 2rem;
-  }
-
-  .md\:pb-\[120px\] {
-    padding-bottom: 120px;
-  }
-
-  .md\:pb-\[140px\] {
-    padding-bottom: 140px;
-  }
-
-  .md\:pr-0 {
-    padding-right: 0px;
   }
 
   .md\:text-left {
@@ -4627,8 +4611,16 @@ article > *:not(.entry-content),
     padding-bottom: 10rem;
   }
 
+  .lg\:pb-\[100px\] {
+    padding-bottom: 100px;
+  }
+
   .lg\:pl-1 {
     padding-left: 0.25rem;
+  }
+
+  .lg\:pl-12 {
+    padding-left: 3rem;
   }
 
   .lg\:pl-6 {
@@ -4641,6 +4633,10 @@ article > *:not(.entry-content),
 
   .lg\:pr-10 {
     padding-right: 2.5rem;
+  }
+
+  .lg\:pr-12 {
+    padding-right: 3rem;
   }
 
   .lg\:pr-6 {
@@ -4665,22 +4661,6 @@ article > *:not(.entry-content),
 
   .lg\:pt-48 {
     padding-top: 12rem;
-  }
-
-  .lg\:pb-\[100px\] {
-    padding-bottom: 100px;
-  }
-
-  .lg\:pl-0 {
-    padding-left: 0px;
-  }
-
-  .lg\:pl-12 {
-    padding-left: 3rem;
-  }
-
-  .lg\:pr-12 {
-    padding-right: 3rem;
   }
 
   .lg\:text-left {
