@@ -39,6 +39,7 @@ if (strtolower(get_query_var('category')) == 'all' || !get_query_var('category')
 } else {
     $current_taxo = get_query_var('category');
 }
+console_log($current_taxo);
 ?>
 <section class="relative w-full z-20 pb-[100px] md:pb-[140px] lg:pb-[100px] md:bg-gray-100">
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
@@ -52,8 +53,9 @@ if (strtolower(get_query_var('category')) == 'all' || !get_query_var('category')
                     <?php
                         if($categories){
                             foreach($categories as $cat){
+                                console_log($cat);
                     ?>
-                        <a href="<?php echo $base_list_url; ?>?category=<?php echo $cat->slug; ?>" class="<?php echo $current_taxo == $cat->slug ? 'text-orange-500' : '' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
+                        <a href="<?php echo $base_list_url; ?>?category=<?php echo $cat->slug; ?>" class="<?php echo $current_taxo == $cat->name ? 'text-orange-500' : '' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
                             <p><?php echo $cat->name; ?></p>
                         </a>
                     <?php
@@ -178,7 +180,12 @@ if (strtolower(get_query_var('category')) == 'all' || !get_query_var('category')
             <div class="ms-container w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
                 <div class="ms-wrap inline-flex flex-nowrap my-[20px] md:my-[40px]">
                     <?php
-                    $allPosts = $recent_posts;
+                    $allPosts = get_posts(array(
+                        'numberposts' => -1,
+                        'post_type' => $current_type,
+                        'meta_key'  => 'post_date',
+                        'orderby' => array( 'meta_value' => 'DESC' ), 
+                    ));
                     if ($allPosts) {
                         foreach($allPosts as $singlePost) {
                             $current_taxonomies = get_post_taxonomies($singlePost);
