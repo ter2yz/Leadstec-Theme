@@ -1724,8 +1724,16 @@ video {
   width: 100%;
 }
 
+.w-\[30\%\] {
+  width: 30%;
+}
+
 .min-w-full {
   min-width: 100%;
+}
+
+.min-w-\[400px\] {
+  min-width: 400px;
 }
 
 .max-w-3xl {

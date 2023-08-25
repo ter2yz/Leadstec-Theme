@@ -51,11 +51,11 @@
                     </div>
                 </button>
                 <div class="hidden lg:block relative w-full h-full bg-top bg-cover bg-no-repeat group overflow-hidden" aria-label="<?php echo $case['image_alt_text']?>" style="background-image: url(<?php echo esc_url( $case['image'] ); ?>)">
-                    <div class="absolute top-0 right-0 w-[80%] h-full bg-zinc-900/95 px-12 pt-12 pb-20 transition duration-500 ease-in-out translate-x-full group-hover:translate-x-0 overflow-y-auto text-[15px] md:text-[22px] font-medium text-white">
+                    <div class="absolute top-0 right-0 w-[30%] min-w-[400px] h-full bg-zinc-900/95 px-12 pt-12 pb-20 transition duration-500 ease-in-out translate-x-full group-hover:translate-x-0 overflow-y-auto text-[15px] md:text-[22px] font-medium text-white">
                         <?php echo $case['description']; ?>
                     </div>
                     <?php if($case['button_url']): ?>
-                    <div class="absolute right-0 bottom-0 w-[80%] flex justify-end bg-white px-12 py-3 transition duration-500 ease-in-out translate-x-full group-hover:translate-x-0">
+                    <div class="absolute right-0 bottom-0 w-[30%] min-w-[400px] flex justify-end bg-white px-12 py-3 transition duration-500 ease-in-out translate-x-full group-hover:translate-x-0">
                         <a href="<?php echo $case['button_url']; ?>" class="text-sky-600 text-[14px] md:text-[17px] font-bold align-middle "><?php echo $case['button_label'] ?></a>
                     </div>
                     <?php endif; ?>
