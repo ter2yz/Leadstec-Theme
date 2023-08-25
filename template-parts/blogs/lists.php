@@ -34,17 +34,21 @@ $categories = get_terms($taxonomy, array(
     'hide_empty' => false,
     'orderby' => 'date'
 ));
+$mobileCategories = get_terms($taxonomy, array(
+    'hide_empty' => false,
+    'orderby' => 'date'
+));
 if (strtolower(get_query_var('category')) == 'all' || !get_query_var('category')) {
     $current_taxo = '';
 } else {
     $current_taxo = get_query_var('category');
 }
-console_log($current_taxo);
+console_log($categories);
 ?>
 <section class="relative w-full z-20 pb-[100px] md:pb-[140px] lg:pb-[100px] md:bg-gray-100">
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
         <div id="<?php echo get_field('recent_section_id', $current_post->ID); ?>" class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto md:w-4/12 md:h-[calc(100vh-75px)] md:sticky md:top-12 bg-white md:bg-gray-100 pt-6 pb-10 md:pl-6 md:pr-0 lg:pl-12 lg:pr-12 lg:pt-12 md:overflow-y-auto no-scrollbar">
-            <div class="w-full bg-white md:p-6 flex flex-col mb-4">
+            <div class="hidden md:flex w-full bg-white md:p-6 flex-col mb-4">
                 <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('categories_heading', $current_post->ID);?></h3>
                 <div class="w-full flex flex-col grow">
                         <a href="<?php echo $base_list_url; ?>?category=all" class="<?php echo strtolower(get_query_var('category')) == 'all' ? 'text-orange-500' : '' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
@@ -53,7 +57,6 @@ console_log($current_taxo);
                     <?php
                         if($categories){
                             foreach($categories as $cat){
-                                console_log($cat);
                     ?>
                         <a href="<?php echo $base_list_url; ?>?category=<?php echo $cat->slug; ?>" class="<?php echo $current_taxo == $cat->name ? 'text-orange-500' : '' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
                             <p><?php echo $cat->name; ?></p>
@@ -77,7 +80,7 @@ console_log($current_taxo);
                     if ($recent_posts) {
                         foreach($recent_posts as $recent_post) {
                             $current_taxonomies = get_post_taxonomies($recent_post);
-                            $categories = get_the_terms($recent_post, $current_taxonomies[0]);
+                            $cats = get_the_terms($recent_post, $current_taxonomies[0]);
                             if(get_field('post_date', $recent_post->ID)){
                                 $postDate = DateTime::createFromFormat( 'Ymd', get_field('post_date', $recent_post->ID) );
                                 $dateStr = $postDate->format('j F Y');
@@ -90,7 +93,7 @@ console_log($current_taxo);
                     ?>
                     <a href="<?php echo get_permalink($recent_post) ?>" class="w-full flex flex-col items-start justify-center border-b border-zinc-400/25 last:border-transparent py-[20px]">
                         <p class="text-zinc-900 font-medium capitalize mb-[10px]"><?php echo get_field('title', $recent_post->ID) ?></p>
-                        <p class="text-zinc-500 capitalize"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
+                        <p class="text-zinc-500 capitalize"><?php echo $cats[0]->name ?><?php echo $cats[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
                     </a>
                     <?php
                         }
@@ -155,8 +158,10 @@ console_log($current_taxo);
                     if ($total_pages > 1){
                 
                         $current_page = max(1, get_query_var('paged'));
+                        $big = 999999999;
                 
                         $pagination = paginate_links(array(
+                            // 'base' => html_entity_decode( get_pagenum_link(1) ) . '%_%',
                             'base' => html_entity_decode( get_pagenum_link(1) ) . '%_%',
                             'format' => $para_format,
                             'current' => $current_page,
@@ -218,6 +223,20 @@ console_log($current_taxo);
                     }
                     ?>
                 </div>
+            </div>
+        </div>
+        <div class="w-[91%] mx-auto flex md:hidden flex-col">
+            <h3 class="font-bold text-xl text-left mb-[20px]"><?php echo get_field('categories_heading', $current_post->ID);?></h3>
+            <div class="w-full flex justify-start items-center mb-5 no-scrollbar flex-wrap">
+                <a href="<?php echo $base_list_url; ?>?category=all" class="border <?php echo strtolower(get_query_var('category')) == 'all' ? 'text-orange-500 border-orange-500' : 'text-[#9f9f9f] border-zinc-400/25' ?> text-[15px] font-bold rounded-lg px-6 py-2 mr-3 whitespace-nowrap mb-3"><?php echo get_field('all_posts_heading', $current_post->ID); ?></a>
+                <?php
+                    console_log($mobileCategories);
+                    foreach($mobileCategories as $cat){
+                ?>
+                    <a href="<?php echo $base_list_url; ?>?category=<?php echo $cat->slug; ?>" class="border <?php echo $current_taxo == $cat->name ? 'text-orange-500 border-orange-500' : 'text-[#9f9f9f] border-zinc-400/25' ?> text-[15px] font-bold rounded-lg px-6 py-2 mr-3 mb-3 whitespace-nowrap"><?php echo $cat->name; ?></a>
+                <?php
+                    }   
+                ?>
             </div>
         </div>
     </div>
