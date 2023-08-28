@@ -25,6 +25,8 @@ function remove_pagination_from_url($url) {
     $path = preg_replace('/\/page\/\d+\//', '', $parsed_url['path']);
     return $path;
 }
+
+
 $base_list_url = remove_pagination_from_url($_SERVER['REQUEST_URI']);
 $current_post = get_post();
 
@@ -44,6 +46,7 @@ if (strtolower(get_query_var('category')) == 'all' || !get_query_var('category')
     $current_taxo = get_query_var('category');
 }
 console_log($categories);
+console_log($current_taxo);
 ?>
 <section class="relative w-full z-20 pb-[100px] md:pb-[140px] lg:pb-[100px] md:bg-gray-100">
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
@@ -58,7 +61,7 @@ console_log($categories);
                         if($categories){
                             foreach($categories as $cat){
                     ?>
-                        <a href="<?php echo $base_list_url; ?>?category=<?php echo $cat->slug; ?>" class="<?php echo $current_taxo == $cat->name ? 'text-orange-500' : '' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
+                        <a href="<?php echo $base_list_url; ?>?category=<?php echo $cat->slug; ?>" class="<?php echo $current_taxo == $cat->slug ? 'text-orange-500' : '' ?> border-b border-zinc-400/25 last:border-transparent py-3 transition hover:text-orange-500">
                             <p><?php echo $cat->name; ?></p>
                         </a>
                     <?php
