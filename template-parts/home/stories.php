@@ -1,4 +1,4 @@
-<section id="successful-stories-section" class="w-full flex justify-center mt-20 lg:mt-40">
+<section id="successful-stories-section" class="w-full flex justify-center mt-20">
     <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <div class="w-full flex flex-col lg:flex-row justify-between items-start lg:items-center px-2">
             <h2 class="text-[30px] md:text-[60px] text-[#1b1c1d] font-bold max-h-screen mb-0 w-full lg:w-auto <?php echo get_field('is_stories_header_center') ? 'text-center' : 'text-left'; ?>"><?php echo get_field('successful_stories_heading') ?></h2>
