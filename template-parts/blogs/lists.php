@@ -41,10 +41,10 @@ $mobileCategories = get_terms($taxonomy, array(
     'orderby' => 'date'
 ));
 usort($categories, function($a, $b) {
-    return get_field('order', $a) - get_field('order', $b);
+    return intval(get_field('order', $a)) - intval(get_field('order', $b));
 });
 usort($mobileCategories, function($a, $b) {
-    return get_field('order', $a) - get_field('order', $b);
+    return intval(get_field('order', $a)) - intval(get_field('order', $b));
 });
 if (strtolower(get_query_var('category')) == 'all' || !get_query_var('category')) {
     $current_taxo = '';
