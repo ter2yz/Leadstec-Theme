@@ -212,7 +212,7 @@ if (strtolower(get_query_var('category')) == 'all' || !get_query_var('category')
                     if($mobileCategories){
                     foreach($mobileCategories as $cat){
                 ?>
-                    <a href="<?php echo $base_list_url; ?>?category=<?php echo $cat->slug; ?>" class="border <?php echo $current_taxo == $cat->name ? 'text-orange-500 border-orange-500' : 'text-[#9f9f9f] border-zinc-400/25' ?> text-[15px] font-bold rounded-lg px-6 py-2 mr-3 mb-3 whitespace-nowrap"><?php echo $cat->name; ?></a>
+                    <a href="<?php echo $base_list_url; ?>?category=<?php echo $cat->slug; ?>" class="border <?php echo $current_taxo == $cat->slug ? 'text-orange-500 border-orange-500' : 'text-[#9f9f9f] border-zinc-400/25' ?> text-[15px] font-bold rounded-lg px-6 py-2 mr-3 mb-3 whitespace-nowrap"><?php echo $cat->name; ?></a>
                 <?php
                     }
                 }
