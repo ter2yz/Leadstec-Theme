@@ -40,13 +40,17 @@ $mobileCategories = get_terms($taxonomy, array(
     'hide_empty' => false,
     'orderby' => 'date'
 ));
+usort($categories, function($a, $b) {
+    return get_field('order', $a) - get_field('order', $b);
+});
+usort($mobileCategories, function($a, $b) {
+    return get_field('order', $a) - get_field('order', $b);
+});
 if (strtolower(get_query_var('category')) == 'all' || !get_query_var('category')) {
     $current_taxo = '';
 } else {
     $current_taxo = get_query_var('category');
 }
-console_log($categories);
-console_log($current_taxo);
 ?>
 <section class="relative w-full z-20 pb-[100px] md:pb-[140px] lg:pb-[100px] md:bg-gray-100">
     <div class="w-full flex flex-col-reverse md:flex-row justify-center items-start md:min-h-[600px]">
