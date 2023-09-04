@@ -2,14 +2,8 @@
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/fslightbox.js' ); ?>"></script>
 
 <?php
-    $current_post_uri = get_page_uri(get_post());
-    console_log(get_post());
-    console_log($wp_query->post);
-    console_log('current_post_uri');
-    console_log($current_post_uri);
+    $current_post_uri = get_page_uri($wp_query->post);
     $current_lang = substr($current_post_uri, 0, 2);
-    console_log('current_lang');
-    console_log($current_lang);
     if($current_lang == 'en') {
         $footer_page = get_page_by_path('en/footer');
     } else if($current_lang == 'sc') {
