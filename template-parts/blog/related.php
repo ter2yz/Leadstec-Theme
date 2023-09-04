@@ -7,7 +7,7 @@ $recent_posts = get_posts(array(
     'post_type' => $post_type,
     'exclude' => [$current_post->ID],
     'category' => get_the_category($current_post)[0]->ID,
-    $current_taxonomies[0] => [array_column($current_terms, 'slug')],
+    $current_taxonomies[0] => array_column($current_terms, 'id'),
     'meta_key'  => 'post_date',
     'orderby' => array( 'meta_value' => 'DESC' ), 
 ));
@@ -33,7 +33,19 @@ if ($recent_posts){
                             <div class="w-full">
                                 <h3 class="font-bold text-[20px] text-[#1b1c1d] text-left mb-3"><?php echo get_field('title', $recent_post->ID) ?></h3>
                                 <?php if ($categories): ?>
-                                <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3"><?php echo $categories[0]->name; ?></p>
+                                <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3"><?php
+                                        if(count($categories) > 0) {
+                                            $counter = 0;
+                                            foreach ($categories as $cat) {
+                                                if( $counter == count( $categories ) - 1) {
+                                                    echo $cat->name;
+                                                } else {
+                                                    echo $cat->name . ', ';
+                                                }
+                                                $counter++;
+                                            }
+                                        }
+                                    ?></p>
                                 <?php endif; ?>
                                 <p class="leading-relaxed text-[#9f9f9f] text-[14px] mb-6 line-clamp-3"><?php echo get_field('short_description', $recent_post->ID) ?></p>
                             </div>
@@ -65,7 +77,19 @@ if ($recent_posts){
                             <div class="w-full">
                                 <h3 class="font-bold text-[20px] text-[#1b1c1d] text-left mb-3"><?php echo get_field('title', $recent_post->ID) ?></h3>
                                 <?php if ($categories): ?>
-                                <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3"><?php echo $categories[0]->name; ?></p>
+                                <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3"><?php
+                                        if(count($categories) > 0) {
+                                            $counter = 0;
+                                            foreach ($categories as $cat) {
+                                                if( $counter == count( $categories ) - 1) {
+                                                    echo $cat->name;
+                                                } else {
+                                                    echo $cat->name . ', ';
+                                                }
+                                                $counter++;
+                                            }
+                                        }
+                                    ?></p>
                                 <?php endif; ?>
                                 <p class="leading-relaxed text-[#9f9f9f] text-[14px] mb-6 line-clamp-3"><?php echo get_field('short_description', $recent_post->ID) ?></p>
                             </div>
