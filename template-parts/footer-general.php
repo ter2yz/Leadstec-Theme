@@ -4,6 +4,7 @@
 <?php
     $current_post_uri = get_page_uri(get_post());
     console_log(get_post());
+    console_log($wp_query->post);
     console_log('current_post_uri');
     console_log($current_post_uri);
     $current_lang = substr($current_post_uri, 0, 2);
