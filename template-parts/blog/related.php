@@ -7,7 +7,7 @@ $recent_posts = get_posts(array(
     'post_type' => $post_type,
     'exclude' => [$current_post->ID],
     'category' => get_the_category($current_post)[0]->ID,
-    $current_taxonomies[0] => array_column($current_terms, 'id'),
+    $current_taxonomies[0] => array_column($current_terms, 'slug'),
     'meta_key'  => 'post_date',
     'orderby' => array( 'meta_value' => 'DESC' ), 
 ));
