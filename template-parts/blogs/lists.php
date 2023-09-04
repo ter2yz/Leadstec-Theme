@@ -142,7 +142,22 @@ if (strtolower(get_query_var('category')) == 'all' || !get_query_var('category')
                         <div class="w-full flex flex-col justify-between items-start grow p-3 md:p-6 xl:p-9">
                             <div class="w-full">
                                 <h3 class="font-bold text-xl text-left mb-3"><?php echo get_field('title', $post->ID) ?></h3>
-                                <p class="leading-relaxed mb-3"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
+                                <p class="text-sm">
+                                    <?php
+                                        if(count($categories) > 0) {
+                                            $counter = 0;
+                                            foreach ($categories as $cat) {
+                                                if( $counter == count( $categories ) - 1) {
+                                                    echo $cat->name;
+                                                } else {
+                                                    echo $cat->name . ', ';
+                                                }
+                                                $counter++;
+                                            }
+                                        }
+                                    ?>
+                                </p>
+                                <p class="text-sm mb-3"><?php echo $dateStr; ?></p>
                                 <p class="leading-relaxed text-[#9f9f9f] text-[14px] line-clamp-3 mb-6"><?php echo get_field('short_description', $post->ID) ?></p>
                             </div>
                             <button class="text-sky-600"><?php echo get_field('learn_more_label', $current_post->ID);?></button>
@@ -154,7 +169,20 @@ if (strtolower(get_query_var('category')) == 'all' || !get_query_var('category')
                     <div class="w-full flex flex-col justify-between items-start grow p-[30px] lg:p-6 xl:p-9">
                         <div class="w-full">
                             <h3 class="font-bold text-[20px] text-[#1b1c1d] text-left mb-3"><?php echo get_field('title', $post->ID) ?></h3>
-                            <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3"><?php echo $categories[0]->name ?><?php echo $categories[0]&&$dateStr ? " • " : "" ?><?php echo $dateStr; ?></p>
+                            <p class="leading-relaxed text-[#1b1c1d] text-[15px]"><?php
+                                        if(count($categories) > 0) {
+                                            $counter = 0;
+                                            foreach ($categories as $cat) {
+                                                if( $counter == count( $categories ) - 1) {
+                                                    echo $cat->name;
+                                                } else {
+                                                    echo $cat->name . ', ';
+                                                }
+                                                $counter++;
+                                            }
+                                        }
+                                    ?></p>
+                            <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3"><?php echo $dateStr; ?></p>
                             <p class="leading-relaxed text-[#9f9f9f] text-[14px] md:text-[17px] mb-6 line-clamp-3"><?php echo get_field('short_description', $post->ID) ?></p>
                         </div>
                         <?php if (get_field('learn_more_label', $current_post->ID)): ?>
