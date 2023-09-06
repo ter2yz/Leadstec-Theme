@@ -75,15 +75,12 @@ function console_log($output, $with_script_tags = true) {
                     <div class="relative w-full flex justify-end items-center">
                         <div class="hidden lg:flex justify-center items-center">
                             <?php if($first_lv_items){
-                                console_log('serveruri');
-                                console_log($_SERVER['REQUEST_URI']);
                                 foreach($first_lv_items as $f_item) {
-                                    console_log('f_item');
                                     console_log($f_item);
                             ?>
                             <div class="group inline-block relative">
                                 <<?php echo $f_item['url'] ? 'a' : 'div' ?> href="<?php echo $f_item['url'] ?>" class="relative inline-flex w-full justify-center items-center gap-x-1.5 rounded-md bg-white px-3 py-3 group" id="menu-products" aria-expanded="true" aria-haspopup="true">
-                                    <p class="text-[20px] font-bold text-center <?php echo str_contains($_SERVER['REQUEST_URI'], strtolower($f_item['url'])) ? "text-orange-500" : "text-[#9f9f9f]" ?> hover:text-orange-500 transition-colors"><?php echo $f_item['label'] ?></p>
+                                    <p class="text-[20px] font-bold text-center <?php echo (str_contains($_SERVER['REQUEST_URI'], strtolower($f_item['url'])) || str_contains($_SERVER['REQUEST_URI'], strtolower(str_replace(' ', '-', $f_item['label'])))) ? "text-orange-500" : "text-[#9f9f9f]" ?> hover:text-orange-500 transition-colors"><?php echo $f_item['label'] ?></p>
                                     <?php if($f_item['second_level_items']): ?>
                                     <svg class="-mr-1 h-5 w-5 text-gray-400 group-hover:text-orange-500 transition rot group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
@@ -163,12 +160,12 @@ function console_log($output, $with_script_tags = true) {
                     foreach($first_lv_items as $f_item) {
                 ?>
                 <div class="<?php echo $f_item['second_level_items'] ? 'menu-item' : '' ?> w-full flex items-start justify-center group">
-                    <span class="w-6 h-[2px] flex-none my-6 translate-y-[1px] opacity-70 group-[.active]:bg-orange-500 <?php echo str_contains($_SERVER['REQUEST_URI'], strtolower($f_item['url'])) ? "bg-orange-500" : "bg-zinc-500" ?>"></span>
+                    <span class="w-6 h-[2px] flex-none my-6 translate-y-[1px] opacity-70 group-[.active]:bg-orange-500 <?php echo (str_contains($_SERVER['REQUEST_URI'], strtolower($f_item['url'])) || str_contains($_SERVER['REQUEST_URI'], strtolower(str_replace(' ', '-', $f_item['label'])))) ? "bg-orange-500" : "bg-zinc-500" ?>"></span>
                     <div class="flex grow flex-col items-start ml-3">
                         <!-- Products Tab -->
                         <div class="w-full flex justify-between items-center">
                             <a href="<?php echo $f_item['url'] ? $f_item['url'] : "#" ?>" class="relative inline-flex px-3 my-3 text-xl font-medium " id="menu-products" aria-expanded="true" aria-haspopup="true">
-                                <p class="leading-normal border-orange-500 group-[.active]:text-orange-500 <?php echo str_contains($_SERVER['REQUEST_URI'], strtolower($f_item['url'])) ? "text-orange-500 border-b" : "text-zinc-500" ?>"><?php echo $f_item['label'] ?></p>
+                                <p class="leading-normal border-orange-500 group-[.active]:text-orange-500 <?php echo (str_contains($_SERVER['REQUEST_URI'], strtolower($f_item['url'])) || str_contains($_SERVER['REQUEST_URI'], strtolower(str_replace(' ', '-', $f_item['label'])))) ? "text-orange-500 border-b" : "text-zinc-500" ?>"><?php echo $f_item['label'] ?></p>
                             </a>
                             <?php if($f_item['second_level_items']): ?>
                             <svg class="h-5 w-5 -mt-1 text-gray-400 group-[.active]:text-orange-500 transition rotate-0 group-[.active]:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
