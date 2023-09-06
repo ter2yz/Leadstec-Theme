@@ -163,12 +163,12 @@ function console_log($output, $with_script_tags = true) {
                     foreach($first_lv_items as $f_item) {
                 ?>
                 <div class="<?php echo $f_item['second_level_items'] ? 'menu-item' : '' ?> w-full flex items-start justify-center group">
-                    <span class="w-6 h-[2px] flex-none my-6 translate-y-[1px] opacity-70 group-[.active]:bg-orange-500 <?php echo str_contains($_SERVER['REQUEST_URI'], strtolower('/'.$f_item['label'])) ? "bg-orange-500" : "bg-zinc-500" ?>"></span>
+                    <span class="w-6 h-[2px] flex-none my-6 translate-y-[1px] opacity-70 group-[.active]:bg-orange-500 <?php echo str_contains($_SERVER['REQUEST_URI'], strtolower($f_item['url'])) ? "bg-orange-500" : "bg-zinc-500" ?>"></span>
                     <div class="flex grow flex-col items-start ml-3">
                         <!-- Products Tab -->
                         <div class="w-full flex justify-between items-center">
                             <a href="<?php echo $f_item['url'] ? $f_item['url'] : "#" ?>" class="relative inline-flex px-3 my-3 text-xl font-medium " id="menu-products" aria-expanded="true" aria-haspopup="true">
-                                <p class="leading-normal border-orange-500 group-[.active]:text-orange-500 <?php echo str_contains($_SERVER['REQUEST_URI'], strtolower('/'.$f_item['label'])) ? "text-orange-500 border-b" : "text-zinc-500" ?>"><?php echo $f_item['label'] ?></p>
+                                <p class="leading-normal border-orange-500 group-[.active]:text-orange-500 <?php echo str_contains($_SERVER['REQUEST_URI'], strtolower($f_item['url'])) ? "text-orange-500 border-b" : "text-zinc-500" ?>"><?php echo $f_item['label'] ?></p>
                             </a>
                             <?php if($f_item['second_level_items']): ?>
                             <svg class="h-5 w-5 -mt-1 text-gray-400 group-[.active]:text-orange-500 transition rotate-0 group-[.active]:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
