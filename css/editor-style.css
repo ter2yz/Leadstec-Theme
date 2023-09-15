@@ -685,11 +685,6 @@
   margin-bottom: 2.25rem;
 }
 
-.my-\[20px\] {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .-mr-1 {
   margin-right: -0.25rem;
 }
@@ -1178,6 +1173,10 @@
   width: 290px;
 }
 
+.w-\[30\%\] {
+  width: 30%;
+}
+
 .w-\[350px\] {
   width: 350px;
 }
@@ -1202,16 +1201,12 @@
   width: 100%;
 }
 
-.w-\[30\%\] {
-  width: 30%;
+.min-w-\[400px\] {
+  min-width: 400px;
 }
 
 .min-w-full {
   min-width: 100%;
-}
-
-.min-w-\[400px\] {
-  min-width: 400px;
 }
 
 .max-w-3xl {
@@ -2941,11 +2936,6 @@ body {
     margin-bottom: 2.5rem;
   }
 
-  .md\:my-\[40px\] {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
   .md\:-mt-5 {
     margin-top: -1.25rem;
   }
@@ -3216,6 +3206,11 @@ body {
     padding-right: 4rem;
   }
 
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .md\:px-\[25px\] {
     padding-left: 25px;
     padding-right: 25px;
@@ -3244,11 +3239,6 @@ body {
   .md\:py-32 {
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-
-  .md\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
   .md\:pb-0 {
