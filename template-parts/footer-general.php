@@ -102,22 +102,20 @@
                         }?>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
-        <div class="w-full flex justify-start items-center py-6 text-zinc-300 text-3xl">
-            <?php if(get_field('social_media_buttons', $footer_page->ID)):
-                foreach(get_field('social_media_buttons', $footer_page->ID) as $singleSocialMedia){
-            ?>
-                <a href="<?php echo $singleSocialMedia['url'] ?>" class="mr-[6px] last:mr-0 rounded-md overflow-hidden">
-                    <img class="w-[25px] h-[25px]" src="<?php echo $singleSocialMedia['icon']['url'] ?>" alt="<?php echo $singleSocialMedia['alt_text'] ?>">
-                </a>
-            <?php
-                }
-            endif;
-            ?>
+                <div class="w-full flex justify-start items-center py-6 text-zinc-300 text-3xl pl-6">
+                    <?php if(get_field('social_media_buttons', $footer_page->ID)):
+                        foreach(get_field('social_media_buttons', $footer_page->ID) as $singleSocialMedia){
+                    ?>
+                        <a href="<?php echo $singleSocialMedia['url'] ?>" class="mr-[6px] last:mr-0 rounded-md overflow-hidden">
+                            <img class="w-[25px] h-[25px]" src="<?php echo $singleSocialMedia['icon']['url'] ?>" alt="<?php echo $singleSocialMedia['alt_text'] ?>">
+                        </a>
+                    <?php
+                        }
+                    endif;
+                    ?>
 
+                </div>
+            </div>
         </div>
     </div>
     <div class="relative w-[91%] max-w-none lg:max-w-[1112px] mx-auto pt-10 border-t border-zinc-400/25">
