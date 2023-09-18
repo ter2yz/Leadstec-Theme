@@ -36,6 +36,8 @@ function console_log($output, $with_script_tags = true) {
     <script src="<?php echo (get_template_directory_uri() . '/resources/js/dist/splide-extension-auto-scroll.min.js' ); ?>"></script>
     <link rel="stylesheet" href="<?php echo (get_template_directory_uri() . '/resources/css/splide.min.css' ); ?>">
 
+    <!-- AA Script -->
+    <script src="https://assets.adobedtm.com/d31727ec25f9/8bd16b03bc94/launch-f480a3658811.min.js" async></script>
 </head>
 
 <body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>
