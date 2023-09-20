@@ -38,25 +38,25 @@
                     foreach($cases as $case) {
             ?>
             <div data-index="<?php echo $slide_cases_index; ?>" class="showcase-container relative lg:absolute w-full h-full inset-0 flex flex-col justify-center items-stretch transition duration-500 opacity-100 translate-x-0 mb-10 lg:mb-0 shadow-xl rounded-xl lg:shadow-none lg:rounded-none lg:opacity-<?php echo $slide_cases_index == 0 ? "100" : "0" ?> lg:translate-x-<?php echo $slide_cases_index == 0 ? "0" : "full" ?>">
-                <img class="block w-full lg:hidden" src="<?php echo esc_url( $case['image'] ); ?>" alt="<?php echo $case['image_alt_text']?>">
+                <img class="block w-full lg:hidden" src="<?php echo $case['image'] ? $case['image'] : get_field('feature_image', $case['post_id'])['url']; ?>" alt="<?php echo $case['image_alt_text'] ? $case['image_alt_text'] : get_field('image_alt_text', $case['post_id']); ?>">
                 <div class="w-full h-1/4 bg-zinc-900 hidden lg:flex flex-none justify-start items-center p-6">
-                    <p class="text-white text-3xl font-semibold capitalize"><?php echo $case['heading']; ?></p>
+                    <p class="text-white text-3xl font-semibold capitalize"><?php echo $case['heading'] ? $case['heading'] : get_field('title', $case['post_id']); ?></p>
                 </div>
                 <button class="content-trigger w-full h-1/4 bg-zinc-900 flex flex-col lg:hidden flex-none justify-start items-center p-6 transition">
-                    <p class="w-full text-left text-white text-3xl font-semibold capitalize"><?php echo $case['heading']; ?></p>
+                    <p class="w-full text-left text-white text-3xl font-semibold capitalize"><?php echo $case['heading'] ? $case['heading'] : get_field('title', $case['post_id']); ?></p>
                     <div class="content-wrapper w-full transition overflow-hidden max-h-0 opacity-0 text-left">
                         <div class="w-full pt-3">
-                            <?php echo $case['description']; ?>
+                            <?php echo $case['description'] ? $case['description'] : get_field('short_description', $case['post_id']); ?>
                         </div>
                     </div>
                 </button>
-                <div class="hidden lg:block relative w-full h-full bg-top bg-cover bg-no-repeat group overflow-hidden" aria-label="<?php echo $case['image_alt_text']?>" style="background-image: url(<?php echo esc_url( $case['image'] ); ?>)">
+                <div class="hidden lg:block relative w-full h-full bg-top bg-cover bg-no-repeat group overflow-hidden" aria-label="<?php echo $case['image_alt_text'] ? $case['image_alt_text'] : get_field('image_alt_text', $case['post_id']); ?>" style="background-image: url(<?php echo $case['image'] ? $case['image'] : get_field('feature_image', $case['post_id'])['url']; ?>)">
                     <div class="absolute top-0 right-0 w-[30%] min-w-[400px] h-full bg-zinc-900/95 px-12 pt-12 pb-20 transition duration-500 ease-in-out translate-x-full group-hover:translate-x-0 overflow-y-auto text-[15px] md:text-[22px] font-medium text-white">
-                        <?php echo $case['description']; ?>
+                        <?php echo $case['description'] ? $case['description'] : get_field('short_description', $case['post_id']); ?>
                     </div>
-                    <?php if($case['button_url']): ?>
+                    <?php if($case['button_url'] || $case['post_id']): ?>
                     <div class="absolute right-0 bottom-0 w-[30%] min-w-[400px] flex justify-end bg-white px-12 py-3 transition duration-500 ease-in-out translate-x-full group-hover:translate-x-0">
-                        <a href="<?php echo $case['button_url']; ?>" class="text-sky-600 text-[14px] md:text-[17px] font-bold align-middle "><?php echo $case['button_label'] ?></a>
+                        <a href="<?php echo $case['button_url'] ? $case['button_url'] : get_permalink(get_post($case['post_id'])); ?>" class="text-sky-600 text-[14px] md:text-[17px] font-bold align-middle "><?php echo $case['button_label'] ? $case['button_label'] : get_field('read_more_label', $case['post_id']); ?></a>
                     </div>
                     <?php endif; ?>
                 </div>
@@ -80,22 +80,22 @@
             ?>
                 <div class="w-full md:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n+1)]:pr-2 md:[&:nth-child(3n)]:pl-2 md:[&:nth-child(3n)]:pr-0 md:pl-1 md:pr-1 mb-6 overflow-hidden">
                     <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
-                        <?php if($case['button_url']): ?>
-                        <a href="<?php echo esc_url($case['button_url']); ?>" class="w-full">
+                        <?php if($case['button_url'] || $case['post_id']): ?>
+                        <a href="<?php echo $case['button_url'] ? $case['button_url'] : get_permalink(get_post($case['post_id'])); ?>" class="w-full">
                         <?php endif; ?>
-                            <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo $case['image_alt_text'] ?>" style="background-image: url(<?php echo esc_url( $case['image'] ); ?>); "></div>
+                            <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo $case['image_alt_text'] ? $case['image_alt_text'] : get_field('image_alt_text', $case['post_id']); ?>" style="background-image: url(<?php echo $case['image'] ? $case['image'] : get_field('feature_image', $case['post_id'])['url']; ?>); "></div>
                             <div class="w-full flex flex-col justify-between items-start grow p-[30px] lg:p-6 xl:p-9">
                                 <div class="w-full">
-                                    <h3 class="font-bold text-[20px] text-left mb-[10px]"><?php echo esc_html( $case['heading'] ); ?></h3>
-                                    <p class="leading-relaxed text-[#9f9f9f] text-[14px] md:text-[17px] mb-12 line-clamp-3"><?php echo strip_tags($case['description']); ?></p>
+                                    <h3 class="font-bold text-[20px] text-left mb-[10px]"><?php echo $case['heading'] ? $case['heading'] : get_field('title', $case['post_id']); ?></h3>
+                                    <p class="leading-relaxed text-[#9f9f9f] text-[14px] md:text-[17px] mb-12 line-clamp-3"><?php echo $case['description'] ? strip_tags($case['description']) : strip_tags(get_field('short_description', $case['post_id'])); ?></p>
                                 </div>
-                                <?php if($case['button_url']): ?>
+                                <?php if($case['button_url'] || $case['post_id']): ?>
                                 <button class="capitalize text-white flex justify-center items-center text-[14px] md:text-[17px] font-bold border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
-                                    <?php echo $case['button_label'] ?>
+                                    <?php echo $case['button_label'] ? $case['button_label'] : get_field('read_more_label', $case['post_id']); ?>
                                 </button>
                                 <?php endif; ?>
                             </div>
-                        <?php if($case['button_url']): ?>
+                        <?php if($case['button_url'] || $case['post_id']): ?>
                         </a>
                         <?php endif; ?>
                     </div>
