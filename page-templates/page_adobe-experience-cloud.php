@@ -7,6 +7,5 @@
 
 <!-- footer scripts -->
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/filter.js' ); ?>"></script>
-<script src="<?php echo (get_template_directory_uri() . '/resources/js/gsap.js' ); ?>"></script>
 
 <?php get_template_part( 'template-parts/footer', 'general' );

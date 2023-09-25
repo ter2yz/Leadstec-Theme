@@ -13,6 +13,5 @@
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/page-home.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/brand-logo-slider.js' ); ?>"></script>
 <script src="<?php echo (get_template_directory_uri() . '/resources/js/home-solutions.js' ); ?>"></script>
-<script src="<?php echo (get_template_directory_uri() . '/resources/js/gsap.js' ); ?>"></script>
 
 <?php get_template_part( 'template-parts/footer', 'general' );

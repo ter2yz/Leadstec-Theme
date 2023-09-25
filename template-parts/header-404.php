@@ -24,10 +24,6 @@ function console_log($output, $with_script_tags = true) {
     <!-- Tiny Slider -->
     <link rel="stylesheet" href="<?php echo (get_template_directory_uri() . '/resources/css/tiny-slider.css' ); ?>">
 
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-
     <!-- Lightbox -->
     <link rel="stylesheet" href="<?php echo (get_template_directory_uri() . '/resources/css/lightbox.min.css' ); ?>">
     
