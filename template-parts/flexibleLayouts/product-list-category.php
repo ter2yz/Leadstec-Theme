@@ -26,28 +26,42 @@
                     $cases = get_sub_field('cases');
                     if( $cases ) {
                         foreach( $cases as $case ) {
+                            $current_taxonomies = get_post_taxonomies(get_post($case['post_id']));
+                            $categories = get_the_terms(get_post($case['post_id']), $current_taxonomies[0]);
                 ?>
                     <div class="filter-item w-full md:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n+1)]:pr-2 md:[&:nth-child(3n)]:pl-2 md:[&:nth-child(3n)]:pr-0 md:pl-1 md:pr-1 mb-6 overflow-hidden" data-filter="<?php echo $case['category']->slug ?>">
                         <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
-                            <?php if($case['button_url']): ?>
-                            <a href="<?php echo esc_url($case['button_url']); ?>" class="w-full h-full flex flex-col">
+                            <?php if($case['button_url'] || $case['post_id']): ?>
+                            <a href="<?php echo $case['button_url'] ? esc_url($case['button_url']) : get_permalink(get_post($card['post_id'])); ?>" class="w-full h-full flex flex-col">
                             <?php endif; ?>
-                                <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo $case['image_alt_text'] ?>" style="background-image: url(<?php echo esc_url( $case['feature_image'] ); ?>); "></div>
+                                <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo $case['image_alt_text'] ?>" style="background-image: url(<?php echo $case['feature_image'] ? esc_url( $case['feature_image'] ) : esc_url( get_field('feature_image', $case['post_id'])['url'] ); ?>); "></div>
                                 <div class="w-full flex flex-col justify-between items-start grow p-[30px] lg:p-6 xl:p-9">
                                     <div class="w-full">
-                                        <h3 class="font-bold text-[20px] text-left mb-[10px]"><?php echo esc_html( $case['title'] ); ?></h3>
-                                        <?php if ($case['category']): ?>
-                                        <p class="leading-relaxed mb-[10px] text-[15px]"><?php echo esc_html( $case['category']->name ); ?></p>
+                                        <h3 class="font-bold text-[20px] text-left mb-[10px]"><?php echo $case['title'] ? esc_html( $case['title'] ) : esc_html( get_field('title', $case['post_id']) ); ?></h3>
+                                        <?php if ($categories): ?>
+                                            <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3"><?php
+                                                if(count($categories) > 0) {
+                                                    $counter = 0;
+                                                    foreach ($categories as $cat) {
+                                                        if( $counter == count( $categories ) - 1) {
+                                                            echo $cat->name;
+                                                        } else {
+                                                            echo $cat->name . ', ';
+                                                        }
+                                                        $counter++;
+                                                    }
+                                                }
+                                            ?></p>
                                         <?php endif; ?>
-                                        <p class="leading-relaxed text-[#9f9f9f] text-[14px] md:text-[17px] mb-12 line-clamp-3"><?php echo $case['summary']; ?></p>
+                                        <p class="leading-relaxed text-[#9f9f9f] text-[14px] md:text-[17px] mb-12 line-clamp-3"><?php echo $case['summary'] ? $case['summary'] : get_field('short_description', $case['post_id']); ?></p>
                                     </div>
-                                    <?php if($case['button_url']): ?>
+                                    <?php if($case['button_url'] || $case['post_id']): ?>
                                     <button class="text-white flex justify-center items-center text-[14px] md:text-[17px] font-bold border-2 border-[#1b1c1d] bg-[#1b1c1d] px-6 py-3">
-                                        <?php echo $case['button_label'] ?>
+                                        <?php echo $case['button_label'] ? $case['button_label'] : get_field('read_more_label', $case['post_id']); ?>
                                     </button>
                                     <?php endif; ?>
                                 </div>
-                            <?php if($case['button_url']): ?>
+                            <?php if($case['button_url'] || $case['post_id']): ?>
                             </a>
                             <?php endif; ?>
                         </div>
