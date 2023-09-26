@@ -236,7 +236,6 @@ if (strtolower(get_query_var('category')) == 'all' || !get_query_var('category')
             <div class="w-full flex justify-start items-center mb-5 no-scrollbar flex-wrap">
                 <a href="<?php echo $base_list_url; ?>?category=all" class="border <?php echo strtolower(get_query_var('category')) == 'all' ? 'text-orange-500 border-orange-500' : 'text-[#9f9f9f] border-zinc-400/25' ?> text-[15px] font-bold rounded-lg px-6 py-2 mr-3 whitespace-nowrap mb-3"><?php echo get_field('all_posts_heading', $current_post->ID); ?></a>
                 <?php
-                    console_log($mobileCategories);
                     if($mobileCategories){
                     foreach($mobileCategories as $cat){
                 ?>

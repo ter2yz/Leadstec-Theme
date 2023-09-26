@@ -64,7 +64,6 @@ if (numberButtons && showcases) {
     });
     sliderWebCases.events.on("indexChanged", () => {
         const info = sliderWebCases.getInfo();
-        console.log("INFO: ", info);
         handleCasesChange(info.displayIndex % info.slideCount);
     });
 }

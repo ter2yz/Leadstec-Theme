@@ -24,29 +24,22 @@ filterWrappers.forEach((filterWrapper) => {
             setTimeout(() => {
                 productsWrapper.replaceChildren(...initItems);
                 let selectedFilter = filter.getAttribute("data-filter");
-                let itemsToHide = productsWrapper.querySelectorAll(
-                    `.filter-item:not([data-filter='${selectedFilter}'])`
-                );
-                let itemsToShow = productsWrapper.querySelectorAll(
-                    `.filter-item[data-filter='${selectedFilter}']`
-                );
 
-                if (selectedFilter == "all") {
-                    itemsToHide = [];
-                    itemsToShow = productsWrapper.querySelectorAll(
-                        ".filter-item[data-filter]"
-                    );
-                }
-
-                itemsToHide.forEach((el) => {
-                    el.classList.add("hidden");
-                    el.classList.remove("block");
-                    productsWrapper.removeChild(el);
-                });
-
-                itemsToShow.forEach((el) => {
-                    el.classList.remove("hidden");
-                    el.classList.add("block");
+                initItems.forEach((item) => {
+                    const categories = item
+                        .getAttribute("data-filter")
+                        .split(",");
+                    if (
+                        categories.includes(selectedFilter) ||
+                        selectedFilter == "all"
+                    ) {
+                        item.classList.add("block");
+                        item.classList.remove("hidden");
+                    } else {
+                        item.classList.add("hidden");
+                        item.classList.remove("block");
+                        productsWrapper.removeChild(item);
+                    }
                 });
             }, 200);
             setTimeout(() => {

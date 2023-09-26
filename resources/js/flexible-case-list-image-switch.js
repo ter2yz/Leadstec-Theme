@@ -35,7 +35,6 @@ if (storiesSliderContainer) {
 }
 
 const handleImageClick = (el) => {
-    console.log("EL: ", el);
     const imageIndex = el.dataset.index;
     const info = sliderStories.getInfo();
     sliderStories.goTo(

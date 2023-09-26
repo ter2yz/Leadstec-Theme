@@ -29,7 +29,19 @@
                             $current_taxonomies = get_post_taxonomies(get_post($case['post_id']));
                             $categories = get_the_terms(get_post($case['post_id']), $current_taxonomies[0]);
                 ?>
-                    <div class="filter-item w-full md:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n+1)]:pr-2 md:[&:nth-child(3n)]:pl-2 md:[&:nth-child(3n)]:pr-0 md:pl-1 md:pr-1 mb-6 overflow-hidden" data-filter="<?php echo $case['category']->slug ?>">
+                    <div class="filter-item w-full md:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n+1)]:pr-2 md:[&:nth-child(3n)]:pl-2 md:[&:nth-child(3n)]:pr-0 md:pl-1 md:pr-1 mb-6 overflow-hidden" data-filter="<?php
+                                                if(count($categories) > 0) {
+                                                    $counter = 0;
+                                                    foreach ($categories as $cat) {
+                                                        if( $counter == count( $categories ) - 1) {
+                                                            echo $cat->slug;
+                                                        } else {
+                                                            echo $cat->slug . ',';
+                                                        }
+                                                        $counter++;
+                                                    }
+                                                }
+                                            ?>">
                         <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
                             <?php if($case['button_url'] || $case['post_id']): ?>
                             <a href="<?php echo $case['button_url'] ? esc_url($case['button_url']) : get_permalink(get_post($card['post_id'])); ?>" class="w-full h-full flex flex-col">

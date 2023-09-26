@@ -133,7 +133,7 @@ function buildUrlFromParts($parsedUrl) {
         }
         $first_lv_items = get_field('first_level_items', $header_page->ID);
         global $template;
-        // console_log(get_permalink(get_post()));
+
         $post_link_en = replaceLanguageInURL(get_permalink(get_post()), "en");
         $post_link_sc = replaceLanguageInURL(get_permalink(get_post()), "sc");
         $post_link_tc = replaceLanguageInURL(get_permalink(get_post()), "tc");

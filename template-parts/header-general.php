@@ -74,7 +74,6 @@ function console_log($output, $with_script_tags = true) {
                         <div class="hidden lg:flex justify-center items-center">
                             <?php if($first_lv_items){
                                 foreach($first_lv_items as $f_item) {
-                                    console_log($f_item);
                             ?>
                             <div class="group inline-block relative">
                                 <<?php echo $f_item['url'] ? 'a' : 'div' ?> href="<?php echo $f_item['url'] ?>" class="relative inline-flex w-full justify-center items-center gap-x-1.5 rounded-md bg-white px-3 py-3 group" id="menu-products" aria-expanded="true" aria-haspopup="true">

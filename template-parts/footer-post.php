@@ -11,7 +11,6 @@
         $description = '';
     }
     $current_lang = $description;
-    console_log($current_lang);
     if($current_lang == 'en') {
         $footer_page = get_page_by_path('en/footer');
     } else if($current_lang == 'sc') {
