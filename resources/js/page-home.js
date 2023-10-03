@@ -206,15 +206,15 @@ function animateScroll() {
 
 document
     .getElementById("solutions-fw-container")
-    .addEventListener("mousedown", handleDragStart);
-document.addEventListener("mousemove", handleDrag);
-document.addEventListener("mouseup", handleDragEnd);
+    .addEventListener("mousedown", handleDragStart, { passive: true });
+document.addEventListener("mousemove", handleDrag, { passive: true });
+document.addEventListener("mouseup", handleDragEnd, { passive: true });
 
 document
     .getElementById("solutions-fw-container")
-    .addEventListener("touchstart", handleDragStart);
-document.addEventListener("touchmove", handleDrag);
-document.addEventListener("touchend", handleDragEnd);
+    .addEventListener("touchstart", handleDragStart, { passive: true });
+document.addEventListener("touchmove", handleDrag, { passive: true });
+document.addEventListener("touchend", handleDragEnd, { passive: true });
 
 // Easing function
 function easeOutCubic(t) {
