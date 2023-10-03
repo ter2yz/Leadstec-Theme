@@ -9,7 +9,7 @@
         <div class="hidden lg:flex relative w-full h-full py-20 justify-center items-center">
             <div class="relative flex flex-col items-center px-6">
                 <button id="sliderStoriesPrev" class="w-full text-xl" data-controls="prev" aria-controls="customize" tabindex="-1">
-                    <i class="fa-solid fa-chevron-up"></i>
+                    <img class="w-[18px] mx-auto" src="<?php echo (get_template_directory_uri() . '/resources/images/fa-chevron-up.svg' ); ?>" alt="fa-chevron-up icon">
                 </button>
                 <?php if( have_rows('successful_stories')): ?>
                     <div class="slider-stories w-full">
@@ -27,7 +27,7 @@
                     </div>
                 <?php endif; ?>
                 <button id="sliderStoriesNext" class="w-full text-xl" data-controls="next" aria-controls="customize" tabindex="-1">
-                    <i class="fa-solid fa-chevron-down"></i>      
+                    <img class="w-[18px] mx-auto" src="<?php echo (get_template_directory_uri() . '/resources/images/fa-chevron-down.svg' ); ?>" alt="fa-chevron-down icon">
                 </button>
             </div>
             <div class="relative h-full grow">

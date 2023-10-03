@@ -74,9 +74,7 @@
                 <p class="leading-relaxed text-white text-[15px] mb-3 font-bold"><?php echo $info_section['country'] ?></p>
                 <div class="flex items-start">
                     <div class="flex-none mr-2">
-                        <p class="leading-relaxed text-zinc-300 text-center w-4">
-                            <i class="fa-solid fa-phone"></i>
-                        </p>
+                        <img class="leading-relaxed text-center w-4 mt-[5px]" src="<?php echo (get_template_directory_uri() . '/resources/images/fa-phone.svg' ); ?>" alt="phone icon">
                     </div>
                     <div class="flex flex-col">
                         <p class="leading-relaxed text-white opacity-50 text-[15px] mb-3"><?php echo $info_section['telephone_info'] ?></p>
@@ -84,9 +82,7 @@
                 </div>
                 <div class="flex items-start">
                     <div class="flex-none mr-2">
-                        <p class="leading-relaxed text-zinc-300 text-center w-4">
-                            <i class="fa-solid fa-envelope"></i>
-                        </p>
+                        <img class="leading-relaxed text-center w-4 mt-[5px]" src="<?php echo (get_template_directory_uri() . '/resources/images/fa-envelope.svg' ); ?>" alt="envelope icon">
                     </div>
                     <div class="flex flex-col">
                         <p class="leading-relaxed text-white opacity-50 text-[15px] mb-3"><?php echo $info_section['email_info'] ?></p>
@@ -94,9 +90,7 @@
                 </div>
                 <div class="flex items-start">
                     <div class="flex-none mr-2">
-                        <p class="leading-relaxed text-zinc-300 text-center w-4">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </p>
+                        <img class="leading-relaxed text-center w-4 mt-[5px]" src="<?php echo (get_template_directory_uri() . '/resources/images/fa-location-dot.svg' ); ?>" alt="location dot icon">
                     </div>
                     <div class="flex flex-col">
                         <?php 

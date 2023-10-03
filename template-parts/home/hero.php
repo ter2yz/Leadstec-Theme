@@ -6,7 +6,7 @@
                 <span class="w-20 h-3 bg-orange-500 my-5"></span>
                 <p class="text-[15px] md:text-[20px] text-[#9f9f9f] leading-relaxed"><?php echo get_field('hero_section')['description'] ?></p>
                 <a href="<?php echo get_field('hero_section')['anchor_url'] ?>" class="text-3xl w-12 h-12 mt-10 flex justify-center items-center rounded-full border-2 border-gray-900 text-gray-900">
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <img class="leading-relaxed text-center w-[28px]" src="<?php echo (get_template_directory_uri() . '/resources/images/fa-chevron-down.svg' ); ?>" alt="fa-chevron-down icon">
                 </a>
             </div>
             <div class="w-full md:w-5/12 relative max-h-[300px] md:max-h-[500px] lg:max-h-screen top-0 right-0 flex justify-center md:justify-end overflow-clip">

@@ -58,11 +58,11 @@
         ?>
     </div>
     <div class="w-full flex justify-around items-center mt-9">
-        <button id="sliderBestPrev" class="w-full text-xl text-[#1b1c1d] disabled:text-[#9f9f9f]" data-controls="prev" aria-controls="customize" tabindex="-1">
-            <i class="fa-solid fa-chevron-left"></i>
+        <button id="sliderBestPrev" class="w-full text-xl text-[#1b1c1d] opacity-100 disabled:opacity-50" data-controls="prev" aria-controls="customize" tabindex="-1">
+            <img class="w-[12px] mx-auto" src="<?php echo (get_template_directory_uri() . '/resources/images/fa-chevron-left.svg' ); ?>" alt="fa-chevron-left icon">
         </button>
-        <button id="sliderBestNext" class="w-full text-xl text-[#1b1c1d] disabled:text-[#9f9f9f]" data-controls="prev" aria-controls="customize" tabindex="-1">
-            <i class="fa-solid fa-chevron-right"></i>
+        <button id="sliderBestNext" class="w-full text-xl text-[#1b1c1d] opacity-100 disabled:opacity-50" data-controls="prev" aria-controls="customize" tabindex="-1">
+            <img class="w-[12px] mx-auto" src="<?php echo (get_template_directory_uri() . '/resources/images/fa-chevron-right.svg' ); ?>" alt="fa-chevron-right icon">
         </button>
     </div>
 </div>

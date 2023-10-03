@@ -19,8 +19,6 @@ function console_log($output, $with_script_tags = true) {
 
 	<?php wp_head(); ?>
 
-    <!-- Theme embed code -->
-    <script src="https://kit.fontawesome.com/c3eb9942d6.js" crossorigin="anonymous"></script>
     <!-- Tiny Slider -->
     <link rel="stylesheet" href="<?php echo (get_template_directory_uri() . '/resources/css/tiny-slider.css' ); ?>">
 
