@@ -203,3 +203,14 @@ function add_query_vars_filter( $vars ) {
   return $vars;
 }
 add_filter( 'query_vars', 'add_query_vars_filter' );
+
+
+function disable_recaptcha() {
+    if( is_page(1229) ){
+        wp_dequeue_script( 'google-recaptcha' );
+        wp_deregister_script( 'google-recaptcha' );
+        add_filter( 'wpcf7_load_js', '__return_false' );
+        add_filter( 'wpcf7_load_css', '__return_false' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'disable_recaptcha', 99999 );
