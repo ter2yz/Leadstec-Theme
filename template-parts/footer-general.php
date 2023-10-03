@@ -42,7 +42,7 @@
     <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto mb-6 <?php if (!is_page_template( 'page-templates/page_contact.php' )): ?>-mt-20<?php endif; ?> md:mt-0">
         <div class="w-full mb-10">
             <a href="/">
-                <img class="max-w-[15rem] md:max-w-xs" src="<?php echo esc_url( get_template_directory_uri() . '/assets/leadstec-logo-original.svg' ); ?>" alt="凝新科技，Leadstec">
+                <img class="max-w-[15rem] md:max-w-xs h-auto" src="<?php echo esc_url( get_template_directory_uri() . '/assets/leadstec-logo-original.svg' ); ?>" alt="凝新科技，Leadstec">
             </a>
         </div>
         <div class="w-full flex flex-col md:flex-row items-stretch space-x-0 md:space-x-9">
