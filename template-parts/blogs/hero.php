@@ -22,6 +22,7 @@
             <a href="<?php echo get_field("button_url"); ?>" class="text-3xl w-12 h-12 mt-10 flex justify-center items-center rounded-full border-2 border-gray-900 text-gray-900">
                 <img class="leading-relaxed text-center w-[28px]" src="<?php echo (get_template_directory_uri() . '/resources/images/fa-chevron-down.svg' ); ?>" alt="fa-chevron-down icon">
             </a>
+            <h1 class="hidden">Blogs List</h1>
         </div>
         <div id="showcase-web-cases" class="relative grow w-full lg:w-auto">
             <?php
