@@ -75,8 +75,8 @@
                     }
                 }
             ?>
-            <a href="<?php echo $story['button_url'] ? $story['button_url'] : get_permalink(get_post($story['post_id'])); ?>" class="text-[16px] font-bold flex flex-none justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize whitespace-nowrap">
-                <?php echo $story['button_label'] ? $story['button_label'] : get_field('read_more_label', $story['post_id']) ?>
+            <a href="<?php echo get_sub_field('read_more_button_url'); ?>" class="text-[16px] font-bold flex flex-none justify-center items-center border-2 border-zinc-900 bg-zinc-900 px-6 py-2 text-white capitalize whitespace-nowrap">
+                <?php echo get_sub_field('read_more_button_label') ?>
             </a>
         </div>
     </div>
