@@ -1387,18 +1387,6 @@ video {
   margin-top: 44px;
 }
 
-.ml-6 {
-  margin-left: 1.5rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .mt-\[5px\] {
   margin-top: 5px;
 }
@@ -1540,10 +1528,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-4 {
-  height: 1rem;
 }
 
 .max-h-0 {
@@ -1707,8 +1691,20 @@ video {
   width: 120px;
 }
 
+.w-\[12px\] {
+  width: 12px;
+}
+
+.w-\[18px\] {
+  width: 18px;
+}
+
 .w-\[25px\] {
   width: 25px;
+}
+
+.w-\[28px\] {
+  width: 28px;
 }
 
 .w-\[290px\] {
@@ -1741,18 +1737,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[28px\] {
-  width: 28px;
-}
-
-.w-\[18px\] {
-  width: 18px;
-}
-
-.w-\[12px\] {
-  width: 12px;
 }
 
 .min-w-\[400px\] {
@@ -2372,10 +2356,6 @@ video {
   background-repeat: no-repeat;
 }
 
-.fill-zinc-300 {
-  fill: #d4d4d8;
-}
-
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2682,10 +2662,6 @@ video {
   padding-top: 60%;
 }
 
-.pl-5 {
-  padding-left: 1.25rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -2725,10 +2701,6 @@ video {
 
 .text-\[100px\] {
   font-size: 100px;
-}
-
-.text-\[10px\] {
-  font-size: 10px;
 }
 
 .text-\[12px\] {
@@ -2978,16 +2950,6 @@ video {
 
 .text-zinc-900\/70 {
   color: rgb(24 24 27 / 0.7);
-}
-
-.text-orange-300 {
-  --tw-text-opacity: 1;
-  color: rgb(253 186 116 / var(--tw-text-opacity));
-}
-
-.text-orange-400 {
-  --tw-text-opacity: 1;
-  color: rgb(251 146 60 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3683,16 +3645,6 @@ article > *:not(.entry-content),
   --tw-ring-offset-color: #fff;
 }
 
-.disabled\:text-\[\#9f9f9f\]:disabled {
-  --tw-text-opacity: 1;
-  color: rgb(159 159 159 / var(--tw-text-opacity));
-}
-
-.disabled\:text-orange-500:disabled {
-  --tw-text-opacity: 1;
-  color: rgb(249 115 22 / var(--tw-text-opacity));
-}
-
 .disabled\:opacity-50:disabled {
   opacity: 0.5;
 }
@@ -4262,11 +4214,6 @@ article > *:not(.entry-content),
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .md\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
   }
 
   .md\:text-\[15px\] {
