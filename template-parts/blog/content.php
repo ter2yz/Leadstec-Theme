@@ -25,7 +25,7 @@ if ($post_type == "blogs_sc" || $post_type == "blogs_tc") {
             <img class="w-full md:w-[27.3vw] md:max-w-[350px] object-cover" src="<?php echo esc_url( get_field('feature_image')['url'] ); ?>" alt="<?php echo get_field('image_alt_text'); ?>">
             <div class="w-full flex flex-col justify-start items-start py-6 px-[20px] md:px-[25px] lg:px-10 bg-gray-50">
                 <p class="text-[#1b1c1d] text-[30px] md:text-[36px] lg:text-[40px] font-semibold mt-3 mb-3"><?php echo get_field('title') ?></p>
-                <p class="text-[#1b1c1d]">
+                <p class="text-[#1b1c1d] w-full">
                     <?php
                         if(count($categories) > 0) {
                             $counter = 0;
@@ -40,7 +40,7 @@ if ($post_type == "blogs_sc" || $post_type == "blogs_tc") {
                         }
                     ?>    
                 </p>
-                <p class="text-[#1b1c1d]"><?php echo $dateStr; ?></p>
+                <p class="text-[#1b1c1d] w-full"><?php echo $dateStr; ?></p>
             </div>
         </div>
     </div>
