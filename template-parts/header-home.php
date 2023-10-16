@@ -39,6 +39,36 @@ function console_log($output, $with_script_tags = true) {
 
     <!-- AA Script -->
     <script src="https://assets.adobedtm.com/d31727ec25f9/8bd16b03bc94/launch-f480a3658811.min.js" async></script>
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Leads Technologies Limited",
+        "alternateName": "Leadstec",
+        "url": "https://www.leads-technologies.com/en.html",
+        "logo": "https://www.leads-technologies.com/wp-content/themes/Leadstec-Theme/assets/leadstec-logo-dark.png",
+        "contactPoint": [{
+            "@type": "ContactPoint",
+            "telephone": "+86 20 8100 0647",
+            "contactType": "customer service",
+            "areaServed": "CN",
+            "availableLanguage": ["en","Chinese (Traditional)","Chinese (Simplified)","Chinese"]
+        },{
+            "@type": "ContactPoint",
+            "telephone": "+852 3483 6928",
+            "contactType": "customer service",
+            "areaServed": "HK",
+            "availableLanguage": ["en","Chinese (Traditional)","Chinese (Simplified)"]
+        }],
+        "sameAs": [
+            "https://www.facebook.com/LeadsTechnologiesltd",
+            "https://www.youtube.com/channel/UCiYdLECHhrF6JjcsaddoeVw",
+            "https://www.linkedin.com/company/leads-technologies-ltd/",
+            "https://www.leads-technologies.com/en.html"
+        ]
+        }
+    </script>
 </head>
 
 <body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>

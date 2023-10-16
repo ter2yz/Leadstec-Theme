@@ -14,8 +14,15 @@ function console_log($output, $with_script_tags = true) {
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:locale:alternate" content="zh_HK" />
+    <meta property="og:locale:alternate" content="en_US" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <link rel="alternate" href="https://www.leads-technologies.com/en.html" hreflang="x-default" />
+    <link rel="alternate" href="https://www.leads-technologies.com/en.html" hreflang="en" />
+    <link rel="alternate" href="https://www.leads-technologies.com/sc.html" hreflang="zh-Hans" />
+    <link rel="alternate" href="https://www.leads-technologies.com/tc.html" hreflang="zh-Hant" />
 
 	<?php wp_head(); ?>
 
