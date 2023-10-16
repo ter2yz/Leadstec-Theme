@@ -7,7 +7,7 @@
         ?>
         <div class="w-full flex flex-col md:flex-row justify-center items-stretch space-x-0 md:space-x-12 mb-12">
             <div class="w-full mb-6 md:mb-0">
-                <div class="w-full h-full pb-[70%] bg-cover bg-center bg-no-repeat" aria-label="<?php echo $card['image_alt_text'] ? $card['image_alt_text'] : get_field('image_alt_text', $card['post_id']);?>" style="background-image: url(<?php echo $card['image'] ? esc_url( $card['image'] ) : esc_url( get_field('feature_image', $card['post_id']) ); ?>)"></div>
+                <div class="w-full h-full pb-[70%] bg-cover bg-center bg-no-repeat" aria-label="<?php echo $card['image_alt_text'] ? $card['image_alt_text'] : get_field('image_alt_text', $card['post_id']);?>" style="background-image: url(<?php echo $card['image'] ? esc_url( $card['image'] ) : esc_url( get_field('feature_image', $card['post_id'])['url'] ); ?>)"></div>
             </div>
             <div class="w-full flex flex-col justify-start items-start">
                 <div class="w-full">
