@@ -30,7 +30,7 @@
                             $categories = get_the_terms(get_post($case['post_id']), $current_taxonomies[0]);
                 ?>
                     <div class="filter-item w-full md:w-1/3 md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n+1)]:pr-2 md:[&:nth-child(3n)]:pl-2 md:[&:nth-child(3n)]:pr-0 md:pl-1 md:pr-1 mb-6 overflow-hidden" data-filter="<?php
-                                                if($case['category'] && count($case['category']) > 0){
+                                                if($case['category']){
                                                     echo $case['category']->slug;
                                                 } else if (count($categories) > 0) {
                                                     $counter = 0;
@@ -52,11 +52,13 @@
                                 <div class="w-full flex flex-col justify-between items-start grow p-[30px] lg:p-6 xl:p-9">
                                     <div class="w-full">
                                         <h3 class="font-bold text-[20px] text-left mb-[10px]"><?php echo $case['title'] ? esc_html( $case['title'] ) : esc_html( get_field('title', $case['post_id']) ); ?></h3>
-                                        <?php if ($categories): ?>
+                                        <?php if ($case['category']): ?>
+                                            <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3">
+                                                <?php echo $case['category']->name; ?>
+                                            </p>
+                                        <?php elseif ($categories): ?>
                                             <p class="leading-relaxed text-[#1b1c1d] text-[15px] mb-3"><?php
-                                                if($case['category'] && count($case['category']) > 0){
-                                                    echo $case['category']->name;
-                                                } else if(count($categories) > 0) {
+                                                if(count($categories) > 0) {
                                                     $counter = 0;
                                                     foreach ($categories as $cat) {
                                                         if( $counter == count( $categories ) - 1) {
