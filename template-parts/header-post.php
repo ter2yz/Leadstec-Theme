@@ -84,10 +84,10 @@ function buildUrlFromParts($parsedUrl) {
     <meta property="og:locale:alternate" content="en_US" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link rel="alternate" href="https://www.leads-technologies.com/en.html" hreflang="x-default" />
-    <link rel="alternate" href="https://www.leads-technologies.com/en.html" hreflang="en" />
-    <link rel="alternate" href="https://www.leads-technologies.com/sc.html" hreflang="zh-Hans" />
-    <link rel="alternate" href="https://www.leads-technologies.com/tc.html" hreflang="zh-Hant" />
+    <link rel="alternate" href="https://www.leads-technologies.com/en" hreflang="x-default" />
+    <link rel="alternate" href="https://www.leads-technologies.com/en" hreflang="en" />
+    <link rel="alternate" href="https://www.leads-technologies.com/sc" hreflang="zh-Hans" />
+    <link rel="alternate" href="https://www.leads-technologies.com/tc" hreflang="zh-Hant" />
 
 	<?php wp_head(); ?>
 
@@ -125,13 +125,13 @@ function buildUrlFromParts($parsedUrl) {
         $current_lang = $description;
         $homepage_uri = '/';
         if($current_lang == 'en') {
-            $homepage_uri = '/en.html';
+            $homepage_uri = '/en';
             $header_page = get_page_by_path('en/header');
         } else if($current_lang == 'sc') {
-            $homepage_uri = '/sc.html';
+            $homepage_uri = '/sc';
             $header_page = get_page_by_path('sc/header');
         } else if($current_lang == 'tc') {
-            $homepage_uri = '/tc.html';
+            $homepage_uri = '/tc';
             $header_page = get_page_by_path('tc/header');
         } else {
             $header_page = get_page_by_path('header');

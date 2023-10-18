@@ -19,10 +19,10 @@ function console_log($output, $with_script_tags = true) {
     <meta property="og:locale:alternate" content="en_US" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link rel="alternate" href="https://www.leads-technologies.com/en.html" hreflang="x-default" />
-    <link rel="alternate" href="https://www.leads-technologies.com/en.html" hreflang="en" />
-    <link rel="alternate" href="https://www.leads-technologies.com/sc.html" hreflang="zh-Hans" />
-    <link rel="alternate" href="https://www.leads-technologies.com/tc.html" hreflang="zh-Hant" />
+    <link rel="alternate" href="https://www.leads-technologies.com/en" hreflang="x-default" />
+    <link rel="alternate" href="https://www.leads-technologies.com/en" hreflang="en" />
+    <link rel="alternate" href="https://www.leads-technologies.com/sc" hreflang="zh-Hans" />
+    <link rel="alternate" href="https://www.leads-technologies.com/tc" hreflang="zh-Hant" />
 
 	<?php wp_head(); ?>
 
@@ -83,13 +83,13 @@ function console_log($output, $with_script_tags = true) {
         $current_lang = substr($current_post_uri, 0, 2);
         $homepage_uri = '/';
         if($current_lang == 'en') {
-            $homepage_uri = '/en.html';
+            $homepage_uri = '/en';
             $header_page = get_page_by_path('en/header');
         } else if($current_lang == 'sc') {
-            $homepage_uri = '/sc.html';
+            $homepage_uri = '/sc';
             $header_page = get_page_by_path('sc/header');
         } else if($current_lang == 'tc') {
-            $homepage_uri = '/tc.html';
+            $homepage_uri = '/tc';
             $header_page = get_page_by_path('tc/header');
         } else {
             $header_page = get_page_by_path('header');
@@ -158,17 +158,17 @@ function console_log($output, $with_script_tags = true) {
                             ?>
                         </div>
                         <div class="pl-6 flex justify-center items-center">
-                            <a href="<?php echo '/en' . substr($current_post_uri, 2) . '.html' ?>">
+                            <a href="<?php echo '/en' . substr($current_post_uri, 2) ?>">
                                 <span class="flex justify-center gap-x-1.5 bg-white px-3 text-[15px] <?php if($current_lang == 'en'): ?>text-orange-500<?php else:?>text-[#767676]<?php endif; ?> hover:text-orange-500 transition-colors border-r hover:underline underline-offset-4">
                                     En
                                 </span>
                             </a>
-                            <a href="<?php echo '/sc' . substr($current_post_uri, 2) . '.html' ?>">
+                            <a href="<?php echo '/sc' . substr($current_post_uri, 2) ?>">
                                 <span class="flex justify-center gap-x-1.5 bg-white px-3 text-[15px] <?php if($current_lang == 'sc'): ?>text-orange-500<?php else:?>text-[#767676]<?php endif; ?> hover:text-orange-500 transition-colors border-r hover:underline underline-offset-4">
                                     简
                                 </span>
                             </a>
-                            <a href="<?php echo '/tc' . substr($current_post_uri, 2) . '.html' ?>">
+                            <a href="<?php echo '/tc' . substr($current_post_uri, 2) ?>">
                                 <span class="flex justify-center gap-x-1.5 bg-white px-3 text-[15px] <?php if($current_lang == 'tc'): ?>text-orange-500<?php else:?>text-[#767676]<?php endif; ?> hover:text-orange-500 transition-colors hover:underline underline-offset-4">
                                     繁
                                 </span>
