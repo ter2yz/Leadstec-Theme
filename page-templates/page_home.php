@@ -1,5 +1,5 @@
 <?php /* Template Name: Home Template */ ?>
-<?php get_template_part( 'template-parts/header', 'general' ); ?>
+<?php get_template_part( 'template-parts/header', 'home' ); ?>
 <?php get_template_part( 'template-parts/home/hero' ); ?>
 <?php get_template_part( 'template-parts/home/stories' ); ?>
 <?php get_template_part( 'template-parts/home/solutions' ); ?>

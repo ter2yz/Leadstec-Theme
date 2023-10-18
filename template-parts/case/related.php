@@ -14,9 +14,9 @@
     if($recent_posts):
 ?>
 <div class="w-full pb-40">
-    <div class="hidden md:block w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
+    <div class="w-[91%] max-w-none lg:max-w-[1112px] mx-auto">
         <h2 class="w-full text-[30px] md:text-[60px] text-[#1b1c1d] font-bold mt-[44px] mb-[20px] md:mb-[44px]"><?php echo get_field('similar_cases_heading') ?></h2>
-        <div class="relative w-full pb-16">
+        <div class="hidden md:block relative w-full pb-16">
             <div id="slider-blog-recent" class="w-full my-slider">
                 <?php
                 if ($recent_posts) {
