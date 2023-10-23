@@ -46,7 +46,7 @@ function console_log($output, $with_script_tags = true) {
         "@type": "Organization",
         "name": "Leads Technologies Limited",
         "alternateName": "Leadstec",
-        "url": "https://www.leads-technologies.com/en.html",
+        "url": "https://www.leads-technologies.com/en/",
         "logo": "https://www.leads-technologies.com/wp-content/themes/Leadstec-Theme/assets/leadstec-logo-dark.png",
         "contactPoint": [{
             "@type": "ContactPoint",
@@ -65,7 +65,7 @@ function console_log($output, $with_script_tags = true) {
             "https://www.facebook.com/LeadsTechnologiesltd",
             "https://www.youtube.com/channel/UCiYdLECHhrF6JjcsaddoeVw",
             "https://www.linkedin.com/company/leads-technologies-ltd/",
-            "https://www.leads-technologies.com/en.html"
+            "https://www.leads-technologies.com/en/"
         ]
         }
     </script>
