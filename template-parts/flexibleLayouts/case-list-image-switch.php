@@ -65,7 +65,7 @@
                 if ($stories) {
                     foreach($stories as $story) {
             ?>
-            <a href="<?php echo $story['button_url']; ?>" class="w-full mb-5">
+            <a href="<?php echo $story['button_url'] ? $story['button_url'] : get_permalink(get_post($story['post_id'])); ?>" class="w-full mb-5">
                 <img class="slider-single-image w-full" src="<?php echo esc_url( $story['image']['url'] ? $story['image']['url'] : get_field('feature_image', $story['post_id'])['url'] ); ?>" alt="<?php echo $story['image_alt_text'] ? $story['image_alt_text'] : get_field('image_alt_text', $story['post_id']); ?>">
                 <div class="w-full p-5 flex justify-center items-center bg-zinc-900">
                     <p class="text-white text-[15px] font-bold"><?php echo $story['heading'] ? $story['heading'] : get_field('title', $story['post_id']) ?></p>
