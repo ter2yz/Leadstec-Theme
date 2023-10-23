@@ -46,7 +46,7 @@
                                             ?>">
                         <div class="w-full h-full bg-white flex flex-col border border-zinc-200">
                             <?php if($case['button_url'] || $case['post_id']): ?>
-                            <a href="<?php echo $case['button_url'] ? esc_url($case['button_url']) : get_permalink(get_post($card['post_id'])); ?>" class="w-full h-full flex flex-col">
+                            <a href="<?php echo $case['button_url'] ? esc_url($case['button_url']) : get_permalink(get_post($case['post_id'])); ?>" class="w-full h-full flex flex-col">
                             <?php endif; ?>
                                 <div class="w-full h-0 pt-[60%] flex-none bg-cover bg-center" aria-label="<?php echo $case['image_alt_text'] ?>" style="background-image: url(<?php echo $case['feature_image'] ? esc_url( $case['feature_image'] ) : esc_url( get_field('feature_image', $case['post_id'])['url'] ); ?>); "></div>
                                 <div class="w-full flex flex-col justify-between items-start grow p-[30px] lg:p-6 xl:p-9">
