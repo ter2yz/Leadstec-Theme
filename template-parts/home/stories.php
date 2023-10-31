@@ -18,7 +18,7 @@
                         foreach(get_field('successful_stories') as $story) {
                     ?>
                         <div class="w-full  overflow-hidden py-2">
-                            <img data-index="<?php echo $stories_index ?>" onclick="handleImageClick(this)" class="slider-single-image w-full cursor-pointer" src="<?php echo $story['image']['url']; ?>" alt="<?php echo $story['image_alt_text'] ?>">
+                            <img data-index="<?php echo $stories_index ?>" onclick="handleImageClick(this)" class="slider-single-image w-full cursor-pointer" src="<?php echo $story['image']['url'] ? $story['image']['url'] : get_field('feature_image', $story['post_id'])['url']; ?>" alt="<?php echo $story['image_alt_text'] ? $story['image_alt_text'] : get_field('image_alt_text', $story['post_id']) ?>">
                         </div>
                     <?php
                         $stories_index += 1;
@@ -36,17 +36,17 @@
                     foreach(get_field('successful_stories') as $story) {
                 ?>
                     <div data-index="<?php echo $stories_main_index ?>" class="story-main-image-wrapper absolute inset-0 w-full h-full shadow-lg <?php echo $stories_main_index == 2 ? 'opacity-100' : 'opacity-0' ?> transition group">
-                        <img class="w-full h-full transition-all duration-200 opacity-100 object-contain object-center" src="<?php echo esc_url( $story['image']['url']); ?>" alt="<?php echo $story['image_alt_text']; ?>">
+                        <img class="w-full h-full transition-all duration-200 opacity-100 object-contain object-center" src="<?php echo $story['image']['url'] ? $story['image']['url'] : get_field('feature_image', $story['post_id'])['url']; ?>" alt="<?php echo $story['image_alt_text'] ? $story['image_alt_text'] : get_field('image_alt_text', $story['post_id']); ?>">
                         <div class="absolute inset-0 w-full h-full transition-all duration-500 opacity-0 hover:opacity-100 z-20">
                             <div class="description-wrap absolute w-1/2 h-full flex flex-col justify-start max-h-[67%] transition-all duration-500 bottom-0 right-0 bg-white p-6 text-zinc-900 overflow-auto z-20">
                                 <div class="w-full h-full overflow-auto mb-9">
-                                    <h3 class="font-bold text-[20px] text-left mb-6 capitalize"><?php echo $story['heading']; ?></h3>
+                                    <h3 class="font-bold text-[20px] text-left mb-6 capitalize"><?php echo $story['heading'] ? $story['heading'] : get_field('title', $story['post_id']); ?></h3>
                                     <?php 
-                                        echo $story['description'];
+                                        echo $story['description'] ? $story['description'] : get_field('short_description', $story['post_id']);
                                     ?>
                                 </div>
                                 <div class="absolute left-0 bottom-0 w-full bg-white px-6 py-3">
-                                    <a href="<?php echo $story['button_url']; ?>" class="description-read-btn text-sky-600 text-left"><?php echo get_field('read_more_button_label') ?></a>
+                                    <a href="<?php echo $story['button_url'] ? $story['button_url'] : get_permalink(get_post($story['post_id'])); ?>" class="description-read-btn text-sky-600 text-left"><?php echo $story['button_label'] ? $story['button_label'] : get_field('read_more_label', $story['post_id']) ?></a>
                                 </div>
                             </div>
                         </div>
@@ -65,10 +65,10 @@
                 if ($stories) {
                     foreach($stories as $story) {
             ?>
-            <a href="<?php echo $story['button_url']; ?>" class="w-full mb-5">
-                <img class="slider-single-image w-full" src="<?php echo esc_url( $story['image']['url'] ); ?>" alt="<?php echo $story['image_alt_text']; ?>">
+            <a href="<?php echo $story['button_url'] ? $story['button_url'] : get_permalink(get_post($story['post_id'])); ?>" class="w-full mb-5">
+                <img class="slider-single-image w-full" src="<?php echo esc_url( $story['image']['url'] ) ? $story['image']['url'] : get_field('feature_image', $story['post_id'])['url']; ?>" alt="<?php echo $story['image_alt_text'] ? $story['image_alt_text'] : get_field('image_alt_text', $story['post_id']); ?>">
                 <div class="w-full p-5 flex justify-center items-center bg-zinc-900">
-                    <p class="text-white text-[15px] font-bold"><?php echo $story['heading'] ?></p>
+                    <p class="text-white text-[15px] font-bold"><?php echo $story['heading'] ? $story['heading'] : get_field('title', $story['post_id']) ?></p>
                 </div>
             </a>
             <?php
