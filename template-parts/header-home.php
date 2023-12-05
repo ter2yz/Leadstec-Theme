@@ -69,6 +69,54 @@ function console_log($output, $with_script_tags = true) {
         ]
         }
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-442871622"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-442871622');
+    </script>
+
+    <!-- Event snippet for Contact Us客戶表格 conversion page -->
+    <script>
+        window.addEventListener('load', function(event){
+            if (window.location.href.indexOf("contact-us") > 0) {
+                document.addEventListener('wpcf7mailsent', function(event){
+                    var email = document.querySelector('input[type="email"]').value;
+                    gtag('event', 'conversion', {'send_to': 'AW-442871622/g-1gCLap99cDEMbeltMB'});
+                    gtag('event', 'contact_us_form');
+                });
+            }
+        });
+    </script>
+
+    <!-- Event snippet for TVP客戶表格 conversion page -->
+    <script>
+        window.addEventListener('load', function(event){
+            if (window.location.href.indexOf("services/tvp-services/") > 0) {
+                document.addEventListener('wpcf7mailsent', function(event){
+                    var email = document.querySelector('input[type="email"]').value;
+                    gtag('event', 'conversion', {'send_to': 'AW-442871622/XT4ACOKl99cDEMbeltMB'});
+                    gtag('event', 'tvp_form')
+                });
+            }
+        });
+    </script>
+
+    <!-- Event snippet for Adobe Solution Partner Form conversion page -->
+    <script>
+        window.addEventListener('load', function(event){
+            if (window.location.href.indexOf("services/adobe-solution-partner/") > 0) {
+                document.addEventListener('wpcf7mailsent', function(event){
+                    var email = document.querySelector('input[type="email"]').value
+                    gtag('event', 'conversion', {'send_to': 'AW-442871622/JZ_eCM6R2PwYEMbeltMB'});
+                    gtag('event', 'adobe_solution_partner_form');
+                });
+            }
+        });
+    </script>
 </head>
 
 <body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>
